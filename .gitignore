@@ -1,0 +1,21 @@
+# Virtual environment
+venv/
+
+# Data (downloaded at runtime)
+data/
+
+# wisardpkg (separate repo)
+wisardpkg/
+
+# IDE
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store

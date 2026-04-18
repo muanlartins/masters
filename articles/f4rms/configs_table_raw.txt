@@ -1,0 +1,30 @@
+Experiment 2 Configuration: 21 datasets, 200 paired runs, K in [1, 5, 10, 25, 50]
+Bonferroni alpha = 0.05/21 = 0.0024
+Address size rule: min(2 * n_features, floor(log2(0.8 * n_samples)))
+
+Dataset                   samples n_feat  addr thermo  ratio total_bits n_RAMs
+-----------------------------------------------------------------------------
+Iris                          150      4     6      8   1.50         32      6
+Wine                          178     13     7      8   0.54        104     15
+Seeds                         210      7     7      8   1.00         56      8
+Glass                         214      9     7      8   0.78         72     11
+Haberman                      306      3     6      8   2.00         24      4
+Ecoli                         336      7     8      8   1.14         56      7
+Ionosphere                    351     34     8      8   0.24        272     34
+Breast Cancer                 569     30     8      8   0.27        240     30
+Balance Scale                 625      4     8      8   2.00         32      4
+Pima Diabetes                 768      8     9      8   1.12         64      8
+Vehicle                       846     18     9      8   0.50        144     16
+Banknote                     1372      4     8      8   2.00         32      4
+Yeast                        1484      8    10      8   1.25         64      7
+Steel Plates                 1941     33    10      8   0.30        264     27
+Segment                      2310     19    10      8   0.53        152     16
+Waveform                     5000     40    11      8   0.28        320     30
+SatImage                     6430     36    12      8   0.33        288     24
+Pendigits                   10992     16    13      8   0.81        128     10
+EEG Eye State               14980     14    13      8   0.93        112      9
+Magic Gamma                 19020     10    13      8   1.30         80      7
+Letter Recognition          20000     16    13      8   0.81        128     10
+
+Source: notebooks/F4RM.ipynb cell sec10_setup, execution_count=43
+Cross-check: matches paper Section 3 Table 1 (tab:configs) exactly.

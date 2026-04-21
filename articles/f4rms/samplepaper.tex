@@ -33,9 +33,9 @@ WiSARD's bit-to-RAM mapping has been left as a uniformly random permutation for 
 
 Machine learning at the edge has renewed interest in architectures that trade small amounts of accuracy for large reductions in training cost, inference latency, and energy use. \emph{Weightless neural networks} (WNNs) are a distinctive option: they classify entirely through bit-addressed table lookups, with no weights, no backpropagation, and no floating-point arithmetic at inference. A WNN trains in a single pass and classifies with a handful of memory reads, and recent memory-efficient variants~\cite{susskind2022bthowen,susskind2023uleen,bacellar2022logicwisard} fit on milliwatt-scale hardware.
 
-The canonical WNN architecture is WiSARD~\cite{aleksander1984wisard}, introduced in 1984 and studied extensively since. WiSARD partitions a binary input vector into disjoint chunks, routes each to a RAM-based lookup table, and trains by incrementing the counter addressed by each chunk's bit pattern. The assignment of input bits to RAM positions --- the \emph{mapping} --- is fixed at initialization and shared across classes. In every standard implementation, this mapping is a uniformly random permutation.
+The canonical WNN architecture is WiSARD~\cite{aleksander1984wisard}, introduced in 1984 and studied extensively since then. WiSARD partitions a binary input vector into disjoint chunks, routes each to a RAM-based lookup table, and trains by incrementing the counter addressed by each chunk's bit pattern. The assignment of input bits to RAM positions --- the \emph{mapping} --- is fixed at initialization and shared across classes. In every standard implementation, this mapping is a uniformly random permutation.
 
-The random mapping is an unexamined convention. Forty years of WiSARD research have explored bleaching~\cite{grieco2010producing}, ensemble structure~\cite{susskind2023uleen}, memory optimization~\cite{santiago2020bloom,bacellar2022logicwisard}, and most recently learnable mappings~\cite{bacellar2024dwn}, but the simple non-learned choice of \emph{which} bits go to \emph{which} RAM has, to our knowledge, never been systematically studied. Randomness seems neutral: any permutation is valid, no design bias is introduced, and structure-agnosticism is appealing when the input has no privileged axis. These arguments are sound for genuinely structureless inputs like raw binary images, but they fail silently when WiSARD processes continuous features through \emph{thermometer encoding}~\cite{lima2020distributive}---a now-common preprocessing step that expands each feature into a monotonic block of bits.
+The random mapping is an unexamined convention. Forty years of WiSARD research have explored bleaching~\cite{grieco2010producing}, ensemble structure~\cite{susskind2023uleen}, memory optimization~\cite{santiago2020bloom,bacellar2022logicwisard}, and most recently learnable mappings~\cite{bacellar2024dwn}, but the simple non-learned choice of \emph{which} bits go to \emph{which} RAM has, to the best of our knowledge, never been systematically studied. Randomness seems neutral: any permutation is valid, no design bias is introduced, and structure-agnosticism is appealing when the input has no privileged axis. These arguments are sound for genuinely structureless inputs like raw binary images, but they fail silently when WiSARD processes continuous features through \emph{thermometer encoding}~\cite{lima2020distributive}---a now-common preprocessing step that expands each feature into a monotonic block of bits.
 
 The $t$ bits from a single thermometer-encoded feature are not independent: they encode only $t+1$ distinct patterns rather than $2^t$. When random mapping places multiple bits from the same feature into the same RAM, that RAM wastes address slots on redundant information while another RAM loses the chance to see that feature---a cost invisible per-RAM but consistent in aggregate.
 
@@ -43,11 +43,42 @@ We introduce \textbf{F4RM} (Feature-Restricted Round-Robin Random Mapping), a ru
 
 Our main contributions are fourfold. \textbf{(1) F4RM}, a feature-restricted round-robin mapping rule for WiSARD that maximizes per-RAM feature coverage at zero cost---no new parameters, no training or inference overhead, no hyperparameters beyond standard WiSARD. \textbf{(2) A mechanistic justification} based on the redundancy structure of thermometer encoding, identifying two independent costs of random mapping (feature-coverage loss and effective-capacity loss) and yielding a falsifiable prediction---that F4RM's benefit diminishes as model capacity grows---which we confirm empirically. \textbf{(3) F4RMS}, an ensemble of $K$ seeded F4RM WiSARDs with sum-of-response aggregation, inheriting established WiSARD ensembling practice while compounding F4RM's per-model benefit. \textbf{(4) Empirical validation} on 21 tabular classification datasets with 200 paired evaluations per dataset and Bonferroni-corrected significance: F4RM beats random mapping on 14 of 21 datasets and never significantly loses; F4RMS beats random mapping on 20 of 21 and beats single F4RM on 19 of 21.
 
-Section~\ref{sec:f4rm} defines F4RM and its mechanistic justification; Section~\ref{sec:f4rms} extends it to the F4RMS ensemble. Section~\ref{sec:related} positions both against prior work. Sections~\ref{sec:methodology}--\ref{sec:results} describe the experimental setup and report results across 21 datasets, followed by limitations and conclusions.
+The paper is divided as follows: Section~\ref{sec:related} positions our work against prior research on WiSARD mappings, memory optimizations, and weightless-network ensembles; Section~\ref{sec:f4rm} defines F4RM and its mechanistic justification; Section~\ref{sec:f4rms} extends it to the F4RMS ensemble. Sections~\ref{sec:methodology}--\ref{sec:results} describe the experimental setup and report results across 21 datasets, followed by limitations and conclusions.
+
+
+\section{Related Work}
+\label{sec:related}
+
+We position F4RM against prior mapping strategies (Section~\ref{sec:related-mapping}), memory optimizations (Section~\ref{sec:related-memory}), and weightless-network ensembles (Section~\ref{sec:related-ensemble}).
+
+\subsection{Mapping Strategies in WiSARD}
+\label{sec:related-mapping}
+
+The original WiSARD~\cite{aleksander1984wisard} uses a uniformly random bit-to-RAM mapping, and this has remained the default. Random mapping introduces no design bias and assumes no input structure---desirable for genuinely structureless inputs but wasteful, as Section~\ref{sec:limitation} argues, for thermometer-encoded continuous features.
+
+BTHOWeN~\cite{susskind2022bthowen} replaces random mapping with a deterministic hash-based routing motivated by memory efficiency: hash collisions compress RAM state via a Bloom filter. The mapping remains randomness-based at heart---the hash is chosen for its collision distribution, not for structural awareness of the input. Differentiable WiSARD (DWN)~\cite{bacellar2024dwn} instead makes the mapping a learnable parameter via a differentiable relaxation, achieving strong accuracy gains but abandoning WiSARD's single-pass training simplicity. F4RM targets a different point: accuracy improvement at zero training cost and zero deviation from classical WiSARD training---the first WiSARD mapping rule that is structured but not learned.
+
+\subsection{Memory and Architecture Optimizations}
+\label{sec:related-memory}
+
+A parallel line of work optimizes WiSARD's memory footprint and hardware efficiency without changing the core mapping principle. Bloom WiSARD~\cite{santiago2020bloom} replaces RAM lookup tables with Bloom filters, trading a small false-positive rate for substantial memory savings. ULEEN~\cite{susskind2023uleen} combines Bloom-filter storage with multi-submodel ensembles and Gaussian thermometer encoding for edge-inference deployments. LogicWiSARD~\cite{bacellar2022logicwisard} compiles trained WiSARD RAMs into logic functions, eliminating memory at inference time entirely.
+
+These techniques are orthogonal to F4RM: they modify \emph{how} RAM state is stored or queried, not \emph{which} bits are assigned to which RAMs. A WiSARD using Bloom-filter RAMs can be F4RM-mapped with no modification to the Bloom filter apparatus. This complementarity is deliberate---restricting our contribution to the mapping rule alone lets F4RM slot into existing WiSARD pipelines without architectural changes.
+
+\subsection{Ensemble Methods for Weightless Networks}
+\label{sec:related-ensemble}
+
+Ensembling weightless networks has been explored primarily as a route to reducing per-model memory while maintaining accuracy. ULEEN's multi-submodel architecture~\cite{susskind2023uleen} trains several smaller WiSARDs with different random permutations and aggregates their responses via summation---the same aggregation rule F4RMS adopts. ClusWiSARD~\cite{cardoso2017clus} uses a clustering-based ensemble motivated by intra-class heterogeneity rather than ensemble decorrelation.
+
+The Random Subspace Method~\cite{ho1998random} is the natural starting point for any ensemble seeking decorrelation via input-view diversity. We found it unsuitable for WiSARD---subsets weaken each member faster than decorrelation recovers---so F4RMS instead derives diversity from the mapping randomness F4RM preserves, keeping each member at full F4RM strength.
+
+Taken together, the prior literature leaves an unoccupied niche that F4RM targets directly: a mapping rule that is (i) structured rather than random, (ii) justified by the redundancy of the input encoding rather than by memory or hardware concerns, (iii) compatible with standard WiSARD training and existing memory optimizations, and (iv) extendable to an ensemble that reuses --- rather than replaces --- established aggregation practice. The remainder of this paper occupies that niche.
 
 
 \section{F4RM: Feature-Restricted Round-Robin Random Mapping}
 \label{sec:f4rm}
+
+We cover background (Section~\ref{sec:preliminaries}), the cost of random mapping (Section~\ref{sec:limitation}), the F4RM rule and algorithm (Section~\ref{sec:f4rm-rule}), a testable prediction (Section~\ref{sec:testable-prediction}), and the address-size rule (Section~\ref{sec:address-size}).
 
 \subsection{Preliminaries: WiSARD and Thermometer Encoding}
 \label{sec:preliminaries}
@@ -78,7 +109,7 @@ F4RM resolves both costs by imposing a single rule on the mapping:
 
 The first clause maximizes feature diversity per RAM; the second handles the case $a > n$, where diversity alone cannot be perfect and a tiebreaker avoids concentrating repetition. When $a \leq n$, each RAM reads $a$ distinct features, one bit each. When $a > n$, each RAM reads every feature at least once and F4RM spreads the extra bits evenly across both features and RAMs.
 
-The algorithm that realizes this rule is a round-robin construction (Algorithm~\ref{alg:f4rm}). Feature indices $\{0, 1, \ldots, n-1\}$ are shuffled once at initialization using the mapping seed; thermometer level indices $\{0, 1, \ldots, t-1\}$ within each feature are shuffled independently. The procedure then iterates: at each step, it takes the next feature in the shuffled order, draws its next unassigned bit in the shuffled level order, and places that bit into the RAM with the fewest bits from this feature so far (breaking ties by RAM load). After all $n$ features have been visited once, the iteration wraps around and visits each feature a second time (placing its second bit), and so on until all $n \cdot t$ bits are assigned. Different mapping seeds produce different valid F4RM mappings---a property we exploit in Section~\ref{sec:f4rms}. The construction is deterministic given its seed, runs in $O(n \cdot t)$ time, and is data-independent.
+The algorithm that realizes this rule is a round-robin construction (Algorithm~\ref{alg:f4rm}). At each step, it draws the next feature in a seeded shuffled order, then its next unassigned thermometer bit in an independently shuffled order, and places the bit into the RAM with the fewest bits from that feature so far (ties broken by RAM load). After all $n$ features have been visited once the iteration wraps around and visits each feature a second time, and so on until all $n \cdot t$ bits are assigned. Different mapping seeds produce different valid F4RM mappings---a property we exploit in Section~\ref{sec:f4rms}. The construction is deterministic given its seed, runs in $O(n \cdot t)$ time, and is data-independent.
 
 \begin{algorithm}[!tbp]
   \SetAlgoNoLine
@@ -179,6 +210,8 @@ Table~\ref{tab:configs} reports the address size, total bits, and number of RAMs
 \section{F4RMS: F4RM enSemble}
 \label{sec:f4rms}
 
+We motivate the ensemble (Section~\ref{sec:f4rms-motivation}), justify sum-of-responses aggregation (Section~\ref{sec:f4rms-aggregation}), and consolidate the classifier (Section~\ref{sec:f4rms-classifier}).
+
 \subsection{Motivation and Design}
 \label{sec:f4rms-motivation}
 
@@ -186,7 +219,7 @@ F4RM replaces a randomized mapping with a constrained one, but the construction 
 
 Every F4RMS member is a \emph{full-feature} F4RM WiSARD: each reads every input feature, and members differ only in bit-to-RAM assignment. Ensembling WiSARDs is itself established practice---ULEEN~\cite{susskind2023uleen} combines multiple WiSARDs with different random permutations and reports consistent gains. F4RMS inherits this principle and substitutes F4RM mappings for purely random ones, so every member is individually stronger before aggregation.
 
-An alternative would follow the Random Subspace Method~\cite{ho1998random}, giving each member a feature subset. We tested this variant and found it consistently weaker, consistent with Breiman's observation~\cite{breiman2001random} that subspace ensembles trade member strength for decorrelation---a trade that loses for WiSARD members unable to reconstruct missing features. The full-feature variant keeps each member at full F4RM strength, deriving diversity entirely from the mapping randomness that F4RM preserves.
+An alternative would follow the Random Subspace Method~\cite{ho1998random}, giving each member a feature subset. We tested this and found it consistently weaker (details deferred to Section~\ref{sec:related-ensemble}): subspace ensembles trade member strength for decorrelation~\cite{breiman2001random}, a trade that loses for WiSARD members unable to reconstruct missing features.
 
 \subsection{Aggregation}
 \label{sec:f4rms-aggregation}
@@ -207,32 +240,10 @@ F4RMS with $K$ members trains $K$ independent F4RM WiSARDs with different mappin
 F4RMS's cost scales linearly with $K$. Training is trivially parallel, so on parallel hardware inference latency matches single F4RM while raw compute grows linearly. F4RMS is therefore a parameter-free way to trade training time for accuracy at no deployment latency penalty. Section~\ref{sec:results} reports F4RMS at representative $K$.
 
 
-\section{Related Work}
-\label{sec:related}
-
-\subsection{Mapping Strategies in WiSARD}
-\label{sec:related-mapping}
-
-The original WiSARD~\cite{aleksander1984wisard} uses a uniformly random bit-to-RAM mapping, and this has remained the default. Random mapping introduces no design bias and assumes no input structure---desirable for genuinely structureless inputs but wasteful, as Section~\ref{sec:limitation} argues, for thermometer-encoded continuous features.
-
-BTHOWeN~\cite{susskind2022bthowen} replaces random mapping with a deterministic hash-based routing motivated by memory efficiency: hash collisions compress RAM state via a Bloom filter. The mapping remains randomness-based at heart---the hash is chosen for its collision distribution, not for structural awareness of the input. Differentiable WiSARD (DWN)~\cite{bacellar2024dwn} instead makes the mapping a learnable parameter via a differentiable relaxation, achieving strong accuracy gains but abandoning WiSARD's single-pass training simplicity. F4RM targets a different point: accuracy improvement at zero training cost and zero deviation from classical WiSARD training---the first WiSARD mapping rule that is structured but not learned.
-
-\subsection{Memory and Architecture Optimizations}
-\label{sec:related-memory}
-
-A parallel line of work optimizes WiSARD's memory footprint and hardware efficiency without changing the core mapping principle. Bloom WiSARD~\cite{santiago2020bloom} replaces RAM lookup tables with Bloom filters, trading a small false-positive rate for substantial memory savings. ULEEN~\cite{susskind2023uleen} combines Bloom-filter storage with multi-submodel ensembles and Gaussian thermometer encoding for edge-inference deployments. LogicWiSARD~\cite{bacellar2022logicwisard} compiles trained WiSARD RAMs into logic functions, eliminating memory at inference time entirely.
-
-These techniques are orthogonal to F4RM: they modify \emph{how} RAM state is stored or queried, not \emph{which} bits are assigned to which RAMs. A WiSARD using Bloom-filter RAMs can be F4RM-mapped with no modification to the Bloom filter apparatus. This complementarity is deliberate---restricting our contribution to the mapping rule alone lets F4RM slot into existing WiSARD pipelines without architectural changes.
-
-\subsection{Ensemble Methods for Weightless Networks}
-\label{sec:related-ensemble}
-
-Ensembling weightless networks has been explored primarily as a route to reducing per-model memory while maintaining accuracy. ULEEN's multi-submodel architecture~\cite{susskind2023uleen} trains several smaller WiSARDs with different random permutations and aggregates their responses via summation---the same aggregation rule F4RMS adopts. ClusWiSARD~\cite{cardoso2017clus} uses a clustering-based ensemble motivated by intra-class heterogeneity rather than ensemble decorrelation.
-
-The Random Subspace Method~\cite{ho1998random} is the natural starting point for any ensemble seeking decorrelation via input-view diversity. We found it unsuitable for WiSARD---subsets weaken each member faster than decorrelation recovers---so F4RMS instead derives diversity from the mapping randomness F4RM preserves, keeping each member at full F4RM strength.
-
 \section{Experimental Methodology}
 \label{sec:methodology}
+
+We describe datasets (Section~\ref{sec:datasets}), the paired evaluation protocol (Section~\ref{sec:protocol}), and baselines, statistics, and environment (Section~\ref{sec:baselines-stats}).
 
 \subsection{Datasets}
 \label{sec:datasets}
@@ -249,13 +260,15 @@ Pairing all methods on the same split within each evaluation enables paired stat
 \subsection{Baselines, Statistics, and Environment}
 \label{sec:baselines-stats}
 
-The Random-mapping baseline is the standard WiSARD formulation: uniformly random bit-to-RAM assignment. Bleaching is enabled by default for all methods, matching the standard WiSARD implementation in \texttt{wisardpkg}~\cite{wisardpkg}, the reference Python library we use. F4RM and F4RMS are implemented on top of \texttt{wisardpkg} by supplying an explicit mapping computed by Algorithm~\ref{alg:f4rm} at model initialization. All code is available at \url{ANONYMIZED_REPO_URL}.
+The Random-mapping baseline is the standard WiSARD formulation: uniformly random bit-to-RAM assignment. Bleaching is enabled by default for all methods, matching the standard WiSARD implementation in \texttt{wisardpkg}~\cite{wisardpkg}, the reference Python library we use. F4RM and F4RMS are implemented on top of \texttt{wisardpkg} by supplying an explicit mapping computed by Algorithm~\ref{alg:f4rm} at model initialization. All code is available at \url{ANONYMIZED_REPO_URL}. The primary evaluation metric is top-1 classification accuracy on the held-out test fold, consistent with prior WiSARD tabular-classification work~\cite{susskind2022bthowen,susskind2023uleen}; all reported numbers, deltas, and statistical tests operate on this metric.
 
-For each dataset, we compute the per-evaluation delta between each pair of methods (F4RM $-$ Random, F4RMS $-$ Random, F4RMS $-$ F4RM). We report mean accuracy and standard deviation over 200 evaluations, the paired mean delta, and the Wilcoxon signed-rank test~\cite{wilcoxon1945individual} $p$-value. The Wilcoxon test is preferred over the paired $t$-test because accuracy is bounded in $[0,1]$ and the delta distribution is rarely Gaussian. We apply Bonferroni correction with family-wise threshold $\alpha = 0.05 / 21 \approx 0.0024$ across the 21 datasets, and report a comparison as \emph{significant} only when the corrected threshold is met. All experiments ran on an Apple M4 Pro workstation (24 GB RAM, Python 3.13, CPU only); full replication of the 21-dataset evaluation takes approximately one hour.
+For each dataset, we compute the per-evaluation delta between each pair of methods (F4RM $-$ Random, F4RMS $-$ Random, F4RMS $-$ F4RM). For each pair-delta we report the mean, the Wilcoxon signed-rank test~\cite{wilcoxon1945individual} $p$-value, and a 95\% normal-approximation confidence interval on the mean paired delta ($\bar{\Delta} \pm 1.96\,\sigma_{\Delta}/\sqrt{n}$, with $n = 200$); every pair reported as significant at the Bonferroni-corrected threshold has a CI that excludes zero. The Wilcoxon test is preferred over the paired $t$-test because accuracy is bounded in $[0,1]$ and the delta distribution is rarely Gaussian. We apply Bonferroni correction with family-wise threshold $\alpha = 0.05 / 21 \approx 0.0024$ across the 21 datasets, and report a comparison as \emph{significant} only when the corrected threshold is met. All experiments ran on an Apple M4 Pro workstation (24 GB RAM, Python 3.13, CPU only); full replication of the 21-dataset evaluation takes approximately one hour.
 
 
 \section{Results}
 \label{sec:results}
+
+We present F4RM vs Random (Section~\ref{sec:results-f4rm}), show how F4RMS compounds the benefit (Section~\ref{sec:results-f4rms}), and report costs (Section~\ref{sec:results-cost}).
 
 \begin{table}[!tbp]
   \centering
@@ -303,14 +316,14 @@ Table~\ref{tab:main-results} reports the main result: on 21 tabular classificati
 
 The datasets where F4RM's advantage is largest share a property the mechanism of Section~\ref{sec:f4rm-rule} predicts should matter: each feature carries meaningful, largely non-redundant signal. EEG Eye State ($+6.43$pp) has 14 electrode readings capturing distinct brain-activity channels; Yeast ($+4.53$pp) has 8 biological measurements curated for independent informativeness. Magic Gamma ($+4.25$pp), Letter Recognition ($+2.52$pp), Pendigits ($+0.44$pp), and SatImage ($+1.01$pp) all share moderate feature counts ($n$ between 8 and 36) with each feature contributing distinct information. On these, F4RM's guarantee that every RAM reads from every feature is exactly the right constraint: it prevents the model from accidentally leaving signal on the table.
 
-The datasets where F4RM's advantage is small tell the complementary story. Ionosphere ($-0.54$pp, n.s.) has 34 radar features organized as complex-valued pairs from 17 pulse numbers~\cite{sigillito1989classification}, and Breast Cancer ($+0.25$pp, n.s.) has 30 features that are mean/standard-error/``worst'' variants of 10 underlying measurements~\cite{street1993nuclear}; in both cases, correlated features mean that random mapping's occasional omissions cost little because the omitted signal is carried by a neighbor.
+The datasets where F4RM's advantage is small tell the complementary story. Ionosphere ($-0.54$pp, n.s.) and Breast Cancer ($+0.25$pp, n.s.) both have feature sets with heavy internal redundancy: Ionosphere's 34 features are complex-valued pairs from 17 pulse numbers~\cite{sigillito1989classification}, and Breast Cancer's 30 are mean/standard-error/``worst'' variants of 10 underlying measurements~\cite{street1993nuclear}. When omitted signal is carried by a neighboring feature, F4RM's coverage guarantee has little to redistribute.
 
 This pattern defines three data regimes: a \emph{dense-signal regime} (EEG, Magic Gamma, Yeast, Letter Recognition, Pendigits, SatImage, Waveform, Vehicle, Segment) where each feature carries distinct information and F4RM delivers its largest gains; a \emph{redundant-feature regime} (Ionosphere, Breast Cancer) where correlated features make omissions cheap; and a \emph{small-sample regime} (Iris, Wine, Seeds, Glass, Haberman) where the $\lfloor \log_2 m \rfloor$ cap forces a small address size and run-to-run variance swamps sub-percentage-point effects---F4RM never significantly hurts here, and mean delta is positive on all five ($+0.38$, $+0.29$, $+0.31$, $+0.81$, $+0.28$ pp respectively). F4RM's contribution is to redistribute feature information evenly across RAMs; that redistribution is most valuable exactly when every feature carries signal worth redistributing.
 
 \subsection{F4RMS Compounds the Benefit}
 \label{sec:results-f4rms}
 
-Table~\ref{tab:main-results} also reports F4RMS results at the ensemble size $K^*$ that maximizes accuracy per dataset; $K^* = 50$ on 15 of 21 datasets, $K^* = 25$ on 5 datasets, and $K^* = 10$ on one dataset. With this selection, \textbf{F4RMS beats random mapping on 20 of 21 datasets} with statistical significance, and \textbf{F4RMS beats single F4RM on 19 of 21 datasets}. The only dataset where F4RMS does not significantly improve over random mapping is Haberman. The two datasets where F4RMS does not significantly exceed single F4RM are Haberman and Iris --- both small enough ($m = 306$ and $m = 150$) that 200-run paired evaluation struggles to resolve small deltas after Bonferroni correction.
+Table~\ref{tab:main-results} reports F4RMS at the per-dataset optimal $K^* \in \{10, 25, 50\}$. With this selection, \textbf{F4RMS beats random mapping on 20 of 21 datasets} with statistical significance and \textbf{beats single F4RM on 19 of 21}. The only dataset where F4RMS does not significantly improve over random mapping is Haberman; the two where F4RMS does not significantly exceed single F4RM are Haberman and Iris, both small enough ($m = 306$ and $m = 150$) that 200-run paired evaluation struggles to resolve small deltas after Bonferroni correction.
 
 The compounding effect is most pronounced where F4RM itself is already strong. On EEG Eye State, F4RM's $+6.43$pp gain becomes $+15.24$pp under F4RMS; on Yeast, $+4.53$pp becomes $+9.58$pp; on Waveform, $+1.06$pp becomes $+6.74$pp. The ensemble's mapping diversity multiplies the benefit that a single F4RM mapping already captures.
 
@@ -327,6 +340,8 @@ All methods share the same architecture and differ only in the mapping, so per-m
 \section{Limitations and Future Work}
 \label{sec:limitations}
 
+We discuss scope conditions (Section~\ref{sec:limitations-details}) and outline extensions (Section~\ref{sec:future-work}).
+
 \subsection{Limitations}
 \label{sec:limitations-details}
 
@@ -340,8 +355,6 @@ All methods share the same architecture and differ only in the mapping, so per-m
 
 \subsection{Future Work}
 \label{sec:future-work}
-
-Several directions follow naturally from this work.
 
 \paragraph{Spatially-aware mapping for image data.} A variant replacing feature identity with patch or spatial-region identity could recover F4RM's benefit on image data at the appropriate granularity.
 
@@ -371,12 +384,13 @@ The authors have no competing interests to declare that are relevant to the cont
 \let\oldbibliography\thebibliography
 \renewcommand{\thebibliography}[1]{%
   \oldbibliography{#1}%
-  \small
-  \setlength{\itemsep}{-0.5ex}%
+  \footnotesize
+  \setlength{\itemsep}{-1.3ex}%
   \setlength{\parsep}{0pt}%
 }
 \makeatother
 \bibliographystyle{splncs04}
-\bibliography{references}
+\enlargethispage{3\baselineskip}
+{\footnotesize\bibliography{references}}
 
 \end{document}

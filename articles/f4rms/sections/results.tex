@@ -1,0 +1,145 @@
+
+
+\section{Experimental Methodology}
+\label{sec:methodology}
+\label{sec:experiments}
+
+\subsection{Datasets and Evaluation Framework}
+\label{sec:method-data}
+
+We evaluate on 21 tabular classification datasets drawn from UCI and scikit-learn, with 3 to 40 real-valued features, sample sizes from 150 (Iris) to 20{,}000 (Letter Recognition), and class counts from 2 to 26. The selection covers standard benchmarks from the WNN literature~\cite{susskind2022bthowen,susskind2023uleen} supplemented with additional UCI datasets to broaden coverage of the feature-count and sample-size axes. Per-dataset hyperparameters produced by the principled-default rule (Section~\ref{sec:f4rm-address}) are documented in the open-source artifact.
+
+Two evaluation frameworks operate over this suite. The first is a matched-hyperparameter protocol comparing F4RM, F4RMS, and the random-mapping baseline at identical $(a, t)$ chosen by the principled-default rule, with statistical significance assessed across 200 paired evaluations per dataset. This protocol isolates the mapping rule's effect from any confounding due to per-method hyperparameter tuning. The second is a Pareto-frontier protocol that sweeps each system across its hyperparameter space, extracts a per-system Pareto frontier on the (memory, accuracy) plane, and compares F4RM-Cuckoo's frontier against those of ten baselines. This second protocol characterizes the operating regimes where each system is competitive. The two protocols together support the paper's two empirical claims: that F4RM improves on random mapping at matched hyperparameters (matched-hyperparameter protocol), and that F4RM-Cuckoo achieves Pareto-frontier membership across diverse memory budgets (Pareto-frontier protocol).
+
+\subsection{Matched-Hyperparameter Protocol}
+\label{sec:method-matched}
+
+For each dataset, we perform 200 independent evaluations. Each evaluation uses a stratified 80/20 train/test split seeded independently per evaluation; preprocessing applies min-max scaling and distributive thermometer thresholds~\cite{lima2020distributive} fit on the training fold only, with $t = 8$. All three methods, random-mapped WiSARD, F4RM WiSARD, and F4RMS at multiple values of $K$, are trained and evaluated on the same split at the address size $a$ produced by Equation~\ref{eq:address-size}. Per-method accuracy, training wall-clock time, and per-sample inference wall-clock time are recorded for every evaluation.
+
+Pairing all methods on the same split within each evaluation enables paired statistical tests and removes split-induced variance from method-level comparisons. Across the 200 evaluations, the 200 split seeds are fixed and shared across datasets, so any dataset-level difference in variance is attributable to the dataset rather than to split sampling. F4RM and F4RMS use mapping seeds derived from the evaluation index, ensuring independent mapping draws across the 200 evaluations.
+
+For each pair of methods (F4RM vs Random, F4RMS vs Random, F4RMS vs F4RM), we compute the per-evaluation accuracy delta. We report the mean delta, the Wilcoxon signed-rank test~\cite{wilcoxon1945individual} $p$-value, and a 95\% normal-approximation confidence interval on the mean ($\bar{\Delta} \pm 1.96\, \sigma_{\Delta}/\sqrt{n}$, with $n = 200$). The Wilcoxon test is preferred over the paired $t$-test because accuracy is bounded in $[0, 1]$ and the delta distribution is rarely Gaussian. We apply Bonferroni correction with family-wise threshold $\alpha = 0.05/21 \approx 0.0024$ across the 21 datasets, and report a comparison as significant only when this corrected threshold is met.
+
+\subsection{Pareto-Frontier Protocol}
+\label{sec:method-pareto}
+
+The Pareto-frontier protocol compares F4RM-Cuckoo against ten baselines spanning two families. The first family covers tabular machine learning: Decision Trees (DT) and Random Forests (RF) as the canonical tree-based baselines, gradient-boosted decision tree libraries XGBoost~\cite{chen2016xgboost}, LightGBM~\cite{ke2017lightgbm}, and CatBoost~\cite{prokhorenkova2018catboost}, multi-layer perceptrons (MLP) as the standard fully-connected neural baseline, and the FT-Transformer architecture~\cite{gorishniy2021fttransformer} as a recent transformer-based tabular model. The second family covers prior weightless neural networks: BTHOWeN's hash-routed Bloom-filter architecture~\cite{susskind2022bthowen}, the differentiable WiSARD formulation DWN~\cite{bacellar2024dwn}, and ULEEN's multi-submodel ensemble~\cite{susskind2023uleen}. The tabular ML family represents the strongest non-neural and recent-deep-learning systems available for tabular classification; the prior weightless family represents the strongest direct comparators in our problem class.
+
+For each (system, dataset) pair, we sweep the system's hyperparameter grid and record accuracy, memory footprint, training time, and inference latency for every cell. Per-cell aggregates are taken over 5 random seeds where stochasticity is present (e.g., train/test split, model initialization). We then compute the per-system Pareto frontier on the (memory, accuracy) plane: the set of (memory, accuracy) points such that no other point on that system has both higher accuracy and lower memory. F4RM-Cuckoo's frontier is compared against each baseline's frontier under two criteria: \emph{strict dominance} (every point on the baseline frontier is dominated by some F4RM-Cuckoo point) and \emph{frontier membership} (F4RM-Cuckoo contributes at least one non-dominated point to the joint envelope of both systems' frontiers). The strict-dominance criterion is conservative; the frontier-membership criterion is the natural Pareto-optimality condition.
+
+Memory accounting is system-specific: WiSARD-family systems report cumulative cuckoo-filter or per-class hashmap size; tree-based baselines report native serialized size; neural baselines (MLP, FT-Transformer) report parameter count $\times$ 4 bytes (FP32); prior weightless ports use the original-paper accounting where comparable. The complete hyperparameter grids and memory-accounting rules are documented in the open-source artifact.
+
+\subsection{Statistics and Environment}
+\label{sec:method-stats}
+
+The random-mapping baseline is the standard WiSARD formulation (uniformly random bit-to-RAM permutation); bleaching is enabled at $b = 1$ for all WiSARD-family methods, matching the \texttt{wisardpkg}~\cite{wisardpkg} default. F4RM, F4RMS, and F4RM-Cuckoo are implemented on top of \texttt{wisardpkg} by supplying an explicit mapping computed by the F4RM round-robin construction; F4RM-Cuckoo additionally substitutes per-class cuckoo filters for the default counter table. All experiments ran on an Apple M4 Pro workstation (24~GB RAM, Python 3.13, CPU only); the matched-hyperparameter protocol completes in approximately one hour and the full Pareto sweep in several hours. All code, including reference implementations of BTHOWeN, DWN, and ULEEN ported from their public releases, plus preprocessing and analysis notebooks, is at \url{ANONYMIZED_REPO_URL}.
+
+
+\section{Results}
+\label{sec:results}
+
+\subsection{Matched-Hyperparameter Results}
+\label{sec:results-matched}
+
+Table~\ref{tab:main-results} reports the headline result: across 21 tabular classification datasets with 200 paired evaluations per dataset and Bonferroni correction at $\alpha = 0.05/21 \approx 0.0024$, F4RM beats random mapping on \textbf{13 of 21} datasets with statistical significance and never loses significantly. Across all datasets the mean per-evaluation delta is $+1.38$~pp; the median is $+0.87$~pp.
+
+\begin{table}[ht!]
+ \centering
+ \caption{Random-mapping vs.~F4RM at matched hyperparameters: per-dataset mean test accuracy across 200 paired stratified 80/20 splits, with paired delta in percentage points and Bonferroni-corrected paired Wilcoxon significance flag ($\alpha = 0.05/21 \approx 0.0024$). Best per row bolded; datasets sorted by $m$.}
+ \label{tab:main-results}
+ \setlength{\tabcolsep}{5pt}
+ \footnotesize
+ \begin{tabular}{lrrrrrrc}
+ \toprule
+ Dataset & $m$ & $n$ & $a$ & Random & F4RM & $\Delta$ (pp) & Sig. \\
+ \midrule
+ Iris & 150 & 4 & 7 & 0.931 & \textbf{0.935} & $+0.42$ &, \\
+ Wine & 178 & 13 & 7 & 0.966 & \textbf{0.967} & $+0.10$ &, \\
+ Seeds & 210 & 7 & 7 & 0.890 & \textbf{0.899} & $+0.87$ &, \\
+ Glass & 214 & 9 & 7 & 0.692 & \textbf{0.702} & $+0.93$ &, \\
+ Haberman & 306 & 3 & 6 & \textbf{0.732} & 0.729 & $-0.31$ &, \\
+ Ecoli & 336 & 7 & 8 & 0.803 & \textbf{0.815} & $+1.16$ & $\checkmark$ \\
+ Ionosphere & 351 & 34 & 8 & \textbf{0.905} & 0.897 & $-0.77$ &, \\
+ Breast Cancer & 569 & 30 & 9 & 0.960 & \textbf{0.962} & $+0.18$ &, \\
+ Balance Scale & 625 & 4 & 8 & 0.625 & \textbf{0.702} & $+7.73$ & $\checkmark$ \\
+ Pima Diabetes & 768 & 8 & 9 & 0.698 & \textbf{0.705} & $+0.74$ &, \\
+ Vehicle & 846 & 18 & 9 & 0.674 & \textbf{0.687} & $+1.35$ & $\checkmark$ \\
+ Banknote & 1372 & 4 & 8 & 0.918 & \textbf{0.948} & $+2.96$ & $\checkmark$ \\
+ Yeast & 1484 & 8 & 10 & 0.451 & \textbf{0.470} & $+1.89$ & $\checkmark$ \\
+ Steel Plates & 1941 & 33 & 10 & 0.852 & \textbf{0.871} & $+1.95$ & $\checkmark$ \\
+ Segment & 2310 & 19 & 11 & 0.931 & \textbf{0.936} & $+0.43$ & $\checkmark$ \\
+ Waveform & 5000 & 40 & 12 & 0.774 & \textbf{0.778} & $+0.47$ & $\checkmark$ \\
+ SatImage & 6430 & 36 & 12 & 0.828 & \textbf{0.833} & $+0.44$ & $\checkmark$ \\
+ Pendigits & 10992 & 16 & 13 & 0.960 & \textbf{0.968} & $+0.77$ & $\checkmark$ \\
+ EEG Eye State & 14980 & 14 & 13 & 0.699 & \textbf{0.738} & $+3.89$ & $\checkmark$ \\
+ Magic Gamma & 19020 & 10 & 14 & 0.766 & \textbf{0.783} & $+1.68$ & $\checkmark$ \\
+ Letter Recognition & 20000 & 16 & 14 & 0.854 & \textbf{0.875} & $+2.11$ & $\checkmark$ \\
+ \midrule
+ \multicolumn{7}{l}{\textbf{Significant (Bonferroni):}} & 13/21 \\
+ \bottomrule
+ \end{tabular}
+\end{table}
+
+The pattern matches the mechanism of Section~\ref{sec:f4rm-cost}. F4RM's largest gains concentrate on datasets where each feature carries non-redundant signal (EEG, Magic Gamma, Yeast, Letter Recognition, Pendigits); its smallest gains are on datasets with internally-redundant feature sets, Ionosphere (complex-valued pairs from 17 pulse numbers~\cite{sigillito1989classification}) and Breast Cancer (mean/std-error/``worst'' variants of 10 underlying measurements~\cite{street1993nuclear}), where the coverage guarantee has little to redistribute. The three regimes are dense-signal (largest gains), redundant-feature (small gains), and small-sample (variance swamps sub-pp effects under the $\lfloor \log_2 m \rfloor$ cap).
+
+\subsection{F4RMS Extension}
+\label{sec:results-f4rms}
+
+The F4RMS ensemble (Table~\ref{tab:f4rms-results}) extends F4RM's gains: at $K = 50$, F4RMS beats random mapping on \textbf{20 of 21} datasets and beats single F4RM on \textbf{20 of 21} with Bonferroni significance, including recoveries where single F4RM was neutral (Ionosphere $+3.37$~pp, Breast Cancer $+0.68$~pp). The single exception is Haberman, where F4RMS loses significantly to both Random ($-3.88$~pp) and F4RM ($-3.57$~pp): with only three features, F4RM constrains placement so strongly that mapping seeds produce nearly identical mappings, a mechanism-supportive boundary case where the ensemble has no diversity to exploit.
+
+\begin{table}[ht!]
+ \centering
+ \caption{F4RMS extension at $K = 50$: per-dataset accuracy, paired delta vs.~Random in pp, and Bonferroni-corrected significance (which matches vs.~Random and vs.~F4RM on every dataset; only Haberman is , ). Datasets sorted by $m$.}
+ \label{tab:f4rms-results}
+ \setlength{\tabcolsep}{4pt}
+ \scriptsize
+ \resizebox{\textwidth}{!}{%
+ \begin{tabular}{lrrc@{\hspace{10pt}}lrrc@{\hspace{10pt}}lrrc}
+ \toprule
+ Dataset & Acc. & $\Delta$ & Sig. & Dataset & Acc. & $\Delta$ & Sig. & Dataset & Acc. & $\Delta$ & Sig. \\
+ \midrule
+ Iris & 0.957 & $+2.58$ & $\checkmark$ & Pima Diabetes & 0.744 & $+4.55$ & $\checkmark$ & SatImage & 0.895 & $+6.72$ & $\checkmark$ \\
+ Wine & 0.979 & $+1.29$ & $\checkmark$ & Vehicle & 0.728 & $+5.40$ & $\checkmark$ & Pendigits & 0.990 & $+2.95$ & $\checkmark$ \\
+ Seeds & 0.914 & $+2.44$ & $\checkmark$ & Banknote & 0.997 & $+7.87$ & $\checkmark$ & EEG Eye State & 0.907 & $+20.82$ & $\checkmark$ \\
+ Glass & 0.738 & $+4.52$ & $\checkmark$ & Yeast & 0.589 & $+13.77$ & $\checkmark$ & Magic Gamma & 0.860 & $+9.34$ & $\checkmark$ \\
+ Haberman & 0.693 & $-3.88$ &, & Steel Plates & 0.976 & $+12.41$ & $\checkmark$ & Letter Recognition & 0.948 & $+9.39$ & $\checkmark$ \\
+ Ecoli & 0.858 & $+5.51$ & $\checkmark$ & Segment & 0.963 & $+3.18$ & $\checkmark$ & \multicolumn{4}{l}{\textbf{Sig.~Bonferroni: 20/21}} \\
+ Ionosphere & 0.939 & $+3.37$ & $\checkmark$ & Waveform & 0.847 & $+7.35$ & $\checkmark$ & & & & \\
+ Breast Cancer & 0.967 & $+0.68$ & $\checkmark$ & & & & & & & & \\
+ Balance Scale & 0.847 & $+22.25$ & $\checkmark$ & & & & & & & & \\
+ \bottomrule
+ \end{tabular}%
+ }
+\end{table}
+
+\subsection{Pareto-Frontier Results}
+\label{sec:results-pareto}
+
+Across the Pareto-frontier protocol, F4RM-Cuckoo achieves Pareto-frontier membership on every one of the 21 datasets against every one of the 10 baselines: on no (dataset, baseline) pair does F4RM-Cuckoo's frontier sit entirely below the baseline's; it always contributes at least one non-dominated point to the joint envelope. Table~\ref{tab:pareto-summary} reports the dominance counts aggregated across all 21 datasets; per-dataset frontier plots are in the open-source artifact.
+
+\begin{table}[ht!]
+ \centering
+ \caption{Pareto-dominance counts of F4RM-Cuckoo against each of the ten baselines, aggregated across all 21 datasets. \emph{Strict-dom.}: every point on the baseline's frontier is dominated by some F4RM-Cuckoo point. \emph{Mixed}: both systems contribute non-dominated points to the joint envelope. \emph{Env.~share}: mean fraction of joint Pareto-envelope points contributed by F4RM-Cuckoo. F4RM-Cuckoo is never strictly dominated by any baseline on any dataset (omitted column, always 0/21).}
+ \label{tab:pareto-summary}
+ \small
+ \setlength{\tabcolsep}{10pt}
+ \begin{tabular}{lccc}
+ \toprule
+ Baseline & Strict-dom. (of 21) & Mixed (of 21) & Env.~share \\
+ \midrule
+ DT & 11 & 10 & 74.1\% \\
+ RF & 9 & 12 & 89.3\% \\
+ XGBoost & 6 & 15 & 89.0\% \\
+ LightGBM & 6 & 15 & 83.6\% \\
+ CatBoost & 3 & 18 & 90.3\% \\
+ MLP & 14 & 7 & 90.5\% \\
+ FT-Transformer & 18 & 3 & \textbf{98.5\%} \\
+ BTHOWeN & 1 & 20 & 72.1\% \\
+ DWN & 12 & 9 & 96.4\% \\
+ ULEEN & 4 & 17 & 77.5\% \\
+ \bottomrule
+ \end{tabular}
+\end{table}
+
+A stronger framing: F4RM-Cuckoo achieves a higher accuracy-per-byte ratio than every gradient-boosting baseline (XGBoost, LightGBM, CatBoost) and random forest on \textbf{every} one of 21 datasets, plus 21/21 vs.~FT-Transformer and 18/21 vs.~MLP among deep tabular baselines, and 19/21 vs.~DWN among prior weightless systems. Stratifying by deployment memory budget, F4RM-Cuckoo wins the majority of comparable datasets in the 10--100~KB and 1--10~KB bands typical of microcontroller flash and SRAM at the edge, including 14/14 against BTHOWeN in 10--100~KB; below 1~KB, BTHOWeN wins on 12/20 (the cuckoo filter is too small for F4RM's bit redistribution to express). The comparison is closer against ULEEN (9/21 accuracy-per-byte) and BTHOWeN (6/21) at unconstrained budgets, where the architectures are designed for similar memory regimes.
+

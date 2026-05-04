@@ -1,0 +1,902 @@
+system,dataset,mem_band,best_acc_in_band,hp_id_at_best,n_seeds
+BTHOWeN,Balance Scale,<1KB,0.8368,"{""addressSize"": 6, ""bitsPerInput"": 9, ""numBits"": 128, ""numHashes"": 4}",10
+BTHOWeN,Balance Scale,1-10KB,0.8496,"{""addressSize"": 6, ""bitsPerInput"": 9, ""numBits"": 512, ""numHashes"": 2}",10
+BTHOWeN,Banknote,<1KB,0.986909090909091,"{""addressSize"": 12, ""bitsPerInput"": 9, ""numBits"": 512, ""numHashes"": 4}",10
+BTHOWeN,Banknote,1-10KB,0.992,"{""addressSize"": 20, ""bitsPerInput"": 9, ""numBits"": 2048, ""numHashes"": 4}",10
+BTHOWeN,Breast Cancer,<1KB,0.9491228070175438,"{""addressSize"": 6, ""bitsPerInput"": 3, ""numBits"": 128, ""numHashes"": 2}",10
+BTHOWeN,Breast Cancer,1-10KB,0.9596491228070174,"{""addressSize"": 20, ""bitsPerInput"": 9, ""numBits"": 2048, ""numHashes"": 2}",10
+BTHOWeN,Breast Cancer,10-100KB,0.9491228070175438,"{""addressSize"": 12, ""bitsPerInput"": 9, ""numBits"": 2048, ""numHashes"": 4}",10
+BTHOWeN,EEG Eye State,<1KB,0.580173564753004,"{""addressSize"": 28, ""bitsPerInput"": 9, ""numBits"": 512, ""numHashes"": 4}",10
+BTHOWeN,EEG Eye State,1-10KB,0.5785046728971962,"{""addressSize"": 28, ""bitsPerInput"": 3, ""numBits"": 2048, ""numHashes"": 4}",10
+BTHOWeN,EEG Eye State,10-100KB,0.5667556742323098,"{""addressSize"": 6, ""bitsPerInput"": 9, ""numBits"": 2048, ""numHashes"": 2}",10
+BTHOWeN,Ecoli,<1KB,0.8176470588235294,"{""addressSize"": 12, ""bitsPerInput"": 9, ""numBits"": 128, ""numHashes"": 4}",10
+BTHOWeN,Ecoli,1-10KB,0.8411764705882353,"{""addressSize"": 8, ""bitsPerInput"": 8, ""numBits"": 1024, ""numHashes"": 2}",5
+BTHOWeN,Ecoli,10-100KB,0.8205882352941176,"{""addressSize"": 4, ""bitsPerInput"": 6, ""numBits"": 1024, ""numHashes"": 3}",5
+BTHOWeN,Glass,<1KB,0.6744186046511629,"{""addressSize"": 12, ""bitsPerInput"": 9, ""numBits"": 128, ""numHashes"": 2}",10
+BTHOWeN,Glass,1-10KB,0.6604651162790698,"{""addressSize"": 12, ""bitsPerInput"": 9, ""numBits"": 512, ""numHashes"": 4}",10
+BTHOWeN,Glass,10-100KB,0.6465116279069767,"{""addressSize"": 12, ""bitsPerInput"": 9, ""numBits"": 2048, ""numHashes"": 4}",10
+BTHOWeN,Haberman,<1KB,0.7516129032258064,"{""addressSize"": 6, ""bitsPerInput"": 3, ""numBits"": 128, ""numHashes"": 4}",10
+BTHOWeN,Haberman,1-10KB,0.7516129032258064,"{""addressSize"": 6, ""bitsPerInput"": 3, ""numBits"": 2048, ""numHashes"": 2}",10
+BTHOWeN,Ionosphere,<1KB,0.8845070422535211,"{""addressSize"": 12, ""bitsPerInput"": 3, ""numBits"": 128, ""numHashes"": 4}",10
+BTHOWeN,Ionosphere,1-10KB,0.9183098591549296,"{""addressSize"": 20, ""bitsPerInput"": 3, ""numBits"": 2048, ""numHashes"": 2}",10
+BTHOWeN,Ionosphere,10-100KB,0.895774647887324,"{""addressSize"": 12, ""bitsPerInput"": 9, ""numBits"": 2048, ""numHashes"": 4}",10
+BTHOWeN,Iris,<1KB,0.96,"{""addressSize"": 2, ""bitsPerInput"": 3, ""numBits"": 128, ""numHashes"": 1}",10
+BTHOWeN,Iris,1-10KB,0.9400000000000001,"{""addressSize"": 12, ""bitsPerInput"": 9, ""numBits"": 2048, ""numHashes"": 4}",10
+BTHOWeN,Letter Recognition,<1KB,0.24609999999999999,"{""addressSize"": 28, ""bitsPerInput"": 3, ""numBits"": 128, ""numHashes"": 4}",10
+BTHOWeN,Letter Recognition,1-10KB,0.7536,"{""addressSize"": 12, ""bitsPerInput"": 9, ""numBits"": 128, ""numHashes"": 2}",10
+BTHOWeN,Letter Recognition,10-100KB,0.900925,"{""addressSize"": 20, ""bitsPerInput"": 15, ""numBits"": 2048, ""numHashes"": 4}",10
+BTHOWeN,Letter Recognition,100KB-1MB,0.7295,"{""addressSize"": 6, ""bitsPerInput"": 9, ""numBits"": 2048, ""numHashes"": 2}",10
+BTHOWeN,Magic Gamma,<1KB,0.7656677181913775,"{""addressSize"": 12, ""bitsPerInput"": 9, ""numBits"": 128, ""numHashes"": 2}",10
+BTHOWeN,Magic Gamma,1-10KB,0.7874868559411146,"{""addressSize"": 6, ""bitsPerInput"": 9, ""numBits"": 2048, ""numHashes"": 4}",10
+BTHOWeN,Pendigits,<1KB,0.8875852660300136,"{""addressSize"": 12, ""bitsPerInput"": 3, ""numBits"": 128, ""numHashes"": 4}",10
+BTHOWeN,Pendigits,1-10KB,0.9715325147794452,"{""addressSize"": 12, ""bitsPerInput"": 9, ""numBits"": 512, ""numHashes"": 2}",10
+BTHOWeN,Pendigits,10-100KB,0.9757162346521145,"{""addressSize"": 20, ""bitsPerInput"": 9, ""numBits"": 2048, ""numHashes"": 4}",10
+BTHOWeN,Pima Diabetes,<1KB,0.7155844155844155,"{""addressSize"": 12, ""bitsPerInput"": 9, ""numBits"": 512, ""numHashes"": 2}",10
+BTHOWeN,Pima Diabetes,1-10KB,0.7337662337662337,"{""addressSize"": 6, ""bitsPerInput"": 9, ""numBits"": 2048, ""numHashes"": 2}",10
+BTHOWeN,SatImage,<1KB,0.8363919129082426,"{""addressSize"": 12, ""bitsPerInput"": 3, ""numBits"": 128, ""numHashes"": 4}",10
+BTHOWeN,SatImage,1-10KB,0.8650077760497668,"{""addressSize"": 6, ""bitsPerInput"": 9, ""numBits"": 128, ""numHashes"": 2}",10
+BTHOWeN,SatImage,10-100KB,0.8796267496111975,"{""addressSize"": 20, ""bitsPerInput"": 9, ""numBits"": 2048, ""numHashes"": 2}",10
+BTHOWeN,Seeds,<1KB,0.9047619047619048,"{""addressSize"": 12, ""bitsPerInput"": 3, ""numBits"": 512, ""numHashes"": 2}",10
+BTHOWeN,Seeds,1-10KB,0.9095238095238095,"{""addressSize"": 12, ""bitsPerInput"": 9, ""numBits"": 2048, ""numHashes"": 2}",10
+BTHOWeN,Segment,<1KB,0.919047619047619,"{""addressSize"": 20, ""bitsPerInput"": 9, ""numBits"": 128, ""numHashes"": 2}",10
+BTHOWeN,Segment,1-10KB,0.9385281385281384,"{""addressSize"": 28, ""bitsPerInput"": 9, ""numBits"": 512, ""numHashes"": 2}",10
+BTHOWeN,Segment,10-100KB,0.9415584415584416,"{""addressSize"": 28, ""bitsPerInput"": 9, ""numBits"": 2048, ""numHashes"": 2}",10
+BTHOWeN,Steel Plates,<1KB,0.8262210796915166,"{""addressSize"": 12, ""bitsPerInput"": 9, ""numBits"": 128, ""numHashes"": 2}",10
+BTHOWeN,Steel Plates,1-10KB,0.8910025706940875,"{""addressSize"": 20, ""bitsPerInput"": 9, ""numBits"": 2048, ""numHashes"": 2}",10
+BTHOWeN,Steel Plates,10-100KB,0.8365038560411311,"{""addressSize"": 12, ""bitsPerInput"": 9, ""numBits"": 2048, ""numHashes"": 4}",10
+BTHOWeN,Vehicle,<1KB,0.6341176470588236,"{""addressSize"": 6, ""bitsPerInput"": 3, ""numBits"": 128, ""numHashes"": 2}",10
+BTHOWeN,Vehicle,1-10KB,0.6905882352941177,"{""addressSize"": 16, ""bitsPerInput"": 8, ""numBits"": 1024, ""numHashes"": 2}",5
+BTHOWeN,Vehicle,10-100KB,0.6717647058823529,"{""addressSize"": 12, ""bitsPerInput"": 9, ""numBits"": 2048, ""numHashes"": 4}",10
+BTHOWeN,Waveform,<1KB,0.7644,"{""addressSize"": 6, ""bitsPerInput"": 3, ""numBits"": 128, ""numHashes"": 4}",10
+BTHOWeN,Waveform,1-10KB,0.8106,"{""addressSize"": 6, ""bitsPerInput"": 9, ""numBits"": 128, ""numHashes"": 4}",10
+BTHOWeN,Waveform,10-100KB,0.8154,"{""addressSize"": 6, ""bitsPerInput"": 9, ""numBits"": 512, ""numHashes"": 2}",10
+BTHOWeN,Wine,<1KB,0.961111111111111,"{""addressSize"": 6, ""bitsPerInput"": 9, ""numBits"": 128, ""numHashes"": 4}",10
+BTHOWeN,Wine,1-10KB,0.9666666666666666,"{""addressSize"": 4, ""bitsPerInput"": 8, ""numBits"": 256, ""numHashes"": 2}",5
+BTHOWeN,Wine,10-100KB,0.9388888888888889,"{""addressSize"": 6, ""bitsPerInput"": 9, ""numBits"": 2048, ""numHashes"": 4}",10
+BTHOWeN,Yeast,<1KB,0.49696969696969695,"{""addressSize"": 12, ""bitsPerInput"": 9, ""numBits"": 128, ""numHashes"": 4}",10
+BTHOWeN,Yeast,1-10KB,0.5070707070707071,"{""addressSize"": 6, ""bitsPerInput"": 9, ""numBits"": 512, ""numHashes"": 2}",10
+BTHOWeN,Yeast,10-100KB,0.5252525252525253,"{""addressSize"": 6, ""bitsPerInput"": 9, ""numBits"": 2048, ""numHashes"": 2}",10
+BTHOWeN,australian,<1KB,0.846376811594203,"{""addressSize"": 6, ""bitsPerInput"": 9, ""numBits"": 128, ""numHashes"": 2}",10
+BTHOWeN,australian,1-10KB,0.8565217391304347,"{""addressSize"": 6, ""bitsPerInput"": 9, ""numBits"": 512, ""numHashes"": 2}",10
+BTHOWeN,australian,10-100KB,0.8434782608695652,"{""addressSize"": 6, ""bitsPerInput"": 9, ""numBits"": 2048, ""numHashes"": 4}",10
+BTHOWeN,blood-transfusion,<1KB,0.7746666666666666,"{""addressSize"": 6, ""bitsPerInput"": 9, ""numBits"": 512, ""numHashes"": 2}",5
+BTHOWeN,blood-transfusion,1-10KB,0.768,"{""addressSize"": 6, ""bitsPerInput"": 3, ""numBits"": 2048, ""numHashes"": 2}",5
+BTHOWeN,christine,1-10KB,0.546309963099631,"{""addressSize"": 20, ""bitsPerInput"": 3, ""numBits"": 128, ""numHashes"": 4}",5
+BTHOWeN,christine,10-100KB,0.6654981549815498,"{""addressSize"": 12, ""bitsPerInput"": 9, ""numBits"": 128, ""numHashes"": 4}",10
+BTHOWeN,christine,100KB-1MB,0.6750922509225092,"{""addressSize"": 12, ""bitsPerInput"": 9, ""numBits"": 2048, ""numHashes"": 4}",10
+BTHOWeN,christine,>1MB,0.622140221402214,"{""addressSize"": 6, ""bitsPerInput"": 9, ""numBits"": 2048, ""numHashes"": 2}",10
+BTHOWeN,higgs-small,<1KB,0.5475471698113208,"{""addressSize"": 6, ""bitsPerInput"": 3, ""numBits"": 128, ""numHashes"": 2}",5
+BTHOWeN,higgs-small,1-10KB,0.5567975522692504,"{""addressSize"": 6, ""bitsPerInput"": 3, ""numBits"": 2048, ""numHashes"": 4}",5
+BTHOWeN,higgs-small,10-100KB,0.5566751657317696,"{""addressSize"": 6, ""bitsPerInput"": 9, ""numBits"": 2048, ""numHashes"": 2}",5
+BTHOWeN,jasmine,<1KB,0.7644891122278057,"{""addressSize"": 20, ""bitsPerInput"": 3, ""numBits"": 128, ""numHashes"": 4}",5
+BTHOWeN,jasmine,1-10KB,0.7695142378559464,"{""addressSize"": 6, ""bitsPerInput"": 3, ""numBits"": 512, ""numHashes"": 2}",5
+BTHOWeN,jasmine,10-100KB,0.7701842546063652,"{""addressSize"": 12, ""bitsPerInput"": 9, ""numBits"": 2048, ""numHashes"": 4}",5
+BTHOWeN,jasmine,100KB-1MB,0.7574539363484087,"{""addressSize"": 6, ""bitsPerInput"": 9, ""numBits"": 2048, ""numHashes"": 2}",5
+BTHOWeN,miniboone,<1KB,0.8350824587706146,"{""addressSize"": 20, ""bitsPerInput"": 9, ""numBits"": 128, ""numHashes"": 4}",10
+BTHOWeN,miniboone,1-10KB,0.8392957367470111,"{""addressSize"": 20, ""bitsPerInput"": 9, ""numBits"": 512, ""numHashes"": 2}",10
+BTHOWeN,miniboone,10-100KB,0.8350901472340752,"{""addressSize"": 12, ""bitsPerInput"": 9, ""numBits"": 2048, ""numHashes"": 2}",10
+BTHOWeN,nomao,<1KB,0.8833889453068331,"{""addressSize"": 12, ""bitsPerInput"": 3, ""numBits"": 128, ""numHashes"": 2}",10
+BTHOWeN,nomao,1-10KB,0.9321630639779487,"{""addressSize"": 28, ""bitsPerInput"": 3, ""numBits"": 2048, ""numHashes"": 2}",10
+BTHOWeN,nomao,10-100KB,0.9426954881764109,"{""addressSize"": 20, ""bitsPerInput"": 9, ""numBits"": 2048, ""numHashes"": 4}",10
+BTHOWeN,phoneme,<1KB,0.7837187789084181,"{""addressSize"": 12, ""bitsPerInput"": 9, ""numBits"": 512, ""numHashes"": 4}",10
+BTHOWeN,phoneme,1-10KB,0.7972247918593894,"{""addressSize"": 20, ""bitsPerInput"": 9, ""numBits"": 2048, ""numHashes"": 4}",10
+BTHOWeN,skin-segmentation,<1KB,0.9805965885905493,"{""addressSize"": 12, ""bitsPerInput"": 9, ""numBits"": 128, ""numHashes"": 4}",5
+BTHOWeN,skin-segmentation,1-10KB,0.9778911287031746,"{""addressSize"": 12, ""bitsPerInput"": 9, ""numBits"": 2048, ""numHashes"": 2}",5
+BTHOWeN,sylvine,<1KB,0.8204878048780488,"{""addressSize"": 6, ""bitsPerInput"": 9, ""numBits"": 128, ""numHashes"": 4}",5
+BTHOWeN,sylvine,1-10KB,0.8364878048780489,"{""addressSize"": 6, ""bitsPerInput"": 9, ""numBits"": 512, ""numHashes"": 2}",5
+BTHOWeN,sylvine,10-100KB,0.8171707317073171,"{""addressSize"": 6, ""bitsPerInput"": 9, ""numBits"": 2048, ""numHashes"": 2}",5
+CatBoost,Balance Scale,10-100KB,0.9173333333333334,"{""depth"": 4, ""iterations"": 100, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Balance Scale,100KB-1MB,0.9146666666666667,"{""depth"": 4, ""iterations"": 500, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Balance Scale,>1MB,0.8746666666666667,"{""depth"": 8, ""iterations"": 500, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Banknote,10-100KB,0.9963636363636365,"{""depth"": 4, ""iterations"": 100, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Banknote,100KB-1MB,0.9975757575757576,"{""depth"": 4, ""iterations"": 500, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Banknote,>1MB,0.9975757575757576,"{""depth"": 8, ""iterations"": 500, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Breast Cancer,10-100KB,0.9754385964912281,"{""depth"": 4, ""iterations"": 100, ""l2_leaf_reg"": 3, ""learning_rate"": 0.3}",5
+CatBoost,Breast Cancer,100KB-1MB,0.9754385964912281,"{""depth"": 8, ""iterations"": 100, ""l2_leaf_reg"": 1, ""learning_rate"": 0.1}",5
+CatBoost,Breast Cancer,>1MB,0.9754385964912281,"{""depth"": 10, ""iterations"": 500, ""l2_leaf_reg"": 3, ""learning_rate"": 0.3}",5
+CatBoost,EEG Eye State,10-100KB,0.8093012906097018,"{""depth"": 4, ""iterations"": 100, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,EEG Eye State,100KB-1MB,0.9087672452158433,"{""depth"": 4, ""iterations"": 500, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,EEG Eye State,>1MB,0.9561637739207832,"{""depth"": 8, ""iterations"": 500, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Ecoli,100KB-1MB,0.9068627450980392,"{""depth"": 4, ""iterations"": 500, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Ecoli,>1MB,0.9117647058823529,"{""depth"": 8, ""iterations"": 100, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Glass,100KB-1MB,0.8093023255813954,"{""depth"": 4, ""iterations"": 100, ""l2_leaf_reg"": 3, ""learning_rate"": 0.3}",5
+CatBoost,Glass,>1MB,0.8,"{""depth"": 6, ""iterations"": 1000, ""l2_leaf_reg"": 1, ""learning_rate"": 0.1}",5
+CatBoost,Haberman,10-100KB,0.7548387096774193,"{""depth"": 4, ""iterations"": 100, ""l2_leaf_reg"": 1, ""learning_rate"": 0.03}",5
+CatBoost,Haberman,100KB-1MB,0.7290322580645161,"{""depth"": 6, ""iterations"": 100, ""l2_leaf_reg"": 10, ""learning_rate"": 0.1}",5
+CatBoost,Haberman,>1MB,0.7129032258064516,"{""depth"": 10, ""iterations"": 100, ""l2_leaf_reg"": 3, ""learning_rate"": 0.03}",5
+CatBoost,Ionosphere,10-100KB,0.9530516431924884,"{""depth"": 4, ""iterations"": 100, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Ionosphere,100KB-1MB,0.948356807511737,"{""depth"": 4, ""iterations"": 500, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Ionosphere,>1MB,0.9436619718309859,"{""depth"": 8, ""iterations"": 500, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Iris,10-100KB,0.9555555555555556,"{""depth"": 4, ""iterations"": 100, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Iris,100KB-1MB,0.9555555555555556,"{""depth"": 4, ""iterations"": 500, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Iris,>1MB,0.9555555555555556,"{""depth"": 8, ""iterations"": 500, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Letter Recognition,100KB-1MB,0.8528333333333333,"{""depth"": 4, ""iterations"": 100, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Letter Recognition,>1MB,0.9645833333333332,"{""depth"": 8, ""iterations"": 500, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Magic Gamma,10-100KB,0.8675955134945671,"{""depth"": 4, ""iterations"": 100, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Magic Gamma,100KB-1MB,0.8862600771118121,"{""depth"": 4, ""iterations"": 500, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Magic Gamma,>1MB,0.8864353312302838,"{""depth"": 8, ""iterations"": 500, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Pendigits,100KB-1MB,0.9889343641048961,"{""depth"": 4, ""iterations"": 500, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Pendigits,>1MB,0.9910565408519023,"{""depth"": 8, ""iterations"": 500, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Pima Diabetes,10-100KB,0.7662337662337663,"{""depth"": 4, ""iterations"": 100, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Pima Diabetes,100KB-1MB,0.7575757575757575,"{""depth"": 8, ""iterations"": 100, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Pima Diabetes,>1MB,0.7467532467532467,"{""depth"": 8, ""iterations"": 500, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,SatImage,100KB-1MB,0.9165370658372214,"{""depth"": 4, ""iterations"": 500, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,SatImage,>1MB,0.9212026956972524,"{""depth"": 8, ""iterations"": 500, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Seeds,10-100KB,0.9365079365079364,"{""depth"": 4, ""iterations"": 100, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Seeds,100KB-1MB,0.9444444444444443,"{""depth"": 4, ""iterations"": 500, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Seeds,>1MB,0.9523809523809524,"{""depth"": 8, ""iterations"": 500, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Segment,100KB-1MB,0.9797979797979798,"{""depth"": 4, ""iterations"": 500, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Segment,>1MB,0.9812409812409811,"{""depth"": 8, ""iterations"": 500, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Steel Plates,10-100KB,1.0,"{""depth"": 4, ""iterations"": 100, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Steel Plates,100KB-1MB,1.0,"{""depth"": 4, ""iterations"": 500, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Vehicle,10-100KB,0.7411764705882353,"{""depth"": 4, ""iterations"": 100, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Vehicle,100KB-1MB,0.7647058823529411,"{""depth"": 4, ""iterations"": 500, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Vehicle,>1MB,0.7647058823529411,"{""depth"": 8, ""iterations"": 500, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Waveform,10-100KB,0.8556666666666667,"{""depth"": 4, ""iterations"": 100, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Waveform,100KB-1MB,0.8613333333333334,"{""depth"": 4, ""iterations"": 500, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Waveform,>1MB,0.86,"{""depth"": 8, ""iterations"": 500, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Wine,10-100KB,0.9907407407407408,"{""depth"": 4, ""iterations"": 100, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Wine,100KB-1MB,0.9907407407407408,"{""depth"": 4, ""iterations"": 500, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Wine,>1MB,0.9907407407407408,"{""depth"": 8, ""iterations"": 500, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Yeast,100KB-1MB,0.6464646464646465,"{""depth"": 4, ""iterations"": 100, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+CatBoost,Yeast,>1MB,0.6307519640852974,"{""depth"": 8, ""iterations"": 100, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1}",3
+DT,Balance Scale,1-10KB,0.7792,"{""ccp_alpha"": 0.0, ""criterion"": ""gini"", ""max_depth"": 4, ""min_samples_leaf"": 1, ""min_samples_split"": 10}",5
+DT,Balance Scale,10-100KB,0.7632,"{""ccp_alpha"": 0.0, ""criterion"": ""gini"", ""max_depth"": 16, ""min_samples_leaf"": 1, ""min_samples_split"": 2}",5
+DT,Banknote,1-10KB,0.9854545454545454,"{""ccp_alpha"": 0.0, ""criterion"": ""entropy"", ""max_depth"": 16, ""min_samples_leaf"": 1, ""min_samples_split"": 2}",5
+DT,Breast Cancer,1-10KB,0.9438596491228071,"{""ccp_alpha"": 0.0, ""criterion"": ""gini"", ""max_depth"": 4, ""min_samples_leaf"": 5, ""min_samples_split"": 10}",5
+DT,EEG Eye State,1-10KB,0.7654873164218958,"{""ccp_alpha"": 0.001, ""criterion"": ""gini"", ""max_depth"": 8, ""min_samples_leaf"": 1, ""min_samples_split"": 2}",5
+DT,EEG Eye State,10-100KB,0.8195594125500667,"{""ccp_alpha"": 0.0, ""criterion"": ""entropy"", ""max_depth"": 32, ""min_samples_leaf"": 5, ""min_samples_split"": 50}",5
+DT,EEG Eye State,100KB-1MB,0.8411882510013351,"{""ccp_alpha"": 0.0, ""criterion"": ""entropy"", ""max_depth"": 32, ""min_samples_leaf"": 1, ""min_samples_split"": 2}",5
+DT,Ecoli,1-10KB,0.8352941176470589,"{""ccp_alpha"": 0.0, ""criterion"": ""gini"", ""max_depth"": 16, ""min_samples_leaf"": 5, ""min_samples_split"": 10}",5
+DT,Ecoli,10-100KB,0.8205882352941176,"{""ccp_alpha"": 0.0, ""criterion"": ""gini"", ""max_depth"": 16, ""min_samples_leaf"": 1, ""min_samples_split"": 2}",5
+DT,Glass,1-10KB,0.7162790697674419,"{""ccp_alpha"": 0.0, ""criterion"": ""entropy"", ""max_depth"": 16, ""min_samples_leaf"": 1, ""min_samples_split"": 10}",5
+DT,Glass,10-100KB,0.7069767441860465,"{""ccp_alpha"": 0.0, ""criterion"": ""gini"", ""max_depth"": 16, ""min_samples_leaf"": 1, ""min_samples_split"": 2}",5
+DT,Haberman,1-10KB,0.7612903225806452,"{""ccp_alpha"": 0.0, ""criterion"": ""gini"", ""max_depth"": 4, ""min_samples_leaf"": 1, ""min_samples_split"": 10}",5
+DT,Haberman,10-100KB,0.6258064516129032,"{""ccp_alpha"": 0.0, ""criterion"": ""entropy"", ""max_depth"": 32, ""min_samples_leaf"": 1, ""min_samples_split"": 2}",5
+DT,Ionosphere,1-10KB,0.9014084507042254,"{""ccp_alpha"": 0.01, ""criterion"": ""gini"", ""max_depth"": 16, ""min_samples_leaf"": 1, ""min_samples_split"": 50}",5
+DT,Iris,1-10KB,0.9666666666666668,"{""ccp_alpha"": 0.0, ""criterion"": ""entropy"", ""max_depth"": 16, ""min_samples_leaf"": 1, ""min_samples_split"": 10}",5
+DT,Letter Recognition,10-100KB,0.7195,"{""ccp_alpha"": 0.001, ""criterion"": ""gini"", ""max_depth"": 32, ""min_samples_leaf"": 1, ""min_samples_split"": 2}",3
+DT,Letter Recognition,100KB-1MB,0.8851666666666667,"{""ccp_alpha"": 0.0, ""criterion"": ""entropy"", ""max_depth"": 32, ""min_samples_leaf"": 1, ""min_samples_split"": 2}",3
+DT,Letter Recognition,>1MB,0.8738333333333334,"{""ccp_alpha"": 0.0, ""criterion"": ""gini"", ""max_depth"": 32, ""min_samples_leaf"": 1, ""min_samples_split"": 2}",3
+DT,Magic Gamma,1-10KB,0.8426393270241851,"{""ccp_alpha"": 0.001, ""criterion"": ""gini"", ""max_depth"": null, ""min_samples_leaf"": 1, ""min_samples_split"": 10}",5
+DT,Magic Gamma,10-100KB,0.8442691903259727,"{""ccp_alpha"": 0.0, ""criterion"": ""gini"", ""max_depth"": null, ""min_samples_leaf"": 20, ""min_samples_split"": 2}",5
+DT,Magic Gamma,100KB-1MB,0.8288117770767613,"{""ccp_alpha"": 0.0, ""criterion"": ""gini"", ""max_depth"": null, ""min_samples_leaf"": 5, ""min_samples_split"": 10}",5
+DT,Pendigits,1-10KB,0.8277398817644384,"{""ccp_alpha"": 0.01, ""criterion"": ""gini"", ""max_depth"": 16, ""min_samples_leaf"": 1, ""min_samples_split"": 10}",5
+DT,Pendigits,10-100KB,0.9628922237380628,"{""ccp_alpha"": 0.0, ""criterion"": ""entropy"", ""max_depth"": 16, ""min_samples_leaf"": 1, ""min_samples_split"": 2}",5
+DT,Pima Diabetes,1-10KB,0.7701298701298701,"{""ccp_alpha"": 0.01, ""criterion"": ""entropy"", ""max_depth"": 16, ""min_samples_leaf"": 20, ""min_samples_split"": 10}",5
+DT,Pima Diabetes,10-100KB,0.7194805194805195,"{""ccp_alpha"": 0.0, ""criterion"": ""gini"", ""max_depth"": 8, ""min_samples_leaf"": 1, ""min_samples_split"": 2}",5
+DT,SatImage,1-10KB,0.8581648522550545,"{""ccp_alpha"": 0.001, ""criterion"": ""gini"", ""max_depth"": 8, ""min_samples_leaf"": 20, ""min_samples_split"": 10}",5
+DT,SatImage,10-100KB,0.8682737169517886,"{""ccp_alpha"": 0.001, ""criterion"": ""gini"", ""max_depth"": 16, ""min_samples_leaf"": 1, ""min_samples_split"": 10}",5
+DT,Seeds,1-10KB,0.9285714285714285,"{""ccp_alpha"": 0.01, ""criterion"": ""gini"", ""max_depth"": 16, ""min_samples_leaf"": 1, ""min_samples_split"": 2}",5
+DT,Segment,1-10KB,0.9662337662337663,"{""ccp_alpha"": 0.0, ""criterion"": ""entropy"", ""max_depth"": 8, ""min_samples_leaf"": 1, ""min_samples_split"": 2}",5
+DT,Segment,10-100KB,0.9675324675324675,"{""ccp_alpha"": 0.0, ""criterion"": ""entropy"", ""max_depth"": 16, ""min_samples_leaf"": 1, ""min_samples_split"": 2}",5
+DT,Steel Plates,1-10KB,1.0,"{""ccp_alpha"": 0.0, ""criterion"": ""entropy"", ""max_depth"": 16, ""min_samples_leaf"": 1, ""min_samples_split"": 10}",5
+DT,Vehicle,1-10KB,0.7235294117647059,"{""ccp_alpha"": 0.01, ""criterion"": ""entropy"", ""max_depth"": 8, ""min_samples_leaf"": 1, ""min_samples_split"": 2}",5
+DT,Vehicle,10-100KB,0.7235294117647058,"{""ccp_alpha"": 0.0, ""criterion"": ""entropy"", ""max_depth"": 8, ""min_samples_leaf"": 5, ""min_samples_split"": 10}",5
+DT,Waveform,1-10KB,0.7455999999999999,"{""ccp_alpha"": 0.01, ""criterion"": ""entropy"", ""max_depth"": 16, ""min_samples_leaf"": 1, ""min_samples_split"": 10}",5
+DT,Waveform,10-100KB,0.7727999999999999,"{""ccp_alpha"": 0.0, ""criterion"": ""entropy"", ""max_depth"": 16, ""min_samples_leaf"": 20, ""min_samples_split"": 50}",5
+DT,Wine,1-10KB,0.9388888888888889,"{""ccp_alpha"": 0.0, ""criterion"": ""gini"", ""max_depth"": 16, ""min_samples_leaf"": 1, ""min_samples_split"": 2}",5
+DT,Yeast,1-10KB,0.593939393939394,"{""ccp_alpha"": 0.0, ""criterion"": ""entropy"", ""max_depth"": 8, ""min_samples_leaf"": 20, ""min_samples_split"": 50}",5
+DT,Yeast,10-100KB,0.593939393939394,"{""ccp_alpha"": 0.0, ""criterion"": ""entropy"", ""max_depth"": 16, ""min_samples_leaf"": 20, ""min_samples_split"": 10}",5
+DT,Yeast,100KB-1MB,0.5225589225589226,"{""ccp_alpha"": 0.0, ""criterion"": ""entropy"", ""max_depth"": 16, ""min_samples_leaf"": 1, ""min_samples_split"": 2}",5
+DWN,Balance Scale,1-10KB,0.7679999999999999,"{""batch_size"": 32, ""bits_per_input"": 2, ""epochs"": 10, ""lr"": 0.01, ""n"": 4, ""num_luts_l1"": 200, ""num_luts_l2"": 100, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,Balance Scale,10-100KB,0.8213333333333334,"{""batch_size"": 32, ""bits_per_input"": 6, ""epochs"": 15, ""lr"": 0.01, ""n"": 6, ""num_luts_l1"": 1000, ""num_luts_l2"": 500, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,Banknote,1-10KB,0.9466666666666667,"{""batch_size"": 32, ""bits_per_input"": 2, ""epochs"": 10, ""lr"": 0.01, ""n"": 4, ""num_luts_l1"": 200, ""num_luts_l2"": 100, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,Banknote,10-100KB,0.9927272727272727,"{""batch_size"": 32, ""bits_per_input"": 6, ""epochs"": 15, ""lr"": 0.01, ""n"": 6, ""num_luts_l1"": 1000, ""num_luts_l2"": 500, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,Breast Cancer,1-10KB,0.935672514619883,"{""batch_size"": 32, ""bits_per_input"": 2, ""epochs"": 10, ""lr"": 0.01, ""n"": 4, ""num_luts_l1"": 200, ""num_luts_l2"": 100, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",6
+DWN,Breast Cancer,10-100KB,0.9649122807017543,"{""batch_size"": 32, ""bits_per_input"": 3, ""epochs"": 15, ""lr"": 0.01, ""n"": 6, ""num_luts_l1"": 500, ""num_luts_l2"": 250, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",6
+DWN,EEG Eye State,1-10KB,0.7997329773030707,"{""batch_size"": 32, ""bits_per_input"": 2, ""epochs"": 10, ""lr"": 0.01, ""n"": 4, ""num_luts_l1"": 200, ""num_luts_l2"": 100, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,EEG Eye State,10-100KB,0.8854027592345349,"{""batch_size"": 32, ""bits_per_input"": 6, ""epochs"": 20, ""lr"": 0.01, ""n"": 6, ""num_luts_l1"": 2000, ""num_luts_l2"": 1000, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,Ecoli,1-10KB,0.8186274509803922,"{""batch_size"": 32, ""bits_per_input"": 2, ""epochs"": 10, ""lr"": 0.01, ""n"": 4, ""num_luts_l1"": 200, ""num_luts_l2"": 100, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",6
+DWN,Ecoli,10-100KB,0.8676470588235294,"{""batch_size"": 32, ""bits_per_input"": 6, ""epochs"": 15, ""lr"": 0.01, ""n"": 6, ""num_luts_l1"": 1000, ""num_luts_l2"": 500, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",6
+DWN,Glass,1-10KB,0.6201550387596899,"{""batch_size"": 32, ""bits_per_input"": 2, ""epochs"": 10, ""lr"": 0.01, ""n"": 4, ""num_luts_l1"": 200, ""num_luts_l2"": 100, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",6
+DWN,Glass,10-100KB,0.7286821705426357,"{""batch_size"": 32, ""bits_per_input"": 6, ""epochs"": 20, ""lr"": 0.01, ""n"": 6, ""num_luts_l1"": 2000, ""num_luts_l2"": 1000, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",6
+DWN,Haberman,1-10KB,0.6989247311827956,"{""batch_size"": 32, ""bits_per_input"": 2, ""epochs"": 10, ""lr"": 0.01, ""n"": 4, ""num_luts_l1"": 200, ""num_luts_l2"": 100, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",6
+DWN,Haberman,10-100KB,0.6827956989247311,"{""batch_size"": 32, ""bits_per_input"": 3, ""epochs"": 15, ""lr"": 0.01, ""n"": 6, ""num_luts_l1"": 500, ""num_luts_l2"": 250, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",6
+DWN,Ionosphere,1-10KB,0.9014084507042254,"{""batch_size"": 32, ""bits_per_input"": 2, ""epochs"": 10, ""lr"": 0.01, ""n"": 4, ""num_luts_l1"": 200, ""num_luts_l2"": 100, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",6
+DWN,Ionosphere,10-100KB,0.9107981220657276,"{""batch_size"": 32, ""bits_per_input"": 6, ""epochs"": 15, ""lr"": 0.01, ""n"": 6, ""num_luts_l1"": 1000, ""num_luts_l2"": 500, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",6
+DWN,Iris,1-10KB,0.9555555555555556,"{""batch_size"": 32, ""bits_per_input"": 2, ""epochs"": 10, ""lr"": 0.01, ""n"": 4, ""num_luts_l1"": 200, ""num_luts_l2"": 100, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",6
+DWN,Iris,10-100KB,0.9555555555555556,"{""batch_size"": 32, ""bits_per_input"": 3, ""epochs"": 15, ""lr"": 0.01, ""n"": 6, ""num_luts_l1"": 1000, ""num_luts_l2"": 500, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",6
+DWN,Letter Recognition,1-10KB,0.47625,"{""batch_size"": 32, ""bits_per_input"": 2, ""epochs"": 10, ""lr"": 0.01, ""n"": 4, ""num_luts_l1"": 200, ""num_luts_l2"": 100, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,Letter Recognition,10-100KB,0.9398333333333332,"{""batch_size"": 32, ""bits_per_input"": 6, ""epochs"": 20, ""lr"": 0.01, ""n"": 6, ""num_luts_l1"": 2000, ""num_luts_l2"": 1000, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,Magic Gamma,1-10KB,0.806869961444094,"{""batch_size"": 32, ""bits_per_input"": 2, ""epochs"": 10, ""lr"": 0.01, ""n"": 4, ""num_luts_l1"": 200, ""num_luts_l2"": 100, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,Magic Gamma,10-100KB,0.8214160532772521,"{""batch_size"": 32, ""bits_per_input"": 6, ""epochs"": 20, ""lr"": 0.01, ""n"": 6, ""num_luts_l1"": 2000, ""num_luts_l2"": 1000, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,Pendigits,1-10KB,0.9173866909201153,"{""batch_size"": 32, ""bits_per_input"": 2, ""epochs"": 10, ""lr"": 0.01, ""n"": 4, ""num_luts_l1"": 200, ""num_luts_l2"": 100, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,Pendigits,10-100KB,0.9886311959981811,"{""batch_size"": 32, ""bits_per_input"": 6, ""epochs"": 20, ""lr"": 0.01, ""n"": 6, ""num_luts_l1"": 2000, ""num_luts_l2"": 1000, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,Pima Diabetes,1-10KB,0.6969696969696969,"{""batch_size"": 32, ""bits_per_input"": 2, ""epochs"": 10, ""lr"": 0.01, ""n"": 4, ""num_luts_l1"": 200, ""num_luts_l2"": 100, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,Pima Diabetes,10-100KB,0.7164502164502164,"{""batch_size"": 32, ""bits_per_input"": 2, ""epochs"": 10, ""lr"": 0.01, ""n"": 6, ""num_luts_l1"": 500, ""num_luts_l2"": 250, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,SatImage,1-10KB,0.8639191290824261,"{""batch_size"": 32, ""bits_per_input"": 2, ""epochs"": 10, ""lr"": 0.01, ""n"": 4, ""num_luts_l1"": 200, ""num_luts_l2"": 100, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,SatImage,10-100KB,0.9061689994815967,"{""batch_size"": 32, ""bits_per_input"": 6, ""epochs"": 15, ""lr"": 0.01, ""n"": 6, ""num_luts_l1"": 1000, ""num_luts_l2"": 500, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,Seeds,1-10KB,0.9206349206349206,"{""batch_size"": 32, ""bits_per_input"": 2, ""epochs"": 10, ""lr"": 0.01, ""n"": 4, ""num_luts_l1"": 200, ""num_luts_l2"": 100, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",6
+DWN,Seeds,10-100KB,0.9126984126984127,"{""batch_size"": 32, ""bits_per_input"": 3, ""epochs"": 15, ""lr"": 0.01, ""n"": 6, ""num_luts_l1"": 1000, ""num_luts_l2"": 500, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",6
+DWN,Segment,1-10KB,0.9285714285714285,"{""batch_size"": 32, ""bits_per_input"": 2, ""epochs"": 10, ""lr"": 0.01, ""n"": 4, ""num_luts_l1"": 200, ""num_luts_l2"": 100, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,Segment,10-100KB,0.9747474747474748,"{""batch_size"": 32, ""bits_per_input"": 6, ""epochs"": 15, ""lr"": 0.01, ""n"": 6, ""num_luts_l1"": 1000, ""num_luts_l2"": 500, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,Steel Plates,1-10KB,1.0,"{""batch_size"": 32, ""bits_per_input"": 2, ""epochs"": 10, ""lr"": 0.01, ""n"": 4, ""num_luts_l1"": 200, ""num_luts_l2"": 100, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,Steel Plates,10-100KB,1.0,"{""batch_size"": 32, ""bits_per_input"": 3, ""epochs"": 15, ""lr"": 0.01, ""n"": 6, ""num_luts_l1"": 500, ""num_luts_l2"": 250, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,Vehicle,1-10KB,0.688235294117647,"{""batch_size"": 32, ""bits_per_input"": 2, ""epochs"": 10, ""lr"": 0.01, ""n"": 4, ""num_luts_l1"": 200, ""num_luts_l2"": 100, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,Vehicle,10-100KB,0.7450980392156863,"{""batch_size"": 32, ""bits_per_input"": 6, ""epochs"": 20, ""lr"": 0.01, ""n"": 6, ""num_luts_l1"": 2000, ""num_luts_l2"": 1000, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,Waveform,1-10KB,0.8163333333333332,"{""batch_size"": 32, ""bits_per_input"": 2, ""epochs"": 10, ""lr"": 0.01, ""n"": 4, ""num_luts_l1"": 200, ""num_luts_l2"": 100, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,Waveform,10-100KB,0.8286666666666666,"{""batch_size"": 32, ""bits_per_input"": 6, ""epochs"": 15, ""lr"": 0.01, ""n"": 6, ""num_luts_l1"": 1000, ""num_luts_l2"": 500, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,Wine,1-10KB,0.9537037037037037,"{""batch_size"": 32, ""bits_per_input"": 2, ""epochs"": 10, ""lr"": 0.01, ""n"": 4, ""num_luts_l1"": 200, ""num_luts_l2"": 100, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",6
+DWN,Wine,10-100KB,0.9722222222222222,"{""batch_size"": 32, ""bits_per_input"": 6, ""epochs"": 20, ""lr"": 0.01, ""n"": 6, ""num_luts_l1"": 2000, ""num_luts_l2"": 1000, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",6
+DWN,Yeast,1-10KB,0.494949494949495,"{""batch_size"": 32, ""bits_per_input"": 2, ""epochs"": 10, ""lr"": 0.01, ""n"": 4, ""num_luts_l1"": 200, ""num_luts_l2"": 100, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,Yeast,10-100KB,0.5757575757575757,"{""batch_size"": 32, ""bits_per_input"": 6, ""epochs"": 15, ""lr"": 0.01, ""n"": 6, ""num_luts_l1"": 1000, ""num_luts_l2"": 500, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,australian,1-10KB,0.8429951690821257,"{""batch_size"": 32, ""bits_per_input"": 2, ""epochs"": 10, ""lr"": 0.01, ""n"": 4, ""num_luts_l1"": 200, ""num_luts_l2"": 100, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,australian,10-100KB,0.852657004830918,"{""batch_size"": 32, ""bits_per_input"": 2, ""epochs"": 10, ""lr"": 0.01, ""n"": 6, ""num_luts_l1"": 500, ""num_luts_l2"": 250, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,australian,>1MB,0.8623333333333333,"{""batch_size"": 32, ""bits_per_input"": 200, ""layer_sizes"": [12000, 12000, 12000], ""lr_schedule"": [[0.01, 30], [0.001, 30], [0.0001, 15]], ""n"": 6, ""tau"": 33.333333333333336}",6
+DWN,blood-transfusion,1-10KB,0.7533333333333333,"{""batch_size"": 32, ""bits_per_input"": 2, ""epochs"": 10, ""lr"": 0.01, ""n"": 4, ""num_luts_l1"": 200, ""num_luts_l2"": 100, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,blood-transfusion,10-100KB,0.7711111111111112,"{""batch_size"": 32, ""bits_per_input"": 2, ""epochs"": 10, ""lr"": 0.01, ""n"": 6, ""num_luts_l1"": 500, ""num_luts_l2"": 250, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,christine,1-10KB,0.6961869618696186,"{""batch_size"": 32, ""bits_per_input"": 2, ""epochs"": 10, ""lr"": 0.01, ""n"": 4, ""num_luts_l1"": 200, ""num_luts_l2"": 100, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,christine,10-100KB,0.6841943419434194,"{""batch_size"": 32, ""bits_per_input"": 6, ""epochs"": 20, ""lr"": 0.01, ""n"": 6, ""num_luts_l1"": 2000, ""num_luts_l2"": 1000, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,higgs-small,1-10KB,0.6386537480877102,"{""batch_size"": 64, ""bits_per_input"": 2, ""epochs"": 50, ""lr"": 0.01, ""n"": 4, ""num_luts_l1"": 200, ""num_luts_l2"": 100, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,higgs-small,10-100KB,0.6379398266190719,"{""batch_size"": 32, ""bits_per_input"": 6, ""epochs"": 20, ""lr"": 0.01, ""n"": 6, ""num_luts_l1"": 2000, ""num_luts_l2"": 1000, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,jasmine,1-10KB,0.7733109994416528,"{""batch_size"": 32, ""bits_per_input"": 2, ""epochs"": 10, ""lr"": 0.01, ""n"": 4, ""num_luts_l1"": 200, ""num_luts_l2"": 100, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,jasmine,10-100KB,0.7733109994416528,"{""batch_size"": 32, ""bits_per_input"": 3, ""epochs"": 15, ""lr"": 0.01, ""n"": 6, ""num_luts_l1"": 1000, ""num_luts_l2"": 500, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,miniboone,1-10KB,0.9177718832891246,"{""batch_size"": 32, ""bits_per_input"": 2, ""epochs"": 10, ""lr"": 0.01, ""n"": 4, ""num_luts_l1"": 200, ""num_luts_l2"": 100, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,miniboone,10-100KB,0.9223337049424005,"{""batch_size"": 32, ""bits_per_input"": 6, ""epochs"": 20, ""lr"": 0.01, ""n"": 6, ""num_luts_l1"": 2000, ""num_luts_l2"": 1000, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,nomao,1-10KB,0.9472895207698632,"{""batch_size"": 32, ""bits_per_input"": 2, ""epochs"": 10, ""lr"": 0.01, ""n"": 4, ""num_luts_l1"": 200, ""num_luts_l2"": 100, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,nomao,10-100KB,0.9578316166158904,"{""batch_size"": 32, ""bits_per_input"": 6, ""epochs"": 20, ""lr"": 0.01, ""n"": 6, ""num_luts_l1"": 2000, ""num_luts_l2"": 1000, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,phoneme,1-10KB,0.8023435090965156,"{""batch_size"": 32, ""bits_per_input"": 2, ""epochs"": 10, ""lr"": 0.01, ""n"": 4, ""num_luts_l1"": 200, ""num_luts_l2"": 100, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,phoneme,10-100KB,0.8516805427073697,"{""batch_size"": 64, ""bits_per_input"": 6, ""epochs"": 50, ""lr"": 0.01, ""n"": 6, ""num_luts_l1"": 2000, ""num_luts_l2"": 1000, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,phoneme,>1MB,0.9010027443724945,"{""batch_size"": 32, ""bits_per_input"": 200, ""layer_sizes"": [21000, 21000, 21000], ""lr_schedule"": [[0.01, 30], [0.001, 30], [0.0001, 15]], ""n"": 6, ""tau"": 33.333333333333336}",6
+DWN,skin-segmentation,1-10KB,0.936682173073261,"{""batch_size"": 32, ""bits_per_input"": 2, ""epochs"": 10, ""lr"": 0.01, ""n"": 4, ""num_luts_l1"": 200, ""num_luts_l2"": 100, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,skin-segmentation,10-100KB,0.9857517886776028,"{""batch_size"": 32, ""bits_per_input"": 6, ""epochs"": 20, ""lr"": 0.01, ""n"": 6, ""num_luts_l1"": 2000, ""num_luts_l2"": 1000, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,sylvine,1-10KB,0.8878048780487805,"{""batch_size"": 32, ""bits_per_input"": 2, ""epochs"": 10, ""lr"": 0.01, ""n"": 4, ""num_luts_l1"": 200, ""num_luts_l2"": 100, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+DWN,sylvine,10-100KB,0.9300813008130081,"{""batch_size"": 32, ""bits_per_input"": 6, ""epochs"": 15, ""lr"": 0.01, ""n"": 6, ""num_luts_l1"": 1000, ""num_luts_l2"": 500, ""scheduler_gamma"": 0.1, ""scheduler_step"": 8, ""tau"": 3.3333333333333335}",3
+F4RM-WiSARD-cuckoo,Balance Scale,<1KB,0.8688,"{""a"": 8, ""bleach"": 4, ""t"": 16}",5
+F4RM-WiSARD-cuckoo,Balance Scale,1-10KB,0.9024000000000001,"{""a"": 8, ""bleach"": 4, ""t"": 128}",5
+F4RM-WiSARD-cuckoo,Balance Scale,10-100KB,0.8992000000000001,"{""a"": 12, ""bleach"": 4, ""t"": 256}",5
+F4RM-WiSARD-cuckoo,Banknote,<1KB,0.9992727272727272,"{""a"": 12, ""bleach"": 1, ""t"": 32}",5
+F4RM-WiSARD-cuckoo,Banknote,1-10KB,1.0,"{""a"": 16, ""bleach"": 1, ""t"": 128}",5
+F4RM-WiSARD-cuckoo,Banknote,10-100KB,1.0,"{""a"": 48, ""bleach"": 1, ""t"": 256}",5
+F4RM-WiSARD-cuckoo,Breast Cancer,<1KB,0.9456140350877194,"{""a"": 4, ""bleach"": 2, ""t"": 4}",5
+F4RM-WiSARD-cuckoo,Breast Cancer,1-10KB,0.9614035087719298,"{""a"": 8, ""bleach"": 1, ""t"": 32}",5
+F4RM-WiSARD-cuckoo,Breast Cancer,10-100KB,0.9631578947368421,"{""a"": 4, ""bleach"": 1, ""t"": 128}",5
+F4RM-WiSARD-cuckoo,Breast Cancer,100KB-1MB,0.9578947368421054,"{""a"": 16, ""bleach"": 1, ""t"": 256}",5
+F4RM-WiSARD-cuckoo,EEG Eye State,<1KB,0.5791722296395193,"{""a"": 4, ""bleach"": 4, ""t"": 8}",5
+F4RM-WiSARD-cuckoo,EEG Eye State,1-10KB,0.7558077436582109,"{""a"": 12, ""bleach"": 4, ""t"": 8}",5
+F4RM-WiSARD-cuckoo,EEG Eye State,10-100KB,0.8889853137516688,"{""a"": 28, ""bleach"": 1, ""t"": 32}",5
+F4RM-WiSARD-cuckoo,EEG Eye State,100KB-1MB,0.9427236315086782,"{""a"": 32, ""bleach"": 1, ""t"": 256}",5
+F4RM-WiSARD-cuckoo,Ecoli,<1KB,0.8647058823529411,"{""a"": 12, ""bleach"": 2, ""t"": 16}",5
+F4RM-WiSARD-cuckoo,Ecoli,1-10KB,0.8676470588235293,"{""a"": 12, ""bleach"": 1, ""t"": 32}",5
+F4RM-WiSARD-cuckoo,Ecoli,10-100KB,0.8705882352941176,"{""a"": 12, ""bleach"": 1, ""t"": 256}",5
+F4RM-WiSARD-cuckoo,Glass,<1KB,0.7162790697674419,"{""a"": 4, ""bleach"": 1, ""t"": 8}",5
+F4RM-WiSARD-cuckoo,Glass,1-10KB,0.7534883720930232,"{""a"": 24, ""bleach"": 1, ""t"": 128}",5
+F4RM-WiSARD-cuckoo,Glass,10-100KB,0.7534883720930232,"{""a"": 20, ""bleach"": 1, ""t"": 256}",5
+F4RM-WiSARD-cuckoo,Haberman,<1KB,0.7483870967741936,"{""a"": 24, ""bleach"": 4, ""t"": 16}",5
+F4RM-WiSARD-cuckoo,Haberman,1-10KB,0.7483870967741936,"{""a"": 24, ""bleach"": 4, ""t"": 64}",5
+F4RM-WiSARD-cuckoo,Ionosphere,<1KB,0.8929577464788732,"{""a"": 12, ""bleach"": 2, ""t"": 2}",5
+F4RM-WiSARD-cuckoo,Ionosphere,1-10KB,0.9380281690140844,"{""a"": 28, ""bleach"": 2, ""t"": 16}",5
+F4RM-WiSARD-cuckoo,Ionosphere,10-100KB,0.9492957746478872,"{""a"": 8, ""bleach"": 1, ""t"": 256}",5
+F4RM-WiSARD-cuckoo,Iris,<1KB,0.96,"{""a"": 16, ""bleach"": 1, ""t"": 64}",5
+F4RM-WiSARD-cuckoo,Iris,1-10KB,0.9666666666666668,"{""a"": 12, ""bleach"": 1, ""t"": 128}",5
+F4RM-WiSARD-cuckoo,Letter Recognition,1-10KB,0.69985,"{""a"": 8, ""bleach"": 4, ""t"": 4}",5
+F4RM-WiSARD-cuckoo,Letter Recognition,10-100KB,0.9253500000000001,"{""a"": 12, ""bleach"": 1, ""t"": 32}",5
+F4RM-WiSARD-cuckoo,Letter Recognition,100KB-1MB,0.95335,"{""a"": 20, ""bleach"": 1, ""t"": 256}",5
+F4RM-WiSARD-cuckoo,Magic Gamma,<1KB,0.6902208201892744,"{""a"": 8, ""bleach"": 4, ""t"": 2}",5
+F4RM-WiSARD-cuckoo,Magic Gamma,1-10KB,0.8195057833859096,"{""a"": 12, ""bleach"": 4, ""t"": 16}",5
+F4RM-WiSARD-cuckoo,Magic Gamma,10-100KB,0.8574132492113564,"{""a"": 12, ""bleach"": 4, ""t"": 128}",5
+F4RM-WiSARD-cuckoo,Magic Gamma,100KB-1MB,0.8691903259726603,"{""a"": 28, ""bleach"": 1, ""t"": 256}",5
+F4RM-WiSARD-cuckoo,Pendigits,<1KB,0.6746703046839473,"{""a"": 4, ""bleach"": 4, ""t"": 2}",5
+F4RM-WiSARD-cuckoo,Pendigits,1-10KB,0.9778990450204639,"{""a"": 16, ""bleach"": 1, ""t"": 8}",5
+F4RM-WiSARD-cuckoo,Pendigits,10-100KB,0.9889040472942247,"{""a"": 20, ""bleach"": 1, ""t"": 64}",5
+F4RM-WiSARD-cuckoo,Pendigits,100KB-1MB,0.9899045020463847,"{""a"": 20, ""bleach"": 1, ""t"": 256}",5
+F4RM-WiSARD-cuckoo,Pima Diabetes,<1KB,0.7142857142857142,"{""a"": 4, ""bleach"": 4, ""t"": 8}",5
+F4RM-WiSARD-cuckoo,Pima Diabetes,1-10KB,0.7675324675324675,"{""a"": 8, ""bleach"": 3, ""t"": 64}",5
+F4RM-WiSARD-cuckoo,Pima Diabetes,10-100KB,0.7636363636363637,"{""a"": 8, ""bleach"": 1, ""t"": 256}",5
+F4RM-WiSARD-cuckoo,SatImage,<1KB,0.3097978227060653,"{""a"": 2, ""bleach"": 4, ""t"": 2}",5
+F4RM-WiSARD-cuckoo,SatImage,1-10KB,0.865940902021773,"{""a"": 20, ""bleach"": 2, ""t"": 4}",5
+F4RM-WiSARD-cuckoo,SatImage,10-100KB,0.906687402799378,"{""a"": 24, ""bleach"": 1, ""t"": 32}",5
+F4RM-WiSARD-cuckoo,SatImage,100KB-1MB,0.9122861586314153,"{""a"": 32, ""bleach"": 1, ""t"": 256}",5
+F4RM-WiSARD-cuckoo,Seeds,<1KB,0.9285714285714285,"{""a"": 24, ""bleach"": 1, ""t"": 16}",5
+F4RM-WiSARD-cuckoo,Seeds,1-10KB,0.9380952380952381,"{""a"": 24, ""bleach"": 2, ""t"": 64}",5
+F4RM-WiSARD-cuckoo,Segment,<1KB,0.8419913419913421,"{""a"": 4, ""bleach"": 4, ""t"": 4}",5
+F4RM-WiSARD-cuckoo,Segment,1-10KB,0.9597402597402598,"{""a"": 20, ""bleach"": 1, ""t"": 16}",5
+F4RM-WiSARD-cuckoo,Segment,10-100KB,0.9662337662337663,"{""a"": 12, ""bleach"": 1, ""t"": 64}",5
+F4RM-WiSARD-cuckoo,Segment,100KB-1MB,0.9662337662337663,"{""a"": 28, ""bleach"": 1, ""t"": 256}",5
+F4RM-WiSARD-cuckoo,Steel Plates,<1KB,0.699228791773779,"{""a"": 4, ""bleach"": 4, ""t"": 4}",5
+F4RM-WiSARD-cuckoo,Steel Plates,1-10KB,0.9609254498714653,"{""a"": 20, ""bleach"": 1, ""t"": 8}",5
+F4RM-WiSARD-cuckoo,Steel Plates,10-100KB,0.9897172236503856,"{""a"": 28, ""bleach"": 1, ""t"": 64}",5
+F4RM-WiSARD-cuckoo,Steel Plates,100KB-1MB,0.9922879177377892,"{""a"": 32, ""bleach"": 1, ""t"": 256}",5
+F4RM-WiSARD-cuckoo,Vehicle,<1KB,0.6,"{""a"": 4, ""bleach"": 4, ""t"": 4}",5
+F4RM-WiSARD-cuckoo,Vehicle,1-10KB,0.7494117647058823,"{""a"": 8, ""bleach"": 1, ""t"": 32}",5
+F4RM-WiSARD-cuckoo,Vehicle,10-100KB,0.7482352941176471,"{""a"": 8, ""bleach"": 1, ""t"": 256}",5
+F4RM-WiSARD-cuckoo,Waveform,<1KB,0.49720000000000003,"{""a"": 4, ""bleach"": 4, ""t"": 2}",5
+F4RM-WiSARD-cuckoo,Waveform,1-10KB,0.7794000000000001,"{""a"": 8, ""bleach"": 4, ""t"": 4}",5
+F4RM-WiSARD-cuckoo,Waveform,10-100KB,0.8321999999999999,"{""a"": 8, ""bleach"": 4, ""t"": 32}",5
+F4RM-WiSARD-cuckoo,Waveform,100KB-1MB,0.8486,"{""a"": 12, ""bleach"": 2, ""t"": 256}",5
+F4RM-WiSARD-cuckoo,Waveform,>1MB,0.841,"{""a"": 16, ""bleach"": 1, ""t"": 256}",5
+F4RM-WiSARD-cuckoo,Wine,<1KB,0.9888888888888889,"{""a"": 4, ""bleach"": 2, ""t"": 8}",5
+F4RM-WiSARD-cuckoo,Wine,1-10KB,0.9888888888888889,"{""a"": 2, ""bleach"": 3, ""t"": 128}",5
+F4RM-WiSARD-cuckoo,Wine,10-100KB,0.9833333333333334,"{""a"": 8, ""bleach"": 2, ""t"": 256}",5
+F4RM-WiSARD-cuckoo,Yeast,<1KB,0.46464646464646464,"{""a"": 8, ""bleach"": 4, ""t"": 4}",5
+F4RM-WiSARD-cuckoo,Yeast,1-10KB,0.5885521885521886,"{""a"": 12, ""bleach"": 3, ""t"": 32}",5
+F4RM-WiSARD-cuckoo,Yeast,10-100KB,0.6107744107744107,"{""a"": 20, ""bleach"": 1, ""t"": 256}",5
+F4RM-WiSARD-dense,Balance Scale,<1KB,0.7487999999999999,"{""a"": 8, ""bleach"": 2, ""t"": 2}",5
+F4RM-WiSARD-dense,Balance Scale,1-10KB,0.8880000000000001,"{""a"": 4, ""bleach"": 4, ""t"": 64}",5
+F4RM-WiSARD-dense,Balance Scale,10-100KB,0.9024000000000001,"{""a"": 8, ""bleach"": 4, ""t"": 128}",5
+F4RM-WiSARD-dense,Banknote,<1KB,0.976,"{""a"": 16, ""bleach"": 1, ""t"": 4}",5
+F4RM-WiSARD-dense,Banknote,1-10KB,1.0,"{""a"": 20, ""bleach"": 1, ""t"": 32}",5
+F4RM-WiSARD-dense,Banknote,10-100KB,1.0,"{""a"": 16, ""bleach"": 1, ""t"": 128}",5
+F4RM-WiSARD-dense,Breast Cancer,1-10KB,0.9578947368421054,"{""a"": 8, ""bleach"": 1, ""t"": 4}",5
+F4RM-WiSARD-dense,Breast Cancer,10-100KB,0.9631578947368421,"{""a"": 4, ""bleach"": 1, ""t"": 128}",5
+F4RM-WiSARD-dense,Breast Cancer,100KB-1MB,0.9614035087719298,"{""a"": 24, ""bleach"": 1, ""t"": 128}",5
+F4RM-WiSARD-dense,EEG Eye State,<1KB,0.5510680907877169,"{""a"": 2, ""bleach"": 1, ""t"": 2}",5
+F4RM-WiSARD-dense,EEG Eye State,1-10KB,0.6354472630173564,"{""a"": 8, ""bleach"": 4, ""t"": 4}",5
+F4RM-WiSARD-dense,EEG Eye State,10-100KB,0.789652870493992,"{""a"": 12, ""bleach"": 4, ""t"": 16}",5
+F4RM-WiSARD-dense,EEG Eye State,100KB-1MB,0.9225634178905207,"{""a"": 32, ""bleach"": 1, ""t"": 64}",5
+F4RM-WiSARD-dense,EEG Eye State,>1MB,0.9427236315086782,"{""a"": 32, ""bleach"": 1, ""t"": 256}",5
+F4RM-WiSARD-dense,Ecoli,<1KB,0.7941176470588236,"{""a"": 4, ""bleach"": 4, ""t"": 4}",5
+F4RM-WiSARD-dense,Ecoli,1-10KB,0.8676470588235293,"{""a"": 12, ""bleach"": 1, ""t"": 32}",5
+F4RM-WiSARD-dense,Ecoli,10-100KB,0.8705882352941176,"{""a"": 12, ""bleach"": 1, ""t"": 256}",5
+F4RM-WiSARD-dense,Glass,<1KB,0.6,"{""a"": 4, ""bleach"": 2, ""t"": 2}",5
+F4RM-WiSARD-dense,Glass,1-10KB,0.7395348837209302,"{""a"": 8, ""bleach"": 1, ""t"": 16}",5
+F4RM-WiSARD-dense,Glass,10-100KB,0.7534883720930232,"{""a"": 20, ""bleach"": 1, ""t"": 256}",5
+F4RM-WiSARD-dense,Haberman,<1KB,0.7451612903225806,"{""a"": 4, ""bleach"": 3, ""t"": 4}",5
+F4RM-WiSARD-dense,Haberman,1-10KB,0.7483870967741936,"{""a"": 24, ""bleach"": 4, ""t"": 16}",5
+F4RM-WiSARD-dense,Haberman,10-100KB,0.7387096774193548,"{""a"": 28, ""bleach"": 4, ""t"": 128}",5
+F4RM-WiSARD-dense,Ionosphere,1-10KB,0.9211267605633802,"{""a"": 16, ""bleach"": 3, ""t"": 4}",5
+F4RM-WiSARD-dense,Ionosphere,10-100KB,0.9464788732394366,"{""a"": 28, ""bleach"": 3, ""t"": 64}",5
+F4RM-WiSARD-dense,Ionosphere,100KB-1MB,0.9492957746478872,"{""a"": 8, ""bleach"": 1, ""t"": 256}",5
+F4RM-WiSARD-dense,Iris,<1KB,0.9466666666666667,"{""a"": 8, ""bleach"": 4, ""t"": 8}",5
+F4RM-WiSARD-dense,Iris,1-10KB,0.9666666666666668,"{""a"": 12, ""bleach"": 1, ""t"": 128}",5
+F4RM-WiSARD-dense,Iris,10-100KB,0.96,"{""a"": 20, ""bleach"": 4, ""t"": 256}",5
+F4RM-WiSARD-dense,Letter Recognition,1-10KB,0.09419999999999999,"{""a"": 2, ""bleach"": 4, ""t"": 2}",5
+F4RM-WiSARD-dense,Letter Recognition,10-100KB,0.8082,"{""a"": 16, ""bleach"": 1, ""t"": 4}",5
+F4RM-WiSARD-dense,Letter Recognition,100KB-1MB,0.9402000000000001,"{""a"": 12, ""bleach"": 1, ""t"": 64}",5
+F4RM-WiSARD-dense,Letter Recognition,>1MB,0.95335,"{""a"": 20, ""bleach"": 1, ""t"": 256}",5
+F4RM-WiSARD-dense,Magic Gamma,<1KB,0.6502103049421661,"{""a"": 4, ""bleach"": 4, ""t"": 2}",5
+F4RM-WiSARD-dense,Magic Gamma,1-10KB,0.7473711882229233,"{""a"": 8, ""bleach"": 4, ""t"": 4}",5
+F4RM-WiSARD-dense,Magic Gamma,10-100KB,0.8382229232386962,"{""a"": 12, ""bleach"": 4, ""t"": 32}",5
+F4RM-WiSARD-dense,Magic Gamma,100KB-1MB,0.8635120925341745,"{""a"": 24, ""bleach"": 1, ""t"": 128}",5
+F4RM-WiSARD-dense,Magic Gamma,>1MB,0.8691903259726603,"{""a"": 28, ""bleach"": 1, ""t"": 256}",5
+F4RM-WiSARD-dense,Pendigits,1-10KB,0.862119145065939,"{""a"": 8, ""bleach"": 4, ""t"": 2}",5
+F4RM-WiSARD-dense,Pendigits,10-100KB,0.9846293769895407,"{""a"": 16, ""bleach"": 1, ""t"": 16}",5
+F4RM-WiSARD-dense,Pendigits,100KB-1MB,0.9896316507503411,"{""a"": 24, ""bleach"": 1, ""t"": 128}",5
+F4RM-WiSARD-dense,Pendigits,>1MB,0.9899045020463847,"{""a"": 20, ""bleach"": 1, ""t"": 256}",5
+F4RM-WiSARD-dense,Pima Diabetes,<1KB,0.6545454545454545,"{""a"": 4, ""bleach"": 3, ""t"": 2}",5
+F4RM-WiSARD-dense,Pima Diabetes,1-10KB,0.7402597402597403,"{""a"": 4, ""bleach"": 3, ""t"": 32}",5
+F4RM-WiSARD-dense,Pima Diabetes,10-100KB,0.7675324675324675,"{""a"": 8, ""bleach"": 3, ""t"": 64}",5
+F4RM-WiSARD-dense,Pima Diabetes,100KB-1MB,0.7636363636363637,"{""a"": 8, ""bleach"": 1, ""t"": 256}",5
+F4RM-WiSARD-dense,SatImage,1-10KB,0.5631415241057542,"{""a"": 2, ""bleach"": 4, ""t"": 4}",5
+F4RM-WiSARD-dense,SatImage,10-100KB,0.8825816485225506,"{""a"": 12, ""bleach"": 2, ""t"": 16}",5
+F4RM-WiSARD-dense,SatImage,100KB-1MB,0.9077760497667186,"{""a"": 20, ""bleach"": 1, ""t"": 128}",5
+F4RM-WiSARD-dense,SatImage,>1MB,0.9122861586314153,"{""a"": 32, ""bleach"": 1, ""t"": 256}",5
+F4RM-WiSARD-dense,Seeds,<1KB,0.880952380952381,"{""a"": 8, ""bleach"": 2, ""t"": 4}",5
+F4RM-WiSARD-dense,Seeds,1-10KB,0.9285714285714285,"{""a"": 24, ""bleach"": 1, ""t"": 16}",5
+F4RM-WiSARD-dense,Seeds,10-100KB,0.9380952380952381,"{""a"": 24, ""bleach"": 2, ""t"": 64}",5
+F4RM-WiSARD-dense,Segment,1-10KB,0.9021645021645022,"{""a"": 12, ""bleach"": 2, ""t"": 4}",5
+F4RM-WiSARD-dense,Segment,10-100KB,0.9645021645021645,"{""a"": 12, ""bleach"": 1, ""t"": 32}",5
+F4RM-WiSARD-dense,Segment,100KB-1MB,0.9662337662337663,"{""a"": 12, ""bleach"": 1, ""t"": 64}",5
+F4RM-WiSARD-dense,Steel Plates,1-10KB,0.8575835475578406,"{""a"": 12, ""bleach"": 2, ""t"": 2}",5
+F4RM-WiSARD-dense,Steel Plates,10-100KB,0.9758354755784062,"{""a"": 20, ""bleach"": 1, ""t"": 16}",5
+F4RM-WiSARD-dense,Steel Plates,100KB-1MB,0.9912596401028277,"{""a"": 28, ""bleach"": 1, ""t"": 128}",5
+F4RM-WiSARD-dense,Steel Plates,>1MB,0.9922879177377892,"{""a"": 32, ""bleach"": 1, ""t"": 256}",5
+F4RM-WiSARD-dense,Vehicle,1-10KB,0.668235294117647,"{""a"": 12, ""bleach"": 2, ""t"": 4}",5
+F4RM-WiSARD-dense,Vehicle,10-100KB,0.7494117647058823,"{""a"": 8, ""bleach"": 1, ""t"": 32}",5
+F4RM-WiSARD-dense,Vehicle,100KB-1MB,0.7482352941176471,"{""a"": 8, ""bleach"": 1, ""t"": 256}",5
+F4RM-WiSARD-dense,Waveform,1-10KB,0.5962,"{""a"": 4, ""bleach"": 4, ""t"": 4}",5
+F4RM-WiSARD-dense,Waveform,10-100KB,0.7929999999999999,"{""a"": 8, ""bleach"": 4, ""t"": 8}",5
+F4RM-WiSARD-dense,Waveform,100KB-1MB,0.842,"{""a"": 8, ""bleach"": 3, ""t"": 128}",5
+F4RM-WiSARD-dense,Waveform,>1MB,0.8486,"{""a"": 12, ""bleach"": 2, ""t"": 256}",5
+F4RM-WiSARD-dense,Wine,<1KB,0.9277777777777777,"{""a"": 4, ""bleach"": 2, ""t"": 2}",5
+F4RM-WiSARD-dense,Wine,1-10KB,0.9888888888888889,"{""a"": 4, ""bleach"": 2, ""t"": 8}",5
+F4RM-WiSARD-dense,Wine,10-100KB,0.9888888888888889,"{""a"": 2, ""bleach"": 3, ""t"": 128}",5
+F4RM-WiSARD-dense,Wine,100KB-1MB,0.9833333333333334,"{""a"": 8, ""bleach"": 2, ""t"": 256}",5
+F4RM-WiSARD-dense,Yeast,1-10KB,0.5265993265993266,"{""a"": 8, ""bleach"": 4, ""t"": 8}",5
+F4RM-WiSARD-dense,Yeast,10-100KB,0.591919191919192,"{""a"": 12, ""bleach"": 2, ""t"": 64}",5
+F4RM-WiSARD-dense,Yeast,100KB-1MB,0.6107744107744107,"{""a"": 20, ""bleach"": 1, ""t"": 256}",5
+F4RMS,Balance Scale,1-10KB,0.8656,"{""K"": 5, ""a"": 8, ""bleach"": 2, ""t"": 8}",5
+F4RMS,Balance Scale,10-100KB,0.9008,"{""K"": 5, ""a"": 8, ""bleach"": 2, ""t"": 64}",5
+F4RMS,Balance Scale,100KB-1MB,0.9072000000000001,"{""K"": 50, ""a"": 4, ""bleach"": 2, ""t"": 64}",5
+F4RMS,Balance Scale,>1MB,0.9008,"{""K"": 100, ""a"": 8, ""bleach"": 2, ""t"": 64}",5
+F4RMS,Banknote,1-10KB,0.9992727272727272,"{""K"": 5, ""a"": 8, ""bleach"": 1, ""t"": 16}",5
+F4RMS,Banknote,10-100KB,1.0,"{""K"": 10, ""a"": 32, ""bleach"": 1, ""t"": 32}",5
+F4RMS,Banknote,100KB-1MB,1.0,"{""K"": 10, ""a"": 32, ""bleach"": 1, ""t"": 64}",5
+F4RMS,Banknote,>1MB,0.9985454545454544,"{""K"": 100, ""a"": 16, ""bleach"": 1, ""t"": 64}",5
+F4RMS,Breast Cancer,10-100KB,0.9596491228070174,"{""K"": 25, ""a"": 4, ""bleach"": 1, ""t"": 4}",5
+F4RMS,Breast Cancer,100KB-1MB,0.9666666666666666,"{""K"": 50, ""a"": 4, ""bleach"": 1, ""t"": 16}",5
+F4RMS,Breast Cancer,>1MB,0.9631578947368421,"{""K"": 100, ""a"": 4, ""bleach"": 1, ""t"": 16}",5
+F4RMS,EEG Eye State,100KB-1MB,0.7935024477080551,"{""K"": 10, ""a"": 8, ""bleach"": 1, ""t"": 16}",3
+F4RMS,EEG Eye State,>1MB,0.9491544281263907,"{""K"": 50, ""a"": 32, ""bleach"": 1, ""t"": 64}",3
+F4RMS,Ecoli,1-10KB,0.8411764705882353,"{""K"": 10, ""a"": 4, ""bleach"": 2, ""t"": 4}",5
+F4RMS,Ecoli,10-100KB,0.8705882352941176,"{""K"": 5, ""a"": 8, ""bleach"": 1, ""t"": 64}",5
+F4RMS,Ecoli,100KB-1MB,0.8764705882352942,"{""K"": 25, ""a"": 8, ""bleach"": 1, ""t"": 64}",5
+F4RMS,Ecoli,>1MB,0.8647058823529411,"{""K"": 100, ""a"": 4, ""bleach"": 1, ""t"": 64}",5
+F4RMS,Glass,1-10KB,0.7116279069767442,"{""K"": 5, ""a"": 16, ""bleach"": 1, ""t"": 4}",5
+F4RMS,Glass,10-100KB,0.7534883720930232,"{""K"": 5, ""a"": 16, ""bleach"": 1, ""t"": 32}",5
+F4RMS,Glass,100KB-1MB,0.7674418604651162,"{""K"": 25, ""a"": 32, ""bleach"": 1, ""t"": 64}",5
+F4RMS,Glass,>1MB,0.7674418604651163,"{""K"": 100, ""a"": 32, ""bleach"": 1, ""t"": 64}",5
+F4RMS,Haberman,1-10KB,0.7419354838709677,"{""K"": 10, ""a"": 4, ""bleach"": 2, ""t"": 4}",5
+F4RMS,Haberman,10-100KB,0.735483870967742,"{""K"": 50, ""a"": 4, ""bleach"": 2, ""t"": 4}",5
+F4RMS,Haberman,100KB-1MB,0.7096774193548387,"{""K"": 50, ""a"": 4, ""bleach"": 2, ""t"": 64}",5
+F4RMS,Ionosphere,10-100KB,0.9436619718309858,"{""K"": 5, ""a"": 8, ""bleach"": 1, ""t"": 8}",5
+F4RMS,Ionosphere,100KB-1MB,0.952112676056338,"{""K"": 25, ""a"": 8, ""bleach"": 1, ""t"": 8}",5
+F4RMS,Ionosphere,>1MB,0.9492957746478872,"{""K"": 100, ""a"": 8, ""bleach"": 1, ""t"": 16}",5
+F4RMS,Iris,1-10KB,0.9733333333333334,"{""K"": 10, ""a"": 4, ""bleach"": 2, ""t"": 8}",5
+F4RMS,Iris,10-100KB,0.9800000000000001,"{""K"": 100, ""a"": 4, ""bleach"": 2, ""t"": 8}",5
+F4RMS,Iris,100KB-1MB,0.9666666666666668,"{""K"": 100, ""a"": 4, ""bleach"": 2, ""t"": 32}",5
+F4RMS,Letter Recognition,>1MB,0.9539166666666666,"{""K"": 50, ""a"": 32, ""bleach"": 1, ""t"": 64}",3
+F4RMS,Magic Gamma,100KB-1MB,0.8582194181563266,"{""K"": 10, ""a"": 8, ""bleach"": 1, ""t"": 64}",3
+F4RMS,Magic Gamma,>1MB,0.8769716088328076,"{""K"": 50, ""a"": 16, ""bleach"": 1, ""t"": 64}",3
+F4RMS,Pendigits,100KB-1MB,0.9883280278914658,"{""K"": 10, ""a"": 16, ""bleach"": 1, ""t"": 16}",3
+F4RMS,Pendigits,>1MB,0.989389116264969,"{""K"": 10, ""a"": 32, ""bleach"": 1, ""t"": 64}",3
+F4RMS,Pima Diabetes,1-10KB,0.6935064935064934,"{""K"": 5, ""a"": 4, ""bleach"": 2, ""t"": 4}",5
+F4RMS,Pima Diabetes,10-100KB,0.7610389610389611,"{""K"": 10, ""a"": 4, ""bleach"": 2, ""t"": 32}",5
+F4RMS,Pima Diabetes,100KB-1MB,0.764935064935065,"{""K"": 100, ""a"": 8, ""bleach"": 2, ""t"": 8}",5
+F4RMS,Pima Diabetes,>1MB,0.7584415584415585,"{""K"": 100, ""a"": 8, ""bleach"": 2, ""t"": 16}",5
+F4RMS,SatImage,100KB-1MB,0.8973561430793158,"{""K"": 10, ""a"": 8, ""bleach"": 1, ""t"": 16}",3
+F4RMS,SatImage,>1MB,0.9180922757905651,"{""K"": 10, ""a"": 32, ""bleach"": 1, ""t"": 64}",3
+F4RMS,Seeds,1-10KB,0.9238095238095237,"{""K"": 5, ""a"": 16, ""bleach"": 1, ""t"": 8}",5
+F4RMS,Seeds,10-100KB,0.9333333333333333,"{""K"": 5, ""a"": 32, ""bleach"": 2, ""t"": 32}",5
+F4RMS,Seeds,100KB-1MB,0.9238095238095237,"{""K"": 100, ""a"": 32, ""bleach"": 2, ""t"": 8}",5
+F4RMS,Segment,10-100KB,0.9458874458874458,"{""K"": 10, ""a"": 4, ""bleach"": 2, ""t"": 8}",5
+F4RMS,Segment,100KB-1MB,0.9632034632034632,"{""K"": 10, ""a"": 4, ""bleach"": 1, ""t"": 64}",5
+F4RMS,Segment,>1MB,0.9636363636363636,"{""K"": 25, ""a"": 4, ""bleach"": 1, ""t"": 64}",5
+F4RMS,Steel Plates,10-100KB,0.9043701799485862,"{""K"": 10, ""a"": 8, ""bleach"": 2, ""t"": 4}",5
+F4RMS,Steel Plates,100KB-1MB,0.9912596401028277,"{""K"": 5, ""a"": 32, ""bleach"": 1, ""t"": 32}",5
+F4RMS,Steel Plates,>1MB,0.9948586118251928,"{""K"": 100, ""a"": 32, ""bleach"": 1, ""t"": 32}",5
+F4RMS,Vehicle,10-100KB,0.7270588235294118,"{""K"": 5, ""a"": 16, ""bleach"": 2, ""t"": 8}",5
+F4RMS,Vehicle,100KB-1MB,0.7517647058823529,"{""K"": 5, ""a"": 4, ""bleach"": 1, ""t"": 64}",5
+F4RMS,Vehicle,>1MB,0.7552941176470588,"{""K"": 25, ""a"": 4, ""bleach"": 1, ""t"": 64}",5
+F4RMS,Waveform,>1MB,0.8496666666666667,"{""K"": 50, ""a"": 8, ""bleach"": 1, ""t"": 64}",3
+F4RMS,Wine,1-10KB,0.9833333333333332,"{""K"": 5, ""a"": 4, ""bleach"": 2, ""t"": 4}",5
+F4RMS,Wine,10-100KB,0.9833333333333334,"{""K"": 10, ""a"": 8, ""bleach"": 1, ""t"": 8}",5
+F4RMS,Wine,100KB-1MB,0.9833333333333334,"{""K"": 10, ""a"": 8, ""bleach"": 1, ""t"": 64}",5
+F4RMS,Wine,>1MB,0.9833333333333334,"{""K"": 100, ""a"": 8, ""bleach"": 1, ""t"": 32}",5
+F4RMS,Yeast,10-100KB,0.5952861952861953,"{""K"": 5, ""a"": 16, ""bleach"": 1, ""t"": 16}",5
+F4RMS,Yeast,100KB-1MB,0.6148148148148149,"{""K"": 25, ""a"": 8, ""bleach"": 1, ""t"": 32}",5
+F4RMS,Yeast,>1MB,0.6161616161616161,"{""K"": 100, ""a"": 16, ""bleach"": 1, ""t"": 64}",5
+FT-Transformer,Balance Scale,10-100KB,0.8506666666666667,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 32, ""learning_rate"": 0.0001, ""n_blocks"": 2, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,Balance Scale,100KB-1MB,0.9066666666666667,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 64, ""learning_rate"": 0.0001, ""n_blocks"": 2, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,Banknote,10-100KB,0.9672727272727273,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 32, ""learning_rate"": 0.0001, ""n_blocks"": 2, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,Banknote,100KB-1MB,0.9987878787878787,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 64, ""learning_rate"": 0.0001, ""n_blocks"": 3, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,Breast Cancer,10-100KB,0.8391812865497076,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 32, ""learning_rate"": 0.0001, ""n_blocks"": 2, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,Breast Cancer,100KB-1MB,0.9415204678362573,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 64, ""learning_rate"": 0.0001, ""n_blocks"": 2, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,EEG Eye State,10-100KB,0.5511793502447707,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 32, ""learning_rate"": 0.0001, ""n_blocks"": 2, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,EEG Eye State,100KB-1MB,0.5512906097018245,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 64, ""learning_rate"": 0.0001, ""n_blocks"": 3, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,Ecoli,10-100KB,0.4264705882352941,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 32, ""learning_rate"": 0.0001, ""n_blocks"": 2, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,Ecoli,100KB-1MB,0.573529411764706,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 64, ""learning_rate"": 0.0001, ""n_blocks"": 3, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,Glass,10-100KB,0.3488372093023256,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 32, ""learning_rate"": 0.0001, ""n_blocks"": 2, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,Glass,100KB-1MB,0.3953488372093023,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 64, ""learning_rate"": 0.0001, ""n_blocks"": 3, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,Haberman,10-100KB,0.7419354838709676,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 32, ""learning_rate"": 0.0001, ""n_blocks"": 2, ""n_epochs"": 10, ""n_heads"": 4}",3
+FT-Transformer,Haberman,100KB-1MB,0.7473118279569894,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 64, ""learning_rate"": 0.0001, ""n_blocks"": 3, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,Ionosphere,10-100KB,0.647887323943662,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 32, ""learning_rate"": 0.0001, ""n_blocks"": 2, ""n_epochs"": 10, ""n_heads"": 4}",3
+FT-Transformer,Ionosphere,100KB-1MB,0.7887323943661971,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 64, ""learning_rate"": 0.0001, ""n_blocks"": 3, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,Iris,10-100KB,0.7888888888888889,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 32, ""learning_rate"": 0.0001, ""n_blocks"": 2, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,Iris,100KB-1MB,0.9,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 64, ""learning_rate"": 0.0001, ""n_blocks"": 2, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,Letter Recognition,10-100KB,0.7179166666666666,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 32, ""learning_rate"": 0.0001, ""n_blocks"": 2, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,Letter Recognition,100KB-1MB,0.8930833333333332,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 64, ""learning_rate"": 0.0001, ""n_blocks"": 3, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,Magic Gamma,10-100KB,0.853925692253768,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 32, ""learning_rate"": 0.0001, ""n_blocks"": 2, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,Magic Gamma,100KB-1MB,0.8643533123028391,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 64, ""learning_rate"": 0.0001, ""n_blocks"": 2, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,Pendigits,10-100KB,0.9410338032438986,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 32, ""learning_rate"": 0.0001, ""n_blocks"": 2, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,Pendigits,100KB-1MB,0.9869637714112476,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 64, ""learning_rate"": 0.0001, ""n_blocks"": 3, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,Pima Diabetes,10-100KB,0.6666666666666666,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 32, ""learning_rate"": 0.0001, ""n_blocks"": 2, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,Pima Diabetes,100KB-1MB,0.7575757575757577,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 64, ""learning_rate"": 0.0001, ""n_blocks"": 3, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,SatImage,10-100KB,0.8499222395023328,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 32, ""learning_rate"": 0.0001, ""n_blocks"": 2, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,SatImage,100KB-1MB,0.8709175738724729,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 64, ""learning_rate"": 0.0001, ""n_blocks"": 2, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,Seeds,10-100KB,0.6587301587301587,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 32, ""learning_rate"": 0.0001, ""n_blocks"": 2, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,Seeds,100KB-1MB,0.9047619047619048,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 64, ""learning_rate"": 0.0001, ""n_blocks"": 2, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,Segment,10-100KB,0.8225108225108224,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 32, ""learning_rate"": 0.0001, ""n_blocks"": 2, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,Segment,100KB-1MB,0.9235209235209235,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 64, ""learning_rate"": 0.0001, ""n_blocks"": 3, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,Steel Plates,10-100KB,0.8414738646101113,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 32, ""learning_rate"": 0.0001, ""n_blocks"": 2, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,Steel Plates,100KB-1MB,1.0,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 64, ""learning_rate"": 0.0001, ""n_blocks"": 2, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,Vehicle,10-100KB,0.38823529411764707,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 32, ""learning_rate"": 0.0001, ""n_blocks"": 2, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,Vehicle,100KB-1MB,0.596078431372549,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 64, ""learning_rate"": 0.0001, ""n_blocks"": 3, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,Waveform,10-100KB,0.8413333333333334,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 32, ""learning_rate"": 0.0001, ""n_blocks"": 2, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,Waveform,100KB-1MB,0.8673333333333333,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 64, ""learning_rate"": 0.0001, ""n_blocks"": 3, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,Wine,10-100KB,0.4259259259259259,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 32, ""learning_rate"": 0.0001, ""n_blocks"": 2, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,Wine,100KB-1MB,0.9074074074074074,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 64, ""learning_rate"": 0.0001, ""n_blocks"": 3, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,Yeast,10-100KB,0.3041526374859708,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 32, ""learning_rate"": 0.0001, ""n_blocks"": 2, ""n_epochs"": 30, ""n_heads"": 4}",3
+FT-Transformer,Yeast,100KB-1MB,0.4927048260381594,"{""attention_dropout"": 0.0, ""batch_size"": 256, ""d_token"": 64, ""learning_rate"": 0.0001, ""n_blocks"": 2, ""n_epochs"": 30, ""n_heads"": 4}",3
+LightGBM,Balance Scale,100KB-1MB,0.9040000000000001,"{""learning_rate"": 0.1, ""n_estimators"": 100, ""num_leaves"": 127, ""reg_lambda"": 10.0}",5
+LightGBM,Balance Scale,>1MB,0.9024000000000001,"{""learning_rate"": 0.3, ""n_estimators"": 1000, ""num_leaves"": 15, ""reg_lambda"": 1.0}",5
+LightGBM,Banknote,100KB-1MB,0.9978181818181818,"{""learning_rate"": 0.3, ""n_estimators"": 100, ""num_leaves"": 127, ""reg_lambda"": 1.0}",5
+LightGBM,Banknote,>1MB,0.9978181818181818,"{""learning_rate"": 0.3, ""n_estimators"": 1000, ""num_leaves"": 127, ""reg_lambda"": 1.0}",5
+LightGBM,Breast Cancer,10-100KB,0.9614035087719298,"{""learning_rate"": 0.1, ""n_estimators"": 100, ""num_leaves"": 127, ""reg_lambda"": 10.0}",5
+LightGBM,Breast Cancer,100KB-1MB,0.9719298245614034,"{""learning_rate"": 0.3, ""n_estimators"": 500, ""num_leaves"": 127, ""reg_lambda"": 1.0}",5
+LightGBM,Breast Cancer,>1MB,0.9719298245614034,"{""learning_rate"": 0.3, ""n_estimators"": 1000, ""num_leaves"": 127, ""reg_lambda"": 1.0}",5
+LightGBM,EEG Eye State,100KB-1MB,0.9309078771695595,"{""learning_rate"": 0.1, ""n_estimators"": 500, ""num_leaves"": 15, ""reg_lambda"": 0.1}",3
+LightGBM,EEG Eye State,>1MB,0.9601691143747219,"{""learning_rate"": 0.1, ""n_estimators"": 1000, ""num_leaves"": 127, ""reg_lambda"": 0.1}",3
+LightGBM,Ecoli,100KB-1MB,0.85,"{""learning_rate"": 0.03, ""n_estimators"": 100, ""num_leaves"": 127, ""reg_lambda"": 0.1}",5
+LightGBM,Ecoli,>1MB,0.8529411764705882,"{""learning_rate"": 0.03, ""n_estimators"": 500, ""num_leaves"": 127, ""reg_lambda"": 1.0}",5
+LightGBM,Glass,100KB-1MB,0.7720930232558139,"{""learning_rate"": 0.3, ""n_estimators"": 100, ""num_leaves"": 127, ""reg_lambda"": 0.1}",5
+LightGBM,Glass,>1MB,0.7767441860465116,"{""learning_rate"": 0.3, ""n_estimators"": 500, ""num_leaves"": 127, ""reg_lambda"": 0.1}",5
+LightGBM,Haberman,10-100KB,0.7387096774193548,"{""learning_rate"": 0.03, ""n_estimators"": 100, ""num_leaves"": 127, ""reg_lambda"": 10.0}",5
+LightGBM,Haberman,100KB-1MB,0.7290322580645161,"{""learning_rate"": 0.03, ""n_estimators"": 100, ""num_leaves"": 127, ""reg_lambda"": 1.0}",5
+LightGBM,Haberman,>1MB,0.6838709677419355,"{""learning_rate"": 0.3, ""n_estimators"": 1000, ""num_leaves"": 127, ""reg_lambda"": 10.0}",5
+LightGBM,Ionosphere,10-100KB,0.932394366197183,"{""learning_rate"": 0.3, ""n_estimators"": 100, ""num_leaves"": 127, ""reg_lambda"": 10.0}",5
+LightGBM,Ionosphere,100KB-1MB,0.9492957746478872,"{""learning_rate"": 0.1, ""n_estimators"": 100, ""num_leaves"": 127, ""reg_lambda"": 0.1}",5
+LightGBM,Ionosphere,>1MB,0.9464788732394366,"{""learning_rate"": 0.03, ""n_estimators"": 1000, ""num_leaves"": 127, ""reg_lambda"": 0.1}",5
+LightGBM,Iris,100KB-1MB,0.9533333333333334,"{""learning_rate"": 0.03, ""n_estimators"": 100, ""num_leaves"": 127, ""reg_lambda"": 0.1}",5
+LightGBM,Iris,>1MB,0.9333333333333333,"{""learning_rate"": 0.03, ""n_estimators"": 1000, ""num_leaves"": 127, ""reg_lambda"": 0.1}",5
+LightGBM,Letter Recognition,>1MB,0.9703333333333334,"{""learning_rate"": 0.1, ""n_estimators"": 1000, ""num_leaves"": 15, ""reg_lambda"": 0.1}",3
+LightGBM,Magic Gamma,100KB-1MB,0.8818787241500176,"{""learning_rate"": 0.1, ""n_estimators"": 500, ""num_leaves"": 15, ""reg_lambda"": 0.1}",3
+LightGBM,Magic Gamma,>1MB,0.8845075359270943,"{""learning_rate"": 0.1, ""n_estimators"": 1000, ""num_leaves"": 31, ""reg_lambda"": 10.0}",3
+LightGBM,Pendigits,>1MB,0.9915112930119752,"{""learning_rate"": 0.1, ""n_estimators"": 1000, ""num_leaves"": 15, ""reg_lambda"": 0.1}",3
+LightGBM,Pima Diabetes,100KB-1MB,0.7883116883116883,"{""learning_rate"": 0.03, ""n_estimators"": 100, ""num_leaves"": 127, ""reg_lambda"": 10.0}",5
+LightGBM,Pima Diabetes,>1MB,0.7454545454545455,"{""learning_rate"": 0.03, ""n_estimators"": 500, ""num_leaves"": 127, ""reg_lambda"": 0.1}",5
+LightGBM,SatImage,100KB-1MB,0.920943494038362,"{""learning_rate"": 0.1, ""n_estimators"": 100, ""num_leaves"": 15, ""reg_lambda"": 10.0}",3
+LightGBM,SatImage,>1MB,0.9297563504406429,"{""learning_rate"": 0.1, ""n_estimators"": 1000, ""num_leaves"": 15, ""reg_lambda"": 0.1}",3
+LightGBM,Seeds,100KB-1MB,0.9476190476190476,"{""learning_rate"": 0.3, ""n_estimators"": 100, ""num_leaves"": 127, ""reg_lambda"": 0.1}",5
+LightGBM,Seeds,>1MB,0.9428571428571428,"{""learning_rate"": 0.03, ""n_estimators"": 500, ""num_leaves"": 127, ""reg_lambda"": 0.1}",5
+LightGBM,Segment,100KB-1MB,0.9848484848484849,"{""learning_rate"": 0.1, ""n_estimators"": 100, ""num_leaves"": 127, ""reg_lambda"": 0.1}",3
+LightGBM,Segment,>1MB,0.987012987012987,"{""learning_rate"": 0.1, ""n_estimators"": 1000, ""num_leaves"": 15, ""reg_lambda"": 0.1}",3
+LightGBM,Steel Plates,10-100KB,1.0,"{""learning_rate"": 0.03, ""n_estimators"": 100, ""num_leaves"": 15, ""reg_lambda"": 0.1}",5
+LightGBM,Steel Plates,100KB-1MB,1.0,"{""learning_rate"": 0.03, ""n_estimators"": 100, ""num_leaves"": 15, ""reg_lambda"": 10.0}",5
+LightGBM,Vehicle,100KB-1MB,0.7647058823529411,"{""learning_rate"": 0.3, ""n_estimators"": 100, ""num_leaves"": 127, ""reg_lambda"": 1.0}",5
+LightGBM,Vehicle,>1MB,0.7635294117647058,"{""learning_rate"": 0.3, ""n_estimators"": 500, ""num_leaves"": 127, ""reg_lambda"": 1.0}",5
+LightGBM,Waveform,100KB-1MB,0.8553333333333333,"{""learning_rate"": 0.03, ""n_estimators"": 100, ""num_leaves"": 15, ""reg_lambda"": 0.1}",3
+LightGBM,Waveform,>1MB,0.858,"{""learning_rate"": 0.03, ""n_estimators"": 500, ""num_leaves"": 15, ""reg_lambda"": 0.1}",3
+LightGBM,Wine,100KB-1MB,0.9666666666666666,"{""learning_rate"": 0.03, ""n_estimators"": 100, ""num_leaves"": 127, ""reg_lambda"": 0.1}",5
+LightGBM,Wine,>1MB,0.961111111111111,"{""learning_rate"": 0.3, ""n_estimators"": 1000, ""num_leaves"": 127, ""reg_lambda"": 1.0}",5
+LightGBM,Yeast,>1MB,0.6215488215488215,"{""learning_rate"": 0.03, ""n_estimators"": 100, ""num_leaves"": 15, ""reg_lambda"": 1.0}",5
+MLP,Balance Scale,1-10KB,0.8672000000000001,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [64, 32], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Balance Scale,10-100KB,0.8736,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [128, 64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Balance Scale,100KB-1MB,0.9103999999999999,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [512, 256, 128, 64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Banknote,<1KB,0.7258181818181818,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [32], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Banknote,1-10KB,0.9396363636363636,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [128], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Banknote,10-100KB,0.984,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [128, 64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Banknote,100KB-1MB,0.9905454545454546,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [256, 128, 64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Breast Cancer,1-10KB,0.9175438596491228,"{""alpha"": 0.01, ""hidden_layer_sizes"": [32], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Breast Cancer,10-100KB,0.9192982456140351,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [128, 64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Breast Cancer,100KB-1MB,0.9491228070175438,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [512, 256, 128, 64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,EEG Eye State,1-10KB,0.5511793502447707,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",3
+MLP,EEG Eye State,100KB-1MB,0.5510680907877169,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [256, 128], ""learning_rate_init"": 0.001, ""max_iter"": 200}",3
+MLP,Ecoli,1-10KB,0.5117647058823529,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Ecoli,10-100KB,0.5441176470588236,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [128, 64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Ecoli,100KB-1MB,0.8029411764705883,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [512, 256, 128, 64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Glass,1-10KB,0.3627906976744186,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [128], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Glass,10-100KB,0.3767441860465116,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [128, 64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Glass,100KB-1MB,0.46976744186046515,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [512, 256, 128, 64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Haberman,<1KB,0.632258064516129,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [32], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Haberman,1-10KB,0.7419354838709677,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [64, 32], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Haberman,10-100KB,0.7387096774193548,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [128, 64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Haberman,100KB-1MB,0.7419354838709677,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [256, 128, 64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Ionosphere,1-10KB,0.676056338028169,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Ionosphere,10-100KB,0.8309859154929577,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [128, 64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Ionosphere,100KB-1MB,0.9408450704225352,"{""alpha"": 0.01, ""hidden_layer_sizes"": [512, 256, 128, 64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Iris,1-10KB,0.7333333333333334,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [128], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Iris,10-100KB,0.7533333333333333,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [128, 64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Iris,100KB-1MB,0.8800000000000001,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [512, 256, 128, 64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Letter Recognition,10-100KB,0.8571666666666666,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [128], ""learning_rate_init"": 0.001, ""max_iter"": 200}",3
+MLP,Letter Recognition,100KB-1MB,0.9501666666666667,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [512, 256, 128], ""learning_rate_init"": 0.001, ""max_iter"": 200}",3
+MLP,Magic Gamma,1-10KB,0.8561163687346652,"{""alpha"": 0.01, ""hidden_layer_sizes"": [128], ""learning_rate_init"": 0.001, ""max_iter"": 200}",3
+MLP,Magic Gamma,100KB-1MB,0.8740799158780231,"{""alpha"": 0.01, ""hidden_layer_sizes"": [512, 256, 128], ""learning_rate_init"": 0.001, ""max_iter"": 200}",3
+MLP,Pendigits,1-10KB,0.9804456571168714,"{""alpha"": 0.01, ""hidden_layer_sizes"": [64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Pendigits,10-100KB,0.9883583447021372,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [128, 64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Pendigits,100KB-1MB,0.9919054115507049,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [512, 256, 128, 64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Pima Diabetes,1-10KB,0.6506493506493507,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Pima Diabetes,10-100KB,0.6896103896103896,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [128, 64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Pima Diabetes,100KB-1MB,0.774025974025974,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [512, 256, 128, 64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,SatImage,1-10KB,0.8300155520995334,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [32], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,SatImage,10-100KB,0.8682737169517886,"{""alpha"": 0.01, ""hidden_layer_sizes"": [128, 64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,SatImage,100KB-1MB,0.8953343701399689,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [512, 256, 128, 64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Seeds,1-10KB,0.5142857142857142,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [32], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Seeds,10-100KB,0.7285714285714286,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [128, 64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Seeds,100KB-1MB,0.9238095238095237,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [512, 256, 128, 64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Segment,1-10KB,0.8718614718614719,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Segment,10-100KB,0.9346320346320347,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [128, 64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Segment,100KB-1MB,0.9584415584415584,"{""alpha"": 0.01, ""hidden_layer_sizes"": [256, 128, 64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Steel Plates,1-10KB,0.9948586118251928,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Steel Plates,10-100KB,0.9994858611825193,"{""alpha"": 0.01, ""hidden_layer_sizes"": [128, 64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Steel Plates,100KB-1MB,0.9994858611825193,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [256, 128, 64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Vehicle,1-10KB,0.47411764705882353,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Vehicle,10-100KB,0.6152941176470589,"{""alpha"": 0.01, ""hidden_layer_sizes"": [128, 64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Vehicle,100KB-1MB,0.7047058823529412,"{""alpha"": 0.01, ""hidden_layer_sizes"": [512, 256, 128, 64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Waveform,1-10KB,0.8635999999999999,"{""alpha"": 0.01, ""hidden_layer_sizes"": [32], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Waveform,10-100KB,0.8634000000000001,"{""alpha"": 0.01, ""hidden_layer_sizes"": [128, 64], ""learning_rate_init"": 0.0001, ""max_iter"": 200}",5
+MLP,Waveform,100KB-1MB,0.865,"{""alpha"": 0.01, ""hidden_layer_sizes"": [512, 256, 128, 64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Wine,1-10KB,0.8722222222222221,"{""alpha"": 0.01, ""hidden_layer_sizes"": [128], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Wine,10-100KB,0.7388888888888889,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [64, 32], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Wine,100KB-1MB,0.9333333333333333,"{""alpha"": 0.0001, ""hidden_layer_sizes"": [256, 128, 64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Yeast,1-10KB,0.5191919191919192,"{""alpha"": 0.01, ""hidden_layer_sizes"": [128], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Yeast,10-100KB,0.49023569023569025,"{""alpha"": 0.01, ""hidden_layer_sizes"": [128, 64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+MLP,Yeast,100KB-1MB,0.6,"{""alpha"": 0.01, ""hidden_layer_sizes"": [512, 256, 128, 64], ""learning_rate_init"": 0.001, ""max_iter"": 200}",5
+RF,Balance Scale,10-100KB,0.8576,"{""max_depth"": 8, ""max_features"": ""log2"", ""min_samples_leaf"": 5, ""n_estimators"": 10}",5
+RF,Balance Scale,100KB-1MB,0.8656,"{""max_depth"": 16, ""max_features"": ""log2"", ""min_samples_leaf"": 5, ""n_estimators"": 50}",5
+RF,Balance Scale,>1MB,0.8592000000000001,"{""max_depth"": 16, ""max_features"": ""log2"", ""min_samples_leaf"": 5, ""n_estimators"": 200}",5
+RF,Banknote,10-100KB,0.997090909090909,"{""max_depth"": 16, ""max_features"": ""log2"", ""min_samples_leaf"": 1, ""n_estimators"": 10}",5
+RF,Banknote,100KB-1MB,0.997090909090909,"{""max_depth"": 16, ""max_features"": ""log2"", ""min_samples_leaf"": 1, ""n_estimators"": 100}",5
+RF,Breast Cancer,10-100KB,0.956140350877193,"{""max_depth"": 16, ""max_features"": ""log2"", ""min_samples_leaf"": 5, ""n_estimators"": 10}",5
+RF,Breast Cancer,100KB-1MB,0.9631578947368421,"{""max_depth"": 16, ""max_features"": ""sqrt"", ""min_samples_leaf"": 1, ""n_estimators"": 100}",5
+RF,EEG Eye State,100KB-1MB,0.8951935914552737,"{""max_depth"": null, ""max_features"": 1.0, ""min_samples_leaf"": 5, ""n_estimators"": 10}",3
+RF,EEG Eye State,>1MB,0.933355585224744,"{""max_depth"": null, ""max_features"": ""sqrt"", ""min_samples_leaf"": 1, ""n_estimators"": 200}",3
+RF,Ecoli,10-100KB,0.8470588235294118,"{""max_depth"": 16, ""max_features"": ""log2"", ""min_samples_leaf"": 5, ""n_estimators"": 10}",5
+RF,Ecoli,100KB-1MB,0.8823529411764707,"{""max_depth"": 8, ""max_features"": ""log2"", ""min_samples_leaf"": 1, ""n_estimators"": 100}",5
+RF,Ecoli,>1MB,0.8735294117647058,"{""max_depth"": 16, ""max_features"": ""log2"", ""min_samples_leaf"": 1, ""n_estimators"": 200}",5
+RF,Glass,10-100KB,0.7674418604651163,"{""max_depth"": 16, ""max_features"": 1.0, ""min_samples_leaf"": 1, ""n_estimators"": 10}",5
+RF,Glass,100KB-1MB,0.8046511627906977,"{""max_depth"": 16, ""max_features"": ""log2"", ""min_samples_leaf"": 1, ""n_estimators"": 100}",5
+RF,Glass,>1MB,0.813953488372093,"{""max_depth"": 16, ""max_features"": ""log2"", ""min_samples_leaf"": 1, ""n_estimators"": 200}",5
+RF,Haberman,10-100KB,0.7225806451612903,"{""max_depth"": 8, ""max_features"": ""log2"", ""min_samples_leaf"": 5, ""n_estimators"": 10}",5
+RF,Haberman,100KB-1MB,0.7258064516129032,"{""max_depth"": 8, ""max_features"": ""log2"", ""min_samples_leaf"": 5, ""n_estimators"": 200}",5
+RF,Haberman,>1MB,0.6806451612903226,"{""max_depth"": 16, ""max_features"": ""log2"", ""min_samples_leaf"": 1, ""n_estimators"": 200}",5
+RF,Ionosphere,10-100KB,0.923943661971831,"{""max_depth"": 16, ""max_features"": ""log2"", ""min_samples_leaf"": 1, ""n_estimators"": 10}",5
+RF,Ionosphere,100KB-1MB,0.9380281690140844,"{""max_depth"": 8, ""max_features"": ""log2"", ""min_samples_leaf"": 1, ""n_estimators"": 50}",5
+RF,Iris,10-100KB,0.9666666666666668,"{""max_depth"": 16, ""max_features"": ""log2"", ""min_samples_leaf"": 1, ""n_estimators"": 10}",5
+RF,Iris,100KB-1MB,0.9533333333333334,"{""max_depth"": 16, ""max_features"": ""log2"", ""min_samples_leaf"": 5, ""n_estimators"": 100}",5
+RF,Letter Recognition,100KB-1MB,0.74775,"{""max_depth"": 8, ""max_features"": ""sqrt"", ""min_samples_leaf"": 5, ""n_estimators"": 10}",3
+RF,Letter Recognition,>1MB,0.9659166666666668,"{""max_depth"": null, ""max_features"": ""sqrt"", ""min_samples_leaf"": 1, ""n_estimators"": 200}",3
+RF,Magic Gamma,100KB-1MB,0.8685594111461619,"{""max_depth"": 16, ""max_features"": ""sqrt"", ""min_samples_leaf"": 5, ""n_estimators"": 10}",3
+RF,Magic Gamma,>1MB,0.8780231335436383,"{""max_depth"": null, ""max_features"": ""sqrt"", ""min_samples_leaf"": 1, ""n_estimators"": 200}",3
+RF,Pendigits,100KB-1MB,0.9854479308776717,"{""max_depth"": 16, ""max_features"": ""sqrt"", ""min_samples_leaf"": 1, ""n_estimators"": 10}",3
+RF,Pendigits,>1MB,0.9912081249052599,"{""max_depth"": null, ""max_features"": ""sqrt"", ""min_samples_leaf"": 1, ""n_estimators"": 100}",3
+RF,Pima Diabetes,10-100KB,0.7753246753246753,"{""max_depth"": 8, ""max_features"": ""log2"", ""min_samples_leaf"": 5, ""n_estimators"": 10}",5
+RF,Pima Diabetes,100KB-1MB,0.7870129870129869,"{""max_depth"": 16, ""max_features"": ""log2"", ""min_samples_leaf"": 5, ""n_estimators"": 50}",5
+RF,Pima Diabetes,>1MB,0.7909090909090909,"{""max_depth"": 16, ""max_features"": ""log2"", ""min_samples_leaf"": 5, ""n_estimators"": 200}",5
+RF,SatImage,100KB-1MB,0.9045101088646967,"{""max_depth"": null, ""max_features"": ""log2"", ""min_samples_leaf"": 1, ""n_estimators"": 10}",5
+RF,SatImage,>1MB,0.9161741835147744,"{""max_depth"": null, ""max_features"": ""sqrt"", ""min_samples_leaf"": 1, ""n_estimators"": 50}",5
+RF,Seeds,10-100KB,0.9285714285714285,"{""max_depth"": 16, ""max_features"": 1.0, ""min_samples_leaf"": 1, ""n_estimators"": 50}",5
+RF,Seeds,100KB-1MB,0.9285714285714285,"{""max_depth"": 16, ""max_features"": 1.0, ""min_samples_leaf"": 1, ""n_estimators"": 200}",5
+RF,Segment,10-100KB,0.958008658008658,"{""max_depth"": 16, ""max_features"": 1.0, ""min_samples_leaf"": 5, ""n_estimators"": 10}",5
+RF,Segment,100KB-1MB,0.9748917748917749,"{""max_depth"": 16, ""max_features"": ""log2"", ""min_samples_leaf"": 1, ""n_estimators"": 50}",5
+RF,Segment,>1MB,0.9770562770562771,"{""max_depth"": 16, ""max_features"": ""log2"", ""min_samples_leaf"": 1, ""n_estimators"": 100}",5
+RF,Steel Plates,10-100KB,1.0,"{""max_depth"": 16, ""max_features"": 1.0, ""min_samples_leaf"": 1, ""n_estimators"": 10}",5
+RF,Steel Plates,100KB-1MB,1.0,"{""max_depth"": 16, ""max_features"": 1.0, ""min_samples_leaf"": 1, ""n_estimators"": 100}",5
+RF,Steel Plates,>1MB,0.9933161953727506,"{""max_depth"": 16, ""max_features"": ""log2"", ""min_samples_leaf"": 1, ""n_estimators"": 100}",5
+RF,Vehicle,10-100KB,0.7270588235294118,"{""max_depth"": 8, ""max_features"": ""log2"", ""min_samples_leaf"": 5, ""n_estimators"": 10}",5
+RF,Vehicle,100KB-1MB,0.7435294117647059,"{""max_depth"": 8, ""max_features"": ""log2"", ""min_samples_leaf"": 1, ""n_estimators"": 50}",5
+RF,Vehicle,>1MB,0.7505882352941177,"{""max_depth"": 16, ""max_features"": ""log2"", ""min_samples_leaf"": 1, ""n_estimators"": 50}",5
+RF,Waveform,100KB-1MB,0.837,"{""max_depth"": 8, ""max_features"": ""sqrt"", ""min_samples_leaf"": 5, ""n_estimators"": 10}",5
+RF,Waveform,>1MB,0.8577999999999999,"{""max_depth"": 16, ""max_features"": ""log2"", ""min_samples_leaf"": 5, ""n_estimators"": 200}",5
+RF,Wine,10-100KB,0.9777777777777779,"{""max_depth"": 16, ""max_features"": ""log2"", ""min_samples_leaf"": 1, ""n_estimators"": 10}",5
+RF,Wine,100KB-1MB,0.9777777777777779,"{""max_depth"": 16, ""max_features"": ""log2"", ""min_samples_leaf"": 1, ""n_estimators"": 100}",5
+RF,Yeast,100KB-1MB,0.6215488215488215,"{""max_depth"": 8, ""max_features"": ""sqrt"", ""min_samples_leaf"": 5, ""n_estimators"": 50}",5
+RF,Yeast,>1MB,0.6316498316498317,"{""max_depth"": 8, ""max_features"": ""log2"", ""min_samples_leaf"": 1, ""n_estimators"": 50}",5
+Random-WiSARD-cuckoo,Balance Scale,<1KB,0.8720000000000001,"{""a"": 8, ""bleach"": 4, ""t"": 32}",5
+Random-WiSARD-cuckoo,Balance Scale,1-10KB,0.9008,"{""a"": 8, ""bleach"": 4, ""t"": 128}",5
+Random-WiSARD-cuckoo,Balance Scale,10-100KB,0.9008,"{""a"": 20, ""bleach"": 4, ""t"": 256}",5
+Random-WiSARD-cuckoo,Banknote,<1KB,0.9985454545454544,"{""a"": 12, ""bleach"": 2, ""t"": 32}",5
+Random-WiSARD-cuckoo,Banknote,1-10KB,1.0,"{""a"": 24, ""bleach"": 1, ""t"": 64}",5
+Random-WiSARD-cuckoo,Banknote,10-100KB,1.0,"{""a"": 32, ""bleach"": 4, ""t"": 256}",5
+Random-WiSARD-cuckoo,Breast Cancer,<1KB,0.9508771929824562,"{""a"": 8, ""bleach"": 3, ""t"": 2}",5
+Random-WiSARD-cuckoo,Breast Cancer,1-10KB,0.9578947368421054,"{""a"": 4, ""bleach"": 2, ""t"": 64}",5
+Random-WiSARD-cuckoo,Breast Cancer,10-100KB,0.9614035087719298,"{""a"": 4, ""bleach"": 1, ""t"": 128}",5
+Random-WiSARD-cuckoo,Breast Cancer,100KB-1MB,0.9596491228070174,"{""a"": 16, ""bleach"": 1, ""t"": 256}",5
+Random-WiSARD-cuckoo,EEG Eye State,<1KB,0.5662883845126835,"{""a"": 4, ""bleach"": 4, ""t"": 8}",5
+Random-WiSARD-cuckoo,EEG Eye State,1-10KB,0.7334445927903872,"{""a"": 12, ""bleach"": 4, ""t"": 8}",5
+Random-WiSARD-cuckoo,EEG Eye State,10-100KB,0.8803738317757009,"{""a"": 32, ""bleach"": 1, ""t"": 32}",5
+Random-WiSARD-cuckoo,EEG Eye State,100KB-1MB,0.9371161548731642,"{""a"": 48, ""bleach"": 1, ""t"": 256}",5
+Random-WiSARD-cuckoo,Ecoli,<1KB,0.8411764705882353,"{""a"": 12, ""bleach"": 2, ""t"": 16}",5
+Random-WiSARD-cuckoo,Ecoli,1-10KB,0.8705882352941178,"{""a"": 8, ""bleach"": 1, ""t"": 128}",5
+Random-WiSARD-cuckoo,Ecoli,10-100KB,0.8705882352941176,"{""a"": 8, ""bleach"": 1, ""t"": 256}",5
+Random-WiSARD-cuckoo,Glass,<1KB,0.7116279069767442,"{""a"": 12, ""bleach"": 1, ""t"": 8}",5
+Random-WiSARD-cuckoo,Glass,1-10KB,0.7674418604651163,"{""a"": 12, ""bleach"": 1, ""t"": 128}",5
+Random-WiSARD-cuckoo,Glass,10-100KB,0.7674418604651163,"{""a"": 20, ""bleach"": 1, ""t"": 256}",5
+Random-WiSARD-cuckoo,Haberman,<1KB,0.7483870967741936,"{""a"": 4, ""bleach"": 2, ""t"": 16}",5
+Random-WiSARD-cuckoo,Haberman,1-10KB,0.7483870967741936,"{""a"": 20, ""bleach"": 4, ""t"": 64}",5
+Random-WiSARD-cuckoo,Ionosphere,<1KB,0.8845070422535212,"{""a"": 12, ""bleach"": 3, ""t"": 2}",5
+Random-WiSARD-cuckoo,Ionosphere,1-10KB,0.9323943661971832,"{""a"": 32, ""bleach"": 1, ""t"": 32}",5
+Random-WiSARD-cuckoo,Ionosphere,10-100KB,0.9492957746478872,"{""a"": 8, ""bleach"": 1, ""t"": 128}",5
+Random-WiSARD-cuckoo,Iris,<1KB,0.9666666666666666,"{""a"": 4, ""bleach"": 2, ""t"": 2}",5
+Random-WiSARD-cuckoo,Iris,1-10KB,0.9666666666666668,"{""a"": 12, ""bleach"": 4, ""t"": 256}",5
+Random-WiSARD-cuckoo,Letter Recognition,1-10KB,0.6668499999999999,"{""a"": 8, ""bleach"": 4, ""t"": 4}",5
+Random-WiSARD-cuckoo,Letter Recognition,10-100KB,0.9314,"{""a"": 16, ""bleach"": 1, ""t"": 32}",5
+Random-WiSARD-cuckoo,Letter Recognition,100KB-1MB,0.9536,"{""a"": 24, ""bleach"": 1, ""t"": 256}",5
+Random-WiSARD-cuckoo,Magic Gamma,<1KB,0.6919032597266036,"{""a"": 8, ""bleach"": 4, ""t"": 2}",5
+Random-WiSARD-cuckoo,Magic Gamma,1-10KB,0.810515247108307,"{""a"": 12, ""bleach"": 4, ""t"": 16}",5
+Random-WiSARD-cuckoo,Magic Gamma,10-100KB,0.8615141955835963,"{""a"": 12, ""bleach"": 3, ""t"": 256}",5
+Random-WiSARD-cuckoo,Magic Gamma,100KB-1MB,0.8684016824395373,"{""a"": 24, ""bleach"": 1, ""t"": 256}",5
+Random-WiSARD-cuckoo,Pendigits,<1KB,0.6659390632105502,"{""a"": 4, ""bleach"": 4, ""t"": 2}",5
+Random-WiSARD-cuckoo,Pendigits,1-10KB,0.9675306957708049,"{""a"": 16, ""bleach"": 1, ""t"": 8}",5
+Random-WiSARD-cuckoo,Pendigits,10-100KB,0.9885402455661664,"{""a"": 24, ""bleach"": 1, ""t"": 64}",5
+Random-WiSARD-cuckoo,Pendigits,100KB-1MB,0.9895407003183265,"{""a"": 24, ""bleach"": 1, ""t"": 256}",5
+Random-WiSARD-cuckoo,Pima Diabetes,<1KB,0.7454545454545455,"{""a"": 8, ""bleach"": 4, ""t"": 8}",5
+Random-WiSARD-cuckoo,Pima Diabetes,1-10KB,0.7675324675324675,"{""a"": 12, ""bleach"": 2, ""t"": 32}",5
+Random-WiSARD-cuckoo,Pima Diabetes,10-100KB,0.7610389610389611,"{""a"": 8, ""bleach"": 3, ""t"": 128}",5
+Random-WiSARD-cuckoo,SatImage,<1KB,0.35769828926905134,"{""a"": 2, ""bleach"": 4, ""t"": 2}",5
+Random-WiSARD-cuckoo,SatImage,1-10KB,0.8696734059097977,"{""a"": 12, ""bleach"": 4, ""t"": 8}",5
+Random-WiSARD-cuckoo,SatImage,10-100KB,0.9003110419906687,"{""a"": 28, ""bleach"": 1, ""t"": 32}",5
+Random-WiSARD-cuckoo,SatImage,100KB-1MB,0.9087091757387247,"{""a"": 28, ""bleach"": 1, ""t"": 256}",5
+Random-WiSARD-cuckoo,Seeds,<1KB,0.9380952380952381,"{""a"": 16, ""bleach"": 1, ""t"": 8}",5
+Random-WiSARD-cuckoo,Seeds,1-10KB,0.9285714285714286,"{""a"": 24, ""bleach"": 4, ""t"": 64}",5
+Random-WiSARD-cuckoo,Segment,<1KB,0.8324675324675324,"{""a"": 4, ""bleach"": 3, ""t"": 4}",5
+Random-WiSARD-cuckoo,Segment,1-10KB,0.9623376623376624,"{""a"": 20, ""bleach"": 1, ""t"": 16}",5
+Random-WiSARD-cuckoo,Segment,10-100KB,0.9696969696969697,"{""a"": 28, ""bleach"": 1, ""t"": 128}",5
+Random-WiSARD-cuckoo,Segment,100KB-1MB,0.9701298701298701,"{""a"": 28, ""bleach"": 1, ""t"": 256}",5
+Random-WiSARD-cuckoo,Steel Plates,<1KB,0.7789203084832905,"{""a"": 8, ""bleach"": 4, ""t"": 2}",5
+Random-WiSARD-cuckoo,Steel Plates,1-10KB,0.9383033419023136,"{""a"": 20, ""bleach"": 1, ""t"": 8}",5
+Random-WiSARD-cuckoo,Steel Plates,10-100KB,0.9768637532133676,"{""a"": 20, ""bleach"": 1, ""t"": 64}",5
+Random-WiSARD-cuckoo,Steel Plates,100KB-1MB,0.9830334190231362,"{""a"": 20, ""bleach"": 1, ""t"": 256}",5
+Random-WiSARD-cuckoo,Vehicle,<1KB,0.6270588235294118,"{""a"": 8, ""bleach"": 3, ""t"": 2}",5
+Random-WiSARD-cuckoo,Vehicle,1-10KB,0.7388235294117648,"{""a"": 4, ""bleach"": 2, ""t"": 64}",5
+Random-WiSARD-cuckoo,Vehicle,10-100KB,0.7482352941176471,"{""a"": 12, ""bleach"": 1, ""t"": 256}",5
+Random-WiSARD-cuckoo,Waveform,<1KB,0.479,"{""a"": 4, ""bleach"": 4, ""t"": 2}",5
+Random-WiSARD-cuckoo,Waveform,1-10KB,0.7654,"{""a"": 8, ""bleach"": 4, ""t"": 4}",5
+Random-WiSARD-cuckoo,Waveform,10-100KB,0.8404,"{""a"": 8, ""bleach"": 3, ""t"": 64}",5
+Random-WiSARD-cuckoo,Waveform,100KB-1MB,0.8486,"{""a"": 8, ""bleach"": 4, ""t"": 128}",5
+Random-WiSARD-cuckoo,Waveform,>1MB,0.845,"{""a"": 16, ""bleach"": 1, ""t"": 256}",5
+Random-WiSARD-cuckoo,Wine,<1KB,0.9777777777777779,"{""a"": 2, ""bleach"": 1, ""t"": 16}",5
+Random-WiSARD-cuckoo,Wine,1-10KB,0.9888888888888889,"{""a"": 2, ""bleach"": 1, ""t"": 32}",5
+Random-WiSARD-cuckoo,Wine,10-100KB,0.9833333333333334,"{""a"": 4, ""bleach"": 1, ""t"": 256}",5
+Random-WiSARD-cuckoo,Yeast,<1KB,0.45387205387205387,"{""a"": 8, ""bleach"": 4, ""t"": 4}",5
+Random-WiSARD-cuckoo,Yeast,1-10KB,0.5824915824915825,"{""a"": 8, ""bleach"": 3, ""t"": 64}",5
+Random-WiSARD-cuckoo,Yeast,10-100KB,0.6161616161616161,"{""a"": 20, ""bleach"": 1, ""t"": 256}",5
+Random-WiSARD-dense,Balance Scale,<1KB,0.7487999999999999,"{""a"": 8, ""bleach"": 2, ""t"": 2}",5
+Random-WiSARD-dense,Balance Scale,1-10KB,0.8928,"{""a"": 8, ""bleach"": 4, ""t"": 64}",5
+Random-WiSARD-dense,Balance Scale,10-100KB,0.9008,"{""a"": 20, ""bleach"": 4, ""t"": 256}",5
+Random-WiSARD-dense,Banknote,<1KB,0.976,"{""a"": 16, ""bleach"": 1, ""t"": 4}",5
+Random-WiSARD-dense,Banknote,1-10KB,0.9992727272727272,"{""a"": 12, ""bleach"": 1, ""t"": 64}",5
+Random-WiSARD-dense,Banknote,10-100KB,1.0,"{""a"": 24, ""bleach"": 1, ""t"": 64}",5
+Random-WiSARD-dense,Breast Cancer,1-10KB,0.9543859649122807,"{""a"": 4, ""bleach"": 3, ""t"": 8}",5
+Random-WiSARD-dense,Breast Cancer,10-100KB,0.9614035087719298,"{""a"": 4, ""bleach"": 1, ""t"": 128}",5
+Random-WiSARD-dense,Breast Cancer,100KB-1MB,0.9596491228070174,"{""a"": 12, ""bleach"": 1, ""t"": 256}",5
+Random-WiSARD-dense,EEG Eye State,<1KB,0.5510680907877169,"{""a"": 2, ""bleach"": 1, ""t"": 2}",5
+Random-WiSARD-dense,EEG Eye State,1-10KB,0.6273030707610147,"{""a"": 8, ""bleach"": 4, ""t"": 4}",5
+Random-WiSARD-dense,EEG Eye State,10-100KB,0.7869158878504673,"{""a"": 20, ""bleach"": 2, ""t"": 8}",5
+Random-WiSARD-dense,EEG Eye State,100KB-1MB,0.9091455273698263,"{""a"": 32, ""bleach"": 1, ""t"": 64}",5
+Random-WiSARD-dense,EEG Eye State,>1MB,0.9371161548731642,"{""a"": 48, ""bleach"": 1, ""t"": 256}",5
+Random-WiSARD-dense,Ecoli,<1KB,0.8058823529411765,"{""a"": 4, ""bleach"": 2, ""t"": 4}",5
+Random-WiSARD-dense,Ecoli,1-10KB,0.8705882352941176,"{""a"": 8, ""bleach"": 2, ""t"": 32}",5
+Random-WiSARD-dense,Ecoli,10-100KB,0.8705882352941178,"{""a"": 8, ""bleach"": 1, ""t"": 128}",5
+Random-WiSARD-dense,Glass,<1KB,0.6418604651162791,"{""a"": 4, ""bleach"": 3, ""t"": 2}",5
+Random-WiSARD-dense,Glass,1-10KB,0.7395348837209302,"{""a"": 20, ""bleach"": 1, ""t"": 32}",5
+Random-WiSARD-dense,Glass,10-100KB,0.7674418604651163,"{""a"": 12, ""bleach"": 1, ""t"": 128}",5
+Random-WiSARD-dense,Haberman,<1KB,0.7419354838709677,"{""a"": 12, ""bleach"": 4, ""t"": 4}",5
+Random-WiSARD-dense,Haberman,1-10KB,0.7483870967741936,"{""a"": 20, ""bleach"": 4, ""t"": 64}",5
+Random-WiSARD-dense,Haberman,10-100KB,0.7419354838709677,"{""a"": 48, ""bleach"": 4, ""t"": 256}",5
+Random-WiSARD-dense,Ionosphere,1-10KB,0.904225352112676,"{""a"": 16, ""bleach"": 3, ""t"": 4}",5
+Random-WiSARD-dense,Ionosphere,10-100KB,0.9492957746478872,"{""a"": 8, ""bleach"": 1, ""t"": 64}",5
+Random-WiSARD-dense,Ionosphere,100KB-1MB,0.9492957746478872,"{""a"": 8, ""bleach"": 1, ""t"": 128}",5
+Random-WiSARD-dense,Iris,<1KB,0.9666666666666666,"{""a"": 4, ""bleach"": 2, ""t"": 2}",5
+Random-WiSARD-dense,Iris,1-10KB,0.9666666666666666,"{""a"": 16, ""bleach"": 2, ""t"": 128}",5
+Random-WiSARD-dense,Iris,10-100KB,0.9666666666666668,"{""a"": 12, ""bleach"": 4, ""t"": 256}",5
+Random-WiSARD-dense,Letter Recognition,1-10KB,0.08954999999999999,"{""a"": 2, ""bleach"": 4, ""t"": 2}",5
+Random-WiSARD-dense,Letter Recognition,10-100KB,0.78545,"{""a"": 16, ""bleach"": 1, ""t"": 4}",5
+Random-WiSARD-dense,Letter Recognition,100KB-1MB,0.9398500000000001,"{""a"": 16, ""bleach"": 1, ""t"": 64}",5
+Random-WiSARD-dense,Letter Recognition,>1MB,0.9536,"{""a"": 24, ""bleach"": 1, ""t"": 256}",5
+Random-WiSARD-dense,Magic Gamma,<1KB,0.6485804416403785,"{""a"": 2, ""bleach"": 3, ""t"": 4}",5
+Random-WiSARD-dense,Magic Gamma,1-10KB,0.7435856992639327,"{""a"": 8, ""bleach"": 4, ""t"": 8}",5
+Random-WiSARD-dense,Magic Gamma,10-100KB,0.8339116719242903,"{""a"": 12, ""bleach"": 4, ""t"": 32}",5
+Random-WiSARD-dense,Magic Gamma,100KB-1MB,0.8666666666666666,"{""a"": 16, ""bleach"": 3, ""t"": 256}",5
+Random-WiSARD-dense,Magic Gamma,>1MB,0.8684016824395373,"{""a"": 24, ""bleach"": 1, ""t"": 256}",5
+Random-WiSARD-dense,Pendigits,1-10KB,0.8582082764893133,"{""a"": 8, ""bleach"": 4, ""t"": 2}",5
+Random-WiSARD-dense,Pendigits,10-100KB,0.9816280127330606,"{""a"": 16, ""bleach"": 1, ""t"": 16}",5
+Random-WiSARD-dense,Pendigits,100KB-1MB,0.9887221464301955,"{""a"": 28, ""bleach"": 1, ""t"": 128}",5
+Random-WiSARD-dense,Pendigits,>1MB,0.9895407003183265,"{""a"": 24, ""bleach"": 1, ""t"": 256}",5
+Random-WiSARD-dense,Pima Diabetes,<1KB,0.6506493506493507,"{""a"": 2, ""bleach"": 3, ""t"": 4}",5
+Random-WiSARD-dense,Pima Diabetes,1-10KB,0.7454545454545455,"{""a"": 8, ""bleach"": 4, ""t"": 8}",5
+Random-WiSARD-dense,Pima Diabetes,10-100KB,0.7675324675324675,"{""a"": 12, ""bleach"": 2, ""t"": 32}",5
+Random-WiSARD-dense,Pima Diabetes,100KB-1MB,0.7558441558441558,"{""a"": 16, ""bleach"": 4, ""t"": 256}",5
+Random-WiSARD-dense,SatImage,1-10KB,0.5465007776049766,"{""a"": 2, ""bleach"": 4, ""t"": 4}",5
+Random-WiSARD-dense,SatImage,10-100KB,0.885692068429238,"{""a"": 12, ""bleach"": 3, ""t"": 16}",5
+Random-WiSARD-dense,SatImage,100KB-1MB,0.9066874027993779,"{""a"": 32, ""bleach"": 1, ""t"": 64}",5
+Random-WiSARD-dense,SatImage,>1MB,0.9087091757387247,"{""a"": 28, ""bleach"": 1, ""t"": 256}",5
+Random-WiSARD-dense,Seeds,<1KB,0.9047619047619048,"{""a"": 12, ""bleach"": 1, ""t"": 4}",5
+Random-WiSARD-dense,Seeds,1-10KB,0.9380952380952381,"{""a"": 16, ""bleach"": 1, ""t"": 8}",5
+Random-WiSARD-dense,Seeds,10-100KB,0.9238095238095237,"{""a"": 2, ""bleach"": 2, ""t"": 128}",5
+Random-WiSARD-dense,Segment,1-10KB,0.9086580086580087,"{""a"": 12, ""bleach"": 2, ""t"": 4}",5
+Random-WiSARD-dense,Segment,10-100KB,0.9632034632034632,"{""a"": 28, ""bleach"": 1, ""t"": 32}",5
+Random-WiSARD-dense,Segment,100KB-1MB,0.9701298701298701,"{""a"": 28, ""bleach"": 1, ""t"": 256}",5
+Random-WiSARD-dense,Steel Plates,1-10KB,0.8385604113110541,"{""a"": 12, ""bleach"": 2, ""t"": 2}",5
+Random-WiSARD-dense,Steel Plates,10-100KB,0.9480719794344473,"{""a"": 20, ""bleach"": 1, ""t"": 16}",5
+Random-WiSARD-dense,Steel Plates,100KB-1MB,0.9820051413881747,"{""a"": 24, ""bleach"": 1, ""t"": 128}",5
+Random-WiSARD-dense,Steel Plates,>1MB,0.9830334190231362,"{""a"": 20, ""bleach"": 1, ""t"": 256}",5
+Random-WiSARD-dense,Vehicle,1-10KB,0.7023529411764706,"{""a"": 8, ""bleach"": 3, ""t"": 8}",5
+Random-WiSARD-dense,Vehicle,10-100KB,0.7388235294117648,"{""a"": 4, ""bleach"": 2, ""t"": 64}",5
+Random-WiSARD-dense,Vehicle,100KB-1MB,0.7482352941176471,"{""a"": 12, ""bleach"": 1, ""t"": 256}",5
+Random-WiSARD-dense,Waveform,1-10KB,0.5906,"{""a"": 4, ""bleach"": 4, ""t"": 4}",5
+Random-WiSARD-dense,Waveform,10-100KB,0.7936,"{""a"": 8, ""bleach"": 4, ""t"": 8}",5
+Random-WiSARD-dense,Waveform,100KB-1MB,0.8486,"{""a"": 8, ""bleach"": 4, ""t"": 128}",5
+Random-WiSARD-dense,Waveform,>1MB,0.8469999999999999,"{""a"": 8, ""bleach"": 2, ""t"": 256}",5
+Random-WiSARD-dense,Wine,<1KB,0.9333333333333332,"{""a"": 4, ""bleach"": 4, ""t"": 2}",5
+Random-WiSARD-dense,Wine,1-10KB,0.9888888888888889,"{""a"": 2, ""bleach"": 1, ""t"": 32}",5
+Random-WiSARD-dense,Wine,10-100KB,0.9888888888888889,"{""a"": 4, ""bleach"": 1, ""t"": 64}",5
+Random-WiSARD-dense,Wine,100KB-1MB,0.9777777777777779,"{""a"": 12, ""bleach"": 1, ""t"": 256}",5
+Random-WiSARD-dense,Yeast,1-10KB,0.494949494949495,"{""a"": 12, ""bleach"": 2, ""t"": 8}",5
+Random-WiSARD-dense,Yeast,10-100KB,0.6033670033670033,"{""a"": 20, ""bleach"": 1, ""t"": 64}",5
+Random-WiSARD-dense,Yeast,100KB-1MB,0.6161616161616161,"{""a"": 20, ""bleach"": 1, ""t"": 256}",5
+ULEEN,Balance Scale,<1KB,0.7946666666666666,"{""batch_size"": 16, ""bits_per_input"": 3, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 30, ""filter_entries"": 64, ""filter_hash_functions"": 2, ""filter_inputs"": 4, ""lr"": 0.01, ""n_submodels"": 3}",3
+ULEEN,Balance Scale,1-10KB,0.88,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 50, ""filter_entries"": 256, ""filter_hash_functions"": 2, ""filter_inputs"": 8, ""lr"": 0.01, ""n_submodels"": 5}",3
+ULEEN,Banknote,<1KB,0.9842424242424243,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 80, ""filter_entries"": 256, ""filter_hash_functions"": 2, ""filter_inputs"": 8, ""lr"": 0.001, ""n_submodels"": 5, ""pruning_ratio"": 0.27, ""thermometer"": ""gaussian""}",3
+ULEEN,Banknote,1-10KB,0.9866666666666667,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 50, ""filter_entries"": 256, ""filter_hash_functions"": 2, ""filter_inputs"": 12, ""lr"": 0.01, ""n_submodels"": 5}",3
+ULEEN,Breast Cancer,<1KB,0.9532163742690059,"{""batch_size"": 16, ""bits_per_input"": 3, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 80, ""filter_entries"": 64, ""filter_hash_functions"": 2, ""filter_inputs"": 4, ""lr"": 0.001, ""n_submodels"": 3, ""pruning_ratio"": 0.27, ""thermometer"": ""gaussian""}",3
+ULEEN,Breast Cancer,1-10KB,0.9590643274853802,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 40, ""filter_entries"": 128, ""filter_hash_functions"": 2, ""filter_inputs"": 6, ""lr"": 0.01, ""n_submodels"": 3}",3
+ULEEN,Breast Cancer,10-100KB,0.9502923976608187,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 50, ""filter_entries"": 256, ""filter_hash_functions"": 2, ""filter_inputs"": 8, ""lr"": 0.01, ""n_submodels"": 5}",3
+ULEEN,EEG Eye State,<1KB,0.6109256786826881,"{""batch_size"": 16, ""bits_per_input"": 3, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 80, ""filter_entries"": 64, ""filter_hash_functions"": 2, ""filter_inputs"": 4, ""lr"": 0.001, ""n_submodels"": 3, ""pruning_ratio"": 0.27, ""thermometer"": ""gaussian""}",3
+ULEEN,EEG Eye State,1-10KB,0.6637739207832666,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 80, ""filter_entries"": 256, ""filter_hash_functions"": 2, ""filter_inputs"": 12, ""lr"": 0.001, ""n_submodels"": 5, ""pruning_ratio"": 0.27, ""thermometer"": ""gaussian""}",3
+ULEEN,Ecoli,<1KB,0.7254901960784315,"{""batch_size"": 16, ""bits_per_input"": 3, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 30, ""filter_entries"": 64, ""filter_hash_functions"": 1, ""filter_inputs"": 4, ""lr"": 0.01, ""n_submodels"": 1}",3
+ULEEN,Ecoli,1-10KB,0.9019607843137255,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 50, ""filter_entries"": 256, ""filter_hash_functions"": 2, ""filter_inputs"": 12, ""lr"": 0.01, ""n_submodels"": 5}",3
+ULEEN,Glass,<1KB,0.5503875968992248,"{""batch_size"": 16, ""bits_per_input"": 3, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 30, ""filter_entries"": 64, ""filter_hash_functions"": 1, ""filter_inputs"": 4, ""lr"": 0.01, ""n_submodels"": 1}",3
+ULEEN,Glass,1-10KB,0.6666666666666666,"{""batch_size"": 16, ""bits_per_input"": 3, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 30, ""filter_entries"": 64, ""filter_hash_functions"": 2, ""filter_inputs"": 4, ""lr"": 0.01, ""n_submodels"": 3}",3
+ULEEN,Haberman,<1KB,0.7365591397849464,"{""batch_size"": 16, ""bits_per_input"": 3, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 30, ""filter_entries"": 64, ""filter_hash_functions"": 2, ""filter_inputs"": 4, ""lr"": 0.01, ""n_submodels"": 3}",3
+ULEEN,Haberman,1-10KB,0.7258064516129034,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 50, ""filter_entries"": 256, ""filter_hash_functions"": 2, ""filter_inputs"": 12, ""lr"": 0.01, ""n_submodels"": 5}",3
+ULEEN,Ionosphere,<1KB,0.8779342723004695,"{""batch_size"": 16, ""bits_per_input"": 3, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 30, ""filter_entries"": 64, ""filter_hash_functions"": 1, ""filter_inputs"": 4, ""lr"": 0.01, ""n_submodels"": 1}",3
+ULEEN,Ionosphere,1-10KB,0.948356807511737,"{""batch_size"": 16, ""bits_per_input"": 3, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 30, ""filter_entries"": 64, ""filter_hash_functions"": 2, ""filter_inputs"": 4, ""lr"": 0.01, ""n_submodels"": 3}",3
+ULEEN,Ionosphere,10-100KB,0.9014084507042254,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 50, ""filter_entries"": 256, ""filter_hash_functions"": 2, ""filter_inputs"": 8, ""lr"": 0.01, ""n_submodels"": 5}",3
+ULEEN,Iris,<1KB,0.888888888888889,"{""batch_size"": 16, ""bits_per_input"": 3, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 30, ""filter_entries"": 64, ""filter_hash_functions"": 2, ""filter_inputs"": 4, ""lr"": 0.01, ""n_submodels"": 3}",3
+ULEEN,Iris,1-10KB,0.9,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 50, ""filter_entries"": 256, ""filter_hash_functions"": 2, ""filter_inputs"": 8, ""lr"": 0.01, ""n_submodels"": 5}",3
+ULEEN,Letter Recognition,1-10KB,0.6594166666666667,"{""batch_size"": 16, ""bits_per_input"": 3, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 80, ""filter_entries"": 64, ""filter_hash_functions"": 2, ""filter_inputs"": 4, ""lr"": 0.001, ""n_submodels"": 3, ""pruning_ratio"": 0.27, ""thermometer"": ""gaussian""}",3
+ULEEN,Letter Recognition,10-100KB,0.8814166666666666,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 80, ""filter_entries"": 256, ""filter_hash_functions"": 2, ""filter_inputs"": 12, ""lr"": 0.001, ""n_submodels"": 5, ""pruning_ratio"": 0.27, ""thermometer"": ""gaussian""}",3
+ULEEN,Magic Gamma,<1KB,0.8256221521205749,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 80, ""filter_entries"": 128, ""filter_hash_functions"": 2, ""filter_inputs"": 6, ""lr"": 0.001, ""n_submodels"": 3, ""pruning_ratio"": 0.27, ""thermometer"": ""gaussian""}",3
+ULEEN,Magic Gamma,1-10KB,0.8386785839467228,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 80, ""filter_entries"": 256, ""filter_hash_functions"": 2, ""filter_inputs"": 12, ""lr"": 0.001, ""n_submodels"": 5, ""pruning_ratio"": 0.27, ""thermometer"": ""gaussian""}",3
+ULEEN,Pendigits,<1KB,0.8873730483553129,"{""batch_size"": 16, ""bits_per_input"": 3, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 80, ""filter_entries"": 64, ""filter_hash_functions"": 1, ""filter_inputs"": 4, ""lr"": 0.001, ""n_submodels"": 1, ""pruning_ratio"": 0.27, ""thermometer"": ""gaussian""}",3
+ULEEN,Pendigits,1-10KB,0.9857510989843868,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 40, ""filter_entries"": 128, ""filter_hash_functions"": 2, ""filter_inputs"": 6, ""lr"": 0.01, ""n_submodels"": 3}",3
+ULEEN,Pendigits,10-100KB,0.9878732757313932,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 50, ""filter_entries"": 256, ""filter_hash_functions"": 2, ""filter_inputs"": 8, ""lr"": 0.01, ""n_submodels"": 5}",3
+ULEEN,Pima Diabetes,<1KB,0.735930735930736,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 80, ""filter_entries"": 128, ""filter_hash_functions"": 2, ""filter_inputs"": 4, ""lr"": 0.001, ""n_submodels"": 3, ""pruning_ratio"": 0.27, ""thermometer"": ""gaussian""}",3
+ULEEN,Pima Diabetes,1-10KB,0.7683982683982684,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 50, ""filter_entries"": 256, ""filter_hash_functions"": 2, ""filter_inputs"": 8, ""lr"": 0.01, ""n_submodels"": 5}",3
+ULEEN,SatImage,<1KB,0.847071021254536,"{""batch_size"": 16, ""bits_per_input"": 3, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 80, ""filter_entries"": 64, ""filter_hash_functions"": 1, ""filter_inputs"": 4, ""lr"": 0.001, ""n_submodels"": 1, ""pruning_ratio"": 0.27, ""thermometer"": ""gaussian""}",3
+ULEEN,SatImage,1-10KB,0.8952825298081907,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 80, ""filter_entries"": 128, ""filter_hash_functions"": 2, ""filter_inputs"": 6, ""lr"": 0.001, ""n_submodels"": 3, ""pruning_ratio"": 0.27, ""thermometer"": ""gaussian""}",3
+ULEEN,SatImage,10-100KB,0.8994297563504405,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 80, ""filter_entries"": 256, ""filter_hash_functions"": 2, ""filter_inputs"": 12, ""lr"": 0.001, ""n_submodels"": 5, ""pruning_ratio"": 0.27, ""thermometer"": ""gaussian""}",3
+ULEEN,Seeds,<1KB,0.8968253968253969,"{""batch_size"": 16, ""bits_per_input"": 3, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 30, ""filter_entries"": 64, ""filter_hash_functions"": 2, ""filter_inputs"": 4, ""lr"": 0.01, ""n_submodels"": 3}",3
+ULEEN,Seeds,1-10KB,0.9444444444444443,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 40, ""filter_entries"": 128, ""filter_hash_functions"": 2, ""filter_inputs"": 4, ""lr"": 0.01, ""n_submodels"": 3}",3
+ULEEN,Segment,<1KB,0.8152958152958153,"{""batch_size"": 16, ""bits_per_input"": 3, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 80, ""filter_entries"": 64, ""filter_hash_functions"": 1, ""filter_inputs"": 4, ""lr"": 0.001, ""n_submodels"": 1, ""pruning_ratio"": 0.27, ""thermometer"": ""gaussian""}",3
+ULEEN,Segment,1-10KB,0.9437229437229439,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 40, ""filter_entries"": 128, ""filter_hash_functions"": 2, ""filter_inputs"": 6, ""lr"": 0.01, ""n_submodels"": 3}",3
+ULEEN,Segment,10-100KB,0.9502164502164502,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 50, ""filter_entries"": 256, ""filter_hash_functions"": 2, ""filter_inputs"": 12, ""lr"": 0.01, ""n_submodels"": 5}",3
+ULEEN,Steel Plates,<1KB,0.9383033419023136,"{""batch_size"": 16, ""bits_per_input"": 3, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 30, ""filter_entries"": 64, ""filter_hash_functions"": 1, ""filter_inputs"": 4, ""lr"": 0.01, ""n_submodels"": 1}",3
+ULEEN,Steel Plates,1-10KB,1.0,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 40, ""filter_entries"": 128, ""filter_hash_functions"": 2, ""filter_inputs"": 4, ""lr"": 0.01, ""n_submodels"": 3}",3
+ULEEN,Steel Plates,10-100KB,0.998286203941731,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 50, ""filter_entries"": 256, ""filter_hash_functions"": 2, ""filter_inputs"": 8, ""lr"": 0.01, ""n_submodels"": 5}",3
+ULEEN,Vehicle,<1KB,0.5882352941176471,"{""batch_size"": 16, ""bits_per_input"": 3, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 30, ""filter_entries"": 64, ""filter_hash_functions"": 1, ""filter_inputs"": 4, ""lr"": 0.01, ""n_submodels"": 1}",3
+ULEEN,Vehicle,1-10KB,0.7274509803921569,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 50, ""filter_entries"": 256, ""filter_hash_functions"": 2, ""filter_inputs"": 12, ""lr"": 0.01, ""n_submodels"": 5}",3
+ULEEN,Vehicle,10-100KB,0.7411764705882353,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 50, ""filter_entries"": 256, ""filter_hash_functions"": 2, ""filter_inputs"": 8, ""lr"": 0.01, ""n_submodels"": 5}",3
+ULEEN,Waveform,<1KB,0.79,"{""batch_size"": 16, ""bits_per_input"": 3, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 80, ""filter_entries"": 64, ""filter_hash_functions"": 1, ""filter_inputs"": 4, ""lr"": 0.001, ""n_submodels"": 1, ""pruning_ratio"": 0.27, ""thermometer"": ""gaussian""}",3
+ULEEN,Waveform,1-10KB,0.838,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 80, ""filter_entries"": 128, ""filter_hash_functions"": 2, ""filter_inputs"": 4, ""lr"": 0.001, ""n_submodels"": 3, ""pruning_ratio"": 0.27, ""thermometer"": ""gaussian""}",3
+ULEEN,Waveform,10-100KB,0.8336666666666667,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 80, ""filter_entries"": 256, ""filter_hash_functions"": 2, ""filter_inputs"": 8, ""lr"": 0.001, ""n_submodels"": 5, ""pruning_ratio"": 0.27, ""thermometer"": ""gaussian""}",3
+ULEEN,Wine,<1KB,0.8703703703703703,"{""batch_size"": 16, ""bits_per_input"": 3, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 30, ""filter_entries"": 64, ""filter_hash_functions"": 1, ""filter_inputs"": 4, ""lr"": 0.01, ""n_submodels"": 1}",3
+ULEEN,Wine,1-10KB,0.9537037037037037,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 50, ""filter_entries"": 256, ""filter_hash_functions"": 2, ""filter_inputs"": 8, ""lr"": 0.01, ""n_submodels"": 5}",3
+ULEEN,Yeast,<1KB,0.4657687991021324,"{""batch_size"": 16, ""bits_per_input"": 3, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 30, ""filter_entries"": 64, ""filter_hash_functions"": 1, ""filter_inputs"": 4, ""lr"": 0.01, ""n_submodels"": 1}",3
+ULEEN,Yeast,1-10KB,0.5970819304152638,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 50, ""filter_entries"": 256, ""filter_hash_functions"": 2, ""filter_inputs"": 12, ""lr"": 0.01, ""n_submodels"": 5}",3
+ULEEN,Yeast,10-100KB,0.5802469135802469,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 50, ""filter_entries"": 256, ""filter_hash_functions"": 2, ""filter_inputs"": 8, ""lr"": 0.01, ""n_submodels"": 5}",3
+ULEEN,australian,<1KB,0.8236714975845411,"{""batch_size"": 16, ""bits_per_input"": 3, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 80, ""filter_entries"": 64, ""filter_hash_functions"": 2, ""filter_inputs"": 4, ""lr"": 0.001, ""n_submodels"": 3, ""pruning_ratio"": 0.27, ""thermometer"": ""gaussian""}",3
+ULEEN,australian,1-10KB,0.8647342995169082,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 50, ""filter_entries"": 256, ""filter_hash_functions"": 2, ""filter_inputs"": 8, ""lr"": 0.01, ""n_submodels"": 5}",3
+ULEEN,blood-transfusion,<1KB,0.7755555555555556,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 40, ""filter_entries"": 128, ""filter_hash_functions"": 2, ""filter_inputs"": 6, ""lr"": 0.01, ""n_submodels"": 3}",3
+ULEEN,blood-transfusion,1-10KB,0.7799999999999999,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 50, ""filter_entries"": 256, ""filter_hash_functions"": 2, ""filter_inputs"": 8, ""lr"": 0.01, ""n_submodels"": 5}",3
+ULEEN,christine,10-100KB,0.6903444034440346,"{""batch_size"": 16, ""bits_per_input"": 3, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 80, ""filter_entries"": 64, ""filter_hash_functions"": 2, ""filter_inputs"": 4, ""lr"": 0.001, ""n_submodels"": 3, ""pruning_ratio"": 0.27, ""thermometer"": ""gaussian""}",3
+ULEEN,christine,100KB-1MB,0.7167896678966791,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 50, ""filter_entries"": 256, ""filter_hash_functions"": 2, ""filter_inputs"": 8, ""lr"": 0.01, ""n_submodels"": 5}",3
+ULEEN,higgs-small,<1KB,0.6412884582695902,"{""batch_size"": 16, ""bits_per_input"": 3, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 80, ""filter_entries"": 64, ""filter_hash_functions"": 2, ""filter_inputs"": 4, ""lr"": 0.001, ""n_submodels"": 3, ""pruning_ratio"": 0.27, ""thermometer"": ""gaussian""}",3
+ULEEN,higgs-small,1-10KB,0.6523372429032807,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 80, ""filter_entries"": 256, ""filter_hash_functions"": 2, ""filter_inputs"": 8, ""lr"": 0.001, ""n_submodels"": 5, ""pruning_ratio"": 0.27, ""thermometer"": ""gaussian""}",3
+ULEEN,higgs-small,10-100KB,0.5971783103858576,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 80, ""filter_entries"": 256, ""filter_hash_functions"": 2, ""filter_inputs"": 8, ""lr"": 0.001, ""n_submodels"": 5}",3
+ULEEN,jasmine,1-10KB,0.7677275265214965,"{""batch_size"": 16, ""bits_per_input"": 3, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 80, ""filter_entries"": 64, ""filter_hash_functions"": 2, ""filter_inputs"": 4, ""lr"": 0.001, ""n_submodels"": 3, ""pruning_ratio"": 0.27, ""thermometer"": ""gaussian""}",3
+ULEEN,jasmine,10-100KB,0.7828029034059184,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 80, ""filter_entries"": 256, ""filter_hash_functions"": 2, ""filter_inputs"": 8, ""lr"": 0.001, ""n_submodels"": 5, ""pruning_ratio"": 0.27, ""thermometer"": ""gaussian""}",3
+ULEEN,miniboone,<1KB,0.8182831661092531,"{""batch_size"": 16, ""bits_per_input"": 3, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 80, ""filter_entries"": 64, ""filter_hash_functions"": 1, ""filter_inputs"": 4, ""lr"": 0.001, ""n_submodels"": 1, ""pruning_ratio"": 0.27, ""thermometer"": ""gaussian""}",3
+ULEEN,miniboone,1-10KB,0.869334563487487,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 80, ""filter_entries"": 256, ""filter_hash_functions"": 2, ""filter_inputs"": 8, ""lr"": 0.001, ""n_submodels"": 5, ""pruning_ratio"": 0.27, ""thermometer"": ""gaussian""}",3
+ULEEN,miniboone,10-100KB,0.8268558028677969,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 50, ""filter_entries"": 256, ""filter_hash_functions"": 2, ""filter_inputs"": 12, ""lr"": 0.01, ""n_submodels"": 5}",3
+ULEEN,nomao,1-10KB,0.9565259441945936,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 80, ""filter_entries"": 128, ""filter_hash_functions"": 2, ""filter_inputs"": 6, ""lr"": 0.001, ""n_submodels"": 3, ""pruning_ratio"": 0.27, ""thermometer"": ""gaussian""}",3
+ULEEN,nomao,10-100KB,0.9638280381062914,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 50, ""filter_entries"": 256, ""filter_hash_functions"": 2, ""filter_inputs"": 12, ""lr"": 0.01, ""n_submodels"": 5}",3
+ULEEN,phoneme,<1KB,0.8223866790009251,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 80, ""filter_entries"": 256, ""filter_hash_functions"": 2, ""filter_inputs"": 12, ""lr"": 0.001, ""n_submodels"": 5, ""pruning_ratio"": 0.27, ""thermometer"": ""gaussian""}",3
+ULEEN,phoneme,1-10KB,0.7964847363552267,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 50, ""filter_entries"": 256, ""filter_hash_functions"": 2, ""filter_inputs"": 8, ""lr"": 0.01, ""n_submodels"": 5}",3
+ULEEN,skin-segmentation,<1KB,0.9764207404989254,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 80, ""filter_entries"": 256, ""filter_hash_functions"": 2, ""filter_inputs"": 12, ""lr"": 0.001, ""n_submodels"": 5, ""pruning_ratio"": 0.27, ""thermometer"": ""gaussian""}",3
+ULEEN,skin-segmentation,1-10KB,0.9821268260834083,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 80, ""filter_entries"": 256, ""filter_hash_functions"": 2, ""filter_inputs"": 12, ""lr"": 0.001, ""n_submodels"": 5}",3
+ULEEN,sylvine,<1KB,0.8777235772357724,"{""batch_size"": 16, ""bits_per_input"": 3, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 80, ""filter_entries"": 64, ""filter_hash_functions"": 2, ""filter_inputs"": 4, ""lr"": 0.001, ""n_submodels"": 3, ""pruning_ratio"": 0.27, ""thermometer"": ""gaussian""}",3
+ULEEN,sylvine,1-10KB,0.9069918699186993,"{""batch_size"": 32, ""bits_per_input"": 6, ""decay_lr"": true, ""dropout_p"": 0.0, ""epochs"": 80, ""filter_entries"": 128, ""filter_hash_functions"": 2, ""filter_inputs"": 4, ""lr"": 0.001, ""n_submodels"": 3, ""pruning_ratio"": 0.27, ""thermometer"": ""gaussian""}",3
+XGBoost,Balance Scale,100KB-1MB,0.8992000000000001,"{""learning_rate"": 0.1, ""max_depth"": 4, ""n_estimators"": 100, ""reg_lambda"": 10.0}",5
+XGBoost,Balance Scale,>1MB,0.9040000000000001,"{""learning_rate"": 0.3, ""max_depth"": 4, ""n_estimators"": 500, ""reg_lambda"": 1.0}",5
+XGBoost,Banknote,10-100KB,0.9978181818181818,"{""learning_rate"": 0.3, ""max_depth"": 4, ""n_estimators"": 100, ""reg_lambda"": 0.1}",5
+XGBoost,Banknote,100KB-1MB,0.9978181818181818,"{""learning_rate"": 0.1, ""max_depth"": 4, ""n_estimators"": 1000, ""reg_lambda"": 0.1}",5
+XGBoost,Banknote,>1MB,0.9963636363636363,"{""learning_rate"": 0.03, ""max_depth"": 10, ""n_estimators"": 1000, ""reg_lambda"": 10.0}",5
+XGBoost,Breast Cancer,10-100KB,0.968421052631579,"{""learning_rate"": 0.3, ""max_depth"": 4, ""n_estimators"": 100, ""reg_lambda"": 1.0}",5
+XGBoost,Breast Cancer,100KB-1MB,0.9701754385964912,"{""learning_rate"": 0.03, ""max_depth"": 4, ""n_estimators"": 1000, ""reg_lambda"": 0.1}",5
+XGBoost,EEG Eye State,100KB-1MB,0.9176680017801514,"{""learning_rate"": 0.1, ""max_depth"": 4, ""n_estimators"": 500, ""reg_lambda"": 1.0}",3
+XGBoost,EEG Eye State,>1MB,0.9564975522919448,"{""learning_rate"": 0.1, ""max_depth"": 10, ""n_estimators"": 1000, ""reg_lambda"": 1.0}",3
+XGBoost,Ecoli,100KB-1MB,0.85,"{""learning_rate"": 0.3, ""max_depth"": 4, ""n_estimators"": 100, ""reg_lambda"": 10.0}",5
+XGBoost,Ecoli,>1MB,0.8617647058823529,"{""learning_rate"": 0.1, ""max_depth"": 4, ""n_estimators"": 1000, ""reg_lambda"": 10.0}",5
+XGBoost,Glass,100KB-1MB,0.7813953488372093,"{""learning_rate"": 0.3, ""max_depth"": 6, ""n_estimators"": 100, ""reg_lambda"": 0.1}",5
+XGBoost,Glass,>1MB,0.7906976744186046,"{""learning_rate"": 0.03, ""max_depth"": 10, ""n_estimators"": 1000, ""reg_lambda"": 1.0}",5
+XGBoost,Haberman,100KB-1MB,0.732258064516129,"{""learning_rate"": 0.03, ""max_depth"": 10, ""n_estimators"": 100, ""reg_lambda"": 10.0}",5
+XGBoost,Haberman,>1MB,0.6806451612903226,"{""learning_rate"": 0.03, ""max_depth"": 4, ""n_estimators"": 1000, ""reg_lambda"": 10.0}",5
+XGBoost,Ionosphere,10-100KB,0.943661971830986,"{""learning_rate"": 0.3, ""max_depth"": 4, ""n_estimators"": 100, ""reg_lambda"": 0.1}",5
+XGBoost,Ionosphere,100KB-1MB,0.9464788732394366,"{""learning_rate"": 0.03, ""max_depth"": 4, ""n_estimators"": 1000, ""reg_lambda"": 0.1}",5
+XGBoost,Ionosphere,>1MB,0.9295774647887324,"{""learning_rate"": 0.03, ""max_depth"": 10, ""n_estimators"": 1000, ""reg_lambda"": 10.0}",5
+XGBoost,Iris,100KB-1MB,0.9533333333333334,"{""learning_rate"": 0.03, ""max_depth"": 10, ""n_estimators"": 100, ""reg_lambda"": 10.0}",5
+XGBoost,Iris,>1MB,0.9466666666666667,"{""learning_rate"": 0.03, ""max_depth"": 10, ""n_estimators"": 500, ""reg_lambda"": 10.0}",5
+XGBoost,Letter Recognition,>1MB,0.9660833333333333,"{""learning_rate"": 0.1, ""max_depth"": 6, ""n_estimators"": 1000, ""reg_lambda"": 1.0}",3
+XGBoost,Magic Gamma,100KB-1MB,0.8845951629863302,"{""learning_rate"": 0.1, ""max_depth"": 4, ""n_estimators"": 500, ""reg_lambda"": 0.1}",3
+XGBoost,Magic Gamma,>1MB,0.885471433578689,"{""learning_rate"": 0.1, ""max_depth"": 6, ""n_estimators"": 500, ""reg_lambda"": 1.0}",3
+XGBoost,Pendigits,>1MB,0.9915112930119752,"{""learning_rate"": 0.1, ""max_depth"": 4, ""n_estimators"": 1000, ""reg_lambda"": 0.1}",3
+XGBoost,Pima Diabetes,100KB-1MB,0.7844155844155845,"{""learning_rate"": 0.03, ""max_depth"": 4, ""n_estimators"": 100, ""reg_lambda"": 10.0}",5
+XGBoost,Pima Diabetes,>1MB,0.7662337662337662,"{""learning_rate"": 0.03, ""max_depth"": 8, ""n_estimators"": 500, ""reg_lambda"": 10.0}",5
+XGBoost,SatImage,>1MB,0.9240539139450492,"{""learning_rate"": 0.1, ""max_depth"": 10, ""n_estimators"": 1000, ""reg_lambda"": 0.1}",3
+XGBoost,Seeds,100KB-1MB,0.9428571428571428,"{""learning_rate"": 0.1, ""max_depth"": 10, ""n_estimators"": 500, ""reg_lambda"": 0.1}",5
+XGBoost,Seeds,>1MB,0.9428571428571428,"{""learning_rate"": 0.03, ""max_depth"": 10, ""n_estimators"": 1000, ""reg_lambda"": 0.1}",5
+XGBoost,Segment,100KB-1MB,0.9848484848484848,"{""learning_rate"": 0.3, ""max_depth"": 4, ""n_estimators"": 100, ""reg_lambda"": 0.1}",5
+XGBoost,Segment,>1MB,0.9857142857142858,"{""learning_rate"": 0.1, ""max_depth"": 10, ""n_estimators"": 1000, ""reg_lambda"": 10.0}",5
+XGBoost,Steel Plates,10-100KB,1.0,"{""learning_rate"": 0.03, ""max_depth"": 4, ""n_estimators"": 100, ""reg_lambda"": 0.1}",5
+XGBoost,Steel Plates,100KB-1MB,1.0,"{""learning_rate"": 0.03, ""max_depth"": 10, ""n_estimators"": 100, ""reg_lambda"": 0.1}",5
+XGBoost,Steel Plates,>1MB,1.0,"{""learning_rate"": 0.03, ""max_depth"": 10, ""n_estimators"": 1000, ""reg_lambda"": 10.0}",5
+XGBoost,Vehicle,100KB-1MB,0.76,"{""learning_rate"": 0.3, ""max_depth"": 4, ""n_estimators"": 100, ""reg_lambda"": 10.0}",5
+XGBoost,Vehicle,>1MB,0.7694117647058822,"{""learning_rate"": 0.3, ""max_depth"": 4, ""n_estimators"": 500, ""reg_lambda"": 0.1}",5
+XGBoost,Waveform,100KB-1MB,0.8576,"{""learning_rate"": 0.3, ""max_depth"": 4, ""n_estimators"": 100, ""reg_lambda"": 1.0}",5
+XGBoost,Waveform,>1MB,0.8577999999999999,"{""learning_rate"": 0.3, ""max_depth"": 8, ""n_estimators"": 100, ""reg_lambda"": 10.0}",5
+XGBoost,Wine,100KB-1MB,0.9777777777777779,"{""learning_rate"": 0.3, ""max_depth"": 10, ""n_estimators"": 100, ""reg_lambda"": 10.0}",5
+XGBoost,Wine,>1MB,0.9722222222222221,"{""learning_rate"": 0.03, ""max_depth"": 10, ""n_estimators"": 1000, ""reg_lambda"": 10.0}",5
+XGBoost,Yeast,>1MB,0.6195286195286196,"{""learning_rate"": 0.03, ""max_depth"": 4, ""n_estimators"": 500, ""reg_lambda"": 10.0}",5

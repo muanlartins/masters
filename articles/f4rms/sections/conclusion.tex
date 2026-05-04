@@ -1,0 +1,12 @@
+
+\section{Limitations, Conclusion, and Future Work}
+\label{sec:closing}
+\label{sec:limitations}
+\label{sec:conclusion}
+\label{sec:future-work}
+
+F4RM is positioned for tabular classification with thermometer-encoded continuous features and a high address-to-feature ratio $a/n$; on image data ($a/n \ll 1$) collisions are rare by chance and F4RM has nothing to redistribute. F4RMS inherits the same scope condition plus a stricter one: at very small feature counts (e.g., Haberman with $n = 3$) different mapping seeds produce nearly identical mappings, and the ensemble cannot exploit diversity it does not have. F4RM increases memory by 3--18\% at matched hyperparameters compared to random mapping, a consequence of populating addresses random mapping leaves unused, and the principled-default address-size rule is designed for rigor of comparison, not per-dataset accuracy. Our reference ports of BTHOWeN, DWN, and ULEEN reproduce paper-reported accuracy within 2--3~pp on most datasets, with two documented gaps; the open-source artifact details these.
+
+The paper presented F4RM, a heuristic feature-coverage mapping rule for WiSARD that resolves two costs random mapping silently imposes on thermometer-encoded inputs. F4RM is parameter-free, runs once at initialization in $O(n \cdot t)$ time, and adds no training or inference compute. Two compositional extensions, F4RMS (ensemble) and F4RM-Cuckoo (cuckoo-filter storage), demonstrate F4RM's compatibility with established WiSARD techniques without modification. Across 21 tabular datasets, F4RM beats random mapping at matched hyperparameters on 13 of 21 with Bonferroni-corrected significance and never significantly loses; F4RMS extends this to 20 of 21; and F4RM-Cuckoo achieves Pareto-frontier membership on every one of 21 datasets against every one of 10 baselines, with a higher accuracy-per-byte ratio than every gradient-boosting baseline and random forest across all 21 datasets. The bit-to-RAM mapping in WiSARD, defaulted to a uniformly random permutation for four decades, was a structural component left undesigned; F4RM is one instance of replacing it with a redundancy-aware rule.
+
+Future work includes a spatially-aware variant for image data (where patches replace features as the unit F4RM redistributes), F4RM-BTHOWeN and F4RM-DWN compositions that this paper has not evaluated, heterogeneous-$(a, t)$ F4RMS in the spirit of ULEEN~\cite{susskind2023uleen}, and analytical bounds linking expected F4RM gain to measurable dataset properties.

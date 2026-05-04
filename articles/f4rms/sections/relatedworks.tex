@@ -1,0 +1,27 @@
+
+\section{Related Work}
+\label{sec:related}
+
+We organize related work along the three axes most relevant to F4RM: mapping (Section~\ref{sec:rw-mapping}), where F4RM contributes; storage backends (Section~\ref{sec:rw-memory}), where F4RM-Cuckoo composes; and ensembling (Section~\ref{sec:rw-ensembling}), where F4RMS inherits established practice.
+
+\subsection{Mapping}
+\label{sec:rw-mapping}
+
+The original WiSARD~\cite{aleksander1984wisard} introduced a uniformly random bit-to-RAM permutation and four decades of subsequent work have largely preserved the choice. The mapping is convenient: it requires no design effort, introduces no bias toward any particular feature interpretation, and matches the default in every reference implementation. But its convenience has discouraged scrutiny, even as the surrounding architecture has been substantially refined.
+
+Two prior efforts have departed from random mapping. Guarisa~\cite{guarisa2020thesis} conducted a comparative study of mapping techniques in WiSARD, evaluating random-shared, random-independent, stochastic-search, genetic, and entropy-clustering variants, each treating the mapping as a hyperparameter to optimize from data via training-set statistics or stochastic search. Differentiable WiSARD~\cite{bacellar2024dwn} makes the mapping a learnable parameter trained via a differentiable relaxation, achieving substantial accuracy gains at the cost of replacing WiSARD's single-pass training with gradient-based optimization. F4RM occupies a different point: a deterministic mapping rule motivated by the structure of thermometer encoding, requiring no data, no search, and no optimization. BTHOWeN's H3 hash routing~\cite{susskind2022bthowen} is a non-random alternative motivated by memory efficiency rather than input structure.
+
+\subsection{Memory and Storage Backends}
+\label{sec:rw-memory}
+
+A parallel line of work optimizes WiSARD's memory footprint without modifying the mapping principle. Bloom WiSARD~\cite{santiago2020bloom} replaces RAM lookup tables with Bloom filters, trading a small false-positive rate for substantial memory savings. ULEEN~\cite{susskind2023uleen} combines Bloom-filter storage with multi-submodel ensembles and Gaussian thermometer encoding in an architecture targeted at edge inference. LogicWiSARD~\cite{bacellar2022logicwisard} takes the extreme path: it compiles trained WiSARD RAMs into logic functions, eliminating the lookup table at inference time entirely.
+
+Cuckoo WiSARD~\cite{santiago2019thesis} introduced cuckoo filters as an alternative to Bloom filters for WiSARD storage, exploiting the lower false-positive rate and constant-time deletion of cuckoo filters~\cite{fan2014cuckoo}. F4RM-Cuckoo, the storage-efficient variant we evaluate in Section~\ref{sec:experiments}, is the natural composition of F4RM mapping with this storage backend, demonstrating that mapping rules and storage backends are orthogonal axes of WiSARD optimization. The composability is deliberate: by restricting our contribution to the mapping rule alone, F4RM slots into any of these memory architectures without modification to their respective storage apparatus.
+
+\subsection{Ensembling}
+\label{sec:rw-ensembling}
+
+Ensembling weightless networks has been explored primarily as a route to reducing per-model memory while maintaining accuracy. ULEEN's multi-submodel architecture~\cite{susskind2023uleen} trains several smaller WiSARDs with different random permutations and aggregates their responses via summation, the same aggregation rule F4RMS adopts. ClusWiSARD~\cite{cardoso2017clus} uses a clustering-based ensemble motivated by intra-class heterogeneity rather than ensemble decorrelation. Lusquino~\cite{lusquino2021thesis} surveys WiSARD ensembling broadly, covering bagging, boosting, weighted voting, and other aggregation strategies; sum-of-responses, which F4RMS uses, is one of the established options in this lineage.
+
+The Random Subspace Method~\cite{ho1998random} is the natural starting point for any ensemble seeking decorrelation via input-view diversity. We tested this for WiSARD and found it consistently weaker: subsets weaken each member faster than decorrelation recovers, a tradeoff that loses for WiSARD members unable to reconstruct missing features~\cite{breiman2001random}. F4RMS instead derives diversity from the mapping randomness F4RM preserves (Section~\ref{sec:f4rm-rule}), keeping every member at full F4RM strength while still drawing the ensemble benefit.
+

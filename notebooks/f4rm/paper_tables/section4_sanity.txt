@@ -1,0 +1,110 @@
+# Section 4 sanity diagnostics
+
+F4RM datasets (21): ['Balance Scale', 'Banknote', 'Breast Cancer', 'EEG Eye State', 'Ecoli', 'Glass', 'Haberman', 'Ionosphere', 'Iris', 'Letter Recognition', 'Magic Gamma', 'Pendigits', 'Pima Diabetes', 'SatImage', 'Seeds', 'Segment', 'Steel Plates', 'Vehicle', 'Waveform', 'Wine', 'Yeast']
+
+
+## Coverage of each baseline system over the F4RM datasets
+
+  F4RM-WiSARD-cuckoo         21/21  (Balance Scale, Banknote, Breast Cancer, EEG Eye State, Ecoli, Glass, Haberman, Ionosphere, Iris, Letter Recognition, Magic Gamma, Pendigits, Pima Diabetes, SatImage, Seeds, Segment, Steel Plates, Vehicle, Waveform, Wine, Yeast)
+  F4RM-WiSARD-dense          21/21  (Balance Scale, Banknote, Breast Cancer, EEG Eye State, Ecoli, Glass, Haberman, Ionosphere, Iris, Letter Recognition, Magic Gamma, Pendigits, Pima Diabetes, SatImage, Seeds, Segment, Steel Plates, Vehicle, Waveform, Wine, Yeast)
+  F4RMS                      21/21  (Balance Scale, Banknote, Breast Cancer, EEG Eye State, Ecoli, Glass, Haberman, Ionosphere, Iris, Letter Recognition, Magic Gamma, Pendigits, Pima Diabetes, SatImage, Seeds, Segment, Steel Plates, Vehicle, Waveform, Wine, Yeast)
+  Random-WiSARD-cuckoo       21/21  (Balance Scale, Banknote, Breast Cancer, EEG Eye State, Ecoli, Glass, Haberman, Ionosphere, Iris, Letter Recognition, Magic Gamma, Pendigits, Pima Diabetes, SatImage, Seeds, Segment, Steel Plates, Vehicle, Waveform, Wine, Yeast)
+  DT                         21/21  (Balance Scale, Banknote, Breast Cancer, EEG Eye State, Ecoli, Glass, Haberman, Ionosphere, Iris, Letter Recognition, Magic Gamma, Pendigits, Pima Diabetes, SatImage, Seeds, Segment, Steel Plates, Vehicle, Waveform, Wine, Yeast)
+  RF                         21/21  (Balance Scale, Banknote, Breast Cancer, EEG Eye State, Ecoli, Glass, Haberman, Ionosphere, Iris, Letter Recognition, Magic Gamma, Pendigits, Pima Diabetes, SatImage, Seeds, Segment, Steel Plates, Vehicle, Waveform, Wine, Yeast)
+  XGBoost                    21/21  (Balance Scale, Banknote, Breast Cancer, EEG Eye State, Ecoli, Glass, Haberman, Ionosphere, Iris, Letter Recognition, Magic Gamma, Pendigits, Pima Diabetes, SatImage, Seeds, Segment, Steel Plates, Vehicle, Waveform, Wine, Yeast)
+  LightGBM                   21/21  (Balance Scale, Banknote, Breast Cancer, EEG Eye State, Ecoli, Glass, Haberman, Ionosphere, Iris, Letter Recognition, Magic Gamma, Pendigits, Pima Diabetes, SatImage, Seeds, Segment, Steel Plates, Vehicle, Waveform, Wine, Yeast)
+  CatBoost                   21/21  (Balance Scale, Banknote, Breast Cancer, EEG Eye State, Ecoli, Glass, Haberman, Ionosphere, Iris, Letter Recognition, Magic Gamma, Pendigits, Pima Diabetes, SatImage, Seeds, Segment, Steel Plates, Vehicle, Waveform, Wine, Yeast)
+  MLP                        21/21  (Balance Scale, Banknote, Breast Cancer, EEG Eye State, Ecoli, Glass, Haberman, Ionosphere, Iris, Letter Recognition, Magic Gamma, Pendigits, Pima Diabetes, SatImage, Seeds, Segment, Steel Plates, Vehicle, Waveform, Wine, Yeast)
+  FT-Transformer             21/21  (Balance Scale, Banknote, Breast Cancer, EEG Eye State, Ecoli, Glass, Haberman, Ionosphere, Iris, Letter Recognition, Magic Gamma, Pendigits, Pima Diabetes, SatImage, Seeds, Segment, Steel Plates, Vehicle, Waveform, Wine, Yeast)
+  BTHOWeN                    21/21  (Balance Scale, Banknote, Breast Cancer, EEG Eye State, Ecoli, Glass, Haberman, Ionosphere, Iris, Letter Recognition, Magic Gamma, Pendigits, Pima Diabetes, SatImage, Seeds, Segment, Steel Plates, Vehicle, Waveform, Wine, Yeast)
+  DWN                        21/21  (Balance Scale, Banknote, Breast Cancer, EEG Eye State, Ecoli, Glass, Haberman, Ionosphere, Iris, Letter Recognition, Magic Gamma, Pendigits, Pima Diabetes, SatImage, Seeds, Segment, Steel Plates, Vehicle, Waveform, Wine, Yeast)
+  ULEEN                      21/21  (Balance Scale, Banknote, Breast Cancer, EEG Eye State, Ecoli, Glass, Haberman, Ionosphere, Iris, Letter Recognition, Magic Gamma, Pendigits, Pima Diabetes, SatImage, Seeds, Segment, Steel Plates, Vehicle, Waveform, Wine, Yeast)
+
+
+## Memory-range diagnostics (min, median, max mean_mem in bytes)
+
+  F4RM-WiSARD-cuckoo         min=        24.6  med=      5780.0  max=     1683971.6
+  F4RM-WiSARD-dense          min=       118.0  med=     27457.5  max=     7998867.0
+  F4RMS                      min=      1359.0  med=    173737.0  max=    89444465.0
+  Random-WiSARD-cuckoo       min=        24.6  med=      5406.3  max=     1560889.4
+  DT                         min=      1238.0  med=      2690.9  max=     1082300.7
+  RF                         min=     11918.8  med=    416127.0  max=   229085524.3
+  XGBoost                    min=     66483.0  med=   1029868.8  max=    83321165.0
+  LightGBM                   min=     75446.6  med=   1123448.4  max=   154108898.0
+  CatBoost                   min=     39131.2  med=   1068610.4  max=    70865257.6
+  MLP                        min=       644.0  med=     16388.0  max=      774668.0
+  FT-Transformer             min=     69160.0  med=    274552.0  max=      422916.0
+  BTHOWeN                    min=        32.0  med=      1280.0  max=     1256448.0
+  DWN                        min=      5004.0  med=     24000.0  max=     2016042.5
+  ULEEN                      min=        48.0  med=      2640.0  max=      589600.0
+
+
+## Frontier point counts per (system, dataset)
+
+  F4RM-WiSARD-cuckoo         n_datasets=21  min=4  med=14  max=37
+  F4RM-WiSARD-dense          n_datasets=21  min=4  med=14  max=37
+  F4RMS                      n_datasets=21  min=2  med=6  max=13
+  Random-WiSARD-cuckoo       n_datasets=21  min=3  med=13  max=37
+  DT                         n_datasets=21  min=12  med=29  max=118
+  RF                         n_datasets=21  min=2  med=6  max=18
+  XGBoost                    n_datasets=21  min=1  med=3  max=14
+  LightGBM                   n_datasets=21  min=1  med=6  max=18
+  CatBoost                   n_datasets=21  min=1  med=2  max=4
+  MLP                        n_datasets=21  min=2  med=12  max=22
+  FT-Transformer             n_datasets=21  min=2  med=3  max=4
+  BTHOWeN                    n_datasets=21  min=2  med=6  max=10
+  DWN                        n_datasets=21  min=1  med=3  max=4
+  ULEEN                      n_datasets=21  min=3  med=5  max=8
+
+
+## F4RM-WiSARD-cuckoo dominance bins per baseline (datasets in each bin)
+
+  vs DT                  f4rm_strict_dominates           (11): Balance Scale, Banknote, Breast Cancer, Ecoli, Glass, Iris, Letter Recognition, Pendigits, Seeds, Vehicle, Wine
+  vs DT                  mixed                           (10): EEG Eye State, Haberman, Ionosphere, Magic Gamma, Pima Diabetes, SatImage, Segment, Steel Plates, Waveform, Yeast
+  vs DT                  baseline_strict_dominates       ( 0): -
+  vs DT                  infeasible                      ( 0): -
+
+  vs RF                  f4rm_strict_dominates           ( 9): Balance Scale, Banknote, Breast Cancer, EEG Eye State, Haberman, Ionosphere, Iris, Seeds, Wine
+  vs RF                  mixed                           (12): Ecoli, Glass, Letter Recognition, Magic Gamma, Pendigits, Pima Diabetes, SatImage, Segment, Steel Plates, Vehicle, Waveform, Yeast
+  vs RF                  baseline_strict_dominates       ( 0): -
+  vs RF                  infeasible                      ( 0): -
+
+  vs XGBoost             f4rm_strict_dominates           ( 6): Banknote, Ecoli, Haberman, Ionosphere, Iris, Wine
+  vs XGBoost             mixed                           (15): Balance Scale, Breast Cancer, EEG Eye State, Glass, Letter Recognition, Magic Gamma, Pendigits, Pima Diabetes, SatImage, Seeds, Segment, Steel Plates, Vehicle, Waveform, Yeast
+  vs XGBoost             baseline_strict_dominates       ( 0): -
+  vs XGBoost             infeasible                      ( 0): -
+
+  vs LightGBM            f4rm_strict_dominates           ( 6): Banknote, Ecoli, Haberman, Ionosphere, Iris, Wine
+  vs LightGBM            mixed                           (15): Balance Scale, Breast Cancer, EEG Eye State, Glass, Letter Recognition, Magic Gamma, Pendigits, Pima Diabetes, SatImage, Seeds, Segment, Steel Plates, Vehicle, Waveform, Yeast
+  vs LightGBM            baseline_strict_dominates       ( 0): -
+  vs LightGBM            infeasible                      ( 0): -
+
+  vs CatBoost            f4rm_strict_dominates           ( 3): Banknote, Iris, Pima Diabetes
+  vs CatBoost            mixed                           (18): Balance Scale, Breast Cancer, EEG Eye State, Ecoli, Glass, Haberman, Ionosphere, Letter Recognition, Magic Gamma, Pendigits, SatImage, Seeds, Segment, Steel Plates, Vehicle, Waveform, Wine, Yeast
+  vs CatBoost            baseline_strict_dominates       ( 0): -
+  vs CatBoost            infeasible                      ( 0): -
+
+  vs MLP                 f4rm_strict_dominates           (14): Banknote, Breast Cancer, EEG Eye State, Ecoli, Glass, Haberman, Ionosphere, Iris, SatImage, Seeds, Segment, Vehicle, Wine, Yeast
+  vs MLP                 mixed                           ( 7): Balance Scale, Letter Recognition, Magic Gamma, Pendigits, Pima Diabetes, Steel Plates, Waveform
+  vs MLP                 baseline_strict_dominates       ( 0): -
+  vs MLP                 infeasible                      ( 0): -
+
+  vs FT-Transformer      f4rm_strict_dominates           (18): Banknote, Breast Cancer, EEG Eye State, Ecoli, Glass, Haberman, Ionosphere, Iris, Letter Recognition, Magic Gamma, Pendigits, Pima Diabetes, SatImage, Seeds, Segment, Vehicle, Wine, Yeast
+  vs FT-Transformer      mixed                           ( 3): Balance Scale, Steel Plates, Waveform
+  vs FT-Transformer      baseline_strict_dominates       ( 0): -
+  vs FT-Transformer      infeasible                      ( 0): -
+
+  vs BTHOWeN             f4rm_strict_dominates           ( 1): Ecoli
+  vs BTHOWeN             mixed                           (20): Balance Scale, Banknote, Breast Cancer, EEG Eye State, Glass, Haberman, Ionosphere, Iris, Letter Recognition, Magic Gamma, Pendigits, Pima Diabetes, SatImage, Seeds, Segment, Steel Plates, Vehicle, Waveform, Wine, Yeast
+  vs BTHOWeN             baseline_strict_dominates       ( 0): -
+  vs BTHOWeN             infeasible                      ( 0): -
+
+  vs DWN                 f4rm_strict_dominates           (12): Balance Scale, Banknote, Ecoli, Glass, Haberman, Ionosphere, Iris, Pima Diabetes, Seeds, Vehicle, Wine, Yeast
+  vs DWN                 mixed                           ( 9): Breast Cancer, EEG Eye State, Letter Recognition, Magic Gamma, Pendigits, SatImage, Segment, Steel Plates, Waveform
+  vs DWN                 baseline_strict_dominates       ( 0): -
+  vs DWN                 infeasible                      ( 0): -
+
+  vs ULEEN               f4rm_strict_dominates           ( 4): Glass, Haberman, Iris, Wine
+  vs ULEEN               mixed                           (17): Balance Scale, Banknote, Breast Cancer, EEG Eye State, Ecoli, Ionosphere, Letter Recognition, Magic Gamma, Pendigits, Pima Diabetes, SatImage, Seeds, Segment, Steel Plates, Vehicle, Waveform, Yeast
+  vs ULEEN               baseline_strict_dominates       ( 0): -
+  vs ULEEN               infeasible                      ( 0): -

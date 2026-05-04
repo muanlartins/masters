@@ -1,0 +1,75 @@
+\documentclass[runningheads]{llncs}
+
+% Suppress benign warnings from amsmath (LNCS pre-defines \vec) and caption
+% (LNCS isn't in caption's known-class list, but defaults work fine).
+\usepackage{silence}
+\WarningFilter{amsmath}{Unable to redefine math accent}
+\WarningFilter{caption}{Unknown document class}
+
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{algorithm2e}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+
+% pdfTeX-only directives (Overleaf uses pdfTeX); guarded so xetex/tectonic also compile
+\ifx\pdfminorversion\undefined\else\pdfminorversion=7\fi
+\ifx\pdfsuppresswarningpagegroup\undefined\else\pdfsuppresswarningpagegroup=1\fi
+
+\setlength{\textfloatsep}{8pt}
+\setlength{\floatsep}{8pt}
+\setlength{\intextsep}{6pt}
+
+\begin{document}
+
+%\title{WiSARD F4RM: Feature-Restricted Round-Robin Random Mapping}
+
+\title{F4RM: Feature-Restricted Round-Robin Random Mapping for Weightless Neural Networks}
+
+\titlerunning{F4RM: Feature-Restricted Round-Robin Random Mapping}
+
+\author{Anonymous Author(s)}
+
+\authorrunning{Anonymous}
+
+\institute{Affiliation anonymized for double-blind review}
+
+\maketitle
+
+\begin{abstract}
+Weightless Neural Networks (WNNs) classify by reading bit-addressed entries from small lookup tables, replacing the multiply-accumulate operations of deep neural networks (DNNs) with a handful of memory reads. This makes them attractive for Edge AI deployment on memory- and energy-constrained devices, but the canonical WNN architecture, WiSARD, has left one structural component largely unexamined for four decades: the mapping from input bits to RAM positions, defaulted to a uniformly random permutation. We show that random mapping leaves measurable accuracy on the table whenever the input has exploitable structure, and that thermometer-encoded continuous features, the de-facto WiSARD binarization, have exactly such structure. We propose F4RM (Feature-Restricted Round-Robin Random Mapping), a heuristic mapping rule that maximizes per-RAM feature coverage at zero training cost and no added parameters. Two compositional extensions, F4RMS, an ensemble of independently-seeded F4RM WiSARDs, and F4RM-Cuckoo, which pairs F4RM with cuckoo-filter storage, demonstrate F4RM's composability with established WiSARD techniques. Across 21 tabular classification datasets with 200 paired evaluations per dataset and Bonferroni-corrected significance, F4RM beats random mapping on 13 of 21 datasets and never significantly loses; F4RMS extends this to 20 of 21. Across a 10-baseline Pareto-frontier comparison, F4RM-Cuckoo achieves Pareto-frontier membership on every one of the 21 datasets and a higher accuracy-per-byte ratio than every gradient-boosting baseline and random forest on every dataset evaluated. These results establish weightless networks with structured mapping as a competitive option for tabular classification at the extreme edge.
+
+\keywords{Weightless neural networks \and WiSARD \and Tabular classification \and Edge AI \and Pareto evaluation}
+\end{abstract}
+
+\input{sections/intro}
+\input{sections/relatedworks}
+\input{sections/proposal}
+\input{sections/results}
+\input{sections/conclusion}
+
+\begin{credits}
+\subsubsection{\ackname} The authors used Claude Opus 4.7 (Anthropic) as a research assistant for code development, experimental analysis, and manuscript preparation.
+
+\subsubsection{\discintname}
+The authors have no competing interests to declare that are relevant to the content of this article.
+\end{credits}
+
+\makeatletter
+\renewcommand\@biblabel[1]{#1.}
+\let\oldbibliography\thebibliography
+\renewcommand{\thebibliography}[1]{%
+ \oldbibliography{#1}%
+ \footnotesize
+ \setlength{\itemsep}{0pt}%
+ \setlength{\parsep}{0pt}%
+}
+\makeatother
+\bibliographystyle{splncs04}
+\enlargethispage{6\baselineskip}
+{\footnotesize\bibliography{references}}
+
+\end{document}

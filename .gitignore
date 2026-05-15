@@ -45,3 +45,10 @@ notebooks/f4rm/paper_tables/section4_all_points.csv
 
 # Orphan figure
 articles/f4rms/fig1.eps
+
+# TON_IoT sweep results: each integrante regenerates locally.
+# We commit only the EDA demo JSONL as schema reference.
+notebooks/toniot/results/*
+!notebooks/toniot/results/wisard/
+notebooks/toniot/results/wisard/*
+!notebooks/toniot/results/wisard/Fridge__binary.jsonl

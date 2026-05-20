@@ -31,11 +31,30 @@ depois que os pipelines estiverem estáveis.
 
 ## Ambiente
 
-Venv compartilhado em `../../venv/`. `wisardpkg` é a versão local
-(`../../wisardpkg/`) — inclui `BloomWiSARD`, termômetros ajustados
-(`Distributive`, `Gaussian`, `Exponential`, `Stochastic`) e ports
-PyTorch de `BTHOWeN`, `DWN`, `ULEEN`. Ver
-`../../wisardpkg/CLAUDE.md` para detalhes.
+Venv compartilhado em `../../venv/` (Python 3.13). Se você não tem o
+venv ainda, recrie a partir do `requirements.txt` na raiz do repo:
+
+```bash
+cd ../..                                            # raiz do masters/
+python3.13 -m venv venv
+source venv/bin/activate
+pip install --no-build-isolation -r requirements.txt
+```
+
+O `--no-build-isolation` é necessário porque o build C++ do `wisardpkg`
+precisa enxergar `pybind11` e `setuptools` do ambiente ativo (build
+isolado quebra). O `requirements.txt` já fixa o `wisardpkg` num commit
+específico do nosso fork
+[`muanlartins/wisardpkg`](https://github.com/muanlartins/wisardpkg) —
+inclui `BloomWiSARD`, termômetros ajustados (`Distributive`,
+`Gaussian`, `Exponential`, `Stochastic`), `ColorMaskBinarization`,
+`Local2DMapping` e ports PyTorch de `BTHOWeN`, `DWN`, `ULEEN`. Ver
+o `CLAUDE.md` do fork para detalhes da API.
+
+Para desenvolvimento ativo do próprio `wisardpkg`, clone o fork ao lado
+do `masters/` e instale com `pip install -e --no-build-isolation .` —
+nesse modo o pacote é importado a partir do seu clone, não do commit
+pinado.
 
 ## Convenção de saída
 

@@ -1,7 +1,13 @@
-# Reproducibility pin for the masters/ Python environment.
-# Built with Python 3.13 on macOS. Install with:
-#   python3.13 -m venv venv && source venv/bin/activate
+# Reproducibility pin for the notebooks/toniot/ sweep.
+# Captures the shared masters/venv at the time of the sweep — packages
+# unrelated to toniot are included because pip freeze can't disentangle
+# them from a shared venv. Built with Python 3.13 on macOS.
+#
+# Install (from notebooks/toniot/):
+#   python3.13 -m venv ../../venv
+#   source ../../venv/bin/activate
 #   pip install --no-build-isolation -r requirements.txt
+#
 # The --no-build-isolation flag is required because wisardpkg's C++ build
 # expects pybind11/setuptools to be visible from the active environment.
 

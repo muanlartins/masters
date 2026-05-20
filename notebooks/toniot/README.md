@@ -31,13 +31,14 @@ depois que os pipelines estiverem estáveis.
 
 ## Ambiente
 
-Venv compartilhado em `../../venv/` (Python 3.13). Se você não tem o
-venv ainda, recrie a partir do `requirements.txt` na raiz do repo:
+Venv compartilhado em `../../venv/` (Python 3.13). O `requirements.txt`
+deste folder fixa as versões com as quais a sweep do toniot foi
+executada. Para recriar o venv a partir daqui:
 
 ```bash
-cd ../..                                            # raiz do masters/
-python3.13 -m venv venv
-source venv/bin/activate
+# de dentro de notebooks/toniot/
+python3.13 -m venv ../../venv
+source ../../venv/bin/activate
 pip install --no-build-isolation -r requirements.txt
 ```
 

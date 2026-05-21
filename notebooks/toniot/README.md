@@ -61,6 +61,35 @@ O `uv sync` lê o arquivo `.python-version` na raiz do repositório, baixa e usa
 
 > **Nota sobre o wisardpkg:** a versão usada é o fork `muanlartins/wisardpkg@muanlartins`, que adiciona `BloomWiSARD`, termômetros ajustáveis (`Distributive`, `Gaussian`, `Exponential`) e ports PyTorch de `BTHOWeN`, `DWN` e `ULEEN`. O build requer `pybind11` e `setuptools`, declarados em `[tool.uv.extra-build-dependencies]` no `pyproject.toml`.
 
+## Adicionar ou atualizar dependências
+
+Para adicionar um novo pacote ao projeto, use **sempre** `uv add` seguido de `uv sync`:
+
+```bash
+uv add <pacote>   # registra a dependência no pyproject.toml e resolve o lock
+uv sync           # instala no .venv (compilando extensões C++ se necessário)
+```
+
+> **Nunca use `pip install` diretamente.** O `pip` ignora o lock file e o ambiente
+> gerenciado pelo `uv`, podendo quebrar a reprodutibilidade ou instalar o pacote
+> no Python do sistema em vez do `.venv`.
+
+Exemplos:
+
+```bash
+uv add torch              # adiciona PyTorch
+uv add "pandas>=2.0"      # adiciona com restrição de versão
+uv sync                   # aplica todas as dependências pendentes
+```
+
+Para ver todos os subcomandos disponíveis:
+
+```bash
+uv -h
+```
+
+Documentação completa: <https://docs.astral.sh/uv/>
+
 ## Executar os notebooks
 
 O projeto usa **VS Code** com a extensão Jupyter. Após `uv sync`, selecione o interpretador `.venv` no VS Code (`Ctrl+Shift+P` → _Python: Select Interpreter_ → `./.venv/bin/python`) e abra qualquer `.ipynb` normalmente.

@@ -13,6 +13,7 @@ dependencies = [
     "scikit-learn>=1.8.0",
     "scipy>=1.17.1",
     "setuptools>=82.0.1",
+    "torch",
     "tqdm>=4.67.3",
     "wisardpkg @ git+https://github.com/muanlartins/wisardpkg.git@muanlartins",
 ]

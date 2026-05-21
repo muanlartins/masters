@@ -54,7 +54,10 @@ Outras plataformas e métodos alternativos: <https://docs.astral.sh/uv/getting-s
 uv sync
 ```
 
-O `uv sync` cria o ambiente virtual em `.venv/`, instala a versão correta do python e todas as dependências declaradas em `pyproject.toml` e compila o `wisardpkg` (extensão C++/pybind11) automaticamente. Nenhum passo adicional é necessário.
+O `uv sync` lê o arquivo `.python-version` na raiz do repositório, baixa e usa a versão exata do Python gerenciada pelo próprio `uv` (ex: `3.13.13`), cria o ambiente virtual em `.venv/`, instala todas as dependências declaradas em `pyproject.toml` e compila o `wisardpkg` (extensão C++/pybind11) automaticamente.
+
+> **Importante — não instale `python3-dev` nem pacotes de headers via `apt`/`brew`/sistema.**
+> O `uv` usa sua própria distribuição bundled do Python, que já inclui os headers de build necessários para compilar extensões C++. Usar o Python do sistema em vez do gerenciado pelo `uv` causará falha de build (`Python.h: Arquivo ou diretório inexistente`). A versão correta está fixada em `.python-version`; basta rodar `uv sync`.
 
 > **Nota sobre o wisardpkg:** a versão usada é o fork `muanlartins/wisardpkg@muanlartins`, que adiciona `BloomWiSARD`, termômetros ajustáveis (`Distributive`, `Gaussian`, `Exponential`) e ports PyTorch de `BTHOWeN`, `DWN` e `ULEEN`. O build requer `pybind11` e `setuptools`, declarados em `[tool.uv.extra-build-dependencies]` no `pyproject.toml`.
 

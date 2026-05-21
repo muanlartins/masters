@@ -242,6 +242,7 @@ configurações — uma entrada por ponto do grid.
     "recall_weighted": 0.0,
     "f1_macro": 0.0,
     "f1_weighted": 0.0,
+    "balanced_accuracy": 0.0,        // média de recall por classe; robusto a desbalanceamento
     "auc_roc": 0.0,                  // binary: AUC; multiclass: OvR macro
     "memory_bytes_serialized": 0,
     "memory_bytes_theoretical": 0,

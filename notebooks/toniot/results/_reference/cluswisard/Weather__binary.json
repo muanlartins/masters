@@ -1,0 +1,1394 @@
+[
+ {
+  "model": "ClusWiSARD",
+  "base": "Weather",
+  "task": "binary",
+  "encoder": {
+   "type": "Distributive",
+   "size": 8
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 3,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 24
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.7366276107997962,
+   "precision_macro": 0.7424650563006387,
+   "precision_weighted": 0.739875400663248,
+   "recall_macro": 0.6841727580837227,
+   "recall_weighted": 0.7366276107997962,
+   "f1_macro": 0.6911397162269918,
+   "f1_weighted": 0.7190966567409854,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 13082,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.016941208159551024,
+   "inference_latency_us": 9.645475074648857
+  },
+  "confusion_matrix": [
+   [
+    2078,
+    2422
+   ],
+   [
+    680,
+    6598
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:02:11Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Weather",
+  "task": "binary",
+  "encoder": {
+   "type": "Distributive",
+   "size": 8
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 3,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 24
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.7381558838512481,
+   "precision_macro": 0.7380722672999538,
+   "precision_weighted": 0.7381121380139077,
+   "recall_macro": 0.6904138499587799,
+   "recall_weighted": 0.7381558838512481,
+   "f1_macro": 0.6978444455092115,
+   "f1_weighted": 0.7238754022070678,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 13709,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.016803625039756298,
+   "inference_latency_us": 9.208451956510544
+  },
+  "confusion_matrix": [
+   [
+    2196,
+    2304
+   ],
+   [
+    780,
+    6498
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:02:11Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Weather",
+  "task": "binary",
+  "encoder": {
+   "type": "Distributive",
+   "size": 8
+  },
+  "addressSize": 16,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 3,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 24
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.7961453557480047,
+   "precision_macro": 0.7841574405730305,
+   "precision_weighted": 0.8000460037200144,
+   "recall_macro": 0.7913675918292571,
+   "recall_weighted": 0.7961453557480047,
+   "f1_macro": 0.7870275269714947,
+   "f1_weighted": 0.7974211783219851,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 13228,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.014738708036020398,
+   "inference_latency_us": 3.9580045267939568
+  },
+  "confusion_matrix": [
+   [
+    3470,
+    1030
+   ],
+   [
+    1371,
+    5907
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:02:11Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Weather",
+  "task": "binary",
+  "encoder": {
+   "type": "Distributive",
+   "size": 8
+  },
+  "addressSize": 16,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 3,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 24
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.7887587026659875,
+   "precision_macro": 0.7767245045999693,
+   "precision_weighted": 0.7934903031091962,
+   "recall_macro": 0.7846272785563799,
+   "recall_weighted": 0.7887587026659875,
+   "f1_macro": 0.7797185512903841,
+   "f1_weighted": 0.7902439245181402,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 12642,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.014037584187462926,
+   "inference_latency_us": 4.332978278398514
+  },
+  "confusion_matrix": [
+   [
+    3452,
+    1048
+   ],
+   [
+    1440,
+    5838
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:02:11Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Weather",
+  "task": "binary",
+  "encoder": {
+   "type": "Distributive",
+   "size": 8
+  },
+  "addressSize": 24,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 3,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 24
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.7381558838512481,
+   "precision_macro": 0.8482250337349164,
+   "precision_weighted": 0.8139071775759006,
+   "recall_macro": 0.6577150316020886,
+   "recall_weighted": 0.7381558838512481,
+   "f1_macro": 0.6526373010848306,
+   "f1_weighted": 0.6932893583957662,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 19891,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.011189500102773309,
+   "inference_latency_us": 3.7080608308315277
+  },
+  "confusion_matrix": [
+   [
+    1425,
+    3075
+   ],
+   [
+    9,
+    7269
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:02:11Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Weather",
+  "task": "binary",
+  "encoder": {
+   "type": "Distributive",
+   "size": 8
+  },
+  "addressSize": 24,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 3,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 24
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.7381558838512481,
+   "precision_macro": 0.8482250337349164,
+   "precision_weighted": 0.8139071775759006,
+   "recall_macro": 0.6577150316020886,
+   "recall_weighted": 0.7381558838512481,
+   "f1_macro": 0.6526373010848306,
+   "f1_weighted": 0.6932893583957662,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 19891,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.011431375052779913,
+   "inference_latency_us": 3.8124853745102882
+  },
+  "confusion_matrix": [
+   [
+    1425,
+    3075
+   ],
+   [
+    9,
+    7269
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:02:12Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Weather",
+  "task": "binary",
+  "encoder": {
+   "type": "Distributive",
+   "size": 16
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 3,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 48
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.7668534555951775,
+   "precision_macro": 0.7544212922319327,
+   "precision_weighted": 0.7641498978159028,
+   "recall_macro": 0.7449337730145644,
+   "recall_weighted": 0.7668534555951775,
+   "f1_macro": 0.7487196759907211,
+   "f1_weighted": 0.7646411803336982,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 27301,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.030577166937291622,
+   "inference_latency_us": 22.37502485513687
+  },
+  "confusion_matrix": [
+   [
+    2934,
+    1566
+   ],
+   [
+    1180,
+    6098
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:02:12Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Weather",
+  "task": "binary",
+  "encoder": {
+   "type": "Distributive",
+   "size": 16
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 3,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 48
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.7770419426048565,
+   "precision_macro": 0.7677545062198528,
+   "precision_weighted": 0.7742403026697121,
+   "recall_macro": 0.7511844829165522,
+   "recall_weighted": 0.7770419426048565,
+   "f1_macro": 0.7570581193680956,
+   "f1_weighted": 0.7734924180512578,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 31042,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.03031854215078056,
+   "inference_latency_us": 22.646505385637283
+  },
+  "confusion_matrix": [
+   [
+    2887,
+    1613
+   ],
+   [
+    1013,
+    6265
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:02:13Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Weather",
+  "task": "binary",
+  "encoder": {
+   "type": "Distributive",
+   "size": 16
+  },
+  "addressSize": 16,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 3,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 48
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.7969943963321446,
+   "precision_macro": 0.8048062600414995,
+   "precision_weighted": 0.8006616157740075,
+   "recall_macro": 0.7589740771274159,
+   "recall_weighted": 0.7969943963321446,
+   "f1_macro": 0.7704223368585239,
+   "f1_weighted": 0.7888443935637195,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 36474,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.023142040940001607,
+   "inference_latency_us": 7.853959687054157
+  },
+  "confusion_matrix": [
+   [
+    2690,
+    1810
+   ],
+   [
+    581,
+    6697
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:02:13Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Weather",
+  "task": "binary",
+  "encoder": {
+   "type": "Distributive",
+   "size": 16
+  },
+  "addressSize": 16,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 3,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 48
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.8069281711665818,
+   "precision_macro": 0.8023406109531235,
+   "precision_weighted": 0.8054657316674411,
+   "recall_macro": 0.7817709993587982,
+   "recall_weighted": 0.8069281711665818,
+   "f1_macro": 0.7890592194540289,
+   "f1_weighted": 0.8035399510343882,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 35851,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.021954416995868087,
+   "inference_latency_us": 6.9374218583106995
+  },
+  "confusion_matrix": [
+   [
+    3038,
+    1462
+   ],
+   [
+    812,
+    6466
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:02:13Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Weather",
+  "task": "binary",
+  "encoder": {
+   "type": "Distributive",
+   "size": 16
+  },
+  "addressSize": 24,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 3,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 48
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.8358804550857531,
+   "precision_macro": 0.8266460638972755,
+   "precision_weighted": 0.8354919738012723,
+   "recall_macro": 0.8249188421727581,
+   "recall_weighted": 0.8358804550857531,
+   "f1_macro": 0.8257566469745153,
+   "f1_weighted": 0.8356629305014679,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 35017,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.01798025006428361,
+   "inference_latency_us": 4.979083314538002
+  },
+  "confusion_matrix": [
+   [
+    3503,
+    997
+   ],
+   [
+    936,
+    6342
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:02:13Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Weather",
+  "task": "binary",
+  "encoder": {
+   "type": "Distributive",
+   "size": 16
+  },
+  "addressSize": 24,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 3,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 48
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.8429274919341144,
+   "precision_macro": 0.8331018211029588,
+   "precision_weighted": 0.8436407066508159,
+   "recall_macro": 0.8356678574700009,
+   "recall_weighted": 0.8429274919341144,
+   "f1_macro": 0.8343238585839741,
+   "f1_weighted": 0.8432288114329644,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 36444,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.01804699981585145,
+   "inference_latency_us": 4.458008334040642
+  },
+  "confusion_matrix": [
+   [
+    3622,
+    878
+   ],
+   [
+    972,
+    6306
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:02:14Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Weather",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 3,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 24
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.7642214297843437,
+   "precision_macro": 0.757698941533367,
+   "precision_weighted": 0.7616107447201574,
+   "recall_macro": 0.730674544288724,
+   "recall_weighted": 0.7642214297843437,
+   "f1_macro": 0.7383279339253493,
+   "f1_weighted": 0.7577428142212431,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 13104,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.016437875106930733,
+   "inference_latency_us": 11.499971151351929
+  },
+  "confusion_matrix": [
+   [
+    2648,
+    1852
+   ],
+   [
+    925,
+    6353
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:02:14Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Weather",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 3,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 24
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.7719476991000169,
+   "precision_macro": 0.7625462783836168,
+   "precision_weighted": 0.7689632677571204,
+   "recall_macro": 0.7448146926811394,
+   "recall_weighted": 0.7719476991000169,
+   "f1_macro": 0.7508950490587579,
+   "f1_weighted": 0.767975732999943,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 12800,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.016453083138912916,
+   "inference_latency_us": 9.541399776935577
+  },
+  "confusion_matrix": [
+   [
+    2834,
+    1666
+   ],
+   [
+    1020,
+    6258
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:02:14Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Weather",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 16,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 3,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 24
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.7646459500764137,
+   "precision_macro": 0.7509599589446211,
+   "precision_weighted": 0.7664025598236299,
+   "recall_macro": 0.7541319959695887,
+   "recall_weighted": 0.7646459500764137,
+   "f1_macro": 0.7523935420770296,
+   "f1_weighted": 0.7653848357496589,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 10562,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.014098291983827949,
+   "inference_latency_us": 4.562432877719402
+  },
+  "confusion_matrix": [
+   [
+    3193,
+    1307
+   ],
+   [
+    1465,
+    5813
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:02:14Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Weather",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 16,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 3,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 24
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.7733910680930548,
+   "precision_macro": 0.7649025619072914,
+   "precision_weighted": 0.770543966257543,
+   "recall_macro": 0.7451767884950078,
+   "recall_weighted": 0.7733910680930548,
+   "f1_macro": 0.7517294462203088,
+   "f1_weighted": 0.7690263664739703,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 12299,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.014600209193304181,
+   "inference_latency_us": 4.249974153935909
+  },
+  "confusion_matrix": [
+   [
+    2815,
+    1685
+   ],
+   [
+    984,
+    6294
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:02:15Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Weather",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 24,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 3,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 24
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.69502462217694,
+   "precision_macro": 0.8316074303058454,
+   "precision_weighted": 0.7934280138254571,
+   "recall_macro": 0.6011433544013923,
+   "recall_weighted": 0.69502462217694,
+   "f1_macro": 0.5696051318695807,
+   "f1_weighted": 0.6244046512269014,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 16229,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.011353584006428719,
+   "inference_latency_us": 3.7499703466892242
+  },
+  "confusion_matrix": [
+   [
+    914,
+    3586
+   ],
+   [
+    6,
+    7272
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:02:15Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Weather",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 24,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 3,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 24
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.69502462217694,
+   "precision_macro": 0.8316074303058454,
+   "precision_weighted": 0.7934280138254571,
+   "recall_macro": 0.6011433544013923,
+   "recall_weighted": 0.69502462217694,
+   "f1_macro": 0.5696051318695807,
+   "f1_weighted": 0.6244046512269014,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 16229,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.010976540856063366,
+   "inference_latency_us": 3.6249402910470963
+  },
+  "confusion_matrix": [
+   [
+    914,
+    3586
+   ],
+   [
+    6,
+    7272
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:02:15Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Weather",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 16
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 3,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 48
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.7498726439123791,
+   "precision_macro": 0.7399408464075756,
+   "precision_weighted": 0.7460476488574082,
+   "recall_macro": 0.7166892003297609,
+   "recall_weighted": 0.7498726439123791,
+   "f1_macro": 0.7233310512801745,
+   "f1_weighted": 0.7435428233010803,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 26197,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.030006916960701346,
+   "inference_latency_us": 25.687506422400475
+  },
+  "confusion_matrix": [
+   [
+    2592,
+    1908
+   ],
+   [
+    1038,
+    6240
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:02:15Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Weather",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 16
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 3,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 48
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.7446934963491255,
+   "precision_macro": 0.7416275903530993,
+   "precision_weighted": 0.7431978497293826,
+   "recall_macro": 0.7015988824768709,
+   "recall_weighted": 0.7446934963491255,
+   "f1_macro": 0.7094704651563242,
+   "f1_weighted": 0.7333303970396702,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 28100,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0300651250872761,
+   "inference_latency_us": 28.041424229741096
+  },
+  "confusion_matrix": [
+   [
+    2335,
+    2165
+   ],
+   [
+    842,
+    6436
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:02:16Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Weather",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 16
+  },
+  "addressSize": 16,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 3,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 48
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.782305994226524,
+   "precision_macro": 0.7736707471705854,
+   "precision_weighted": 0.7797071629535239,
+   "recall_macro": 0.7568010442429238,
+   "recall_weighted": 0.782305994226524,
+   "f1_macro": 0.7628191556922679,
+   "f1_weighted": 0.7788542378747808,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 31405,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.02321304101496935,
+   "inference_latency_us": 8.729635737836361
+  },
+  "confusion_matrix": [
+   [
+    2919,
+    1581
+   ],
+   [
+    983,
+    6295
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:02:16Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Weather",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 16
+  },
+  "addressSize": 16,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 3,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 48
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.7784853115978944,
+   "precision_macro": 0.7760992813469629,
+   "precision_weighted": 0.7774859742417511,
+   "recall_macro": 0.7442094897865714,
+   "recall_weighted": 0.7784853115978944,
+   "f1_macro": 0.7530641866969245,
+   "f1_weighted": 0.7717516397201832,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 31100,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.022750499891117215,
+   "inference_latency_us": 9.375042282044888
+  },
+  "confusion_matrix": [
+   [
+    2695,
+    1805
+   ],
+   [
+    804,
+    6474
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:02:17Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Weather",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 16
+  },
+  "addressSize": 24,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 3,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 48
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.8231448463236543,
+   "precision_macro": 0.8132516674154648,
+   "precision_weighted": 0.8225743441478088,
+   "recall_macro": 0.8109240633873775,
+   "recall_weighted": 0.8231448463236543,
+   "f1_macro": 0.8120385737499197,
+   "f1_weighted": 0.8228151106726703,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 29324,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.01737337512895465,
+   "inference_latency_us": 4.708417691290379
+  },
+  "confusion_matrix": [
+   [
+    3416,
+    1084
+   ],
+   [
+    999,
+    6279
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:02:17Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Weather",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 16
+  },
+  "addressSize": 24,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 3,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 48
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.8137204958397012,
+   "precision_macro": 0.8033045323631953,
+   "precision_weighted": 0.8130079349580085,
+   "recall_macro": 0.8005840432353211,
+   "recall_weighted": 0.8137204958397012,
+   "f1_macro": 0.8018741902934674,
+   "f1_weighted": 0.8133009391849386,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 27453,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.01756999990902841,
+   "inference_latency_us": 4.937406629323959
+  },
+  "confusion_matrix": [
+   [
+    3352,
+    1148
+   ],
+   [
+    1046,
+    6232
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:02:17Z"
+ }
+]

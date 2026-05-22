@@ -1,0 +1,770 @@
+[
+ {
+  "model": "ULEEN",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 4
+  },
+  "addressSize": 4,
+  "model_hyperparams": {
+   "filter_entries": 64,
+   "filter_hash_functions": 2,
+   "n_submodels": 1,
+   "epochs": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 4
+  },
+  "skipped": true,
+  "skipped_reason": "runtime error: ValueError(\"invalid literal for int() with base 10: 'backdoor'\")",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-21T22:48:57Z"
+ },
+ {
+  "model": "ULEEN",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 4
+  },
+  "addressSize": 4,
+  "model_hyperparams": {
+   "filter_entries": 64,
+   "filter_hash_functions": 2,
+   "n_submodels": 1,
+   "epochs": 30
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 4
+  },
+  "skipped": true,
+  "skipped_reason": "runtime error: ValueError(\"invalid literal for int() with base 10: 'backdoor'\")",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-21T22:48:57Z"
+ },
+ {
+  "model": "ULEEN",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 4
+  },
+  "addressSize": 4,
+  "model_hyperparams": {
+   "filter_entries": 64,
+   "filter_hash_functions": 2,
+   "n_submodels": 3,
+   "epochs": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 4
+  },
+  "skipped": true,
+  "skipped_reason": "runtime error: ValueError(\"invalid literal for int() with base 10: 'backdoor'\")",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-21T22:48:57Z"
+ },
+ {
+  "model": "ULEEN",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 4
+  },
+  "addressSize": 4,
+  "model_hyperparams": {
+   "filter_entries": 64,
+   "filter_hash_functions": 2,
+   "n_submodels": 3,
+   "epochs": 30
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 4
+  },
+  "skipped": true,
+  "skipped_reason": "runtime error: ValueError(\"invalid literal for int() with base 10: 'backdoor'\")",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-21T22:48:57Z"
+ },
+ {
+  "model": "ULEEN",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 4
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "filter_entries": 64,
+   "filter_hash_functions": 2,
+   "n_submodels": 1,
+   "epochs": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 4
+  },
+  "skipped": true,
+  "skipped_reason": "addressSize > bits_total",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-21T22:48:57Z"
+ },
+ {
+  "model": "ULEEN",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 4
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "filter_entries": 64,
+   "filter_hash_functions": 2,
+   "n_submodels": 1,
+   "epochs": 30
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 4
+  },
+  "skipped": true,
+  "skipped_reason": "addressSize > bits_total",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-21T22:48:57Z"
+ },
+ {
+  "model": "ULEEN",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 4
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "filter_entries": 64,
+   "filter_hash_functions": 2,
+   "n_submodels": 3,
+   "epochs": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 4
+  },
+  "skipped": true,
+  "skipped_reason": "addressSize > bits_total",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-21T22:48:57Z"
+ },
+ {
+  "model": "ULEEN",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 4
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "filter_entries": 64,
+   "filter_hash_functions": 2,
+   "n_submodels": 3,
+   "epochs": 30
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 4
+  },
+  "skipped": true,
+  "skipped_reason": "addressSize > bits_total",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-21T22:48:57Z"
+ },
+ {
+  "model": "ULEEN",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 4,
+  "model_hyperparams": {
+   "filter_entries": 64,
+   "filter_hash_functions": 2,
+   "n_submodels": 1,
+   "epochs": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 8
+  },
+  "skipped": true,
+  "skipped_reason": "runtime error: ValueError(\"invalid literal for int() with base 10: 'backdoor'\")",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-21T22:48:57Z"
+ },
+ {
+  "model": "ULEEN",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 4,
+  "model_hyperparams": {
+   "filter_entries": 64,
+   "filter_hash_functions": 2,
+   "n_submodels": 1,
+   "epochs": 30
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 8
+  },
+  "skipped": true,
+  "skipped_reason": "runtime error: ValueError(\"invalid literal for int() with base 10: 'backdoor'\")",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-21T22:48:57Z"
+ },
+ {
+  "model": "ULEEN",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 4,
+  "model_hyperparams": {
+   "filter_entries": 64,
+   "filter_hash_functions": 2,
+   "n_submodels": 3,
+   "epochs": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 8
+  },
+  "skipped": true,
+  "skipped_reason": "runtime error: ValueError(\"invalid literal for int() with base 10: 'backdoor'\")",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-21T22:48:57Z"
+ },
+ {
+  "model": "ULEEN",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 4,
+  "model_hyperparams": {
+   "filter_entries": 64,
+   "filter_hash_functions": 2,
+   "n_submodels": 3,
+   "epochs": 30
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 8
+  },
+  "skipped": true,
+  "skipped_reason": "runtime error: ValueError(\"invalid literal for int() with base 10: 'backdoor'\")",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-21T22:48:57Z"
+ },
+ {
+  "model": "ULEEN",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "filter_entries": 64,
+   "filter_hash_functions": 2,
+   "n_submodels": 1,
+   "epochs": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 8
+  },
+  "skipped": true,
+  "skipped_reason": "runtime error: ValueError(\"invalid literal for int() with base 10: 'backdoor'\")",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-21T22:48:57Z"
+ },
+ {
+  "model": "ULEEN",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "filter_entries": 64,
+   "filter_hash_functions": 2,
+   "n_submodels": 1,
+   "epochs": 30
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 8
+  },
+  "skipped": true,
+  "skipped_reason": "runtime error: ValueError(\"invalid literal for int() with base 10: 'backdoor'\")",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-21T22:48:57Z"
+ },
+ {
+  "model": "ULEEN",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "filter_entries": 64,
+   "filter_hash_functions": 2,
+   "n_submodels": 3,
+   "epochs": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 8
+  },
+  "skipped": true,
+  "skipped_reason": "runtime error: ValueError(\"invalid literal for int() with base 10: 'backdoor'\")",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-21T22:48:57Z"
+ },
+ {
+  "model": "ULEEN",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "filter_entries": 64,
+   "filter_hash_functions": 2,
+   "n_submodels": 3,
+   "epochs": 30
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 8
+  },
+  "skipped": true,
+  "skipped_reason": "runtime error: ValueError(\"invalid literal for int() with base 10: 'backdoor'\")",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-21T22:48:57Z"
+ }
+]

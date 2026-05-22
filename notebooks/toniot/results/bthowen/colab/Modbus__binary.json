@@ -1,0 +1,2744 @@
+[
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 2
+    },
+    "addressSize": 4,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 1355
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 8
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.506215173596228,
+      "precision_macro": 0.501710026276422,
+      "precision_weighted": 0.5023270679060323,
+      "recall_macro": 0.5015966703458425,
+      "recall_weighted": 0.506215173596228,
+      "f1_macro": 0.49520837251169014,
+      "f1_weighted": 0.49786022879620867,
+      "auc_roc": 0.5015966703458425,
+      "memory_bytes_serialized": 9147,
+      "memory_bytes_theoretical": 512,
+      "train_time_s": 0.1588750450000589,
+      "inference_latency_us": 226.99699997019707
+    },
+    "confusion_matrix": [
+      [
+        1673,
+        2827
+      ],
+      [
+        1781,
+        3051
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 2
+    },
+    "addressSize": 8,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 691
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 8
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.5141448778396914,
+      "precision_macro": 0.5117906279190938,
+      "precision_weighted": 0.5123619809699991,
+      "recall_macro": 0.5115518763796909,
+      "recall_weighted": 0.5141448778396914,
+      "f1_macro": 0.5100803202974433,
+      "f1_weighted": 0.5116678886551214,
+      "auc_roc": 0.5115518763796909,
+      "memory_bytes_serialized": 5043,
+      "memory_bytes_theoretical": 256,
+      "train_time_s": 0.09101358099997015,
+      "inference_latency_us": 210.8215000475866
+    },
+    "confusion_matrix": [
+      [
+        1974,
+        2526
+      ],
+      [
+        2008,
+        2824
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 2
+    },
+    "addressSize": 12,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 8
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 2
+    },
+    "addressSize": 16,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 8
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 2
+    },
+    "addressSize": 20,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 8
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 2
+    },
+    "addressSize": 24,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 8
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 2
+    },
+    "addressSize": 28,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 8
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 2
+    },
+    "addressSize": 32,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 8
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 4
+    },
+    "addressSize": 4,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 1875
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 16
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.5058936990998714,
+      "precision_macro": 0.4929066758161864,
+      "precision_weighted": 0.49368862933997737,
+      "recall_macro": 0.4953772994849154,
+      "recall_weighted": 0.5058936990998714,
+      "f1_macro": 0.4521441982310295,
+      "f1_weighted": 0.4582491706184587,
+      "auc_roc": 0.49541167678440035,
+      "memory_bytes_serialized": 17739,
+      "memory_bytes_theoretical": 1024,
+      "train_time_s": 0.2640439500000866,
+      "inference_latency_us": 210.64049997221446
+    },
+    "confusion_matrix": [
+      [
+        899,
+        3601
+      ],
+      [
+        1010,
+        3822
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 4
+    },
+    "addressSize": 8,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 343
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 16
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.48917702528932705,
+      "precision_macro": 0.4991225305893679,
+      "precision_weighted": 0.4997374109915305,
+      "recall_macro": 0.49941234363502574,
+      "recall_weighted": 0.48917702528932705,
+      "f1_macro": 0.44903184896599385,
+      "f1_weighted": 0.44374078166176734,
+      "auc_roc": 0.49985773086828544,
+      "memory_bytes_serialized": 9531,
+      "memory_bytes_theoretical": 512,
+      "train_time_s": 0.18513511100002233,
+      "inference_latency_us": 212.32599999621016
+    },
+    "confusion_matrix": [
+      [
+        3542,
+        958
+      ],
+      [
+        3809,
+        1023
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 4
+    },
+    "addressSize": 12,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 824
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 16
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.49485640805829406,
+      "precision_macro": 0.5072872207899127,
+      "precision_weighted": 0.5080670828131361,
+      "recall_macro": 0.5049500551876379,
+      "recall_weighted": 0.49485640805829406,
+      "f1_macro": 0.45647000517348163,
+      "f1_weighted": 0.45133118027116,
+      "auc_roc": 0.5049500551876379,
+      "memory_bytes_serialized": 9851,
+      "memory_bytes_theoretical": 512,
+      "train_time_s": 0.2175323470000876,
+      "inference_latency_us": 301.85700006768457
+    },
+    "confusion_matrix": [
+      [
+        3549,
+        951
+      ],
+      [
+        3763,
+        1069
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 4
+    },
+    "addressSize": 16,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 36
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 16
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.5081440205743678,
+      "precision_macro": 0.5365019253997776,
+      "precision_weighted": 0.5380058909592084,
+      "recall_macro": 0.5201020051508463,
+      "recall_weighted": 0.5081440205743678,
+      "f1_macro": 0.4529582075962114,
+      "f1_weighted": 0.44677680074440707,
+      "auc_roc": 0.5292961736571007,
+      "memory_bytes_serialized": 5426,
+      "memory_bytes_theoretical": 256,
+      "train_time_s": 0.11873030300000664,
+      "inference_latency_us": 306.11449994921713
+    },
+    "confusion_matrix": [
+      [
+        3853,
+        647
+      ],
+      [
+        3943,
+        889
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 4
+    },
+    "addressSize": 20,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 16
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 4
+    },
+    "addressSize": 24,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 16
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 4
+    },
+    "addressSize": 28,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 16
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 4
+    },
+    "addressSize": 32,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 16
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 8
+    },
+    "addressSize": 4,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 2613
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 32
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.5207886840977283,
+      "precision_macro": 0.5168441715025094,
+      "precision_weighted": 0.5172871952445975,
+      "recall_macro": 0.5151732891832229,
+      "recall_weighted": 0.5207886840977283,
+      "f1_macro": 0.5054399268254945,
+      "f1_weighted": 0.5085395542065052,
+      "auc_roc": 0.5167196927888152,
+      "memory_bytes_serialized": 34926,
+      "memory_bytes_theoretical": 2048,
+      "train_time_s": 0.7282522489999792,
+      "inference_latency_us": 418.9204999534013
+    },
+    "confusion_matrix": [
+      [
+        1608,
+        2892
+      ],
+      [
+        1580,
+        3252
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 8
+    },
+    "addressSize": 8,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 190
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 32
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.5071795970852979,
+      "precision_macro": 0.5258549014752342,
+      "precision_weighted": 0.5270146846883765,
+      "recall_macro": 0.5173919242089772,
+      "recall_weighted": 0.5071795970852979,
+      "f1_macro": 0.4688459914103972,
+      "f1_weighted": 0.46376950274503337,
+      "auc_roc": 0.5213225027593819,
+      "memory_bytes_serialized": 18509,
+      "memory_bytes_theoretical": 1024,
+      "train_time_s": 0.5101736230000142,
+      "inference_latency_us": 364.70149996148393
+    },
+    "confusion_matrix": [
+      [
+        3620,
+        880
+      ],
+      [
+        3719,
+        1113
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 8
+    },
+    "addressSize": 12,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 671
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 32
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.4960351478782683,
+      "precision_macro": 0.5194992131526804,
+      "precision_weighted": 0.5206397797223884,
+      "recall_macro": 0.5090656732891832,
+      "recall_weighted": 0.4960351478782683,
+      "f1_macro": 0.42652204214797595,
+      "f1_weighted": 0.419418825434385,
+      "auc_roc": 0.5143727005150847,
+      "memory_bytes_serialized": 14566,
+      "memory_bytes_theoretical": 768,
+      "train_time_s": 0.5626140209999448,
+      "inference_latency_us": 313.6240000003454
+    },
+    "confusion_matrix": [
+      [
+        3939,
+        561
+      ],
+      [
+        4142,
+        690
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 8
+    },
+    "addressSize": 16,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 28
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 32
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.5249678525503644,
+      "precision_macro": 0.5570672919001969,
+      "precision_weighted": 0.5589389135833974,
+      "recall_macro": 0.5358669058130978,
+      "recall_weighted": 0.5249678525503644,
+      "f1_macro": 0.48223339415177485,
+      "f1_weighted": 0.4769413985574699,
+      "auc_roc": 0.5456916620676969,
+      "memory_bytes_serialized": 10301,
+      "memory_bytes_theoretical": 512,
+      "train_time_s": 0.24232540299999528,
+      "inference_latency_us": 214.54349996474775
+    },
+    "confusion_matrix": [
+      [
+        3790,
+        710
+      ],
+      [
+        3723,
+        1109
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 8
+    },
+    "addressSize": 20,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 256
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 32
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.48939134162023146,
+      "precision_macro": 0.5087810401098122,
+      "precision_weighted": 0.5096592638340334,
+      "recall_macro": 0.5033677336276674,
+      "recall_weighted": 0.48939134162023146,
+      "f1_macro": 0.40586497724717174,
+      "f1_weighted": 0.3979396405875959,
+      "auc_roc": 0.5033677336276674,
+      "memory_bytes_serialized": 10622,
+      "memory_bytes_theoretical": 512,
+      "train_time_s": 0.2836960289999979,
+      "inference_latency_us": 305.3989999557416
+    },
+    "confusion_matrix": [
+      [
+        4033,
+        467
+      ],
+      [
+        4298,
+        534
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 8
+    },
+    "addressSize": 24,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 671
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 32
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.4960351478782683,
+      "precision_macro": 0.5194992131526804,
+      "precision_weighted": 0.5206397797223884,
+      "recall_macro": 0.5090656732891832,
+      "recall_weighted": 0.4960351478782683,
+      "f1_macro": 0.42652204214797595,
+      "f1_weighted": 0.419418825434385,
+      "auc_roc": 0.5143727005150847,
+      "memory_bytes_serialized": 10942,
+      "memory_bytes_theoretical": 512,
+      "train_time_s": 0.3293103500000143,
+      "inference_latency_us": 311.5189999789436
+    },
+    "confusion_matrix": [
+      [
+        3939,
+        561
+      ],
+      [
+        4142,
+        690
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 8
+    },
+    "addressSize": 28,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 18
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 32
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.541791684526361,
+      "precision_macro": 0.5664118780542318,
+      "precision_weighted": 0.5682012616468878,
+      "recall_macro": 0.5505630058866814,
+      "recall_weighted": 0.541791684526361,
+      "f1_macro": 0.5169069361733553,
+      "f1_weighted": 0.5130062107469163,
+      "auc_roc": 0.5660123942236939,
+      "memory_bytes_serialized": 11261,
+      "memory_bytes_theoretical": 512,
+      "train_time_s": 0.37771564900003796,
+      "inference_latency_us": 312.9870000293522
+    },
+    "confusion_matrix": [
+      [
+        3587,
+        913
+      ],
+      [
+        3363,
+        1469
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 8
+    },
+    "addressSize": 32,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 17
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 32
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.5408272610372911,
+      "precision_macro": 0.5613353766386969,
+      "precision_weighted": 0.562952643712252,
+      "recall_macro": 0.5489140912435615,
+      "recall_weighted": 0.5408272610372911,
+      "f1_macro": 0.5201092262326189,
+      "f1_weighted": 0.5165618370860736,
+      "auc_roc": 0.563281709896983,
+      "memory_bytes_serialized": 6197,
+      "memory_bytes_theoretical": 256,
+      "train_time_s": 0.19298706400002175,
+      "inference_latency_us": 206.56200001667457
+    },
+    "confusion_matrix": [
+      [
+        3493,
+        1007
+      ],
+      [
+        3278,
+        1554
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 16
+    },
+    "addressSize": 4,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 1182
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 64
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.5138234033433348,
+      "precision_macro": 0.508687061223016,
+      "precision_weighted": 0.509212404902605,
+      "recall_macro": 0.5076456953642384,
+      "recall_weighted": 0.5138234033433348,
+      "f1_macro": 0.49527413509308016,
+      "f1_weighted": 0.49871648112946054,
+      "auc_roc": 0.5133042218543047,
+      "memory_bytes_serialized": 69303,
+      "memory_bytes_theoretical": 4096,
+      "train_time_s": 0.853209019000019,
+      "inference_latency_us": 239.30100002189647
+    },
+    "confusion_matrix": [
+      [
+        1503,
+        2997
+      ],
+      [
+        1540,
+        3292
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 16
+    },
+    "addressSize": 8,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 1620
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 64
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.48917702528932705,
+      "precision_macro": 0.49591253944183833,
+      "precision_weighted": 0.4964844552215401,
+      "recall_macro": 0.49662582781456954,
+      "recall_weighted": 0.48917702528932705,
+      "f1_macro": 0.4696874150294717,
+      "f1_weighted": 0.4660705617000855,
+      "auc_roc": 0.4962518855776306,
+      "memory_bytes_serialized": 36462,
+      "memory_bytes_theoretical": 2048,
+      "train_time_s": 0.5893033859999832,
+      "inference_latency_us": 228.02650005360192
+    },
+    "confusion_matrix": [
+      [
+        3177,
+        1323
+      ],
+      [
+        3444,
+        1388
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 16
+    },
+    "addressSize": 12,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 170
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 64
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.5088941277325332,
+      "precision_macro": 0.5198459377360247,
+      "precision_weighted": 0.5207749108891058,
+      "recall_macro": 0.5163755518763797,
+      "recall_weighted": 0.5088941277325332,
+      "f1_macro": 0.4901132700886328,
+      "f1_weighted": 0.4866318380742415,
+      "auc_roc": 0.5168773454746136,
+      "memory_bytes_serialized": 28573,
+      "memory_bytes_theoretical": 1536,
+      "train_time_s": 0.5899783300000081,
+      "inference_latency_us": 333.60550003180833
+    },
+    "confusion_matrix": [
+      [
+        3270,
+        1230
+      ],
+      [
+        3353,
+        1479
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 16
+    },
+    "addressSize": 16,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 12
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 64
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.531504500642949,
+      "precision_macro": 0.5747069122353687,
+      "precision_weighted": 0.5770690994304746,
+      "recall_macro": 0.5431332781456953,
+      "recall_weighted": 0.531504500642949,
+      "f1_macro": 0.4825636805713135,
+      "f1_weighted": 0.4769022337895075,
+      "auc_roc": 0.5605769407652685,
+      "memory_bytes_serialized": 20045,
+      "memory_bytes_theoretical": 1024,
+      "train_time_s": 0.74493510100001,
+      "inference_latency_us": 367.1085000291896
+    },
+    "confusion_matrix": [
+      [
+        3915,
+        585
+      ],
+      [
+        3787,
+        1045
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 16
+    },
+    "addressSize": 20,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 18
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 64
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.5380411487355337,
+      "precision_macro": 0.5585255422853876,
+      "precision_weighted": 0.5601137764419853,
+      "recall_macro": 0.5462618653421634,
+      "recall_weighted": 0.5380411487355337,
+      "f1_macro": 0.5163796079655566,
+      "f1_weighted": 0.5127382755424515,
+      "auc_roc": 0.5626771063281825,
+      "memory_bytes_serialized": 20685,
+      "memory_bytes_theoretical": 1024,
+      "train_time_s": 0.918342755000026,
+      "inference_latency_us": 489.9255000054836
+    },
+    "confusion_matrix": [
+      [
+        3498,
+        1002
+      ],
+      [
+        3309,
+        1523
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 16
+    },
+    "addressSize": 24,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 12
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 64
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.5485426489498499,
+      "precision_macro": 0.5747536979170513,
+      "precision_weighted": 0.5766763820215831,
+      "recall_macro": 0.5572423657100809,
+      "recall_weighted": 0.5485426489498499,
+      "f1_macro": 0.5245340497381659,
+      "f1_weighted": 0.5207329744218668,
+      "auc_roc": 0.5848828182487122,
+      "memory_bytes_serialized": 16261,
+      "memory_bytes_theoretical": 768,
+      "train_time_s": 0.5429208320000498,
+      "inference_latency_us": 317.3220000007859
+    },
+    "confusion_matrix": [
+      [
+        3608,
+        892
+      ],
+      [
+        3321,
+        1511
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 16
+    },
+    "addressSize": 28,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 324
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 64
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.4938919845692242,
+      "precision_macro": 0.5269736398502616,
+      "precision_weighted": 0.5283989071164574,
+      "recall_macro": 0.5085917034584253,
+      "recall_weighted": 0.4938919845692242,
+      "f1_macro": 0.40027645089948594,
+      "f1_weighted": 0.3918467364491596,
+      "auc_roc": 0.5129464449963208,
+      "memory_bytes_serialized": 16742,
+      "memory_bytes_theoretical": 768,
+      "train_time_s": 0.5341335959999469,
+      "inference_latency_us": 309.7999999681633
+    },
+    "confusion_matrix": [
+      [
+        4148,
+        352
+      ],
+      [
+        4371,
+        461
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 16
+    },
+    "addressSize": 32,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 14
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 64
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.5621517359622803,
+      "precision_macro": 0.583498378631512,
+      "precision_weighted": 0.5853497593436815,
+      "recall_macro": 0.5695365158204562,
+      "recall_weighted": 0.5621517359622803,
+      "f1_macro": 0.5462308070191473,
+      "f1_weighted": 0.5432069234899024,
+      "auc_roc": 0.5965743883370125,
+      "memory_bytes_serialized": 11837,
+      "memory_bytes_theoretical": 512,
+      "train_time_s": 0.4119154029999663,
+      "inference_latency_us": 213.02300007164376
+    },
+    "confusion_matrix": [
+      [
+        3497,
+        1003
+      ],
+      [
+        3083,
+        1749
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 32
+    },
+    "addressSize": 4,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 2536
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 128
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.5229318474067723,
+      "precision_macro": 0.522218015083457,
+      "precision_weighted": 0.5222515074988527,
+      "recall_macro": 0.5094558498896247,
+      "recall_weighted": 0.5229318474067723,
+      "f1_macro": 0.4337197107436124,
+      "f1_weighted": 0.4417160469672002,
+      "auc_roc": 0.5217540930831494,
+      "memory_bytes_serialized": 138042,
+      "memory_bytes_theoretical": 8192,
+      "train_time_s": 1.7435776169999144,
+      "inference_latency_us": 272.8255000192803
+    },
+    "confusion_matrix": [
+      [
+        588,
+        3912
+      ],
+      [
+        540,
+        4292
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 32
+    },
+    "addressSize": 8,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 609
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 128
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.5094299185597942,
+      "precision_macro": 0.5109596796986096,
+      "precision_weighted": 0.5116244450102413,
+      "recall_macro": 0.5109000183958793,
+      "recall_weighted": 0.5094299185597942,
+      "f1_macro": 0.5091669572624717,
+      "f1_weighted": 0.5087627760091796,
+      "auc_roc": 0.5133448307579102,
+      "memory_bytes_serialized": 72375,
+      "memory_bytes_theoretical": 4096,
+      "train_time_s": 1.1127432490000047,
+      "inference_latency_us": 243.20150004086827
+    },
+    "confusion_matrix": [
+      [
+        2485,
+        2015
+      ],
+      [
+        2563,
+        2269
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 32
+    },
+    "addressSize": 12,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 99
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 128
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.5331118731247321,
+      "precision_macro": 0.538927972503846,
+      "precision_weighted": 0.5398662353774447,
+      "recall_macro": 0.5370816777041942,
+      "recall_weighted": 0.5331118731247321,
+      "f1_macro": 0.529084563145247,
+      "f1_weighted": 0.5275352387962446,
+      "auc_roc": 0.5470531640912436,
+      "memory_bytes_serialized": 52005,
+      "memory_bytes_theoretical": 2816,
+      "train_time_s": 1.600154595000049,
+      "inference_latency_us": 524.6605000479576
+    },
+    "confusion_matrix": [
+      [
+        2919,
+        1581
+      ],
+      [
+        2776,
+        2056
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 32
+    },
+    "addressSize": 16,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 27
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 128
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.5441491641663094,
+      "precision_macro": 0.5579957700028677,
+      "precision_weighted": 0.5593688503904835,
+      "recall_macro": 0.5505950147167035,
+      "recall_weighted": 0.5441491641663094,
+      "f1_macro": 0.5319264596020193,
+      "f1_weighted": 0.5292355193398547,
+      "auc_roc": 0.5667490802060338,
+      "memory_bytes_serialized": 39533,
+      "memory_bytes_theoretical": 2048,
+      "train_time_s": 1.3270860889999767,
+      "inference_latency_us": 241.15200000096593
+    },
+    "confusion_matrix": [
+      [
+        3293,
+        1207
+      ],
+      [
+        3047,
+        1785
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 32
+    },
+    "addressSize": 20,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 14
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 128
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.5548649807115302,
+      "precision_macro": 0.5698298835813629,
+      "precision_weighted": 0.5713391022182963,
+      "recall_macro": 0.5612175312729948,
+      "recall_weighted": 0.5548649807115302,
+      "f1_macro": 0.5433800371617807,
+      "f1_weighted": 0.5408036849600802,
+      "auc_roc": 0.588091979396615,
+      "memory_bytes_serialized": 35909,
+      "memory_bytes_theoretical": 1792,
+      "train_time_s": 0.931257563000031,
+      "inference_latency_us": 336.00799997657305
+    },
+    "confusion_matrix": [
+      [
+        3329,
+        1171
+      ],
+      [
+        2983,
+        1849
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 32
+    },
+    "addressSize": 24,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 424
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 128
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.4942134590655808,
+      "precision_macro": 0.514449414236537,
+      "precision_weighted": 0.5154515528279389,
+      "recall_macro": 0.507001195732156,
+      "recall_weighted": 0.4942134590655808,
+      "f1_macro": 0.4274818943441912,
+      "f1_weighted": 0.4205280715295329,
+      "auc_roc": 0.5070011957321561,
+      "memory_bytes_serialized": 31966,
+      "memory_bytes_theoretical": 1536,
+      "train_time_s": 0.9166831750000028,
+      "inference_latency_us": 319.8800000632218
+    },
+    "confusion_matrix": [
+      [
+        3899,
+        601
+      ],
+      [
+        4119,
+        713
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 32
+    },
+    "addressSize": 28,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 15
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 128
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.5721174453493356,
+      "precision_macro": 0.5820827359718865,
+      "precision_weighted": 0.5834647228084309,
+      "recall_macro": 0.5767779617365709,
+      "recall_weighted": 0.5721174453493356,
+      "f1_macro": 0.5668302421869302,
+      "f1_weighted": 0.56512767046053,
+      "auc_roc": 0.6053170759749815,
+      "memory_bytes_serialized": 27701,
+      "memory_bytes_theoretical": 1280,
+      "train_time_s": 0.869688488999941,
+      "inference_latency_us": 320.53500001438806
+    },
+    "confusion_matrix": [
+      [
+        3185,
+        1315
+      ],
+      [
+        2678,
+        2154
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 32
+    },
+    "addressSize": 32,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 13
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 128
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.5841191598799829,
+      "precision_macro": 0.5967889053181312,
+      "precision_weighted": 0.5983907162417662,
+      "recall_macro": 0.5892376747608536,
+      "recall_weighted": 0.5841191598799829,
+      "f1_macro": 0.5777400919883808,
+      "f1_weighted": 0.5758936660598614,
+      "auc_roc": 0.622865135209713,
+      "memory_bytes_serialized": 23117,
+      "memory_bytes_theoretical": 1024,
+      "train_time_s": 0.7744847310000296,
+      "inference_latency_us": 223.382000001493
+    },
+    "confusion_matrix": [
+      [
+        3299,
+        1201
+      ],
+      [
+        2680,
+        2152
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 64
+    },
+    "addressSize": 4,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 482
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 256
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.5174667809687098,
+      "precision_macro": 0.5149807105911361,
+      "precision_weighted": 0.5155273167933576,
+      "recall_macro": 0.5146069720382634,
+      "recall_weighted": 0.5174667809687098,
+      "f1_macro": 0.5127205607301831,
+      "f1_weighted": 0.5144314674828334,
+      "auc_roc": 0.5162650386313465,
+      "memory_bytes_serialized": 275517,
+      "memory_bytes_theoretical": 16384,
+      "train_time_s": 4.9822395249999545,
+      "inference_latency_us": 348.14049996612084
+    },
+    "confusion_matrix": [
+      [
+        1954,
+        2546
+      ],
+      [
+        1957,
+        2875
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 64
+    },
+    "addressSize": 8,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 145
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 256
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.5322546078011144,
+      "precision_macro": 0.537071807375611,
+      "precision_weighted": 0.5379593269420555,
+      "recall_macro": 0.5357347314201619,
+      "recall_weighted": 0.5322546078011144,
+      "f1_macro": 0.5293349147197435,
+      "f1_weighted": 0.5280160873687024,
+      "auc_roc": 0.5419004552980132,
+      "memory_bytes_serialized": 144188,
+      "memory_bytes_theoretical": 8192,
+      "train_time_s": 2.182649289999972,
+      "inference_latency_us": 289.54599997632613
+    },
+    "confusion_matrix": [
+      [
+        2851,
+        1649
+      ],
+      [
+        2716,
+        2116
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 64
+    },
+    "addressSize": 12,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 505
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 256
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.517573939134162,
+      "precision_macro": 0.5181401896572175,
+      "precision_weighted": 0.5187929506768509,
+      "recall_macro": 0.5181458793230317,
+      "recall_weighted": 0.517573939134162,
+      "f1_macro": 0.517571257934996,
+      "f1_weighted": 0.5176117196678649,
+      "auc_roc": 0.5206425680647535,
+      "memory_bytes_serialized": 103466,
+      "memory_bytes_theoretical": 5632,
+      "train_time_s": 1.9368193330000167,
+      "inference_latency_us": 558.1614999528028
+    },
+    "confusion_matrix": [
+      [
+        2404,
+        2096
+      ],
+      [
+        2406,
+        2426
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 64
+    },
+    "addressSize": 16,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 25
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 256
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.5651521645949421,
+      "precision_macro": 0.5712940653113592,
+      "precision_weighted": 0.5724194025287159,
+      "recall_macro": 0.5686930647534952,
+      "recall_weighted": 0.5651521645949421,
+      "f1_macro": 0.5624005299645162,
+      "f1_weighted": 0.5611660128060006,
+      "auc_roc": 0.5905706401766005,
+      "memory_bytes_serialized": 78521,
+      "memory_bytes_theoretical": 4096,
+      "train_time_s": 2.2685157720000007,
+      "inference_latency_us": 255.82649993793893
+    },
+    "confusion_matrix": [
+      [
+        3007,
+        1493
+      ],
+      [
+        2565,
+        2267
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 64
+    },
+    "addressSize": 20,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 7
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 256
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.5874410630090013,
+      "precision_macro": 0.6124462646149758,
+      "precision_weighted": 0.6146755145970337,
+      "recall_macro": 0.5946594002943341,
+      "recall_weighted": 0.5874410630090013,
+      "f1_macro": 0.5733489856668478,
+      "f1_weighted": 0.5705903950550583,
+      "auc_roc": 0.6360434142752025,
+      "memory_bytes_serialized": 66360,
+      "memory_bytes_theoretical": 3328,
+      "train_time_s": 1.6669205160000047,
+      "inference_latency_us": 347.50899999380636
+    },
+    "confusion_matrix": [
+      [
+        3589,
+        911
+      ],
+      [
+        2939,
+        1893
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 64
+    },
+    "addressSize": 24,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 7
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 256
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.600192884697814,
+      "precision_macro": 0.620432032570803,
+      "precision_weighted": 0.6225331573656224,
+      "recall_macro": 0.6064234731420162,
+      "recall_weighted": 0.600192884697814,
+      "f1_macro": 0.590537785242354,
+      "f1_weighted": 0.588300874552045,
+      "auc_roc": 0.6481967209345106,
+      "memory_bytes_serialized": 58312,
+      "memory_bytes_theoretical": 2816,
+      "train_time_s": 1.6501639549999254,
+      "inference_latency_us": 341.7534999812233
+    },
+    "confusion_matrix": [
+      [
+        3517,
+        983
+      ],
+      [
+        2748,
+        2084
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 64
+    },
+    "addressSize": 28,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 740
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 256
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.48756965280754394,
+      "precision_macro": 0.5004588267209072,
+      "precision_weighted": 0.5011032854165753,
+      "recall_macro": 0.500226821192053,
+      "recall_weighted": 0.48756965280754394,
+      "f1_macro": 0.4214870736156836,
+      "f1_weighted": 0.4145310126481193,
+      "auc_roc": 0.5002268211920529,
+      "memory_bytes_serialized": 54849,
+      "memory_bytes_theoretical": 2560,
+      "train_time_s": 2.7888677450000614,
+      "inference_latency_us": 354.68400000127076
+    },
+    "confusion_matrix": [
+      [
+        3852,
+        648
+      ],
+      [
+        4134,
+        698
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Modbus",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 64
+    },
+    "addressSize": 32,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 9
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 4,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 256
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.6099442777539649,
+      "precision_macro": 0.6208885355325484,
+      "precision_weighted": 0.6225371260872171,
+      "recall_macro": 0.6142901030169242,
+      "recall_weighted": 0.6099442777539649,
+      "f1_macro": 0.6059804017458366,
+      "f1_weighted": 0.6045744115378253,
+      "auc_roc": 0.6544961138704929,
+      "memory_bytes_serialized": 45680,
+      "memory_bytes_theoretical": 2048,
+      "train_time_s": 1.5240586959999973,
+      "inference_latency_us": 251.11000002198125
+    },
+    "confusion_matrix": [
+      [
+        3314,
+        1186
+      ],
+      [
+        2454,
+        2378
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:54:30Z"
+  }
+]

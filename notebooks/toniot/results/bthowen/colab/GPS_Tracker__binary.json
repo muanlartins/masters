@@ -1,0 +1,2681 @@
+[
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 2
+    },
+    "addressSize": 4,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 2037
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 4
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.6484428473648186,
+      "precision_macro": 0.6755984035963184,
+      "precision_weighted": 0.7094861172222569,
+      "recall_macro": 0.679107586718605,
+      "recall_weighted": 0.6484428473648186,
+      "f1_macro": 0.6482592929861202,
+      "f1_weighted": 0.6501072112256006,
+      "auc_roc": 0.679107586718605,
+      "memory_bytes_serialized": 4848,
+      "memory_bytes_theoretical": 256,
+      "train_time_s": 0.09520896600008655,
+      "inference_latency_us": 220.86899997475484
+    },
+    "confusion_matrix": [
+      [
+        3656,
+        844
+      ],
+      [
+        3265,
+        3923
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 2
+    },
+    "addressSize": 8,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 4
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 2
+    },
+    "addressSize": 12,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 4
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 2
+    },
+    "addressSize": 16,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 4
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 2
+    },
+    "addressSize": 20,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 4
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 2
+    },
+    "addressSize": 24,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 4
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 2
+    },
+    "addressSize": 28,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 4
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 2
+    },
+    "addressSize": 32,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 4
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 4
+    },
+    "addressSize": 4,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 2192
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 8
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.8844969199178645,
+      "precision_macro": 0.8912878312761227,
+      "precision_weighted": 0.8867515564920774,
+      "recall_macro": 0.8641687998516046,
+      "recall_weighted": 0.8844969199178645,
+      "f1_macro": 0.8741186518585329,
+      "f1_weighted": 0.8824311621515851,
+      "auc_roc": 0.8697510202188834,
+      "memory_bytes_serialized": 9147,
+      "memory_bytes_theoretical": 512,
+      "train_time_s": 0.19798627000000124,
+      "inference_latency_us": 223.7315000002127
+    },
+    "confusion_matrix": [
+      [
+        3491,
+        1009
+      ],
+      [
+        341,
+        6847
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 4
+    },
+    "addressSize": 8,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 1769
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 8
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.8775667351129364,
+      "precision_macro": 0.8783935656612605,
+      "precision_weighted": 0.8777819749860003,
+      "recall_macro": 0.8609028009645705,
+      "recall_weighted": 0.8775667351129364,
+      "f1_macro": 0.8679050038792845,
+      "f1_weighted": 0.876120990451906,
+      "auc_roc": 0.8697480986829902,
+      "memory_bytes_serialized": 5043,
+      "memory_bytes_theoretical": 256,
+      "train_time_s": 0.11177849500006687,
+      "inference_latency_us": 203.42400000572525
+    },
+    "confusion_matrix": [
+      [
+        3548,
+        952
+      ],
+      [
+        479,
+        6709
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 4
+    },
+    "addressSize": 12,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 8
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 4
+    },
+    "addressSize": 16,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 8
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 4
+    },
+    "addressSize": 20,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 8
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 4
+    },
+    "addressSize": 24,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 8
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 4
+    },
+    "addressSize": 28,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 8
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 4
+    },
+    "addressSize": 32,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 8
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 8
+    },
+    "addressSize": 4,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 8046
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 16
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.8853524982888432,
+      "precision_macro": 0.8930529167543921,
+      "precision_weighted": 0.8879747212599378,
+      "recall_macro": 0.864531997774068,
+      "recall_weighted": 0.8853524982888432,
+      "f1_macro": 0.8748762297335926,
+      "f1_weighted": 0.8832027258532005,
+      "auc_roc": 0.8458879459593149,
+      "memory_bytes_serialized": 17739,
+      "memory_bytes_theoretical": 1024,
+      "train_time_s": 0.34098042999994504,
+      "inference_latency_us": 217.07050001396055
+    },
+    "confusion_matrix": [
+      [
+        3483,
+        1017
+      ],
+      [
+        323,
+        6865
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 8
+    },
+    "addressSize": 8,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 1241
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 16
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.8844969199178645,
+      "precision_macro": 0.8912878312761227,
+      "precision_weighted": 0.8867515564920774,
+      "recall_macro": 0.8641687998516046,
+      "recall_weighted": 0.8844969199178645,
+      "f1_macro": 0.8741186518585329,
+      "f1_weighted": 0.8824311621515851,
+      "auc_roc": 0.8956107092067025,
+      "memory_bytes_serialized": 9531,
+      "memory_bytes_theoretical": 512,
+      "train_time_s": 0.25428858099996887,
+      "inference_latency_us": 207.31850003130603
+    },
+    "confusion_matrix": [
+      [
+        3491,
+        1009
+      ],
+      [
+        341,
+        6847
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 8
+    },
+    "addressSize": 12,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 2264
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 16
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.8844969199178645,
+      "precision_macro": 0.8912878312761227,
+      "precision_weighted": 0.8867515564920774,
+      "recall_macro": 0.8641687998516046,
+      "recall_weighted": 0.8844969199178645,
+      "f1_macro": 0.8741186518585329,
+      "f1_weighted": 0.8824311621515851,
+      "auc_roc": 0.8509457738205651,
+      "memory_bytes_serialized": 9851,
+      "memory_bytes_theoretical": 512,
+      "train_time_s": 0.31169404899992514,
+      "inference_latency_us": 307.66949998906057
+    },
+    "confusion_matrix": [
+      [
+        3491,
+        1009
+      ],
+      [
+        341,
+        6847
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 8
+    },
+    "addressSize": 16,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 1158
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 16
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.8647330595482546,
+      "precision_macro": 0.8602394452254092,
+      "precision_weighted": 0.8640164418795082,
+      "recall_macro": 0.851881469115192,
+      "recall_weighted": 0.8647330595482546,
+      "f1_macro": 0.8555763725907759,
+      "f1_weighted": 0.8639396666926117,
+      "auc_roc": 0.8704514932294565,
+      "memory_bytes_serialized": 5427,
+      "memory_bytes_theoretical": 256,
+      "train_time_s": 0.1571913450000011,
+      "inference_latency_us": 211.54400002387774
+    },
+    "confusion_matrix": [
+      [
+        3582,
+        918
+      ],
+      [
+        663,
+        6525
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 8
+    },
+    "addressSize": 20,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 16
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 8
+    },
+    "addressSize": 24,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 16
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 8
+    },
+    "addressSize": 28,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 16
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 8
+    },
+    "addressSize": 32,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 16
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 16
+    },
+    "addressSize": 4,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 1156
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 32
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.8851813826146475,
+      "precision_macro": 0.8927344763549644,
+      "precision_weighted": 0.8877436415531031,
+      "recall_macro": 0.8644344277499536,
+      "recall_weighted": 0.8851813826146475,
+      "f1_macro": 0.8747165420405331,
+      "f1_weighted": 0.8830438041670042,
+      "auc_roc": 0.9152998516045261,
+      "memory_bytes_serialized": 34926,
+      "memory_bytes_theoretical": 2048,
+      "train_time_s": 0.7760776520000263,
+      "inference_latency_us": 369.8460000123305
+    },
+    "confusion_matrix": [
+      [
+        3484,
+        1016
+      ],
+      [
+        326,
+        6862
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 16
+    },
+    "addressSize": 8,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 655
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 32
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.8860369609856262,
+      "precision_macro": 0.8945249976461727,
+      "precision_weighted": 0.888987171786088,
+      "recall_macro": 0.864797625672417,
+      "recall_weighted": 0.8860369609856262,
+      "f1_macro": 0.8754747159638812,
+      "f1_weighted": 0.883815290176117,
+      "auc_roc": 0.9314556050207136,
+      "memory_bytes_serialized": 18510,
+      "memory_bytes_theoretical": 1024,
+      "train_time_s": 0.671018207999964,
+      "inference_latency_us": 327.1250000125292
+    },
+    "confusion_matrix": [
+      [
+        3476,
+        1024
+      ],
+      [
+        308,
+        6880
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 16
+    },
+    "addressSize": 12,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 1276
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 32
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.884069130732375,
+      "precision_macro": 0.8897761283822503,
+      "precision_weighted": 0.8858964091908328,
+      "recall_macro": 0.864444258950102,
+      "recall_weighted": 0.884069130732375,
+      "f1_macro": 0.8738875474762949,
+      "f1_weighted": 0.8821284676185243,
+      "auc_roc": 0.9139398998330551,
+      "memory_bytes_serialized": 14566,
+      "memory_bytes_theoretical": 768,
+      "train_time_s": 0.6408450100000209,
+      "inference_latency_us": 544.7744999855786
+    },
+    "confusion_matrix": [
+      [
+        3506,
+        994
+      ],
+      [
+        361,
+        6827
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 16
+    },
+    "addressSize": 16,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 580
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 32
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.8835557837097878,
+      "precision_macro": 0.8877504535711591,
+      "precision_weighted": 0.8848218113406744,
+      "recall_macro": 0.8649825635318122,
+      "recall_weighted": 0.8835557837097878,
+      "f1_macro": 0.8736738312496932,
+      "f1_weighted": 0.8817994623946103,
+      "auc_roc": 0.898701663265937,
+      "memory_bytes_serialized": 10302,
+      "memory_bytes_theoretical": 512,
+      "train_time_s": 0.32954666099999486,
+      "inference_latency_us": 211.97699999220276
+    },
+    "confusion_matrix": [
+      [
+        3529,
+        971
+      ],
+      [
+        390,
+        6798
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 16
+    },
+    "addressSize": 20,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 580
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 32
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.8788501026694046,
+      "precision_macro": 0.8803502587989834,
+      "precision_weighted": 0.8792544925825952,
+      "recall_macro": 0.8617800037098868,
+      "recall_weighted": 0.8788501026694046,
+      "f1_macro": 0.869138821233763,
+      "f1_weighted": 0.8773372899834503,
+      "auc_roc": 0.8890759290174983,
+      "memory_bytes_serialized": 10622,
+      "memory_bytes_theoretical": 512,
+      "train_time_s": 0.38386879999995926,
+      "inference_latency_us": 313.38550002146803
+    },
+    "confusion_matrix": [
+      [
+        3544,
+        956
+      ],
+      [
+        460,
+        6728
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 16
+    },
+    "addressSize": 24,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 580
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 32
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.874315537303217,
+      "precision_macro": 0.8741367081143243,
+      "precision_weighted": 0.8742712052770953,
+      "recall_macro": 0.8580933036542385,
+      "recall_weighted": 0.874315537303217,
+      "f1_macro": 0.864599094509453,
+      "f1_weighted": 0.8729407739184717,
+      "auc_roc": 0.8738702776231992,
+      "memory_bytes_serialized": 10942,
+      "memory_bytes_theoretical": 512,
+      "train_time_s": 0.43644357599998784,
+      "inference_latency_us": 308.12399995738815
+    },
+    "confusion_matrix": [
+      [
+        3544,
+        956
+      ],
+      [
+        513,
+        6675
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 16
+    },
+    "addressSize": 28,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 539
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 32
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.846252566735113,
+      "precision_macro": 0.8372278005819331,
+      "precision_weighted": 0.8467260666037606,
+      "recall_macro": 0.8390586162122056,
+      "recall_weighted": 0.846252566735113,
+      "f1_macro": 0.8381117305317094,
+      "f1_weighted": 0.8464606689959402,
+      "auc_roc": 0.8390586162122056,
+      "memory_bytes_serialized": 11262,
+      "memory_bytes_theoretical": 512,
+      "train_time_s": 0.49751098699994145,
+      "inference_latency_us": 309.6385000276314
+    },
+    "confusion_matrix": [
+      [
+        3635,
+        865
+      ],
+      [
+        932,
+        6256
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 16
+    },
+    "addressSize": 32,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 539
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 32
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.8374401095140315,
+      "precision_macro": 0.8274888994577401,
+      "precision_weighted": 0.839139096596813,
+      "recall_macro": 0.8324340567612687,
+      "recall_weighted": 0.8374401095140315,
+      "f1_macro": 0.8296984461877397,
+      "f1_weighted": 0.8380490043823914,
+      "auc_roc": 0.8324340567612687,
+      "memory_bytes_serialized": 6198,
+      "memory_bytes_theoretical": 256,
+      "train_time_s": 0.27300949599998603,
+      "inference_latency_us": 210.39999995764447
+    },
+    "confusion_matrix": [
+      [
+        3648,
+        852
+      ],
+      [
+        1048,
+        6140
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 32
+    },
+    "addressSize": 4,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 1156
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 64
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.8844969199178645,
+      "precision_macro": 0.8912878312761227,
+      "precision_weighted": 0.8867515564920774,
+      "recall_macro": 0.8641687998516046,
+      "recall_weighted": 0.8844969199178645,
+      "f1_macro": 0.8741186518585329,
+      "f1_weighted": 0.8824311621515851,
+      "auc_roc": 0.9176538057255921,
+      "memory_bytes_serialized": 69303,
+      "memory_bytes_theoretical": 4096,
+      "train_time_s": 1.0974641700000802,
+      "inference_latency_us": 238.72500003108144
+    },
+    "confusion_matrix": [
+      [
+        3491,
+        1009
+      ],
+      [
+        341,
+        6847
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 32
+    },
+    "addressSize": 8,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 907
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 64
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.8844969199178645,
+      "precision_macro": 0.8912878312761227,
+      "precision_weighted": 0.8867515564920774,
+      "recall_macro": 0.8641687998516046,
+      "recall_weighted": 0.8844969199178645,
+      "f1_macro": 0.8741186518585329,
+      "f1_weighted": 0.8824311621515851,
+      "auc_roc": 0.9184916063810054,
+      "memory_bytes_serialized": 36462,
+      "memory_bytes_theoretical": 2048,
+      "train_time_s": 0.7677966259999494,
+      "inference_latency_us": 241.09049996923204
+    },
+    "confusion_matrix": [
+      [
+        3491,
+        1009
+      ],
+      [
+        341,
+        6847
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 32
+    },
+    "addressSize": 12,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 920
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 64
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.8844969199178645,
+      "precision_macro": 0.8912878312761227,
+      "precision_weighted": 0.8867515564920774,
+      "recall_macro": 0.8641687998516046,
+      "recall_weighted": 0.8844969199178645,
+      "f1_macro": 0.8741186518585329,
+      "f1_weighted": 0.8824311621515851,
+      "auc_roc": 0.9207273696902245,
+      "memory_bytes_serialized": 28574,
+      "memory_bytes_theoretical": 1536,
+      "train_time_s": 1.1627506790000552,
+      "inference_latency_us": 511.62400001203423
+    },
+    "confusion_matrix": [
+      [
+        3491,
+        1009
+      ],
+      [
+        341,
+        6847
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 32
+    },
+    "addressSize": 16,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 598
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 64
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.8844969199178645,
+      "precision_macro": 0.8912878312761227,
+      "precision_weighted": 0.8867515564920774,
+      "recall_macro": 0.8641687998516046,
+      "recall_weighted": 0.8844969199178645,
+      "f1_macro": 0.8741186518585329,
+      "f1_weighted": 0.8824311621515851,
+      "auc_roc": 0.9172134885302665,
+      "memory_bytes_serialized": 20046,
+      "memory_bytes_theoretical": 1024,
+      "train_time_s": 1.0320454650000102,
+      "inference_latency_us": 449.16350003632033
+    },
+    "confusion_matrix": [
+      [
+        3491,
+        1009
+      ],
+      [
+        341,
+        6847
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 32
+    },
+    "addressSize": 20,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 875
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 64
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.8838980150581793,
+      "precision_macro": 0.890105153032527,
+      "precision_weighted": 0.8859235021866507,
+      "recall_macro": 0.8638896308662586,
+      "recall_weighted": 0.8838980150581793,
+      "f1_macro": 0.8735807227431395,
+      "f1_weighted": 0.8818864674999012,
+      "auc_roc": 0.8817378655784331,
+      "memory_bytes_serialized": 20686,
+      "memory_bytes_theoretical": 1024,
+      "train_time_s": 0.7185456040000417,
+      "inference_latency_us": 311.0820000529202
+    },
+    "confusion_matrix": [
+      [
+        3496,
+        1004
+      ],
+      [
+        353,
+        6835
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 32
+    },
+    "addressSize": 24,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 617
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 64
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.8844969199178645,
+      "precision_macro": 0.8912878312761227,
+      "precision_weighted": 0.8867515564920774,
+      "recall_macro": 0.8641687998516046,
+      "recall_weighted": 0.8844969199178645,
+      "f1_macro": 0.8741186518585329,
+      "f1_weighted": 0.8824311621515851,
+      "auc_roc": 0.9029401162431212,
+      "memory_bytes_serialized": 16262,
+      "memory_bytes_theoretical": 768,
+      "train_time_s": 0.612964068999986,
+      "inference_latency_us": 309.0474999680737
+    },
+    "confusion_matrix": [
+      [
+        3491,
+        1009
+      ],
+      [
+        341,
+        6847
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 32
+    },
+    "addressSize": 28,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 617
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 64
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.8844969199178645,
+      "precision_macro": 0.8912878312761227,
+      "precision_weighted": 0.8867515564920774,
+      "recall_macro": 0.8641687998516046,
+      "recall_weighted": 0.8844969199178645,
+      "f1_macro": 0.8741186518585329,
+      "f1_weighted": 0.8824311621515851,
+      "auc_roc": 0.8957044611389353,
+      "memory_bytes_serialized": 16742,
+      "memory_bytes_theoretical": 768,
+      "train_time_s": 0.6971194929999456,
+      "inference_latency_us": 328.7819999968633
+    },
+    "confusion_matrix": [
+      [
+        3491,
+        1009
+      ],
+      [
+        341,
+        6847
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 32
+    },
+    "addressSize": 32,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 332
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 64
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.8595995893223819,
+      "precision_macro": 0.8511101937668669,
+      "precision_weighted": 0.8601871608524773,
+      "recall_macro": 0.8535664997217585,
+      "recall_weighted": 0.8595995893223819,
+      "f1_macro": 0.8522843806670586,
+      "f1_weighted": 0.8598442733489152,
+      "auc_roc": 0.8815759135596365,
+      "memory_bytes_serialized": 11838,
+      "memory_bytes_theoretical": 512,
+      "train_time_s": 0.5417068530000506,
+      "inference_latency_us": 221.8674999880932
+    },
+    "confusion_matrix": [
+      [
+        3723,
+        777
+      ],
+      [
+        864,
+        6324
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 64
+    },
+    "addressSize": 4,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 8465
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 128
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.8497604380561259,
+      "precision_macro": 0.8412230365044248,
+      "precision_weighted": 0.8498894018257891,
+      "recall_macro": 0.8417859395288444,
+      "recall_weighted": 0.8497604380561259,
+      "f1_macro": 0.8415016566386946,
+      "f1_weighted": 0.8498223479618038,
+      "auc_roc": 0.8570470537315279,
+      "memory_bytes_serialized": 138042,
+      "memory_bytes_theoretical": 8192,
+      "train_time_s": 2.199889757000051,
+      "inference_latency_us": 408.49499998785177
+    },
+    "confusion_matrix": [
+      [
+        3632,
+        868
+      ],
+      [
+        888,
+        6300
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 64
+    },
+    "addressSize": 8,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 935
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 128
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.8851813826146475,
+      "precision_macro": 0.8927344763549644,
+      "precision_weighted": 0.8877436415531031,
+      "recall_macro": 0.8644344277499536,
+      "recall_weighted": 0.8851813826146475,
+      "f1_macro": 0.8747165420405331,
+      "f1_weighted": 0.8830438041670042,
+      "auc_roc": 0.9312229796574538,
+      "memory_bytes_serialized": 72375,
+      "memory_bytes_theoretical": 4096,
+      "train_time_s": 2.2932244810000384,
+      "inference_latency_us": 241.40549999174254
+    },
+    "confusion_matrix": [
+      [
+        3484,
+        1016
+      ],
+      [
+        326,
+        6862
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 64
+    },
+    "addressSize": 12,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 585
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 128
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.8860369609856262,
+      "precision_macro": 0.8945249976461727,
+      "precision_weighted": 0.888987171786088,
+      "recall_macro": 0.864797625672417,
+      "recall_weighted": 0.8860369609856262,
+      "f1_macro": 0.8754747159638812,
+      "f1_weighted": 0.883815290176117,
+      "auc_roc": 0.9369142552402152,
+      "memory_bytes_serialized": 52006,
+      "memory_bytes_theoretical": 2816,
+      "train_time_s": 1.296763621000082,
+      "inference_latency_us": 327.82299996370057
+    },
+    "confusion_matrix": [
+      [
+        3476,
+        1024
+      ],
+      [
+        308,
+        6880
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 64
+    },
+    "addressSize": 16,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 424
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 128
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.8860369609856262,
+      "precision_macro": 0.8945249976461727,
+      "precision_weighted": 0.888987171786088,
+      "recall_macro": 0.864797625672417,
+      "recall_weighted": 0.8860369609856262,
+      "f1_macro": 0.8754747159638812,
+      "f1_weighted": 0.883815290176117,
+      "auc_roc": 0.9415419835528349,
+      "memory_bytes_serialized": 39534,
+      "memory_bytes_theoretical": 2048,
+      "train_time_s": 1.149902666999992,
+      "inference_latency_us": 230.0955000009708
+    },
+    "confusion_matrix": [
+      [
+        3476,
+        1024
+      ],
+      [
+        308,
+        6880
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 64
+    },
+    "addressSize": 20,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 805
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 128
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.8860369609856262,
+      "precision_macro": 0.8945249976461727,
+      "precision_weighted": 0.888987171786088,
+      "recall_macro": 0.864797625672417,
+      "recall_weighted": 0.8860369609856262,
+      "f1_macro": 0.8754747159638812,
+      "f1_weighted": 0.883815290176117,
+      "auc_roc": 0.9211657546528165,
+      "memory_bytes_serialized": 35910,
+      "memory_bytes_theoretical": 1792,
+      "train_time_s": 1.1925724920000675,
+      "inference_latency_us": 322.9419999684069
+    },
+    "confusion_matrix": [
+      [
+        3476,
+        1024
+      ],
+      [
+        308,
+        6880
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 64
+    },
+    "addressSize": 24,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 684
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 128
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.886208076659822,
+      "precision_macro": 0.8942143962848297,
+      "precision_weighted": 0.8889499669423591,
+      "recall_macro": 0.8653107030235578,
+      "recall_weighted": 0.886208076659822,
+      "f1_macro": 0.8757696746124854,
+      "f1_weighted": 0.8840513820219426,
+      "auc_roc": 0.9366190873678353,
+      "memory_bytes_serialized": 31966,
+      "memory_bytes_theoretical": 1536,
+      "train_time_s": 1.421473020999997,
+      "inference_latency_us": 508.78300004342236
+    },
+    "confusion_matrix": [
+      [
+        3485,
+        1015
+      ],
+      [
+        315,
+        6873
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 64
+    },
+    "addressSize": 28,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 435
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 128
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.886208076659822,
+      "precision_macro": 0.8942143962848297,
+      "precision_weighted": 0.8889499669423591,
+      "recall_macro": 0.8653107030235578,
+      "recall_weighted": 0.886208076659822,
+      "f1_macro": 0.8757696746124854,
+      "f1_weighted": 0.8840513820219426,
+      "auc_roc": 0.9324455419526372,
+      "memory_bytes_serialized": 27702,
+      "memory_bytes_theoretical": 1280,
+      "train_time_s": 1.794791929999974,
+      "inference_latency_us": 332.1180000170898
+    },
+    "confusion_matrix": [
+      [
+        3485,
+        1015
+      ],
+      [
+        315,
+        6873
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "GPS_Tracker",
+    "task": "binary",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 64
+    },
+    "addressSize": 32,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 585
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 2,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 128
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.8872347707049966,
+      "precision_macro": 0.8954472736301076,
+      "precision_weighted": 0.8900525503010023,
+      "recall_macro": 0.8663531812279726,
+      "recall_weighted": 0.8872347707049966,
+      "f1_macro": 0.8768772112659386,
+      "f1_weighted": 0.8850899309627492,
+      "auc_roc": 0.9254607679465776,
+      "memory_bytes_serialized": 23118,
+      "memory_bytes_theoretical": 1024,
+      "train_time_s": 0.9995222889999695,
+      "inference_latency_us": 220.5665000474255
+    },
+    "confusion_matrix": [
+      [
+        3490,
+        1010
+      ],
+      [
+        308,
+        6880
+      ]
+    ],
+    "labels": [
+      "normal",
+      "attack"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T01:50:15Z"
+  }
+]

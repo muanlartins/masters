@@ -1,0 +1,1346 @@
+[
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "binary",
+  "encoder": {
+   "type": "Distributive",
+   "size": 8
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 16
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.8807323750855578,
+   "precision_macro": 0.8832202556307841,
+   "precision_weighted": 0.8814340849829293,
+   "recall_macro": 0.8631025783713596,
+   "recall_weighted": 0.8807323750855578,
+   "f1_macro": 0.8709630207454242,
+   "f1_weighted": 0.8791284512386703,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 3220,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.010775124887004495,
+   "inference_latency_us": 4.791654646396637
+  },
+  "confusion_matrix": [
+   [
+    3539,
+    961
+   ],
+   [
+    433,
+    6755
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:36Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "binary",
+  "encoder": {
+   "type": "Distributive",
+   "size": 8
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 16
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.8810746064339493,
+   "precision_macro": 0.8856974377984967,
+   "precision_weighted": 0.8825145047278248,
+   "recall_macro": 0.8618018920422927,
+   "recall_weighted": 0.8810746064339493,
+   "f1_macro": 0.8708002231296478,
+   "f1_weighted": 0.8791793318438355,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 3253,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.010629958007484674,
+   "inference_latency_us": 4.978966899216175
+  },
+  "confusion_matrix": [
+   [
+    3501,
+    999
+   ],
+   [
+    391,
+    6797
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:36Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "binary",
+  "encoder": {
+   "type": "Distributive",
+   "size": 8
+  },
+  "addressSize": 16,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 16
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.6149897330595483,
+   "precision_macro": 0.30749486652977415,
+   "precision_weighted": 0.37821237176865447,
+   "recall_macro": 0.5,
+   "recall_weighted": 0.6149897330595483,
+   "f1_macro": 0.38080101716465353,
+   "f1_weighted": 0.46837743178978947,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 2871,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.009862124919891357,
+   "inference_latency_us": 3.666500560939312
+  },
+  "confusion_matrix": [
+   [
+    0,
+    4500
+   ],
+   [
+    0,
+    7188
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:36Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "binary",
+  "encoder": {
+   "type": "Distributive",
+   "size": 8
+  },
+  "addressSize": 16,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 16
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.6149897330595483,
+   "precision_macro": 0.30749486652977415,
+   "precision_weighted": 0.37821237176865447,
+   "recall_macro": 0.5,
+   "recall_weighted": 0.6149897330595483,
+   "f1_macro": 0.38080101716465353,
+   "f1_weighted": 0.46837743178978947,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 2871,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.009565792046487331,
+   "inference_latency_us": 3.2919924706220627
+  },
+  "confusion_matrix": [
+   [
+    0,
+    4500
+   ],
+   [
+    0,
+    7188
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:37Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "binary",
+  "encoder": {
+   "type": "Distributive",
+   "size": 8
+  },
+  "addressSize": 24,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 16
+  },
+  "skipped": true,
+  "skipped_reason": "addressSize > bits_total",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:37Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "binary",
+  "encoder": {
+   "type": "Distributive",
+   "size": 8
+  },
+  "addressSize": 24,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 16
+  },
+  "skipped": true,
+  "skipped_reason": "addressSize > bits_total",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:37Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "binary",
+  "encoder": {
+   "type": "Distributive",
+   "size": 16
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 32
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.8728610540725531,
+   "precision_macro": 0.8885062132805612,
+   "precision_weighted": 0.8794506172531871,
+   "recall_macro": 0.8454427749953626,
+   "recall_weighted": 0.8728610540725531,
+   "f1_macro": 0.8589884071246432,
+   "f1_weighted": 0.8691601678982334,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 5730,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.015569583978503942,
+   "inference_latency_us": 8.624512702226639
+  },
+  "confusion_matrix": [
+   [
+    3268,
+    1232
+   ],
+   [
+    254,
+    6934
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:37Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "binary",
+  "encoder": {
+   "type": "Distributive",
+   "size": 16
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 32
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.8645619438740588,
+   "precision_macro": 0.8790691614505846,
+   "precision_weighted": 0.8707118102191869,
+   "recall_macro": 0.836451678723799,
+   "recall_weighted": 0.8645619438740588,
+   "f1_macro": 0.8496851729620227,
+   "f1_weighted": 0.860560549685317,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 5794,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.015583874890580773,
+   "inference_latency_us": 7.457914762198925
+  },
+  "confusion_matrix": [
+   [
+    3214,
+    1286
+   ],
+   [
+    297,
+    6891
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:37Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "binary",
+  "encoder": {
+   "type": "Distributive",
+   "size": 16
+  },
+  "addressSize": 16,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 32
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.8734599589322382,
+   "precision_macro": 0.8848634451167146,
+   "precision_weighted": 0.8779127487757004,
+   "recall_macro": 0.8485058430717862,
+   "recall_weighted": 0.8734599589322382,
+   "f1_macro": 0.8606079963121567,
+   "f1_weighted": 0.8703420271723368,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 4869,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.01313304202631116,
+   "inference_latency_us": 5.166511982679367
+  },
+  "confusion_matrix": [
+   [
+    3330,
+    1170
+   ],
+   [
+    309,
+    6879
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:37Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "binary",
+  "encoder": {
+   "type": "Distributive",
+   "size": 16
+  },
+  "addressSize": 16,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 32
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.8653319644079398,
+   "precision_macro": 0.8756898846995645,
+   "precision_weighted": 0.8694021498883886,
+   "recall_macro": 0.8397369690224448,
+   "recall_weighted": 0.8653319644079398,
+   "f1_macro": 0.8515779349056772,
+   "f1_weighted": 0.8619688374638789,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 4834,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.013164290925487876,
+   "inference_latency_us": 4.832982085645199
+  },
+  "confusion_matrix": [
+   [
+    3278,
+    1222
+   ],
+   [
+    352,
+    6836
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:37Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "binary",
+  "encoder": {
+   "type": "Distributive",
+   "size": 16
+  },
+  "addressSize": 24,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 32
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.8662731006160165,
+   "precision_macro": 0.869266450466669,
+   "precision_weighted": 0.8672149144140034,
+   "recall_macro": 0.8459868299016879,
+   "recall_weighted": 0.8662731006160165,
+   "f1_macro": 0.8546512926359153,
+   "f1_weighted": 0.8641034620309265,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 5847,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.01617245888337493,
+   "inference_latency_us": 4.625064320862293
+  },
+  "confusion_matrix": [
+   [
+    3410,
+    1090
+   ],
+   [
+    473,
+    6715
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:38Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "binary",
+  "encoder": {
+   "type": "Distributive",
+   "size": 16
+  },
+  "addressSize": 24,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 32
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.8734599589322382,
+   "precision_macro": 0.8848634451167146,
+   "precision_weighted": 0.8779127487757004,
+   "recall_macro": 0.8485058430717862,
+   "recall_weighted": 0.8734599589322382,
+   "f1_macro": 0.8606079963121567,
+   "f1_weighted": 0.8703420271723368,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 5843,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.01614337507635355,
+   "inference_latency_us": 4.999921657145023
+  },
+  "confusion_matrix": [
+   [
+    3330,
+    1170
+   ],
+   [
+    309,
+    6879
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:38Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 16
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.8044147843942505,
+   "precision_macro": 0.7945355701989116,
+   "precision_weighted": 0.8123340472478868,
+   "recall_macro": 0.805916156557225,
+   "recall_weighted": 0.8044147843942505,
+   "f1_macro": 0.797954350762157,
+   "f1_weighted": 0.8062632721033375,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 2520,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.009153834078460932,
+   "inference_latency_us": 3.8124853745102882
+  },
+  "confusion_matrix": [
+   [
+    3656,
+    844
+   ],
+   [
+    1442,
+    5746
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:38Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 16
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.8044147843942505,
+   "precision_macro": 0.7945355701989116,
+   "precision_weighted": 0.8123340472478868,
+   "recall_macro": 0.805916156557225,
+   "recall_weighted": 0.8044147843942505,
+   "f1_macro": 0.797954350762157,
+   "f1_weighted": 0.8062632721033375,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 2519,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.00888799992389977,
+   "inference_latency_us": 3.9160950109362602
+  },
+  "confusion_matrix": [
+   [
+    3656,
+    844
+   ],
+   [
+    1442,
+    5746
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:38Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 16,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 16
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.6149897330595483,
+   "precision_macro": 0.30749486652977415,
+   "precision_weighted": 0.37821237176865447,
+   "recall_macro": 0.5,
+   "recall_weighted": 0.6149897330595483,
+   "f1_macro": 0.38080101716465353,
+   "f1_weighted": 0.46837743178978947,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 2216,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.008178875083103776,
+   "inference_latency_us": 2.8330832719802856
+  },
+  "confusion_matrix": [
+   [
+    0,
+    4500
+   ],
+   [
+    0,
+    7188
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:38Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 16,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 16
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.6149897330595483,
+   "precision_macro": 0.30749486652977415,
+   "precision_weighted": 0.37821237176865447,
+   "recall_macro": 0.5,
+   "recall_weighted": 0.6149897330595483,
+   "f1_macro": 0.38080101716465353,
+   "f1_weighted": 0.46837743178978947,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 2216,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.007661042036488652,
+   "inference_latency_us": 2.9169023036956787
+  },
+  "confusion_matrix": [
+   [
+    0,
+    4500
+   ],
+   [
+    0,
+    7188
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:38Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 24,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 16
+  },
+  "skipped": true,
+  "skipped_reason": "addressSize > bits_total",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:38Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 24,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 16
+  },
+  "skipped": true,
+  "skipped_reason": "addressSize > bits_total",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:38Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 16
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 32
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.8393223819301848,
+   "precision_macro": 0.8294316651775935,
+   "precision_weighted": 0.8410718782384364,
+   "recall_macro": 0.834546095344092,
+   "recall_weighted": 0.8393223819301848,
+   "f1_macro": 0.8317089060491294,
+   "f1_weighted": 0.8399410151272778,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 5262,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.01469450001604855,
+   "inference_latency_us": 6.833579391241074
+  },
+  "confusion_matrix": [
+   [
+    3662,
+    838
+   ],
+   [
+    1040,
+    6148
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:39Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 16
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 32
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.8393223819301848,
+   "precision_macro": 0.8294316651775935,
+   "precision_weighted": 0.8410718782384364,
+   "recall_macro": 0.834546095344092,
+   "recall_weighted": 0.8393223819301848,
+   "f1_macro": 0.8317089060491294,
+   "f1_weighted": 0.8399410151272778,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 5261,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.014745166059583426,
+   "inference_latency_us": 6.521120667457581
+  },
+  "confusion_matrix": [
+   [
+    3662,
+    838
+   ],
+   [
+    1040,
+    6148
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:39Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 16
+  },
+  "addressSize": 16,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 32
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.8393223819301848,
+   "precision_macro": 0.8294316651775935,
+   "precision_weighted": 0.8410718782384364,
+   "recall_macro": 0.834546095344092,
+   "recall_weighted": 0.8393223819301848,
+   "f1_macro": 0.8317089060491294,
+   "f1_weighted": 0.8399410151272778,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 4468,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.012844250071793795,
+   "inference_latency_us": 5.291542038321495
+  },
+  "confusion_matrix": [
+   [
+    3662,
+    838
+   ],
+   [
+    1040,
+    6148
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:39Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 16
+  },
+  "addressSize": 16,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 32
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.8393223819301848,
+   "precision_macro": 0.8294316651775935,
+   "precision_weighted": 0.8410718782384364,
+   "recall_macro": 0.834546095344092,
+   "recall_weighted": 0.8393223819301848,
+   "f1_macro": 0.8317089060491294,
+   "f1_weighted": 0.8399410151272778,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 4467,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.012900665868073702,
+   "inference_latency_us": 4.749977961182594
+  },
+  "confusion_matrix": [
+   [
+    3662,
+    838
+   ],
+   [
+    1040,
+    6148
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:39Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 16
+  },
+  "addressSize": 24,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 32
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.8418891170431212,
+   "precision_macro": 0.8320848741275595,
+   "precision_weighted": 0.8436842601121676,
+   "recall_macro": 0.8373808198849935,
+   "recall_weighted": 0.8418891170431212,
+   "f1_macro": 0.8344350848033846,
+   "f1_weighted": 0.8425142939406475,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 5386,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.01558783301152289,
+   "inference_latency_us": 5.166046321392059
+  },
+  "confusion_matrix": [
+   [
+    3680,
+    820
+   ],
+   [
+    1028,
+    6160
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:39Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 16
+  },
+  "addressSize": 24,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 32
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.8430869267624914,
+   "precision_macro": 0.8332287893883974,
+   "precision_weighted": 0.8454064884975725,
+   "recall_macro": 0.8396427378964941,
+   "recall_weighted": 0.8430869267624914,
+   "f1_macro": 0.8359857842765186,
+   "f1_weighted": 0.8438344154452255,
+   "auc_roc": 0.5,
+   "memory_bytes_serialized": 5437,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.01583779091015458,
+   "inference_latency_us": 5.187466740608215
+  },
+  "confusion_matrix": [
+   [
+    3711,
+    789
+   ],
+   [
+    1045,
+    6143
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:40Z"
+ }
+]

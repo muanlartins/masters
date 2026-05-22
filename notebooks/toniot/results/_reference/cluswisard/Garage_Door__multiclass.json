@@ -1,0 +1,2186 @@
+[
+ {
+  "model": "ClusWiSARD",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Distributive",
+   "size": 8
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 1,
+   "cat_bits": 1,
+   "bits_total": 9
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.3788835564536499,
+   "precision_macro": 0.04736044455670624,
+   "precision_weighted": 0.14355274935096612,
+   "recall_macro": 0.125,
+   "recall_weighted": 0.3788835564536499,
+   "f1_macro": 0.06869389998168163,
+   "f1_weighted": 0.20821591305384682,
+   "auc_roc": null,
+   "memory_bytes_serialized": 2560,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0029598751571029425,
+   "inference_latency_us": 6.749993190169334
+  },
+  "confusion_matrix": [
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    4500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    871,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    159,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    347,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "labels": [
+   "backdoor",
+   "ddos",
+   "injection",
+   "normal",
+   "password",
+   "ransomware",
+   "scanning",
+   "xss"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:34Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Distributive",
+   "size": 8
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 1,
+   "cat_bits": 1,
+   "bits_total": 9
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.3788835564536499,
+   "precision_macro": 0.04736044455670624,
+   "precision_weighted": 0.14355274935096612,
+   "recall_macro": 0.125,
+   "recall_weighted": 0.3788835564536499,
+   "f1_macro": 0.06869389998168163,
+   "f1_weighted": 0.20821591305384682,
+   "auc_roc": null,
+   "memory_bytes_serialized": 2560,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.002859625034034252,
+   "inference_latency_us": 6.645568646490574
+  },
+  "confusion_matrix": [
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    4500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    871,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    159,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    347,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "labels": [
+   "backdoor",
+   "ddos",
+   "injection",
+   "normal",
+   "password",
+   "ransomware",
+   "scanning",
+   "xss"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:34Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Distributive",
+   "size": 8
+  },
+  "addressSize": 16,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 1,
+   "cat_bits": 1,
+   "bits_total": 9
+  },
+  "skipped": true,
+  "skipped_reason": "addressSize > bits_total",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:34Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Distributive",
+   "size": 8
+  },
+  "addressSize": 16,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 1,
+   "cat_bits": 1,
+   "bits_total": 9
+  },
+  "skipped": true,
+  "skipped_reason": "addressSize > bits_total",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:34Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Distributive",
+   "size": 8
+  },
+  "addressSize": 24,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 1,
+   "cat_bits": 1,
+   "bits_total": 9
+  },
+  "skipped": true,
+  "skipped_reason": "addressSize > bits_total",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:34Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Distributive",
+   "size": 8
+  },
+  "addressSize": 24,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 1,
+   "cat_bits": 1,
+   "bits_total": 9
+  },
+  "skipped": true,
+  "skipped_reason": "addressSize > bits_total",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:34Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Distributive",
+   "size": 16
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 1,
+   "cat_bits": 1,
+   "bits_total": 17
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.3788835564536499,
+   "precision_macro": 0.04736044455670624,
+   "precision_weighted": 0.14355274935096612,
+   "recall_macro": 0.125,
+   "recall_weighted": 0.3788835564536499,
+   "f1_macro": 0.06869389998168163,
+   "f1_weighted": 0.20821591305384682,
+   "auc_roc": null,
+   "memory_bytes_serialized": 3297,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0035636669490486383,
+   "inference_latency_us": 7.6249707490205765
+  },
+  "confusion_matrix": [
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    4500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    871,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    159,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    347,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "labels": [
+   "backdoor",
+   "ddos",
+   "injection",
+   "normal",
+   "password",
+   "ransomware",
+   "scanning",
+   "xss"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:34Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Distributive",
+   "size": 16
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 1,
+   "cat_bits": 1,
+   "bits_total": 17
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.3788835564536499,
+   "precision_macro": 0.04736044455670624,
+   "precision_weighted": 0.14355274935096612,
+   "recall_macro": 0.125,
+   "recall_weighted": 0.3788835564536499,
+   "f1_macro": 0.06869389998168163,
+   "f1_weighted": 0.20821591305384682,
+   "auc_roc": null,
+   "memory_bytes_serialized": 3304,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.003468999871984124,
+   "inference_latency_us": 7.458962500095367
+  },
+  "confusion_matrix": [
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    4500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    871,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    159,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    347,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "labels": [
+   "backdoor",
+   "ddos",
+   "injection",
+   "normal",
+   "password",
+   "ransomware",
+   "scanning",
+   "xss"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:34Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Distributive",
+   "size": 16
+  },
+  "addressSize": 16,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 1,
+   "cat_bits": 1,
+   "bits_total": 17
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.3788835564536499,
+   "precision_macro": 0.04736044455670624,
+   "precision_weighted": 0.14355274935096612,
+   "recall_macro": 0.125,
+   "recall_weighted": 0.3788835564536499,
+   "f1_macro": 0.06869389998168163,
+   "f1_weighted": 0.20821591305384682,
+   "auc_roc": null,
+   "memory_bytes_serialized": 3306,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0036041659768670797,
+   "inference_latency_us": 6.7909713834524155
+  },
+  "confusion_matrix": [
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    4500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    871,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    159,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    347,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "labels": [
+   "backdoor",
+   "ddos",
+   "injection",
+   "normal",
+   "password",
+   "ransomware",
+   "scanning",
+   "xss"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:34Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Distributive",
+   "size": 16
+  },
+  "addressSize": 16,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 1,
+   "cat_bits": 1,
+   "bits_total": 17
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.3788835564536499,
+   "precision_macro": 0.04736044455670624,
+   "precision_weighted": 0.14355274935096612,
+   "recall_macro": 0.125,
+   "recall_weighted": 0.3788835564536499,
+   "f1_macro": 0.06869389998168163,
+   "f1_weighted": 0.20821591305384682,
+   "auc_roc": null,
+   "memory_bytes_serialized": 3309,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0034848751965910196,
+   "inference_latency_us": 6.7909713834524155
+  },
+  "confusion_matrix": [
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    4500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    871,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    159,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    347,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "labels": [
+   "backdoor",
+   "ddos",
+   "injection",
+   "normal",
+   "password",
+   "ransomware",
+   "scanning",
+   "xss"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:35Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Distributive",
+   "size": 16
+  },
+  "addressSize": 24,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 1,
+   "cat_bits": 1,
+   "bits_total": 17
+  },
+  "skipped": true,
+  "skipped_reason": "addressSize > bits_total",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:35Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Distributive",
+   "size": 16
+  },
+  "addressSize": 24,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 1,
+   "cat_bits": 1,
+   "bits_total": 17
+  },
+  "skipped": true,
+  "skipped_reason": "addressSize > bits_total",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:35Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 1,
+   "cat_bits": 1,
+   "bits_total": 9
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.3788835564536499,
+   "precision_macro": 0.04736044455670624,
+   "precision_weighted": 0.14355274935096612,
+   "recall_macro": 0.125,
+   "recall_weighted": 0.3788835564536499,
+   "f1_macro": 0.06869389998168163,
+   "f1_weighted": 0.20821591305384682,
+   "auc_roc": null,
+   "memory_bytes_serialized": 2560,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0031610000878572464,
+   "inference_latency_us": 6.749993190169334
+  },
+  "confusion_matrix": [
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    4500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    871,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    159,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    347,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "labels": [
+   "backdoor",
+   "ddos",
+   "injection",
+   "normal",
+   "password",
+   "ransomware",
+   "scanning",
+   "xss"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:35Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 1,
+   "cat_bits": 1,
+   "bits_total": 9
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.3788835564536499,
+   "precision_macro": 0.04736044455670624,
+   "precision_weighted": 0.14355274935096612,
+   "recall_macro": 0.125,
+   "recall_weighted": 0.3788835564536499,
+   "f1_macro": 0.06869389998168163,
+   "f1_weighted": 0.20821591305384682,
+   "auc_roc": null,
+   "memory_bytes_serialized": 2560,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0031301251146942377,
+   "inference_latency_us": 6.542075425386429
+  },
+  "confusion_matrix": [
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    4500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    871,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    159,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    347,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "labels": [
+   "backdoor",
+   "ddos",
+   "injection",
+   "normal",
+   "password",
+   "ransomware",
+   "scanning",
+   "xss"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:35Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 16,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 1,
+   "cat_bits": 1,
+   "bits_total": 9
+  },
+  "skipped": true,
+  "skipped_reason": "addressSize > bits_total",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:35Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 16,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 1,
+   "cat_bits": 1,
+   "bits_total": 9
+  },
+  "skipped": true,
+  "skipped_reason": "addressSize > bits_total",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:35Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 24,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 1,
+   "cat_bits": 1,
+   "bits_total": 9
+  },
+  "skipped": true,
+  "skipped_reason": "addressSize > bits_total",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:35Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 24,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 1,
+   "cat_bits": 1,
+   "bits_total": 9
+  },
+  "skipped": true,
+  "skipped_reason": "addressSize > bits_total",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:35Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 16
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 1,
+   "cat_bits": 1,
+   "bits_total": 17
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.3788835564536499,
+   "precision_macro": 0.04736044455670624,
+   "precision_weighted": 0.14355274935096612,
+   "recall_macro": 0.125,
+   "recall_weighted": 0.3788835564536499,
+   "f1_macro": 0.06869389998168163,
+   "f1_weighted": 0.20821591305384682,
+   "auc_roc": null,
+   "memory_bytes_serialized": 3297,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0037038750015199184,
+   "inference_latency_us": 7.6249707490205765
+  },
+  "confusion_matrix": [
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    4500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    871,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    159,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    347,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "labels": [
+   "backdoor",
+   "ddos",
+   "injection",
+   "normal",
+   "password",
+   "ransomware",
+   "scanning",
+   "xss"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:35Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 16
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 1,
+   "cat_bits": 1,
+   "bits_total": 17
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.3788835564536499,
+   "precision_macro": 0.04736044455670624,
+   "precision_weighted": 0.14355274935096612,
+   "recall_macro": 0.125,
+   "recall_weighted": 0.3788835564536499,
+   "f1_macro": 0.06869389998168163,
+   "f1_weighted": 0.20821591305384682,
+   "auc_roc": null,
+   "memory_bytes_serialized": 3298,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.003655666019767523,
+   "inference_latency_us": 7.58306123316288
+  },
+  "confusion_matrix": [
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    4500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    871,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    159,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    347,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "labels": [
+   "backdoor",
+   "ddos",
+   "injection",
+   "normal",
+   "password",
+   "ransomware",
+   "scanning",
+   "xss"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:36Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 16
+  },
+  "addressSize": 16,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 1,
+   "cat_bits": 1,
+   "bits_total": 17
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.3788835564536499,
+   "precision_macro": 0.04736044455670624,
+   "precision_weighted": 0.14355274935096612,
+   "recall_macro": 0.125,
+   "recall_weighted": 0.3788835564536499,
+   "f1_macro": 0.06869389998168163,
+   "f1_weighted": 0.20821591305384682,
+   "auc_roc": null,
+   "memory_bytes_serialized": 3301,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0036115418188273907,
+   "inference_latency_us": 6.875023245811462
+  },
+  "confusion_matrix": [
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    4500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    871,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    159,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    347,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "labels": [
+   "backdoor",
+   "ddos",
+   "injection",
+   "normal",
+   "password",
+   "ransomware",
+   "scanning",
+   "xss"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:36Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 16
+  },
+  "addressSize": 16,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 1,
+   "cat_bits": 1,
+   "bits_total": 17
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.3788835564536499,
+   "precision_macro": 0.04736044455670624,
+   "precision_weighted": 0.14355274935096612,
+   "recall_macro": 0.125,
+   "recall_weighted": 0.3788835564536499,
+   "f1_macro": 0.06869389998168163,
+   "f1_weighted": 0.20821591305384682,
+   "auc_roc": null,
+   "memory_bytes_serialized": 3306,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0036559998989105225,
+   "inference_latency_us": 6.875023245811462
+  },
+  "confusion_matrix": [
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    4500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1500,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    871,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    159,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    347,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "labels": [
+   "backdoor",
+   "ddos",
+   "injection",
+   "normal",
+   "password",
+   "ransomware",
+   "scanning",
+   "xss"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:36Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 16
+  },
+  "addressSize": 24,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 1,
+   "cat_bits": 1,
+   "bits_total": 17
+  },
+  "skipped": true,
+  "skipped_reason": "addressSize > bits_total",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:36Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "Garage_Door",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 16
+  },
+  "addressSize": 24,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 1,
+   "n_features_cat": 1,
+   "cat_bits": 1,
+   "bits_total": 17
+  },
+  "skipped": true,
+  "skipped_reason": "addressSize > bits_total",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:36Z"
+ }
+]

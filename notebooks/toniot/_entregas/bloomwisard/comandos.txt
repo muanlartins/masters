@@ -1,0 +1,9 @@
+python -m pip install --upgrade pip
+pip3 install virtualenv
+py -3.10 -m venv venv
+.\venv\Scripts\activate.bat
+.\venv\Scripts\python -m pip install --upgrade pip
+pip3 install -r requirements.txt
+pip install git+https://github.com/muanlartins/wisardpkg@muanlartins --no-build-isolation
+pip install jupyter ipykernel
+python -m ipykernel install --user --name=bloomwisard --display-name "Python (BloomWisard)"

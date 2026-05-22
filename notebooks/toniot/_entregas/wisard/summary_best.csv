@@ -1,0 +1,15 @@
+base,task,thermometer,T,addr,negEv,bits_total,accuracy,f1_macro,f1_weighted,auc_roc,mem_theo_KB,latency_us
+Fridge,binary,Exponential,16,4,True,17,0.5331,0.5022,0.5331,0.5022,0.6,2.73
+Garage_Door,binary,Simple,4,4,False,5,0.6211,0.3831,0.476,0.5,0.2,3.89
+GPS_Tracker,binary,Exponential,64,32,True,128,0.8859,0.8769,0.8845,0.9251,134217728.0,3.02
+Modbus,binary,Distributive,64,32,True,256,0.9133,0.9132,0.9133,0.9171,268435456.0,5.4
+Motion_Light,binary,Simple,4,4,False,5,0.6202,0.3828,0.4748,0.5,0.2,1.98
+Thermostat,binary,Gaussian,64,20,True,128,0.5135,0.507,0.5118,0.5073,57344.0,3.56
+Weather,binary,Distributive,64,32,True,192,0.8908,0.8848,0.891,0.9371,201326592.0,7.33
+Fridge,multiclass,Simple,64,16,True,65,0.3286,0.1232,0.2355,0.4974,8960.0,25.56
+Garage_Door,multiclass,Simple,4,4,False,5,0.3789,0.0687,0.2082,0.5,1.0,10.36
+GPS_Tracker,multiclass,Simple,64,32,False,128,0.5531,0.4195,0.537,0.8069,536870912.0,20.06
+Modbus,multiclass,Simple,64,32,False,256,0.8942,0.8318,0.8918,0.8726,805306368.0,28.56
+Motion_Light,multiclass,Simple,4,4,False,5,0.3798,0.0688,0.2091,0.5,1.0,9.9
+Thermostat,multiclass,Simple,16,16,False,32,0.3846,0.13,0.3129,0.5003,3584.0,11.79
+Weather,multiclass,Distributive,64,32,True,192,0.8441,0.8347,0.843,0.9655,805306368.0,13.26

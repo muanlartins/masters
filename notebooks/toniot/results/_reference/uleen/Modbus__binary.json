@@ -1,0 +1,962 @@
+[
+ {
+  "model": "ULEEN",
+  "base": "Modbus",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 4
+  },
+  "addressSize": 4,
+  "model_hyperparams": {
+   "filter_entries": 64,
+   "filter_hash_functions": 2,
+   "n_submodels": 1,
+   "epochs": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 4,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 16
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.48221174453493354,
+   "precision_macro": 0.24110587226746677,
+   "precision_weighted": 0.232528166567424,
+   "recall_macro": 0.5,
+   "recall_weighted": 0.48221174453493354,
+   "f1_macro": 0.32533256217466744,
+   "f1_weighted": 0.31375836472053226,
+   "auc_roc": null,
+   "memory_bytes_serialized": 5628,
+   "memory_bytes_theoretical": 64,
+   "train_time_s": 1.6726313750259578,
+   "inference_latency_us": 50.58350507169962
+  },
+  "confusion_matrix": [
+   [
+    4500,
+    0
+   ],
+   [
+    4832,
+    0
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-21T22:50:57Z"
+ },
+ {
+  "model": "ULEEN",
+  "base": "Modbus",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 4
+  },
+  "addressSize": 4,
+  "model_hyperparams": {
+   "filter_entries": 64,
+   "filter_hash_functions": 2,
+   "n_submodels": 1,
+   "epochs": 30
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 4,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 16
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.48221174453493354,
+   "precision_macro": 0.24110587226746677,
+   "precision_weighted": 0.232528166567424,
+   "recall_macro": 0.5,
+   "recall_weighted": 0.48221174453493354,
+   "f1_macro": 0.32533256217466744,
+   "f1_weighted": 0.31375836472053226,
+   "auc_roc": null,
+   "memory_bytes_serialized": 5628,
+   "memory_bytes_theoretical": 64,
+   "train_time_s": 5.0654160000849515,
+   "inference_latency_us": 49.874535761773586
+  },
+  "confusion_matrix": [
+   [
+    4500,
+    0
+   ],
+   [
+    4832,
+    0
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-21T22:51:02Z"
+ },
+ {
+  "model": "ULEEN",
+  "base": "Modbus",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 4
+  },
+  "addressSize": 4,
+  "model_hyperparams": {
+   "filter_entries": 64,
+   "filter_hash_functions": 2,
+   "n_submodels": 3,
+   "epochs": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 4,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 16
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.49067723960565796,
+   "precision_macro": 0.5092392574869636,
+   "precision_weighted": 0.5101188735213047,
+   "recall_macro": 0.5040368837380427,
+   "recall_weighted": 0.49067723960565796,
+   "f1_macro": 0.4160024558050223,
+   "f1_weighted": 0.40857301971817456,
+   "auc_roc": null,
+   "memory_bytes_serialized": 13603,
+   "memory_bytes_theoretical": 192,
+   "train_time_s": 4.243872459046543,
+   "inference_latency_us": 120.99999003112316
+  },
+  "confusion_matrix": [
+   [
+    3958,
+    542
+   ],
+   [
+    4211,
+    621
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-21T22:51:06Z"
+ },
+ {
+  "model": "ULEEN",
+  "base": "Modbus",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 4
+  },
+  "addressSize": 4,
+  "model_hyperparams": {
+   "filter_entries": 64,
+   "filter_hash_functions": 2,
+   "n_submodels": 3,
+   "epochs": 30
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 4,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 16
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.4997856836690956,
+   "precision_macro": 0.5128407555025325,
+   "precision_weighted": 0.5137160147611555,
+   "recall_macro": 0.5092366629874908,
+   "recall_weighted": 0.4997856836690956,
+   "f1_macro": 0.4671350467921003,
+   "f1_weighted": 0.4624424011457096,
+   "auc_roc": null,
+   "memory_bytes_serialized": 13603,
+   "memory_bytes_theoretical": 192,
+   "train_time_s": 13.0470293329563,
+   "inference_latency_us": 120.35446707159281
+  },
+  "confusion_matrix": [
+   [
+    3487,
+    1013
+   ],
+   [
+    3655,
+    1177
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-21T22:51:19Z"
+ },
+ {
+  "model": "ULEEN",
+  "base": "Modbus",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 4
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "filter_entries": 64,
+   "filter_hash_functions": 2,
+   "n_submodels": 1,
+   "epochs": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 4,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 16
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.49078439777111016,
+   "precision_macro": 0.5316135919188509,
+   "precision_weighted": 0.5332467596847605,
+   "recall_macro": 0.5066138704930095,
+   "recall_weighted": 0.49078439777111016,
+   "f1_macro": 0.3772898035958339,
+   "f1_weighted": 0.36783192074789417,
+   "auc_roc": null,
+   "memory_bytes_serialized": 4651,
+   "memory_bytes_theoretical": 32,
+   "train_time_s": 1.7135461252182722,
+   "inference_latency_us": 56.895543821156025
+  },
+  "confusion_matrix": [
+   [
+    4282,
+    218
+   ],
+   [
+    4534,
+    298
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-21T22:51:21Z"
+ },
+ {
+  "model": "ULEEN",
+  "base": "Modbus",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 4
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "filter_entries": 64,
+   "filter_hash_functions": 2,
+   "n_submodels": 1,
+   "epochs": 30
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 4,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 16
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.4930347192456065,
+   "precision_macro": 0.5226490845819436,
+   "precision_weighted": 0.5239397080121961,
+   "recall_macro": 0.5075653973509934,
+   "recall_weighted": 0.4930347192456065,
+   "f1_macro": 0.4018854355378039,
+   "f1_weighted": 0.39357866579007117,
+   "auc_roc": null,
+   "memory_bytes_serialized": 4651,
+   "memory_bytes_theoretical": 32,
+   "train_time_s": 5.159236333100125,
+   "inference_latency_us": 55.77085539698601
+  },
+  "confusion_matrix": [
+   [
+    4122,
+    378
+   ],
+   [
+    4353,
+    479
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-21T22:51:26Z"
+ },
+ {
+  "model": "ULEEN",
+  "base": "Modbus",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 4
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "filter_entries": 64,
+   "filter_hash_functions": 2,
+   "n_submodels": 3,
+   "epochs": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 4,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 16
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.5006429489927132,
+   "precision_macro": 0.5229776846225118,
+   "precision_weighted": 0.5241599442253646,
+   "recall_macro": 0.5126143303899926,
+   "recall_weighted": 0.5006429489927132,
+   "f1_macro": 0.4443628700751306,
+   "f1_weighted": 0.4380716289301348,
+   "auc_roc": null,
+   "memory_bytes_serialized": 10672,
+   "memory_bytes_theoretical": 96,
+   "train_time_s": 4.287180332932621,
+   "inference_latency_us": 139.37486801296473
+  },
+  "confusion_matrix": [
+   [
+    3821,
+    679
+   ],
+   [
+    3981,
+    851
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-21T22:51:30Z"
+ },
+ {
+  "model": "ULEEN",
+  "base": "Modbus",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 4
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "filter_entries": 64,
+   "filter_hash_functions": 2,
+   "n_submodels": 3,
+   "epochs": 30
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 4,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 16
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.503643377625375,
+   "precision_macro": 0.5147252198518601,
+   "precision_weighted": 0.5155954118147724,
+   "recall_macro": 0.5117174392935983,
+   "recall_weighted": 0.503643377625375,
+   "f1_macro": 0.48102971346903023,
+   "f1_weighted": 0.4771756392904335,
+   "auc_roc": null,
+   "memory_bytes_serialized": 10672,
+   "memory_bytes_theoretical": 96,
+   "train_time_s": 13.46592970797792,
+   "inference_latency_us": 142.91703701019287
+  },
+  "confusion_matrix": [
+   [
+    3324,
+    1176
+   ],
+   [
+    3456,
+    1376
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-21T22:51:44Z"
+ },
+ {
+  "model": "ULEEN",
+  "base": "Modbus",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 4,
+  "model_hyperparams": {
+   "filter_entries": 64,
+   "filter_hash_functions": 2,
+   "n_submodels": 1,
+   "epochs": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 4,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 32
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.49207029575653666,
+   "precision_macro": 0.5176450253573832,
+   "precision_weighted": 0.5187807677634133,
+   "recall_macro": 0.5063287343635026,
+   "recall_weighted": 0.49207029575653666,
+   "f1_macro": 0.40487768650547634,
+   "f1_weighted": 0.39677355821002497,
+   "auc_roc": null,
+   "memory_bytes_serialized": 7900,
+   "memory_bytes_theoretical": 128,
+   "train_time_s": 2.3047409169375896,
+   "inference_latency_us": 51.74987018108368
+  },
+  "confusion_matrix": [
+   [
+    4082,
+    418
+   ],
+   [
+    4322,
+    510
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-21T22:51:46Z"
+ },
+ {
+  "model": "ULEEN",
+  "base": "Modbus",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 4,
+  "model_hyperparams": {
+   "filter_entries": 64,
+   "filter_hash_functions": 2,
+   "n_submodels": 1,
+   "epochs": 30
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 4,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 32
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.4915345049292756,
+   "precision_macro": 0.5043257606679881,
+   "precision_weighted": 0.505054682210256,
+   "recall_macro": 0.5026431199411332,
+   "recall_weighted": 0.4915345049292756,
+   "f1_macro": 0.4432961992873668,
+   "f1_weighted": 0.437466160163554,
+   "auc_roc": null,
+   "memory_bytes_serialized": 7900,
+   "memory_bytes_theoretical": 128,
+   "train_time_s": 5.780463166069239,
+   "inference_latency_us": 52.41704639047384
+  },
+  "confusion_matrix": [
+   [
+    3667,
+    833
+   ],
+   [
+    3912,
+    920
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-21T22:51:52Z"
+ },
+ {
+  "model": "ULEEN",
+  "base": "Modbus",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 4,
+  "model_hyperparams": {
+   "filter_entries": 64,
+   "filter_hash_functions": 2,
+   "n_submodels": 3,
+   "epochs": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 4,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 32
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.49089155593656236,
+   "precision_macro": 0.529204478612019,
+   "precision_weighted": 0.530752287121176,
+   "recall_macro": 0.5065646615158205,
+   "recall_weighted": 0.49089155593656236,
+   "f1_macro": 0.38024926971626305,
+   "f1_weighted": 0.37093320605277347,
+   "auc_roc": null,
+   "memory_bytes_serialized": 20291,
+   "memory_bytes_theoretical": 384,
+   "train_time_s": 4.705920958891511,
+   "inference_latency_us": 124.45857282727957
+  },
+  "confusion_matrix": [
+   [
+    4262,
+    238
+   ],
+   [
+    4513,
+    319
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-21T22:51:57Z"
+ },
+ {
+  "model": "ULEEN",
+  "base": "Modbus",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 4,
+  "model_hyperparams": {
+   "filter_entries": 64,
+   "filter_hash_functions": 2,
+   "n_submodels": 3,
+   "epochs": 30
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 4,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 32
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.5178954136305186,
+   "precision_macro": 0.5136347693814598,
+   "precision_weighted": 0.5141142723952522,
+   "recall_macro": 0.5122878035320089,
+   "recall_weighted": 0.5178954136305186,
+   "f1_macro": 0.5025120879498755,
+   "f1_weighted": 0.5056243756561359,
+   "auc_roc": null,
+   "memory_bytes_serialized": 20291,
+   "memory_bytes_theoretical": 384,
+   "train_time_s": 13.450704124988988,
+   "inference_latency_us": 125.2919901162386
+  },
+  "confusion_matrix": [
+   [
+    1596,
+    2904
+   ],
+   [
+    1595,
+    3237
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-21T22:52:10Z"
+ },
+ {
+  "model": "ULEEN",
+  "base": "Modbus",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "filter_entries": 64,
+   "filter_hash_functions": 2,
+   "n_submodels": 1,
+   "epochs": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 4,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 32
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.4966780968709816,
+   "precision_macro": 0.5068959947071225,
+   "precision_weighted": 0.5076475104540431,
+   "recall_macro": 0.505289183222958,
+   "recall_weighted": 0.4966780968709816,
+   "f1_macro": 0.4700723673637467,
+   "f1_weighted": 0.4658480238934444,
+   "auc_roc": null,
+   "memory_bytes_serialized": 5884,
+   "memory_bytes_theoretical": 64,
+   "train_time_s": 1.8006724580191076,
+   "inference_latency_us": 56.10391963273287
+  },
+  "confusion_matrix": [
+   [
+    3363,
+    1137
+   ],
+   [
+    3560,
+    1272
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-21T22:52:12Z"
+ },
+ {
+  "model": "ULEEN",
+  "base": "Modbus",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "filter_entries": 64,
+   "filter_hash_functions": 2,
+   "n_submodels": 1,
+   "epochs": 30
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 4,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 32
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.48949849978568366,
+   "precision_macro": 0.5006434688281804,
+   "precision_weighted": 0.501290344653724,
+   "recall_macro": 0.500402225901398,
+   "recall_weighted": 0.48949849978568366,
+   "f1_macro": 0.443086128493216,
+   "f1_weighted": 0.43736641532725484,
+   "auc_roc": null,
+   "memory_bytes_serialized": 5884,
+   "memory_bytes_theoretical": 64,
+   "train_time_s": 5.435289249988273,
+   "inference_latency_us": 59.541547670960426
+  },
+  "confusion_matrix": [
+   [
+    3631,
+    869
+   ],
+   [
+    3895,
+    937
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-21T22:52:17Z"
+ },
+ {
+  "model": "ULEEN",
+  "base": "Modbus",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "filter_entries": 64,
+   "filter_hash_functions": 2,
+   "n_submodels": 3,
+   "epochs": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 4,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 32
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.5095370767252465,
+   "precision_macro": 0.5210904191600905,
+   "precision_weighted": 0.5220460020420956,
+   "recall_macro": 0.5172101729212657,
+   "recall_weighted": 0.5095370767252465,
+   "f1_macro": 0.4896759371486244,
+   "f1_weighted": 0.4860942433194888,
+   "auc_roc": null,
+   "memory_bytes_serialized": 14243,
+   "memory_bytes_theoretical": 192,
+   "train_time_s": 4.439207999967039,
+   "inference_latency_us": 135.9580783173442
+  },
+  "confusion_matrix": [
+   [
+    3298,
+    1202
+   ],
+   [
+    3375,
+    1457
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-21T22:52:22Z"
+ },
+ {
+  "model": "ULEEN",
+  "base": "Modbus",
+  "task": "binary",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "filter_entries": 64,
+   "filter_hash_functions": 2,
+   "n_submodels": 3,
+   "epochs": 30
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 4,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 32
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.5078225460780111,
+   "precision_macro": 0.5197249802724359,
+   "precision_weighted": 0.520671700002323,
+   "recall_macro": 0.5157988410596026,
+   "recall_weighted": 0.5078225460780111,
+   "f1_macro": 0.4860438781565774,
+   "f1_weighted": 0.4822799438775997,
+   "auc_roc": null,
+   "memory_bytes_serialized": 14243,
+   "memory_bytes_theoretical": 192,
+   "train_time_s": 13.824251584010199,
+   "inference_latency_us": 139.6453008055687
+  },
+  "confusion_matrix": [
+   [
+    3330,
+    1170
+   ],
+   [
+    3423,
+    1409
+   ]
+  ],
+  "labels": [
+   "0",
+   "1"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-21T22:52:36Z"
+ }
+]

@@ -1,0 +1,1602 @@
+[
+  {
+    "dataset": "Fridge",
+    "task": "multiclass",
+    "thermometer_type": "Distributive",
+    "thermometer_size": 8,
+    "address_size": 4,
+    "total_input_bits": 9,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 27960,
+    "n_test": 11984,
+    "train_time_s": 0.0359,
+    "infer_latency_us": 162.9621,
+    "memory_bytes": 9690,
+    "memory_kb": 9.46,
+    "accuracy": 0.37550066755674233,
+    "precision_macro": 0.053642952508106044,
+    "recall_macro": 0.14285714285714285,
+    "f1_macro": 0.0779977120671127,
+    "precision_weighted": 0.14100075133555912,
+    "recall_weighted": 0.37550066755674233,
+    "f1_weighted": 0.20501735064369575,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        871,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        613,
+        0,
+        0,
+        0
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "xss"
+    ]
+  },
+  {
+    "dataset": "Fridge",
+    "task": "multiclass",
+    "thermometer_type": "Distributive",
+    "thermometer_size": 8,
+    "address_size": 8,
+    "total_input_bits": 9,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 27960,
+    "n_test": 11984,
+    "train_time_s": 0.03391,
+    "infer_latency_us": 81.4256,
+    "memory_bytes": 8920,
+    "memory_kb": 8.71,
+    "accuracy": 0.37550066755674233,
+    "precision_macro": 0.053642952508106044,
+    "recall_macro": 0.14285714285714285,
+    "f1_macro": 0.0779977120671127,
+    "precision_weighted": 0.14100075133555912,
+    "recall_weighted": 0.37550066755674233,
+    "f1_weighted": 0.20501735064369575,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        871,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        613,
+        0,
+        0,
+        0
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "xss"
+    ]
+  },
+  {
+    "dataset": "Fridge",
+    "task": "multiclass",
+    "thermometer_type": "Distributive",
+    "thermometer_size": 16,
+    "address_size": 4,
+    "total_input_bits": 17,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 27960,
+    "n_test": 11984,
+    "train_time_s": 0.09079,
+    "infer_latency_us": 673.693,
+    "memory_bytes": 24926,
+    "memory_kb": 24.34,
+    "accuracy": 0.37550066755674233,
+    "precision_macro": 0.053642952508106044,
+    "recall_macro": 0.14285714285714285,
+    "f1_macro": 0.0779977120671127,
+    "precision_weighted": 0.14100075133555912,
+    "recall_weighted": 0.37550066755674233,
+    "f1_weighted": 0.20501735064369575,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        871,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        613,
+        0,
+        0,
+        0
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "xss"
+    ]
+  },
+  {
+    "dataset": "Fridge",
+    "task": "multiclass",
+    "thermometer_type": "Distributive",
+    "thermometer_size": 16,
+    "address_size": 8,
+    "total_input_bits": 17,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 27960,
+    "n_test": 11984,
+    "train_time_s": 0.07889,
+    "infer_latency_us": 320.5931,
+    "memory_bytes": 21337,
+    "memory_kb": 20.84,
+    "accuracy": 0.37550066755674233,
+    "precision_macro": 0.053642952508106044,
+    "recall_macro": 0.14285714285714285,
+    "f1_macro": 0.0779977120671127,
+    "precision_weighted": 0.14100075133555912,
+    "recall_weighted": 0.37550066755674233,
+    "f1_weighted": 0.20501735064369575,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        871,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        613,
+        0,
+        0,
+        0
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "xss"
+    ]
+  },
+  {
+    "dataset": "Fridge",
+    "task": "multiclass",
+    "thermometer_type": "Distributive",
+    "thermometer_size": 16,
+    "address_size": 16,
+    "total_input_bits": 17,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 27960,
+    "n_test": 11984,
+    "train_time_s": 0.07953,
+    "infer_latency_us": 161.8685,
+    "memory_bytes": 21382,
+    "memory_kb": 20.88,
+    "accuracy": 0.37550066755674233,
+    "precision_macro": 0.053642952508106044,
+    "recall_macro": 0.14285714285714285,
+    "f1_macro": 0.0779977120671127,
+    "precision_weighted": 0.14100075133555912,
+    "recall_weighted": 0.37550066755674233,
+    "f1_weighted": 0.20501735064369575,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        871,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        613,
+        0,
+        0,
+        0
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "xss"
+    ]
+  },
+  {
+    "dataset": "Fridge",
+    "task": "multiclass",
+    "thermometer_type": "Distributive",
+    "thermometer_size": 32,
+    "address_size": 4,
+    "total_input_bits": 33,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 27960,
+    "n_test": 11984,
+    "train_time_s": 0.28599,
+    "infer_latency_us": 3069.7418,
+    "memory_bytes": 71727,
+    "memory_kb": 70.05,
+    "accuracy": 0.37550066755674233,
+    "precision_macro": 0.053642952508106044,
+    "recall_macro": 0.14285714285714285,
+    "f1_macro": 0.0779977120671127,
+    "precision_weighted": 0.14100075133555912,
+    "recall_weighted": 0.37550066755674233,
+    "f1_weighted": 0.20501735064369575,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        871,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        613,
+        0,
+        0,
+        0
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "xss"
+    ]
+  },
+  {
+    "dataset": "Fridge",
+    "task": "multiclass",
+    "thermometer_type": "Distributive",
+    "thermometer_size": 32,
+    "address_size": 8,
+    "total_input_bits": 33,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 27960,
+    "n_test": 11984,
+    "train_time_s": 0.21835,
+    "infer_latency_us": 1239.7944,
+    "memory_bytes": 57130,
+    "memory_kb": 55.79,
+    "accuracy": 0.37550066755674233,
+    "precision_macro": 0.053642952508106044,
+    "recall_macro": 0.14285714285714285,
+    "f1_macro": 0.0779977120671127,
+    "precision_weighted": 0.14100075133555912,
+    "recall_weighted": 0.37550066755674233,
+    "f1_weighted": 0.20501735064369575,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        871,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        613,
+        0,
+        0,
+        0
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "xss"
+    ]
+  },
+  {
+    "dataset": "Fridge",
+    "task": "multiclass",
+    "thermometer_type": "Distributive",
+    "thermometer_size": 32,
+    "address_size": 16,
+    "total_input_bits": 33,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 27960,
+    "n_test": 11984,
+    "train_time_s": 0.19138,
+    "infer_latency_us": 550.1661,
+    "memory_bytes": 53424,
+    "memory_kb": 52.17,
+    "accuracy": 0.37550066755674233,
+    "precision_macro": 0.053642952508106044,
+    "recall_macro": 0.14285714285714285,
+    "f1_macro": 0.0779977120671127,
+    "precision_weighted": 0.14100075133555912,
+    "recall_weighted": 0.37550066755674233,
+    "f1_weighted": 0.20501735064369575,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        871,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        613,
+        0,
+        0,
+        0
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "xss"
+    ]
+  },
+  {
+    "dataset": "Fridge",
+    "task": "multiclass",
+    "thermometer_type": "Gaussian",
+    "thermometer_size": 8,
+    "address_size": 4,
+    "total_input_bits": 9,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 27960,
+    "n_test": 11984,
+    "train_time_s": 0.03504,
+    "infer_latency_us": 149.9466,
+    "memory_bytes": 9693,
+    "memory_kb": 9.47,
+    "accuracy": 0.37550066755674233,
+    "precision_macro": 0.053642952508106044,
+    "recall_macro": 0.14285714285714285,
+    "f1_macro": 0.0779977120671127,
+    "precision_weighted": 0.14100075133555912,
+    "recall_weighted": 0.37550066755674233,
+    "f1_weighted": 0.20501735064369575,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        871,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        613,
+        0,
+        0,
+        0
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "xss"
+    ]
+  },
+  {
+    "dataset": "Fridge",
+    "task": "multiclass",
+    "thermometer_type": "Gaussian",
+    "thermometer_size": 8,
+    "address_size": 8,
+    "total_input_bits": 9,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 27960,
+    "n_test": 11984,
+    "train_time_s": 0.03427,
+    "infer_latency_us": 76.655,
+    "memory_bytes": 8923,
+    "memory_kb": 8.71,
+    "accuracy": 0.37550066755674233,
+    "precision_macro": 0.053642952508106044,
+    "recall_macro": 0.14285714285714285,
+    "f1_macro": 0.0779977120671127,
+    "precision_weighted": 0.14100075133555912,
+    "recall_weighted": 0.37550066755674233,
+    "f1_weighted": 0.20501735064369575,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        871,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        613,
+        0,
+        0,
+        0
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "xss"
+    ]
+  },
+  {
+    "dataset": "Fridge",
+    "task": "multiclass",
+    "thermometer_type": "Gaussian",
+    "thermometer_size": 16,
+    "address_size": 4,
+    "total_input_bits": 17,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 27960,
+    "n_test": 11984,
+    "train_time_s": 0.08602,
+    "infer_latency_us": 655.2397,
+    "memory_bytes": 24918,
+    "memory_kb": 24.33,
+    "accuracy": 0.37550066755674233,
+    "precision_macro": 0.053642952508106044,
+    "recall_macro": 0.14285714285714285,
+    "f1_macro": 0.0779977120671127,
+    "precision_weighted": 0.14100075133555912,
+    "recall_weighted": 0.37550066755674233,
+    "f1_weighted": 0.20501735064369575,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        871,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        613,
+        0,
+        0,
+        0
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "xss"
+    ]
+  },
+  {
+    "dataset": "Fridge",
+    "task": "multiclass",
+    "thermometer_type": "Gaussian",
+    "thermometer_size": 16,
+    "address_size": 8,
+    "total_input_bits": 17,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 27960,
+    "n_test": 11984,
+    "train_time_s": 0.07888,
+    "infer_latency_us": 290.396,
+    "memory_bytes": 21352,
+    "memory_kb": 20.85,
+    "accuracy": 0.37550066755674233,
+    "precision_macro": 0.053642952508106044,
+    "recall_macro": 0.14285714285714285,
+    "f1_macro": 0.0779977120671127,
+    "precision_weighted": 0.14100075133555912,
+    "recall_weighted": 0.37550066755674233,
+    "f1_weighted": 0.20501735064369575,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        871,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        613,
+        0,
+        0,
+        0
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "xss"
+    ]
+  },
+  {
+    "dataset": "Fridge",
+    "task": "multiclass",
+    "thermometer_type": "Gaussian",
+    "thermometer_size": 16,
+    "address_size": 16,
+    "total_input_bits": 17,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 27960,
+    "n_test": 11984,
+    "train_time_s": 0.07697,
+    "infer_latency_us": 163.5768,
+    "memory_bytes": 21370,
+    "memory_kb": 20.87,
+    "accuracy": 0.37550066755674233,
+    "precision_macro": 0.053642952508106044,
+    "recall_macro": 0.14285714285714285,
+    "f1_macro": 0.0779977120671127,
+    "precision_weighted": 0.14100075133555912,
+    "recall_weighted": 0.37550066755674233,
+    "f1_weighted": 0.20501735064369575,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        871,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        613,
+        0,
+        0,
+        0
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "xss"
+    ]
+  },
+  {
+    "dataset": "Fridge",
+    "task": "multiclass",
+    "thermometer_type": "Gaussian",
+    "thermometer_size": 32,
+    "address_size": 4,
+    "total_input_bits": 33,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 27960,
+    "n_test": 11984,
+    "train_time_s": 0.30613,
+    "infer_latency_us": 2998.4164,
+    "memory_bytes": 73917,
+    "memory_kb": 72.18,
+    "accuracy": 0.37550066755674233,
+    "precision_macro": 0.053642952508106044,
+    "recall_macro": 0.14285714285714285,
+    "f1_macro": 0.0779977120671127,
+    "precision_weighted": 0.14100075133555912,
+    "recall_weighted": 0.37550066755674233,
+    "f1_weighted": 0.20501735064369575,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        871,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        613,
+        0,
+        0,
+        0
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "xss"
+    ]
+  },
+  {
+    "dataset": "Fridge",
+    "task": "multiclass",
+    "thermometer_type": "Gaussian",
+    "thermometer_size": 32,
+    "address_size": 8,
+    "total_input_bits": 33,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 27960,
+    "n_test": 11984,
+    "train_time_s": 0.23076,
+    "infer_latency_us": 1270.6768,
+    "memory_bytes": 58882,
+    "memory_kb": 57.5,
+    "accuracy": 0.37550066755674233,
+    "precision_macro": 0.053642952508106044,
+    "recall_macro": 0.14285714285714285,
+    "f1_macro": 0.0779977120671127,
+    "precision_weighted": 0.14100075133555912,
+    "recall_weighted": 0.37550066755674233,
+    "f1_weighted": 0.20501735064369575,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        871,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        613,
+        0,
+        0,
+        0
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "xss"
+    ]
+  },
+  {
+    "dataset": "Fridge",
+    "task": "multiclass",
+    "thermometer_type": "Gaussian",
+    "thermometer_size": 32,
+    "address_size": 16,
+    "total_input_bits": 33,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 27960,
+    "n_test": 11984,
+    "train_time_s": 0.19945,
+    "infer_latency_us": 594.265,
+    "memory_bytes": 55012,
+    "memory_kb": 53.72,
+    "accuracy": 0.37550066755674233,
+    "precision_macro": 0.053642952508106044,
+    "recall_macro": 0.14285714285714285,
+    "f1_macro": 0.0779977120671127,
+    "precision_weighted": 0.14100075133555912,
+    "recall_weighted": 0.37550066755674233,
+    "f1_weighted": 0.20501735064369575,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        871,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        613,
+        0,
+        0,
+        0
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "xss"
+    ]
+  }
+]

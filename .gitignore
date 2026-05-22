@@ -46,9 +46,9 @@ notebooks/f4rm/paper_tables/section4_all_points.csv
 # Orphan figure
 articles/f4rms/fig1.eps
 
-# TON_IoT sweep results: each integrante regenerates locally.
-# We commit only the EDA demo JSONL as schema reference.
-notebooks/toniot/results/*
-!notebooks/toniot/results/wisard/
-notebooks/toniot/results/wisard/*
-!notebooks/toniot/results/wisard/Fridge__binary.jsonl
+# TON_IoT sweep results.
+# Entregas oficiais dos integrantes ficam comitadas em
+# notebooks/toniot/results/<modelo>/. Sidecars (notebook fonte, script,
+# log, PNGs de cada integrante) em notebooks/toniot/_entregas/<modelo>/.
+# Zips brutos das entregas ficam locais em _entregas/_zips/, não comitados.
+notebooks/toniot/_entregas/_zips/

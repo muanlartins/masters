@@ -1,0 +1,5444 @@
+[
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 2
+    },
+    "addressSize": 4,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 3119
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 6
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.38206826286296486,
+      "precision_macro": 0.04775853285787061,
+      "precision_weighted": 0.14597615748712361,
+      "recall_macro": 0.125,
+      "recall_weighted": 0.38206826286296486,
+      "f1_macro": 0.06911168448212311,
+      "f1_weighted": 0.21124304986894482,
+      "auc_roc": 0.5117715098284426,
+      "memory_bytes_serialized": 34679,
+      "memory_bytes_theoretical": 2048,
+      "train_time_s": 0.5912683060000745,
+      "inference_latency_us": 923.6955000915259
+    },
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4500,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        859,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        159,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        260,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 2
+    },
+    "addressSize": 8,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 6
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 2
+    },
+    "addressSize": 12,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 6
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 2
+    },
+    "addressSize": 16,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 6
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 2
+    },
+    "addressSize": 20,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 6
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 2
+    },
+    "addressSize": 24,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 6
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 2
+    },
+    "addressSize": 28,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 6
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 2
+    },
+    "addressSize": 32,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 6
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 4
+    },
+    "addressSize": 4,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 687
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 12
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.47656647987773815,
+      "precision_macro": 0.3115928209797816,
+      "precision_weighted": 0.4395009769243593,
+      "recall_macro": 0.22502777777777777,
+      "recall_weighted": 0.47656647987773815,
+      "f1_macro": 0.22358264173816506,
+      "f1_weighted": 0.391221143383453,
+      "auc_roc": 0.7344849043561054,
+      "memory_bytes_serialized": 51759,
+      "memory_bytes_theoretical": 3072,
+      "train_time_s": 0.8017860679999558,
+      "inference_latency_us": 777.568499984227
+    },
+    "confusion_matrix": [
+      [
+        233,
+        9,
+        200,
+        1058,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        186,
+        265,
+        152,
+        888,
+        9,
+        0,
+        0,
+        0
+      ],
+      [
+        31,
+        256,
+        421,
+        704,
+        88,
+        0,
+        0,
+        0
+      ],
+      [
+        127,
+        4,
+        0,
+        4369,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        117,
+        4,
+        13,
+        1041,
+        325,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        35,
+        824,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        7,
+        152,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        6,
+        0,
+        19,
+        235,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 4
+    },
+    "addressSize": 8,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 505
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 12
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.43768042112412975,
+      "precision_macro": 0.3280734510598854,
+      "precision_weighted": 0.45123327029695076,
+      "recall_macro": 0.21108333333333335,
+      "recall_weighted": 0.43768042112412975,
+      "f1_macro": 0.20139360624579672,
+      "f1_weighted": 0.35855504356584944,
+      "auc_roc": 0.7332335695998984,
+      "memory_bytes_serialized": 36007,
+      "memory_bytes_theoretical": 2048,
+      "train_time_s": 0.7345856970000568,
+      "inference_latency_us": 885.9484998993139
+    },
+    "confusion_matrix": [
+      [
+        554,
+        9,
+        20,
+        917,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        460,
+        104,
+        169,
+        758,
+        9,
+        0,
+        0,
+        0
+      ],
+      [
+        385,
+        52,
+        239,
+        736,
+        88,
+        0,
+        0,
+        0
+      ],
+      [
+        567,
+        0,
+        0,
+        3933,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        142,
+        0,
+        17,
+        1016,
+        325,
+        0,
+        0,
+        0
+      ],
+      [
+        21,
+        0,
+        0,
+        838,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        22,
+        2,
+        18,
+        117,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        11,
+        0,
+        0,
+        249,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 4
+    },
+    "addressSize": 12,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 172
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 12
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.4913397860417728,
+      "precision_macro": 0.5187784822507745,
+      "precision_weighted": 0.5649779913587117,
+      "recall_macro": 0.38737566657636613,
+      "recall_weighted": 0.4913397860417728,
+      "f1_macro": 0.39187152658431146,
+      "f1_weighted": 0.470300578491328,
+      "auc_roc": 0.748455829733246,
+      "memory_bytes_serialized": 18974,
+      "memory_bytes_theoretical": 1024,
+      "train_time_s": 0.6032312480001565,
+      "inference_latency_us": 1219.5650000421665
+    },
+    "confusion_matrix": [
+      [
+        837,
+        109,
+        33,
+        486,
+        0,
+        25,
+        10,
+        0
+      ],
+      [
+        233,
+        862,
+        110,
+        290,
+        0,
+        1,
+        4,
+        0
+      ],
+      [
+        530,
+        268,
+        435,
+        230,
+        8,
+        22,
+        7,
+        0
+      ],
+      [
+        592,
+        712,
+        4,
+        3133,
+        0,
+        59,
+        0,
+        0
+      ],
+      [
+        315,
+        332,
+        128,
+        431,
+        246,
+        48,
+        0,
+        0
+      ],
+      [
+        10,
+        243,
+        15,
+        409,
+        0,
+        177,
+        5,
+        0
+      ],
+      [
+        45,
+        17,
+        0,
+        0,
+        0,
+        0,
+        97,
+        0
+      ],
+      [
+        74,
+        20,
+        4,
+        162,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 4
+    },
+    "addressSize": 16,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 12
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 4
+    },
+    "addressSize": 20,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 12
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 4
+    },
+    "addressSize": 24,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 12
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 4
+    },
+    "addressSize": 28,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 12
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 4
+    },
+    "addressSize": 32,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 12
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 8
+    },
+    "addressSize": 4,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 3088
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 24
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.39701137714382745,
+      "precision_macro": 0.07209176794321881,
+      "precision_weighted": 0.18126781685472074,
+      "recall_macro": 0.13966666666666666,
+      "recall_weighted": 0.39701137714382745,
+      "f1_macro": 0.09097326242142136,
+      "f1_weighted": 0.2441921589790832,
+      "auc_roc": 0.5868225146733026,
+      "memory_bytes_serialized": 102960,
+      "memory_bytes_theoretical": 6144,
+      "train_time_s": 1.9430236410000816,
+      "inference_latency_us": 811.4810000279249
+    },
+    "confusion_matrix": [
+      [
+        176,
+        0,
+        0,
+        1324,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        276,
+        0,
+        0,
+        1224,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        298,
+        0,
+        0,
+        1202,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4500,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        277,
+        0,
+        0,
+        1223,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        109,
+        0,
+        0,
+        750,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        159,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        11,
+        0,
+        0,
+        249,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 8
+    },
+    "addressSize": 8,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 182
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 24
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.5071319409067754,
+      "precision_macro": 0.47609978330349534,
+      "precision_weighted": 0.5232401876867497,
+      "recall_macro": 0.4131617898292344,
+      "recall_weighted": 0.5071319409067754,
+      "f1_macro": 0.4127642872001376,
+      "f1_weighted": 0.494496743193309,
+      "auc_roc": 0.8516812420726969,
+      "memory_bytes_serialized": 53774,
+      "memory_bytes_theoretical": 3072,
+      "train_time_s": 1.001385449000054,
+      "inference_latency_us": 795.1275000550595
+    },
+    "confusion_matrix": [
+      [
+        739,
+        271,
+        218,
+        250,
+        12,
+        0,
+        10,
+        0
+      ],
+      [
+        188,
+        851,
+        151,
+        209,
+        75,
+        22,
+        4,
+        0
+      ],
+      [
+        180,
+        237,
+        915,
+        140,
+        10,
+        18,
+        0,
+        0
+      ],
+      [
+        1009,
+        554,
+        158,
+        2713,
+        65,
+        1,
+        0,
+        0
+      ],
+      [
+        153,
+        159,
+        122,
+        429,
+        629,
+        8,
+        0,
+        0
+      ],
+      [
+        50,
+        90,
+        89,
+        471,
+        124,
+        35,
+        0,
+        0
+      ],
+      [
+        5,
+        25,
+        36,
+        2,
+        0,
+        0,
+        91,
+        0
+      ],
+      [
+        52,
+        61,
+        4,
+        118,
+        25,
+        0,
+        0,
+        0
+      ]
+    ],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 8
+    },
+    "addressSize": 12,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 67
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 24
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.5659704533876719,
+      "precision_macro": 0.4750404616835069,
+      "precision_weighted": 0.5568671240397264,
+      "recall_macro": 0.4471514675052411,
+      "recall_weighted": 0.5659704533876719,
+      "f1_macro": 0.43884765741570664,
+      "f1_weighted": 0.5461675481660082,
+      "auc_roc": 0.871369272759011,
+      "memory_bytes_serialized": 37382,
+      "memory_bytes_theoretical": 2048,
+      "train_time_s": 0.8870812289999321,
+      "inference_latency_us": 800.3835000636172
+    },
+    "confusion_matrix": [
+      [
+        1111,
+        33,
+        110,
+        214,
+        32,
+        0,
+        0,
+        0
+      ],
+      [
+        374,
+        853,
+        66,
+        124,
+        79,
+        0,
+        4,
+        0
+      ],
+      [
+        242,
+        160,
+        1028,
+        61,
+        9,
+        0,
+        0,
+        0
+      ],
+      [
+        952,
+        383,
+        151,
+        2975,
+        39,
+        0,
+        0,
+        0
+      ],
+      [
+        202,
+        295,
+        82,
+        303,
+        618,
+        0,
+        0,
+        0
+      ],
+      [
+        39,
+        215,
+        117,
+        373,
+        115,
+        0,
+        0,
+        0
+      ],
+      [
+        33,
+        29,
+        16,
+        0,
+        0,
+        0,
+        81,
+        0
+      ],
+      [
+        83,
+        47,
+        0,
+        128,
+        2,
+        0,
+        0,
+        0
+      ]
+    ],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 8
+    },
+    "addressSize": 16,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 589
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 24
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.39836984207845133,
+      "precision_macro": 0.1543913278113371,
+      "precision_weighted": 0.2987388357301266,
+      "recall_macro": 0.20211111111111113,
+      "recall_weighted": 0.39836984207845133,
+      "f1_macro": 0.15291088152082663,
+      "f1_weighted": 0.3188395362589475,
+      "auc_roc": 0.6693352016517351,
+      "memory_bytes_serialized": 38663,
+      "memory_bytes_theoretical": 2048,
+      "train_time_s": 1.0643558540000413,
+      "inference_latency_us": 1406.1155000035797
+    },
+    "confusion_matrix": [
+      [
+        999,
+        0,
+        73,
+        428,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        693,
+        0,
+        197,
+        610,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        942,
+        0,
+        293,
+        265,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1100,
+        0,
+        0,
+        3400,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        893,
+        0,
+        17,
+        590,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        171,
+        0,
+        0,
+        688,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        131,
+        0,
+        28,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        118,
+        0,
+        0,
+        142,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 8
+    },
+    "addressSize": 20,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 2227
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 24
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.4143318050602819,
+      "precision_macro": 0.07969624029334829,
+      "precision_weighted": 0.2059327470116589,
+      "recall_macro": 0.15688888888888888,
+      "recall_weighted": 0.4143318050602819,
+      "f1_macro": 0.10558951635827314,
+      "f1_weighted": 0.27499234882662305,
+      "auc_roc": 0.6060569680774599,
+      "memory_bytes_serialized": 39943,
+      "memory_bytes_theoretical": 2048,
+      "train_time_s": 2.0396511210001336,
+      "inference_latency_us": 905.9995001052812
+    },
+    "confusion_matrix": [
+      [
+        384,
+        0,
+        0,
+        1116,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        591,
+        0,
+        0,
+        909,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        991,
+        0,
+        0,
+        509,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        4,
+        0,
+        0,
+        4496,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        294,
+        0,
+        0,
+        1206,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        144,
+        0,
+        0,
+        715,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        159,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        30,
+        0,
+        0,
+        230,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 8
+    },
+    "addressSize": 24,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 25
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 24
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.5899983019188317,
+      "precision_macro": 0.578040591701336,
+      "precision_weighted": 0.6619988314446839,
+      "recall_macro": 0.44143864113509046,
+      "recall_weighted": 0.5899983019188317,
+      "f1_macro": 0.4353302338952193,
+      "f1_weighted": 0.5848849356601379,
+      "auc_roc": 0.8666307574416245,
+      "memory_bytes_serialized": 20990,
+      "memory_bytes_theoretical": 1024,
+      "train_time_s": 0.6386476700001822,
+      "inference_latency_us": 751.2849999784521
+    },
+    "confusion_matrix": [
+      [
+        1302,
+        19,
+        32,
+        119,
+        14,
+        12,
+        0,
+        2
+      ],
+      [
+        425,
+        990,
+        26,
+        47,
+        9,
+        1,
+        0,
+        2
+      ],
+      [
+        304,
+        106,
+        979,
+        79,
+        12,
+        20,
+        0,
+        0
+      ],
+      [
+        925,
+        508,
+        184,
+        2828,
+        23,
+        30,
+        0,
+        2
+      ],
+      [
+        309,
+        198,
+        60,
+        279,
+        634,
+        20,
+        0,
+        0
+      ],
+      [
+        116,
+        171,
+        44,
+        306,
+        24,
+        198,
+        0,
+        0
+      ],
+      [
+        82,
+        12,
+        57,
+        8,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        80,
+        7,
+        3,
+        139,
+        5,
+        8,
+        0,
+        18
+      ]
+    ],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 8
+    },
+    "addressSize": 28,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 24
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 8
+    },
+    "addressSize": 32,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": null
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 24
+    },
+    "skipped": true,
+    "skipped_reason": "addressSize > bits_total",
+    "metrics": {
+      "accuracy": 0.0,
+      "precision_macro": 0.0,
+      "precision_weighted": 0.0,
+      "recall_macro": 0.0,
+      "recall_weighted": 0.0,
+      "f1_macro": 0.0,
+      "f1_weighted": 0.0,
+      "auc_roc": 0.0,
+      "memory_bytes_serialized": 0,
+      "memory_bytes_theoretical": 0,
+      "train_time_s": 0.0,
+      "inference_latency_us": 0.0
+    },
+    "confusion_matrix": [],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 16
+    },
+    "addressSize": 4,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 283
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 48
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.4866700628290032,
+      "precision_macro": 0.38719696036680873,
+      "precision_weighted": 0.4985375627364564,
+      "recall_macro": 0.3027159487776484,
+      "recall_weighted": 0.4866700628290032,
+      "f1_macro": 0.3073586813553312,
+      "f1_weighted": 0.46536044792279135,
+      "auc_roc": 0.8082620952876292,
+      "memory_bytes_serialized": 205347,
+      "memory_bytes_theoretical": 12288,
+      "train_time_s": 2.662244686000122,
+      "inference_latency_us": 931.89749998146
+    },
+    "confusion_matrix": [
+      [
+        661,
+        127,
+        143,
+        505,
+        64,
+        0,
+        0,
+        0
+      ],
+      [
+        339,
+        525,
+        193,
+        374,
+        69,
+        0,
+        0,
+        0
+      ],
+      [
+        195,
+        304,
+        624,
+        316,
+        61,
+        0,
+        0,
+        0
+      ],
+      [
+        723,
+        370,
+        33,
+        3270,
+        100,
+        4,
+        0,
+        0
+      ],
+      [
+        172,
+        144,
+        121,
+        495,
+        544,
+        24,
+        0,
+        0
+      ],
+      [
+        27,
+        104,
+        99,
+        510,
+        11,
+        108,
+        0,
+        0
+      ],
+      [
+        9,
+        65,
+        85,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        18,
+        18,
+        18,
+        186,
+        20,
+        0,
+        0,
+        0
+      ]
+    ],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 16
+    },
+    "addressSize": 8,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 183
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 48
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.5479707930039056,
+      "precision_macro": 0.5475716814558761,
+      "precision_weighted": 0.5767821957937368,
+      "recall_macro": 0.4149025846689266,
+      "recall_weighted": 0.5479707930039056,
+      "f1_macro": 0.43813059884075767,
+      "f1_weighted": 0.5386436010813521,
+      "auc_roc": 0.8464975277245524,
+      "memory_bytes_serialized": 106994,
+      "memory_bytes_theoretical": 6144,
+      "train_time_s": 2.9029985829999987,
+      "inference_latency_us": 819.1135000288341
+    },
+    "confusion_matrix": [
+      [
+        904,
+        145,
+        37,
+        373,
+        40,
+        1,
+        0,
+        0
+      ],
+      [
+        338,
+        823,
+        35,
+        212,
+        70,
+        22,
+        0,
+        0
+      ],
+      [
+        175,
+        363,
+        652,
+        243,
+        31,
+        36,
+        0,
+        0
+      ],
+      [
+        794,
+        407,
+        46,
+        3178,
+        61,
+        14,
+        0,
+        0
+      ],
+      [
+        219,
+        149,
+        50,
+        354,
+        694,
+        34,
+        0,
+        0
+      ],
+      [
+        14,
+        139,
+        85,
+        431,
+        51,
+        139,
+        0,
+        0
+      ],
+      [
+        15,
+        57,
+        23,
+        0,
+        0,
+        0,
+        64,
+        0
+      ],
+      [
+        55,
+        31,
+        1,
+        160,
+        13,
+        0,
+        0,
+        0
+      ]
+    ],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 16
+    },
+    "addressSize": 12,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 110
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 48
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.5473764645950077,
+      "precision_macro": 0.545786392707067,
+      "precision_weighted": 0.5816627004359556,
+      "recall_macro": 0.43263028532519165,
+      "recall_weighted": 0.5473764645950077,
+      "f1_macro": 0.4518988427750422,
+      "f1_weighted": 0.5376864722054169,
+      "auc_roc": 0.8635724046058247,
+      "memory_bytes_serialized": 74210,
+      "memory_bytes_theoretical": 4096,
+      "train_time_s": 1.6166884879999088,
+      "inference_latency_us": 808.721999987938
+    },
+    "confusion_matrix": [
+      [
+        986,
+        111,
+        54,
+        295,
+        28,
+        16,
+        10,
+        0
+      ],
+      [
+        374,
+        822,
+        22,
+        200,
+        75,
+        5,
+        2,
+        0
+      ],
+      [
+        335,
+        252,
+        583,
+        269,
+        29,
+        32,
+        0,
+        0
+      ],
+      [
+        704,
+        512,
+        81,
+        3135,
+        50,
+        18,
+        0,
+        0
+      ],
+      [
+        241,
+        142,
+        50,
+        381,
+        668,
+        18,
+        0,
+        0
+      ],
+      [
+        2,
+        110,
+        34,
+        518,
+        26,
+        169,
+        0,
+        0
+      ],
+      [
+        25,
+        23,
+        8,
+        19,
+        0,
+        0,
+        84,
+        0
+      ],
+      [
+        51,
+        22,
+        14,
+        147,
+        26,
+        0,
+        0,
+        0
+      ]
+    ],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 16
+    },
+    "addressSize": 16,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 90
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 48
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.5416878926812702,
+      "precision_macro": 0.45668958968146667,
+      "precision_weighted": 0.5835358679708719,
+      "recall_macro": 0.3706831587116802,
+      "recall_weighted": 0.5416878926812702,
+      "f1_macro": 0.37347206282044487,
+      "f1_weighted": 0.5306191032404566,
+      "auc_roc": 0.856068341355166,
+      "memory_bytes_serialized": 57809,
+      "memory_bytes_theoretical": 3072,
+      "train_time_s": 1.524546164999947,
+      "inference_latency_us": 794.8575000682467
+    },
+    "confusion_matrix": [
+      [
+        925,
+        109,
+        77,
+        364,
+        14,
+        11,
+        0,
+        0
+      ],
+      [
+        376,
+        841,
+        57,
+        196,
+        29,
+        1,
+        0,
+        0
+      ],
+      [
+        296,
+        253,
+        737,
+        207,
+        7,
+        0,
+        0,
+        0
+      ],
+      [
+        713,
+        440,
+        174,
+        3135,
+        27,
+        11,
+        0,
+        0
+      ],
+      [
+        127,
+        191,
+        160,
+        480,
+        530,
+        12,
+        0,
+        0
+      ],
+      [
+        44,
+        207,
+        59,
+        321,
+        16,
+        212,
+        0,
+        0
+      ],
+      [
+        44,
+        44,
+        62,
+        9,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        84,
+        33,
+        9,
+        129,
+        5,
+        0,
+        0,
+        0
+      ]
+    ],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 16
+    },
+    "addressSize": 20,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 17
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 48
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.5847342502971642,
+      "precision_macro": 0.7116706732947251,
+      "precision_weighted": 0.6803913585803082,
+      "recall_macro": 0.5285211091042246,
+      "recall_weighted": 0.5847342502971642,
+      "f1_macro": 0.541903085215632,
+      "f1_weighted": 0.5833045822629158,
+      "auc_roc": 0.9124890073894072,
+      "memory_bytes_serialized": 59729,
+      "memory_bytes_theoretical": 3072,
+      "train_time_s": 2.950030609999885,
+      "inference_latency_us": 936.7774999873291
+    },
+    "confusion_matrix": [
+      [
+        1337,
+        26,
+        18,
+        88,
+        22,
+        3,
+        0,
+        6
+      ],
+      [
+        334,
+        1061,
+        15,
+        66,
+        23,
+        1,
+        0,
+        0
+      ],
+      [
+        217,
+        160,
+        1035,
+        58,
+        24,
+        0,
+        6,
+        0
+      ],
+      [
+        1154,
+        678,
+        112,
+        2525,
+        14,
+        8,
+        0,
+        9
+      ],
+      [
+        217,
+        262,
+        94,
+        289,
+        622,
+        15,
+        0,
+        1
+      ],
+      [
+        126,
+        196,
+        51,
+        245,
+        79,
+        162,
+        0,
+        0
+      ],
+      [
+        34,
+        22,
+        13,
+        1,
+        0,
+        0,
+        89,
+        0
+      ],
+      [
+        63,
+        16,
+        13,
+        104,
+        8,
+        0,
+        0,
+        56
+      ]
+    ],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 16
+    },
+    "addressSize": 24,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 11
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 48
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.5963661062998812,
+      "precision_macro": 0.7395825965232184,
+      "precision_weighted": 0.6909355428651145,
+      "recall_macro": 0.5303575143912911,
+      "recall_weighted": 0.5963661062998812,
+      "f1_macro": 0.5463038357444207,
+      "f1_weighted": 0.5939918799381894,
+      "auc_roc": 0.9238352602498717,
+      "memory_bytes_serialized": 41417,
+      "memory_bytes_theoretical": 2048,
+      "train_time_s": 1.4001370099999804,
+      "inference_latency_us": 784.6670000617451
+    },
+    "confusion_matrix": [
+      [
+        1365,
+        13,
+        24,
+        87,
+        7,
+        3,
+        0,
+        1
+      ],
+      [
+        364,
+        1047,
+        21,
+        47,
+        18,
+        3,
+        0,
+        0
+      ],
+      [
+        205,
+        121,
+        1100,
+        48,
+        20,
+        0,
+        6,
+        0
+      ],
+      [
+        1171,
+        508,
+        241,
+        2556,
+        11,
+        10,
+        0,
+        3
+      ],
+      [
+        205,
+        234,
+        101,
+        343,
+        614,
+        3,
+        0,
+        0
+      ],
+      [
+        128,
+        171,
+        71,
+        216,
+        57,
+        216,
+        0,
+        0
+      ],
+      [
+        24,
+        23,
+        10,
+        20,
+        5,
+        0,
+        77,
+        0
+      ],
+      [
+        65,
+        8,
+        24,
+        110,
+        2,
+        2,
+        0,
+        49
+      ]
+    ],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 16
+    },
+    "addressSize": 28,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 18
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 48
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.5663100696213279,
+      "precision_macro": 0.6983939985749159,
+      "precision_weighted": 0.6610568873953914,
+      "recall_macro": 0.47890174877911273,
+      "recall_weighted": 0.5663100696213279,
+      "f1_macro": 0.4979834611278914,
+      "f1_weighted": 0.5694333627541337,
+      "auc_roc": 0.8929937620369137,
+      "memory_bytes_serialized": 42697,
+      "memory_bytes_theoretical": 2048,
+      "train_time_s": 1.6258068660001754,
+      "inference_latency_us": 903.0395000309
+    },
+    "confusion_matrix": [
+      [
+        1250,
+        50,
+        22,
+        160,
+        12,
+        0,
+        0,
+        6
+      ],
+      [
+        401,
+        955,
+        31,
+        88,
+        17,
+        6,
+        2,
+        0
+      ],
+      [
+        330,
+        95,
+        971,
+        65,
+        29,
+        9,
+        1,
+        0
+      ],
+      [
+        995,
+        670,
+        260,
+        2523,
+        46,
+        4,
+        0,
+        2
+      ],
+      [
+        214,
+        235,
+        82,
+        327,
+        630,
+        11,
+        0,
+        1
+      ],
+      [
+        150,
+        185,
+        37,
+        199,
+        25,
+        263,
+        0,
+        0
+      ],
+      [
+        44,
+        12,
+        4,
+        45,
+        0,
+        2,
+        52,
+        0
+      ],
+      [
+        107,
+        14,
+        5,
+        88,
+        20,
+        0,
+        0,
+        26
+      ]
+    ],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 16
+    },
+    "addressSize": 32,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 14
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 48
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.5701307522499576,
+      "precision_macro": 0.7172253500538176,
+      "precision_weighted": 0.6777894884995878,
+      "recall_macro": 0.5040083760289518,
+      "recall_weighted": 0.5701307522499576,
+      "f1_macro": 0.5216516361941824,
+      "f1_weighted": 0.5734770648003867,
+      "auc_roc": 0.8933992043412072,
+      "memory_bytes_serialized": 43977,
+      "memory_bytes_theoretical": 2048,
+      "train_time_s": 2.831962346999944,
+      "inference_latency_us": 917.2320000061518
+    },
+    "confusion_matrix": [
+      [
+        1258,
+        42,
+        21,
+        163,
+        16,
+        0,
+        0,
+        0
+      ],
+      [
+        369,
+        1006,
+        15,
+        91,
+        16,
+        3,
+        0,
+        0
+      ],
+      [
+        324,
+        131,
+        970,
+        52,
+        22,
+        0,
+        1,
+        0
+      ],
+      [
+        1105,
+        569,
+        238,
+        2531,
+        43,
+        5,
+        0,
+        9
+      ],
+      [
+        311,
+        228,
+        109,
+        200,
+        642,
+        8,
+        2,
+        0
+      ],
+      [
+        135,
+        180,
+        48,
+        268,
+        40,
+        188,
+        0,
+        0
+      ],
+      [
+        52,
+        10,
+        5,
+        7,
+        1,
+        0,
+        84,
+        0
+      ],
+      [
+        132,
+        8,
+        19,
+        57,
+        8,
+        0,
+        0,
+        36
+      ]
+    ],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 32
+    },
+    "addressSize": 4,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 4738
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 96
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.3864832739004924,
+      "precision_macro": 0.05952192729048833,
+      "precision_weighted": 0.16479693131027823,
+      "recall_macro": 0.12933333333333333,
+      "recall_weighted": 0.3864832739004924,
+      "f1_macro": 0.0782765532824871,
+      "f1_weighted": 0.22760166325292416,
+      "auc_roc": 0.5884691178128021,
+      "memory_bytes_serialized": 410115,
+      "memory_bytes_theoretical": 24576,
+      "train_time_s": 4.731628406999789,
+      "inference_latency_us": 1573.0454999811627
+    },
+    "confusion_matrix": [
+      [
+        52,
+        0,
+        0,
+        1448,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        113,
+        0,
+        0,
+        1387,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        150,
+        0,
+        0,
+        1350,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4500,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        404,
+        0,
+        0,
+        1096,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        32,
+        0,
+        0,
+        827,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        159,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        22,
+        0,
+        0,
+        238,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 32
+    },
+    "addressSize": 8,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 2154
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 96
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.40414331805060283,
+      "precision_macro": 0.07466423178600042,
+      "precision_weighted": 0.19908158231146225,
+      "recall_macro": 0.14822222222222223,
+      "recall_weighted": 0.40414331805060283,
+      "f1_macro": 0.09916936286709806,
+      "f1_weighted": 0.26660149044024256,
+      "auc_roc": 0.6139285387404458,
+      "memory_bytes_serialized": 213411,
+      "memory_bytes_theoretical": 12288,
+      "train_time_s": 3.422382895000055,
+      "inference_latency_us": 866.2725000476712
+    },
+    "confusion_matrix": [
+      [
+        288,
+        0,
+        0,
+        1212,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        503,
+        0,
+        0,
+        997,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        850,
+        0,
+        0,
+        650,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        28,
+        0,
+        0,
+        4472,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        577,
+        0,
+        0,
+        923,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        186,
+        0,
+        0,
+        673,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        86,
+        0,
+        0,
+        73,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        260,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 32
+    },
+    "addressSize": 12,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 73
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 96
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.6602139582272033,
+      "precision_macro": 0.763043244529647,
+      "precision_weighted": 0.6864416832134226,
+      "recall_macro": 0.5210043915426161,
+      "recall_weighted": 0.6602139582272033,
+      "f1_macro": 0.5594256498220961,
+      "f1_weighted": 0.6446920906591234,
+      "auc_roc": 0.9180017833756278,
+      "memory_bytes_serialized": 147842,
+      "memory_bytes_theoretical": 8192,
+      "train_time_s": 3.5806304709999495,
+      "inference_latency_us": 868.4755000558653
+    },
+    "confusion_matrix": [
+      [
+        922,
+        50,
+        57,
+        422,
+        42,
+        7,
+        0,
+        0
+      ],
+      [
+        160,
+        985,
+        33,
+        286,
+        26,
+        10,
+        0,
+        0
+      ],
+      [
+        113,
+        139,
+        1000,
+        194,
+        51,
+        3,
+        0,
+        0
+      ],
+      [
+        296,
+        316,
+        37,
+        3784,
+        56,
+        11,
+        0,
+        0
+      ],
+      [
+        104,
+        186,
+        18,
+        394,
+        765,
+        33,
+        0,
+        0
+      ],
+      [
+        0,
+        128,
+        51,
+        445,
+        21,
+        214,
+        0,
+        0
+      ],
+      [
+        14,
+        18,
+        36,
+        0,
+        0,
+        0,
+        91,
+        0
+      ],
+      [
+        37,
+        16,
+        16,
+        143,
+        33,
+        0,
+        0,
+        15
+      ]
+    ],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 32
+    },
+    "addressSize": 16,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 42
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 96
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.6771947699100017,
+      "precision_macro": 0.7649871333223618,
+      "precision_weighted": 0.6965968768129392,
+      "recall_macro": 0.5527512079804621,
+      "recall_weighted": 0.6771947699100017,
+      "f1_macro": 0.5981947112517609,
+      "f1_weighted": 0.6647588633921822,
+      "auc_roc": 0.9325509238775412,
+      "memory_bytes_serialized": 115058,
+      "memory_bytes_theoretical": 6144,
+      "train_time_s": 2.867533503000004,
+      "inference_latency_us": 836.389000141935
+    },
+    "confusion_matrix": [
+      [
+        961,
+        46,
+        56,
+        396,
+        35,
+        6,
+        0,
+        0
+      ],
+      [
+        131,
+        995,
+        47,
+        251,
+        49,
+        23,
+        4,
+        0
+      ],
+      [
+        75,
+        123,
+        1072,
+        194,
+        20,
+        16,
+        0,
+        0
+      ],
+      [
+        325,
+        245,
+        80,
+        3779,
+        53,
+        18,
+        0,
+        0
+      ],
+      [
+        72,
+        141,
+        73,
+        417,
+        783,
+        14,
+        0,
+        0
+      ],
+      [
+        5,
+        157,
+        41,
+        384,
+        23,
+        249,
+        0,
+        0
+      ],
+      [
+        11,
+        20,
+        36,
+        0,
+        0,
+        0,
+        92,
+        0
+      ],
+      [
+        34,
+        8,
+        6,
+        138,
+        29,
+        0,
+        0,
+        45
+      ]
+    ],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 32
+    },
+    "addressSize": 20,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 30
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 96
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.6772796739684157,
+      "precision_macro": 0.7502919955995633,
+      "precision_weighted": 0.7072608073982903,
+      "recall_macro": 0.5738645072361493,
+      "recall_weighted": 0.6772796739684157,
+      "f1_macro": 0.6091305155754947,
+      "f1_weighted": 0.6702791155203276,
+      "auc_roc": 0.9386209058012357,
+      "memory_bytes_serialized": 99306,
+      "memory_bytes_theoretical": 5120,
+      "train_time_s": 4.044532983000181,
+      "inference_latency_us": 1012.4274999725458
+    },
+    "confusion_matrix": [
+      [
+        1104,
+        42,
+        37,
+        278,
+        32,
+        7,
+        0,
+        0
+      ],
+      [
+        179,
+        1112,
+        28,
+        120,
+        37,
+        20,
+        4,
+        0
+      ],
+      [
+        109,
+        119,
+        1128,
+        117,
+        15,
+        12,
+        0,
+        0
+      ],
+      [
+        523,
+        399,
+        45,
+        3463,
+        46,
+        15,
+        0,
+        9
+      ],
+      [
+        114,
+        232,
+        53,
+        307,
+        783,
+        11,
+        0,
+        0
+      ],
+      [
+        18,
+        141,
+        51,
+        356,
+        55,
+        238,
+        0,
+        0
+      ],
+      [
+        9,
+        18,
+        42,
+        0,
+        0,
+        0,
+        90,
+        0
+      ],
+      [
+        48,
+        26,
+        2,
+        103,
+        22,
+        0,
+        0,
+        59
+      ]
+    ],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 32
+    },
+    "addressSize": 24,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 32
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 96
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.7035999320767533,
+      "precision_macro": 0.7928325306783512,
+      "precision_weighted": 0.7255406482866933,
+      "recall_macro": 0.5822225264936238,
+      "recall_weighted": 0.7035999320767533,
+      "f1_macro": 0.6237512348052809,
+      "f1_weighted": 0.6917256076669265,
+      "auc_roc": 0.9347480737130142,
+      "memory_bytes_serialized": 82274,
+      "memory_bytes_theoretical": 4096,
+      "train_time_s": 2.6013137470001766,
+      "inference_latency_us": 847.7515000322455
+    },
+    "confusion_matrix": [
+      [
+        1070,
+        52,
+        12,
+        343,
+        22,
+        1,
+        0,
+        0
+      ],
+      [
+        161,
+        1071,
+        28,
+        196,
+        24,
+        20,
+        0,
+        0
+      ],
+      [
+        117,
+        89,
+        1117,
+        154,
+        13,
+        8,
+        2,
+        0
+      ],
+      [
+        314,
+        257,
+        47,
+        3806,
+        52,
+        24,
+        0,
+        0
+      ],
+      [
+        112,
+        151,
+        48,
+        361,
+        821,
+        7,
+        0,
+        0
+      ],
+      [
+        1,
+        72,
+        42,
+        429,
+        53,
+        262,
+        0,
+        0
+      ],
+      [
+        8,
+        18,
+        30,
+        1,
+        0,
+        0,
+        102,
+        0
+      ],
+      [
+        20,
+        18,
+        11,
+        126,
+        47,
+        0,
+        0,
+        38
+      ]
+    ],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 32
+    },
+    "addressSize": 28,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 15
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 96
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.695279334352182,
+      "precision_macro": 0.789175399286317,
+      "precision_weighted": 0.7332072385371872,
+      "recall_macro": 0.6051191975119864,
+      "recall_weighted": 0.695279334352182,
+      "f1_macro": 0.6348383135644344,
+      "f1_weighted": 0.6887290133621313,
+      "auc_roc": 0.9431300936321786,
+      "memory_bytes_serialized": 84834,
+      "memory_bytes_theoretical": 4096,
+      "train_time_s": 4.698189226000068,
+      "inference_latency_us": 936.5045000322425
+    },
+    "confusion_matrix": [
+      [
+        1260,
+        26,
+        19,
+        168,
+        22,
+        5,
+        0,
+        0
+      ],
+      [
+        183,
+        1170,
+        18,
+        109,
+        6,
+        14,
+        0,
+        0
+      ],
+      [
+        146,
+        107,
+        1154,
+        77,
+        7,
+        9,
+        0,
+        0
+      ],
+      [
+        610,
+        336,
+        98,
+        3402,
+        26,
+        28,
+        0,
+        0
+      ],
+      [
+        98,
+        262,
+        65,
+        305,
+        758,
+        12,
+        0,
+        0
+      ],
+      [
+        21,
+        117,
+        39,
+        334,
+        58,
+        290,
+        0,
+        0
+      ],
+      [
+        10,
+        22,
+        22,
+        0,
+        0,
+        0,
+        105,
+        0
+      ],
+      [
+        36,
+        27,
+        9,
+        115,
+        21,
+        2,
+        0,
+        50
+      ]
+    ],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 32
+    },
+    "addressSize": 32,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 8
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 96
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.7014773306164035,
+      "precision_macro": 0.7917084614808261,
+      "precision_weighted": 0.7438745336021051,
+      "recall_macro": 0.6222431129437795,
+      "recall_weighted": 0.7014773306164035,
+      "f1_macro": 0.6515105768433175,
+      "f1_weighted": 0.6968635873313636,
+      "auc_roc": 0.9560237737877397,
+      "memory_bytes_serialized": 65873,
+      "memory_bytes_theoretical": 3072,
+      "train_time_s": 2.5671580870000525,
+      "inference_latency_us": 871.533500003352
+    },
+    "confusion_matrix": [
+      [
+        1327,
+        20,
+        14,
+        124,
+        14,
+        1,
+        0,
+        0
+      ],
+      [
+        228,
+        1167,
+        10,
+        60,
+        9,
+        20,
+        4,
+        2
+      ],
+      [
+        126,
+        123,
+        1200,
+        45,
+        3,
+        3,
+        0,
+        0
+      ],
+      [
+        681,
+        334,
+        133,
+        3310,
+        27,
+        14,
+        0,
+        1
+      ],
+      [
+        123,
+        182,
+        87,
+        331,
+        773,
+        4,
+        0,
+        0
+      ],
+      [
+        32,
+        102,
+        48,
+        311,
+        49,
+        317,
+        0,
+        0
+      ],
+      [
+        10,
+        29,
+        18,
+        0,
+        0,
+        0,
+        102,
+        0
+      ],
+      [
+        25,
+        7,
+        3,
+        136,
+        21,
+        2,
+        0,
+        66
+      ]
+    ],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 64
+    },
+    "addressSize": 4,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 9400
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 192
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.3864832739004924,
+      "precision_macro": 0.06883218982275587,
+      "precision_weighted": 0.17025229757954985,
+      "recall_macro": 0.12933333333333333,
+      "recall_weighted": 0.3864832739004924,
+      "f1_macro": 0.07764558585895966,
+      "f1_weighted": 0.22285186684019861,
+      "auc_roc": 0.5372344282260441,
+      "memory_bytes_serialized": 819654,
+      "memory_bytes_theoretical": 49152,
+      "train_time_s": 10.486230173999957,
+      "inference_latency_us": 1117.227500003537
+    },
+    "confusion_matrix": [
+      [
+        52,
+        0,
+        0,
+        1448,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        135,
+        0,
+        0,
+        1365,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        88,
+        0,
+        0,
+        1412,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4500,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        55,
+        0,
+        0,
+        1445,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        859,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        159,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        260,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 64
+    },
+    "addressSize": 8,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 60
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 192
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.6609780947529292,
+      "precision_macro": 0.6373182146474725,
+      "precision_weighted": 0.6689808314052107,
+      "recall_macro": 0.5198735371928258,
+      "recall_weighted": 0.6609780947529292,
+      "f1_macro": 0.5438904592286053,
+      "f1_weighted": 0.6453619375538192,
+      "auc_roc": 0.9079226823552018,
+      "memory_bytes_serialized": 426242,
+      "memory_bytes_theoretical": 24576,
+      "train_time_s": 7.0348003470001,
+      "inference_latency_us": 973.4555000022738
+    },
+    "confusion_matrix": [
+      [
+        1056,
+        76,
+        53,
+        269,
+        42,
+        4,
+        0,
+        0
+      ],
+      [
+        185,
+        974,
+        59,
+        224,
+        52,
+        4,
+        2,
+        0
+      ],
+      [
+        122,
+        200,
+        1034,
+        119,
+        25,
+        0,
+        0,
+        0
+      ],
+      [
+        428,
+        240,
+        108,
+        3638,
+        65,
+        21,
+        0,
+        0
+      ],
+      [
+        91,
+        185,
+        62,
+        379,
+        781,
+        2,
+        0,
+        0
+      ],
+      [
+        39,
+        86,
+        55,
+        412,
+        50,
+        217,
+        0,
+        0
+      ],
+      [
+        18,
+        16,
+        40,
+        0,
+        0,
+        0,
+        85,
+        0
+      ],
+      [
+        38,
+        22,
+        21,
+        150,
+        29,
+        0,
+        0,
+        0
+      ]
+    ],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 64
+    },
+    "addressSize": 12,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 27
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 192
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.6856851757514009,
+      "precision_macro": 0.7724353541090643,
+      "precision_weighted": 0.7112262323372873,
+      "recall_macro": 0.5793318125864637,
+      "recall_weighted": 0.6856851757514009,
+      "f1_macro": 0.6161617899344449,
+      "f1_weighted": 0.6778047634564479,
+      "auc_roc": 0.937043002005645,
+      "memory_bytes_serialized": 295106,
+      "memory_bytes_theoretical": 16384,
+      "train_time_s": 6.712582501000043,
+      "inference_latency_us": 931.6869999338451
+    },
+    "confusion_matrix": [
+      [
+        1180,
+        39,
+        35,
+        225,
+        17,
+        4,
+        0,
+        0
+      ],
+      [
+        212,
+        1011,
+        39,
+        151,
+        55,
+        30,
+        2,
+        0
+      ],
+      [
+        73,
+        167,
+        1079,
+        165,
+        13,
+        3,
+        0,
+        0
+      ],
+      [
+        457,
+        333,
+        97,
+        3554,
+        32,
+        27,
+        0,
+        0
+      ],
+      [
+        73,
+        187,
+        47,
+        342,
+        830,
+        21,
+        0,
+        0
+      ],
+      [
+        20,
+        92,
+        41,
+        366,
+        60,
+        280,
+        0,
+        0
+      ],
+      [
+        9,
+        14,
+        38,
+        0,
+        0,
+        0,
+        98,
+        0
+      ],
+      [
+        44,
+        12,
+        1,
+        148,
+        11,
+        0,
+        0,
+        44
+      ]
+    ],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 64
+    },
+    "addressSize": 16,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 14
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 192
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.7018169468500595,
+      "precision_macro": 0.7813509507072909,
+      "precision_weighted": 0.7353361517788122,
+      "recall_macro": 0.6196909254938228,
+      "recall_weighted": 0.7018169468500595,
+      "f1_macro": 0.6533424144468493,
+      "f1_weighted": 0.6967101811262199,
+      "auc_roc": 0.9454891913298729,
+      "memory_bytes_serialized": 229538,
+      "memory_bytes_theoretical": 12288,
+      "train_time_s": 6.501342644999795,
+      "inference_latency_us": 966.2490000437174
+    },
+    "confusion_matrix": [
+      [
+        1223,
+        26,
+        21,
+        218,
+        9,
+        3,
+        0,
+        0
+      ],
+      [
+        201,
+        1150,
+        19,
+        91,
+        29,
+        6,
+        2,
+        2
+      ],
+      [
+        112,
+        97,
+        1164,
+        108,
+        15,
+        0,
+        4,
+        0
+      ],
+      [
+        482,
+        440,
+        90,
+        3434,
+        31,
+        17,
+        0,
+        6
+      ],
+      [
+        85,
+        210,
+        38,
+        324,
+        829,
+        13,
+        0,
+        1
+      ],
+      [
+        8,
+        129,
+        38,
+        339,
+        57,
+        288,
+        0,
+        0
+      ],
+      [
+        21,
+        14,
+        16,
+        0,
+        0,
+        0,
+        108,
+        0
+      ],
+      [
+        22,
+        12,
+        1,
+        148,
+        2,
+        5,
+        0,
+        70
+      ]
+    ],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 64
+    },
+    "addressSize": 20,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 12
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 192
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.7303447104771608,
+      "precision_macro": 0.801308873358284,
+      "precision_weighted": 0.7577534763637939,
+      "recall_macro": 0.6450211337444353,
+      "recall_weighted": 0.7303447104771608,
+      "f1_macro": 0.6795169466061064,
+      "f1_weighted": 0.7261253028596913,
+      "auc_roc": 0.9559264598583548,
+      "memory_bytes_serialized": 198034,
+      "memory_bytes_theoretical": 10240,
+      "train_time_s": 6.244640701000208,
+      "inference_latency_us": 994.942000033916
+    },
+    "confusion_matrix": [
+      [
+        1261,
+        32,
+        18,
+        169,
+        17,
+        3,
+        0,
+        0
+      ],
+      [
+        174,
+        1174,
+        18,
+        96,
+        35,
+        3,
+        0,
+        0
+      ],
+      [
+        121,
+        86,
+        1173,
+        86,
+        21,
+        11,
+        2,
+        0
+      ],
+      [
+        444,
+        354,
+        78,
+        3575,
+        25,
+        19,
+        0,
+        5
+      ],
+      [
+        88,
+        184,
+        44,
+        271,
+        895,
+        18,
+        0,
+        0
+      ],
+      [
+        11,
+        132,
+        25,
+        287,
+        58,
+        345,
+        0,
+        1
+      ],
+      [
+        13,
+        17,
+        17,
+        0,
+        0,
+        0,
+        112,
+        0
+      ],
+      [
+        20,
+        12,
+        0,
+        152,
+        5,
+        4,
+        0,
+        67
+      ]
+    ],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 64
+    },
+    "addressSize": 24,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 9
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 192
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.7444387841738835,
+      "precision_macro": 0.8077242840020816,
+      "precision_weighted": 0.7696233830745981,
+      "recall_macro": 0.668078049533488,
+      "recall_weighted": 0.7444387841738835,
+      "f1_macro": 0.7028377708190833,
+      "f1_weighted": 0.7407034321290241,
+      "auc_roc": 0.9630896997518207,
+      "memory_bytes_serialized": 163970,
+      "memory_bytes_theoretical": 8192,
+      "train_time_s": 5.467610541999875,
+      "inference_latency_us": 865.3470000581365
+    },
+    "confusion_matrix": [
+      [
+        1296,
+        24,
+        12,
+        154,
+        12,
+        1,
+        0,
+        1
+      ],
+      [
+        181,
+        1185,
+        21,
+        92,
+        11,
+        8,
+        2,
+        0
+      ],
+      [
+        85,
+        84,
+        1234,
+        75,
+        15,
+        5,
+        2,
+        0
+      ],
+      [
+        393,
+        342,
+        117,
+        3596,
+        19,
+        32,
+        0,
+        1
+      ],
+      [
+        74,
+        187,
+        40,
+        290,
+        885,
+        22,
+        0,
+        2
+      ],
+      [
+        17,
+        117,
+        54,
+        273,
+        24,
+        370,
+        0,
+        4
+      ],
+      [
+        13,
+        17,
+        18,
+        0,
+        0,
+        0,
+        111,
+        0
+      ],
+      [
+        21,
+        11,
+        1,
+        125,
+        7,
+        4,
+        0,
+        91
+      ]
+    ],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 64
+    },
+    "addressSize": 28,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 9
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 192
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.7548819833588045,
+      "precision_macro": 0.8255888363941989,
+      "precision_weighted": 0.7768750588999828,
+      "recall_macro": 0.6769972149521868,
+      "recall_weighted": 0.7548819833588045,
+      "f1_macro": 0.7142434312565286,
+      "f1_weighted": 0.7494456324409139,
+      "auc_roc": 0.9656209644472671,
+      "memory_bytes_serialized": 148218,
+      "memory_bytes_theoretical": 7168,
+      "train_time_s": 5.09758897200004,
+      "inference_latency_us": 973.553499989066
+    },
+    "confusion_matrix": [
+      [
+        1264,
+        26,
+        19,
+        180,
+        7,
+        4,
+        0,
+        0
+      ],
+      [
+        170,
+        1195,
+        19,
+        98,
+        11,
+        7,
+        0,
+        0
+      ],
+      [
+        87,
+        66,
+        1269,
+        71,
+        4,
+        1,
+        2,
+        0
+      ],
+      [
+        363,
+        277,
+        103,
+        3696,
+        31,
+        30,
+        0,
+        0
+      ],
+      [
+        84,
+        139,
+        45,
+        312,
+        909,
+        7,
+        0,
+        4
+      ],
+      [
+        19,
+        92,
+        38,
+        335,
+        26,
+        349,
+        0,
+        0
+      ],
+      [
+        5,
+        20,
+        14,
+        0,
+        0,
+        0,
+        120,
+        0
+      ],
+      [
+        22,
+        5,
+        1,
+        121,
+        17,
+        5,
+        0,
+        89
+      ]
+    ],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  },
+  {
+    "model": "BTHOWeN",
+    "base": "Weather",
+    "task": "multiclass",
+    "encoder": {
+      "type": "Gaussian",
+      "size": 64
+    },
+    "addressSize": 32,
+    "model_hyperparams": {
+      "filter_entries": 1024,
+      "filter_hashes": 2,
+      "bleach_value": 5
+    },
+    "split": {
+      "random_state": 0,
+      "test_size": 0.3,
+      "stratified": true
+    },
+    "input": {
+      "n_features_num": 3,
+      "n_features_cat": 0,
+      "cat_bits": 0,
+      "bits_total": 192
+    },
+    "skipped": false,
+    "skipped_reason": null,
+    "metrics": {
+      "accuracy": 0.761334691798268,
+      "precision_macro": 0.8220350952902841,
+      "precision_weighted": 0.7855023508454333,
+      "recall_macro": 0.6994527880421856,
+      "recall_weighted": 0.761334691798268,
+      "f1_macro": 0.728272863882806,
+      "f1_weighted": 0.7582336686670418,
+      "auc_roc": 0.9704742300676331,
+      "memory_bytes_serialized": 131186,
+      "memory_bytes_theoretical": 6144,
+      "train_time_s": 4.904867138999862,
+      "inference_latency_us": 1432.4525001256916
+    },
+    "confusion_matrix": [
+      [
+        1353,
+        8,
+        14,
+        113,
+        12,
+        0,
+        0,
+        0
+      ],
+      [
+        186,
+        1198,
+        20,
+        65,
+        26,
+        3,
+        2,
+        0
+      ],
+      [
+        68,
+        75,
+        1294,
+        57,
+        2,
+        3,
+        1,
+        0
+      ],
+      [
+        433,
+        348,
+        115,
+        3544,
+        32,
+        19,
+        0,
+        9
+      ],
+      [
+        74,
+        166,
+        36,
+        239,
+        975,
+        10,
+        0,
+        0
+      ],
+      [
+        18,
+        103,
+        42,
+        273,
+        39,
+        384,
+        0,
+        0
+      ],
+      [
+        5,
+        10,
+        18,
+        0,
+        0,
+        1,
+        125,
+        0
+      ],
+      [
+        16,
+        5,
+        0,
+        125,
+        15,
+        5,
+        0,
+        94
+      ]
+    ],
+    "labels": [
+      "backdoor",
+      "ddos",
+      "injection",
+      "normal",
+      "password",
+      "ransomware",
+      "scanning",
+      "xss"
+    ],
+    "machine": "Google Colab CPU \u2014 Intel(R) Xeon(R) CPU @ 2.20GHz 13GB RAM",
+    "wisardpkg_version": "BTHOWeN-standalone-1.0",
+    "timestamp": "2026-05-21T02:07:05Z"
+  }
+]

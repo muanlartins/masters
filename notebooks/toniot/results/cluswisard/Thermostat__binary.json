@@ -1,0 +1,642 @@
+[
+  {
+    "dataset": "Thermostat",
+    "task": "binary",
+    "thermometer_type": "Distributive",
+    "thermometer_size": 8,
+    "address_size": 4,
+    "total_input_bits": 9,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 22941,
+    "n_test": 9833,
+    "train_time_s": 0.04519,
+    "infer_latency_us": 36.6987,
+    "memory_bytes": 5035,
+    "memory_kb": 4.92,
+    "accuracy": 0.5422556696837181,
+    "precision_macro": 0.5190967963498994,
+    "recall_macro": 0.5008434277142321,
+    "f1_macro": 0.3622508424737282,
+    "precision_weighted": 0.5211031761197457,
+    "recall_weighted": 0.5422556696837181,
+    "f1_weighted": 0.39095375615403477,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        54,
+        4446
+      ],
+      [
+        55,
+        5278
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "dataset": "Thermostat",
+    "task": "binary",
+    "thermometer_type": "Distributive",
+    "thermometer_size": 8,
+    "address_size": 8,
+    "total_input_bits": 9,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 22941,
+    "n_test": 9833,
+    "train_time_s": 0.04514,
+    "infer_latency_us": 18.4939,
+    "memory_bytes": 4639,
+    "memory_kb": 4.53,
+    "accuracy": 0.5422556696837181,
+    "precision_macro": 0.5190967963498994,
+    "recall_macro": 0.5008434277142321,
+    "f1_macro": 0.3622508424737282,
+    "precision_weighted": 0.5211031761197457,
+    "recall_weighted": 0.5422556696837181,
+    "f1_weighted": 0.39095375615403477,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        54,
+        4446
+      ],
+      [
+        55,
+        5278
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "dataset": "Thermostat",
+    "task": "binary",
+    "thermometer_type": "Distributive",
+    "thermometer_size": 16,
+    "address_size": 4,
+    "total_input_bits": 17,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 22941,
+    "n_test": 9833,
+    "train_time_s": 0.11892,
+    "infer_latency_us": 163.0785,
+    "memory_bytes": 13449,
+    "memory_kb": 13.13,
+    "accuracy": 0.5393064171666836,
+    "precision_macro": 0.49045200945385903,
+    "recall_macro": 0.49906169135570977,
+    "f1_macro": 0.37094635358235917,
+    "precision_weighted": 0.4948086866431089,
+    "recall_weighted": 0.5393064171666836,
+    "f1_weighted": 0.3985154381048168,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        108,
+        4392
+      ],
+      [
+        138,
+        5195
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "dataset": "Thermostat",
+    "task": "binary",
+    "thermometer_type": "Distributive",
+    "thermometer_size": 16,
+    "address_size": 8,
+    "total_input_bits": 17,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 22941,
+    "n_test": 9833,
+    "train_time_s": 0.10974,
+    "infer_latency_us": 68.6633,
+    "memory_bytes": 11535,
+    "memory_kb": 11.26,
+    "accuracy": 0.5393064171666836,
+    "precision_macro": 0.49045200945385903,
+    "recall_macro": 0.49906169135570977,
+    "f1_macro": 0.37094635358235917,
+    "precision_weighted": 0.4948086866431089,
+    "recall_weighted": 0.5393064171666836,
+    "f1_weighted": 0.3985154381048168,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        108,
+        4392
+      ],
+      [
+        138,
+        5195
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "dataset": "Thermostat",
+    "task": "binary",
+    "thermometer_type": "Distributive",
+    "thermometer_size": 16,
+    "address_size": 16,
+    "total_input_bits": 17,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 22941,
+    "n_test": 9833,
+    "train_time_s": 0.11829,
+    "infer_latency_us": 39.2267,
+    "memory_bytes": 11541,
+    "memory_kb": 11.27,
+    "accuracy": 0.5393064171666836,
+    "precision_macro": 0.49045200945385903,
+    "recall_macro": 0.49906169135570977,
+    "f1_macro": 0.37094635358235917,
+    "precision_weighted": 0.4948086866431089,
+    "recall_weighted": 0.5393064171666836,
+    "f1_weighted": 0.3985154381048168,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        108,
+        4392
+      ],
+      [
+        138,
+        5195
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "dataset": "Thermostat",
+    "task": "binary",
+    "thermometer_type": "Distributive",
+    "thermometer_size": 32,
+    "address_size": 4,
+    "total_input_bits": 33,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 22941,
+    "n_test": 9833,
+    "train_time_s": 0.41936,
+    "infer_latency_us": 659.3317,
+    "memory_bytes": 41618,
+    "memory_kb": 40.64,
+    "accuracy": 0.5413403844198108,
+    "precision_macro": 0.5093573926073927,
+    "recall_macro": 0.5007806112882055,
+    "f1_macro": 0.37027258879379393,
+    "precision_weighted": 0.5121865135779506,
+    "recall_weighted": 0.5413403844198108,
+    "f1_weighted": 0.3980773641609105,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        99,
+        4401
+      ],
+      [
+        109,
+        5224
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "dataset": "Thermostat",
+    "task": "binary",
+    "thermometer_type": "Distributive",
+    "thermometer_size": 32,
+    "address_size": 8,
+    "total_input_bits": 33,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 22941,
+    "n_test": 9833,
+    "train_time_s": 0.33677,
+    "infer_latency_us": 300.4063,
+    "memory_bytes": 33145,
+    "memory_kb": 32.37,
+    "accuracy": 0.5413403844198108,
+    "precision_macro": 0.5093573926073927,
+    "recall_macro": 0.5007806112882055,
+    "f1_macro": 0.37027258879379393,
+    "precision_weighted": 0.5121865135779506,
+    "recall_weighted": 0.5413403844198108,
+    "f1_weighted": 0.3980773641609105,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        99,
+        4401
+      ],
+      [
+        109,
+        5224
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "dataset": "Thermostat",
+    "task": "binary",
+    "thermometer_type": "Distributive",
+    "thermometer_size": 32,
+    "address_size": 16,
+    "total_input_bits": 33,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 22941,
+    "n_test": 9833,
+    "train_time_s": 0.30612,
+    "infer_latency_us": 150.6866,
+    "memory_bytes": 31046,
+    "memory_kb": 30.32,
+    "accuracy": 0.5412386860571545,
+    "precision_macro": 0.5097085829051264,
+    "recall_macro": 0.5009124736962727,
+    "f1_macro": 0.3725920932876943,
+    "precision_weighted": 0.5125137282565778,
+    "recall_weighted": 0.5412386860571545,
+    "f1_weighted": 0.400148509877918,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        112,
+        4388
+      ],
+      [
+        123,
+        5210
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "dataset": "Thermostat",
+    "task": "binary",
+    "thermometer_type": "Gaussian",
+    "thermometer_size": 8,
+    "address_size": 4,
+    "total_input_bits": 9,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 22941,
+    "n_test": 9833,
+    "train_time_s": 0.04494,
+    "infer_latency_us": 35.8056,
+    "memory_bytes": 5032,
+    "memory_kb": 4.91,
+    "accuracy": 0.541950574595749,
+    "precision_macro": 0.516967706231185,
+    "recall_macro": 0.5014819884576119,
+    "f1_macro": 0.3720234952129655,
+    "precision_weighted": 0.5191823204003542,
+    "recall_weighted": 0.541950574595749,
+    "f1_weighted": 0.39969685926494175,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        107,
+        4393
+      ],
+      [
+        111,
+        5222
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "dataset": "Thermostat",
+    "task": "binary",
+    "thermometer_type": "Gaussian",
+    "thermometer_size": 8,
+    "address_size": 8,
+    "total_input_bits": 9,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 22941,
+    "n_test": 9833,
+    "train_time_s": 0.04394,
+    "infer_latency_us": 19.5997,
+    "memory_bytes": 4636,
+    "memory_kb": 4.53,
+    "accuracy": 0.541950574595749,
+    "precision_macro": 0.516967706231185,
+    "recall_macro": 0.5014819884576119,
+    "f1_macro": 0.3720234952129655,
+    "precision_weighted": 0.5191823204003542,
+    "recall_weighted": 0.541950574595749,
+    "f1_weighted": 0.39969685926494175,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        107,
+        4393
+      ],
+      [
+        111,
+        5222
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "dataset": "Thermostat",
+    "task": "binary",
+    "thermometer_type": "Gaussian",
+    "thermometer_size": 16,
+    "address_size": 4,
+    "total_input_bits": 17,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 22941,
+    "n_test": 9833,
+    "train_time_s": 0.11892,
+    "infer_latency_us": 166.2471,
+    "memory_bytes": 13087,
+    "memory_kb": 12.78,
+    "accuracy": 0.5388996237160582,
+    "precision_macro": 0.4889241762292215,
+    "recall_macro": 0.4988255099277038,
+    "f1_macro": 0.3721914173944636,
+    "precision_weighted": 0.49339999041657073,
+    "recall_weighted": 0.5388996237160582,
+    "f1_weighted": 0.3995977595823239,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        116,
+        4384
+      ],
+      [
+        150,
+        5183
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "dataset": "Thermostat",
+    "task": "binary",
+    "thermometer_type": "Gaussian",
+    "thermometer_size": 16,
+    "address_size": 8,
+    "total_input_bits": 17,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 22941,
+    "n_test": 9833,
+    "train_time_s": 0.10863,
+    "infer_latency_us": 74.1954,
+    "memory_bytes": 11198,
+    "memory_kb": 10.94,
+    "accuracy": 0.5381877351774637,
+    "precision_macro": 0.4867189798168924,
+    "recall_macro": 0.49841219242869345,
+    "f1_macro": 0.3743363534323667,
+    "precision_weighted": 0.4913634899691354,
+    "recall_weighted": 0.5381877351774637,
+    "f1_weighted": 0.4014603997347645,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        130,
+        4370
+      ],
+      [
+        171,
+        5162
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "dataset": "Thermostat",
+    "task": "binary",
+    "thermometer_type": "Gaussian",
+    "thermometer_size": 16,
+    "address_size": 16,
+    "total_input_bits": 17,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 22941,
+    "n_test": 9833,
+    "train_time_s": 0.10918,
+    "infer_latency_us": 40.8783,
+    "memory_bytes": 11234,
+    "memory_kb": 10.97,
+    "accuracy": 0.5388996237160582,
+    "precision_macro": 0.4889241762292215,
+    "recall_macro": 0.4988255099277038,
+    "f1_macro": 0.3721914173944636,
+    "precision_weighted": 0.49339999041657073,
+    "recall_weighted": 0.5388996237160582,
+    "f1_weighted": 0.3995977595823239,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        116,
+        4384
+      ],
+      [
+        150,
+        5183
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "dataset": "Thermostat",
+    "task": "binary",
+    "thermometer_type": "Gaussian",
+    "thermometer_size": 32,
+    "address_size": 4,
+    "total_input_bits": 33,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 22941,
+    "n_test": 9833,
+    "train_time_s": 0.39473,
+    "infer_latency_us": 732.5904,
+    "memory_bytes": 40363,
+    "memory_kb": 39.42,
+    "accuracy": 0.5406284958812163,
+    "precision_macro": 0.5018126628499344,
+    "recall_macro": 0.5001590307727566,
+    "f1_macro": 0.37030228428928075,
+    "precision_weighted": 0.5052542369760715,
+    "recall_weighted": 0.5406284958812163,
+    "f1_weighted": 0.3980460727632898,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        101,
+        4399
+      ],
+      [
+        118,
+        5215
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "dataset": "Thermostat",
+    "task": "binary",
+    "thermometer_type": "Gaussian",
+    "thermometer_size": 32,
+    "address_size": 8,
+    "total_input_bits": 33,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 22941,
+    "n_test": 9833,
+    "train_time_s": 0.31624,
+    "infer_latency_us": 312.2826,
+    "memory_bytes": 32133,
+    "memory_kb": 31.38,
+    "accuracy": 0.5406284958812163,
+    "precision_macro": 0.5018126628499344,
+    "recall_macro": 0.5001590307727566,
+    "f1_macro": 0.37030228428928075,
+    "precision_weighted": 0.5052542369760715,
+    "recall_weighted": 0.5406284958812163,
+    "f1_weighted": 0.3980460727632898,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        101,
+        4399
+      ],
+      [
+        118,
+        5215
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "dataset": "Thermostat",
+    "task": "binary",
+    "thermometer_type": "Gaussian",
+    "thermometer_size": 32,
+    "address_size": 16,
+    "total_input_bits": 33,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 22941,
+    "n_test": 9833,
+    "train_time_s": 0.2948,
+    "infer_latency_us": 142.7152,
+    "memory_bytes": 30082,
+    "memory_kb": 29.38,
+    "accuracy": 0.5406284958812163,
+    "precision_macro": 0.5018126628499344,
+    "recall_macro": 0.5001590307727566,
+    "f1_macro": 0.37030228428928075,
+    "precision_weighted": 0.5052542369760715,
+    "recall_weighted": 0.5406284958812163,
+    "f1_weighted": 0.3980460727632898,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        101,
+        4399
+      ],
+      [
+        118,
+        5215
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "0",
+      "1"
+    ]
+  }
+]

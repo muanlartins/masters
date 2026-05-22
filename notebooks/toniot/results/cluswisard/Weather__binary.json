@@ -1,0 +1,722 @@
+[
+  {
+    "dataset": "Weather",
+    "task": "binary",
+    "thermometer_type": "Distributive",
+    "thermometer_size": 8,
+    "address_size": 4,
+    "total_input_bits": 24,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 27481,
+    "n_test": 11779,
+    "train_time_s": 13.73542,
+    "infer_latency_us": 701.2862,
+    "memory_bytes": 59328,
+    "memory_kb": 57.94,
+    "accuracy": 0.824603107224722,
+    "precision_macro": 0.8195936057511619,
+    "recall_macro": 0.8037444246004488,
+    "f1_macro": 0.8099081156691352,
+    "precision_weighted": 0.8232853067840507,
+    "recall_weighted": 0.824603107224722,
+    "f1_weighted": 0.8223775451448528,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        3219,
+        1281
+      ],
+      [
+        785,
+        6494
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "dataset": "Weather",
+    "task": "binary",
+    "thermometer_type": "Distributive",
+    "thermometer_size": 8,
+    "address_size": 8,
+    "total_input_bits": 24,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 27481,
+    "n_test": 11779,
+    "train_time_s": 0.5868,
+    "infer_latency_us": 309.6568,
+    "memory_bytes": 48394,
+    "memory_kb": 47.26,
+    "accuracy": 0.7903047796926734,
+    "precision_macro": 0.788833099108533,
+    "recall_macro": 0.7580071285738272,
+    "f1_macro": 0.767086491909466,
+    "precision_weighted": 0.7897109270422797,
+    "recall_weighted": 0.7903047796926734,
+    "f1_weighted": 0.784436215423726,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        2795,
+        1705
+      ],
+      [
+        765,
+        6514
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "dataset": "Weather",
+    "task": "binary",
+    "thermometer_type": "Distributive",
+    "thermometer_size": 8,
+    "address_size": 16,
+    "total_input_bits": 24,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 27481,
+    "n_test": 11779,
+    "train_time_s": 0.51499,
+    "infer_latency_us": 147.9048,
+    "memory_bytes": 45082,
+    "memory_kb": 44.03,
+    "accuracy": 0.79633245606588,
+    "precision_macro": 0.7847819998895835,
+    "recall_macro": 0.7818884920089756,
+    "f1_macro": 0.7832483959738928,
+    "precision_weighted": 0.7954495697513075,
+    "recall_weighted": 0.79633245606588,
+    "f1_weighted": 0.7958125296973317,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        3243,
+        1257
+      ],
+      [
+        1142,
+        6137
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "dataset": "Weather",
+    "task": "binary",
+    "thermometer_type": "Distributive",
+    "thermometer_size": 16,
+    "address_size": 4,
+    "total_input_bits": 48,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 27481,
+    "n_test": 11779,
+    "train_time_s": 1.34465,
+    "infer_latency_us": 845.1274,
+    "memory_bytes": 119652,
+    "memory_kb": 116.85,
+    "accuracy": 0.8484591221665676,
+    "precision_macro": 0.844533443394754,
+    "recall_macro": 0.8308942925615546,
+    "f1_macro": 0.836497232049537,
+    "precision_weighted": 0.847569753249157,
+    "recall_weighted": 0.8484591221665676,
+    "f1_weighted": 0.8469310338810586,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        3404,
+        1096
+      ],
+      [
+        689,
+        6590
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "dataset": "Weather",
+    "task": "binary",
+    "thermometer_type": "Distributive",
+    "thermometer_size": 16,
+    "address_size": 8,
+    "total_input_bits": 48,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 27481,
+    "n_test": 11779,
+    "train_time_s": 1.06222,
+    "infer_latency_us": 387.8992,
+    "memory_bytes": 106635,
+    "memory_kb": 104.14,
+    "accuracy": 0.8571186008999067,
+    "precision_macro": 0.8529606635439352,
+    "recall_macro": 0.8414216391140419,
+    "f1_macro": 0.8463227057154091,
+    "precision_weighted": 0.8562954133021587,
+    "recall_weighted": 0.8571186008999067,
+    "f1_weighted": 0.8559325047921928,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        3487,
+        1013
+      ],
+      [
+        670,
+        6609
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "dataset": "Weather",
+    "task": "binary",
+    "thermometer_type": "Distributive",
+    "thermometer_size": 16,
+    "address_size": 16,
+    "total_input_bits": 48,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 27481,
+    "n_test": 11779,
+    "train_time_s": 0.77849,
+    "infer_latency_us": 254.9788,
+    "memory_bytes": 108455,
+    "memory_kb": 105.91,
+    "accuracy": 0.8248577977757026,
+    "precision_macro": 0.8157167364843969,
+    "recall_macro": 0.8110346964631894,
+    "f1_macro": 0.8131879940532469,
+    "precision_weighted": 0.8238875339525661,
+    "recall_weighted": 0.8248577977757026,
+    "f1_weighted": 0.8242037496730513,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        3386,
+        1114
+      ],
+      [
+        949,
+        6330
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "dataset": "Weather",
+    "task": "binary",
+    "thermometer_type": "Distributive",
+    "thermometer_size": 32,
+    "address_size": 4,
+    "total_input_bits": 96,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 27481,
+    "n_test": 11779,
+    "train_time_s": 2.95817,
+    "infer_latency_us": 1475.5951,
+    "memory_bytes": 231813,
+    "memory_kb": 226.38,
+    "accuracy": 0.857458188301214,
+    "precision_macro": 0.8552522368783517,
+    "recall_macro": 0.8395329639297218,
+    "f1_macro": 0.8458837869579703,
+    "precision_weighted": 0.8569194490089295,
+    "recall_weighted": 0.857458188301214,
+    "f1_weighted": 0.8558482421416364,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        3436,
+        1064
+      ],
+      [
+        615,
+        6664
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "dataset": "Weather",
+    "task": "binary",
+    "thermometer_type": "Distributive",
+    "thermometer_size": 32,
+    "address_size": 8,
+    "total_input_bits": 96,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 27481,
+    "n_test": 11779,
+    "train_time_s": 1.84387,
+    "infer_latency_us": 439.1003,
+    "memory_bytes": 197714,
+    "memory_kb": 193.08,
+    "accuracy": 0.8683249851430512,
+    "precision_macro": 0.8652286529624089,
+    "recall_macro": 0.853288562226191,
+    "f1_macro": 0.8583758268357692,
+    "precision_weighted": 0.8677119739234493,
+    "recall_weighted": 0.8683249851430512,
+    "f1_weighted": 0.8672319161810403,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        3553,
+        947
+      ],
+      [
+        604,
+        6675
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "dataset": "Weather",
+    "task": "binary",
+    "thermometer_type": "Distributive",
+    "thermometer_size": 32,
+    "address_size": 16,
+    "total_input_bits": 96,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 27481,
+    "n_test": 11779,
+    "train_time_s": 1.21472,
+    "infer_latency_us": 240.6545,
+    "memory_bytes": 212627,
+    "memory_kb": 207.64,
+    "accuracy": 0.8730792087613549,
+    "precision_macro": 0.8734912566416682,
+    "recall_macro": 0.855183908045977,
+    "f1_macro": 0.8624807647390522,
+    "precision_weighted": 0.873186794780623,
+    "recall_weighted": 0.8730792087613549,
+    "f1_weighted": 0.8714878216008195,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        3507,
+        993
+      ],
+      [
+        502,
+        6777
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "dataset": "Weather",
+    "task": "binary",
+    "thermometer_type": "Gaussian",
+    "thermometer_size": 8,
+    "address_size": 4,
+    "total_input_bits": 24,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 27481,
+    "n_test": 11779,
+    "train_time_s": 0.62902,
+    "infer_latency_us": 755.9689,
+    "memory_bytes": 55790,
+    "memory_kb": 54.48,
+    "accuracy": 0.8301214024959674,
+    "precision_macro": 0.824526176201832,
+    "recall_macro": 0.8111787486071041,
+    "f1_macro": 0.8165845051705094,
+    "precision_weighted": 0.8288203308197283,
+    "recall_weighted": 0.8301214024959674,
+    "f1_weighted": 0.8283404544415868,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        3289,
+        1211
+      ],
+      [
+        790,
+        6489
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "dataset": "Weather",
+    "task": "binary",
+    "thermometer_type": "Gaussian",
+    "thermometer_size": 8,
+    "address_size": 8,
+    "total_input_bits": 24,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 27481,
+    "n_test": 11779,
+    "train_time_s": 0.44774,
+    "infer_latency_us": 268.8193,
+    "memory_bytes": 45352,
+    "memory_kb": 44.29,
+    "accuracy": 0.8220562017149163,
+    "precision_macro": 0.8186334810359204,
+    "recall_macro": 0.7987566973485369,
+    "f1_macro": 0.8060584876599362,
+    "precision_weighted": 0.8210191697158626,
+    "recall_weighted": 0.8220562017149163,
+    "f1_weighted": 0.8191999737252008,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        3150,
+        1350
+      ],
+      [
+        746,
+        6533
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "dataset": "Weather",
+    "task": "binary",
+    "thermometer_type": "Gaussian",
+    "thermometer_size": 8,
+    "address_size": 16,
+    "total_input_bits": 24,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 27481,
+    "n_test": 11779,
+    "train_time_s": 0.42403,
+    "infer_latency_us": 139.0279,
+    "memory_bytes": 42268,
+    "memory_kb": 41.28,
+    "accuracy": 0.7844468970201206,
+    "precision_macro": 0.7822951841018324,
+    "recall_macro": 0.7514009708293263,
+    "f1_macro": 0.7603081317867634,
+    "precision_weighted": 0.7835682541891056,
+    "recall_weighted": 0.7844468970201206,
+    "f1_weighted": 0.7782539928310384,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        2751,
+        1749
+      ],
+      [
+        790,
+        6489
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "dataset": "Weather",
+    "task": "binary",
+    "thermometer_type": "Gaussian",
+    "thermometer_size": 16,
+    "address_size": 4,
+    "total_input_bits": 48,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 27481,
+    "n_test": 11779,
+    "train_time_s": 1.27032,
+    "infer_latency_us": 1028.2268,
+    "memory_bytes": 112942,
+    "memory_kb": 110.29,
+    "accuracy": 0.8274047032855081,
+    "precision_macro": 0.8270063842465734,
+    "recall_macro": 0.8020661262994001,
+    "f1_macro": 0.8107530295237027,
+    "precision_weighted": 0.8272693751254517,
+    "recall_weighted": 0.8274047032855081,
+    "f1_weighted": 0.8239971627189109,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        3126,
+        1374
+      ],
+      [
+        659,
+        6620
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "dataset": "Weather",
+    "task": "binary",
+    "thermometer_type": "Gaussian",
+    "thermometer_size": 16,
+    "address_size": 8,
+    "total_input_bits": 48,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 27481,
+    "n_test": 11779,
+    "train_time_s": 0.88374,
+    "infer_latency_us": 393.8214,
+    "memory_bytes": 97178,
+    "memory_kb": 94.9,
+    "accuracy": 0.8254520757279905,
+    "precision_macro": 0.8243508071029011,
+    "recall_macro": 0.8004013982384637,
+    "f1_macro": 0.8088120794874107,
+    "precision_weighted": 0.8250845461364957,
+    "recall_weighted": 0.8254520757279905,
+    "f1_weighted": 0.8221192879917478,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        3124,
+        1376
+      ],
+      [
+        680,
+        6599
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "dataset": "Weather",
+    "task": "binary",
+    "thermometer_type": "Gaussian",
+    "thermometer_size": 16,
+    "address_size": 16,
+    "total_input_bits": 48,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 27481,
+    "n_test": 11779,
+    "train_time_s": 0.66766,
+    "infer_latency_us": 334.8359,
+    "memory_bytes": 91076,
+    "memory_kb": 88.94,
+    "accuracy": 0.7901349859920197,
+    "precision_macro": 0.7881495538364427,
+    "recall_macro": 0.7582939506342445,
+    "f1_macro": 0.7672019591894377,
+    "precision_weighted": 0.78934511525797,
+    "recall_weighted": 0.7901349859920197,
+    "f1_weighted": 0.7844404989471806,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        2805,
+        1695
+      ],
+      [
+        777,
+        6502
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "dataset": "Weather",
+    "task": "binary",
+    "thermometer_type": "Gaussian",
+    "thermometer_size": 32,
+    "address_size": 4,
+    "total_input_bits": 96,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 27481,
+    "n_test": 11779,
+    "train_time_s": 5.73429,
+    "infer_latency_us": 3564.3415,
+    "memory_bytes": 216624,
+    "memory_kb": 211.55,
+    "accuracy": 0.8449783513031667,
+    "precision_macro": 0.8456154020474409,
+    "recall_macro": 0.8220118606035628,
+    "f1_macro": 0.8306061883353542,
+    "precision_weighted": 0.8451818081169147,
+    "recall_weighted": 0.8449783513031667,
+    "f1_weighted": 0.8422471795587733,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        3261,
+        1239
+      ],
+      [
+        587,
+        6692
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "dataset": "Weather",
+    "task": "binary",
+    "thermometer_type": "Gaussian",
+    "thermometer_size": 32,
+    "address_size": 8,
+    "total_input_bits": 96,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 27481,
+    "n_test": 11779,
+    "train_time_s": 3.46326,
+    "infer_latency_us": 1211.8054,
+    "memory_bytes": 179667,
+    "memory_kb": 175.46,
+    "accuracy": 0.8576279820018677,
+    "precision_macro": 0.8584050868921285,
+    "recall_macro": 0.8367857611698799,
+    "f1_macro": 0.8449680113905059,
+    "precision_weighted": 0.8578587740942446,
+    "recall_weighted": 0.8576279820018677,
+    "f1_weighted": 0.8554201974656618,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        3368,
+        1132
+      ],
+      [
+        545,
+        6734
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "dataset": "Weather",
+    "task": "binary",
+    "thermometer_type": "Gaussian",
+    "thermometer_size": 32,
+    "address_size": 16,
+    "total_input_bits": 96,
+    "min_score": 0.0,
+    "threshold": 1,
+    "discriminators_limit": 100,
+    "n_train": 27481,
+    "n_test": 11779,
+    "train_time_s": 1.84339,
+    "infer_latency_us": 324.7795,
+    "memory_bytes": 181886,
+    "memory_kb": 177.62,
+    "accuracy": 0.8466762883097038,
+    "precision_macro": 0.8483196556874286,
+    "recall_macro": 0.8231311535467326,
+    "f1_macro": 0.8321699477387707,
+    "precision_weighted": 0.847218397442264,
+    "recall_weighted": 0.8466762883097038,
+    "f1_weighted": 0.843811045182208,
+    "auc_roc": null,
+    "_auc_error": "float() argument must be a string or a real number, not 'dict'",
+    "confusion_matrix": [
+      [
+        3255,
+        1245
+      ],
+      [
+        561,
+        6718
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "0",
+      "1"
+    ]
+  }
+]

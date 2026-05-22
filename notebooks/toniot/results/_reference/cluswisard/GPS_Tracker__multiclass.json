@@ -1,0 +1,2906 @@
+[
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Distributive",
+   "size": 8
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 16
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.5521902806297057,
+   "precision_macro": 0.28517945023292257,
+   "precision_weighted": 0.4667433394859637,
+   "recall_macro": 0.34887254901960785,
+   "recall_weighted": 0.5521902806297057,
+   "f1_macro": 0.30883519166597767,
+   "f1_weighted": 0.5010410455522588,
+   "auc_roc": null,
+   "memory_bytes_serialized": 9944,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.010995249962434173,
+   "inference_latency_us": 52.79132165014744
+  },
+  "confusion_matrix": [
+   [
+    459,
+    365,
+    313,
+    363,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    16,
+    1104,
+    70,
+    61,
+    0,
+    249,
+    0,
+    0
+   ],
+   [
+    310,
+    326,
+    545,
+    314,
+    0,
+    5,
+    0,
+    0
+   ],
+   [
+    366,
+    0,
+    80,
+    3906,
+    0,
+    148,
+    0,
+    0
+   ],
+   [
+    88,
+    290,
+    381,
+    402,
+    0,
+    339,
+    0,
+    0
+   ],
+   [
+    0,
+    281,
+    13,
+    116,
+    0,
+    440,
+    0,
+    0
+   ],
+   [
+    0,
+    165,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    43,
+    0,
+    130,
+    0,
+    0
+   ]
+  ],
+  "labels": [
+   "backdoor",
+   "ddos",
+   "injection",
+   "normal",
+   "password",
+   "ransomware",
+   "scanning",
+   "xss"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:41Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Distributive",
+   "size": 8
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 16
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.5489390828199863,
+   "precision_macro": 0.2833040705618096,
+   "precision_weighted": 0.4669949086291428,
+   "recall_macro": 0.34781699346405226,
+   "recall_weighted": 0.5489390828199863,
+   "f1_macro": 0.30686735590148323,
+   "f1_weighted": 0.4995196658997559,
+   "auc_roc": null,
+   "memory_bytes_serialized": 9961,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.011447458993643522,
+   "inference_latency_us": 55.979471653699875
+  },
+  "confusion_matrix": [
+   [
+    459,
+    365,
+    313,
+    326,
+    0,
+    37,
+    0,
+    0
+   ],
+   [
+    16,
+    1104,
+    70,
+    61,
+    0,
+    249,
+    0,
+    0
+   ],
+   [
+    310,
+    326,
+    545,
+    309,
+    0,
+    10,
+    0,
+    0
+   ],
+   [
+    366,
+    0,
+    80,
+    3868,
+    0,
+    186,
+    0,
+    0
+   ],
+   [
+    88,
+    290,
+    381,
+    402,
+    0,
+    339,
+    0,
+    0
+   ],
+   [
+    0,
+    281,
+    13,
+    116,
+    0,
+    440,
+    0,
+    0
+   ],
+   [
+    0,
+    165,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    43,
+    0,
+    130,
+    0,
+    0
+   ]
+  ],
+  "labels": [
+   "backdoor",
+   "ddos",
+   "injection",
+   "normal",
+   "password",
+   "ransomware",
+   "scanning",
+   "xss"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:42Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Distributive",
+   "size": 8
+  },
+  "addressSize": 16,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 16
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.0944558521560575,
+   "precision_macro": 0.22427561882724995,
+   "precision_weighted": 0.32628733510652724,
+   "recall_macro": 0.3332614379084967,
+   "recall_weighted": 0.0944558521560575,
+   "f1_macro": 0.09046558798661952,
+   "f1_weighted": 0.05271861884562616,
+   "auc_roc": null,
+   "memory_bytes_serialized": 8614,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.010158167220652103,
+   "inference_latency_us": 12.167030945420265
+  },
+  "confusion_matrix": [
+   [
+    0,
+    28,
+    12,
+    37,
+    761,
+    432,
+    230,
+    0
+   ],
+   [
+    0,
+    16,
+    0,
+    0,
+    0,
+    370,
+    818,
+    296
+   ],
+   [
+    0,
+    0,
+    13,
+    5,
+    711,
+    702,
+    64,
+    5
+   ],
+   [
+    0,
+    0,
+    0,
+    38,
+    763,
+    46,
+    0,
+    3653
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    361,
+    604,
+    19,
+    516
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    338,
+    0,
+    512
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    165,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    173
+   ]
+  ],
+  "labels": [
+   "backdoor",
+   "ddos",
+   "injection",
+   "normal",
+   "password",
+   "ransomware",
+   "scanning",
+   "xss"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:43Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Distributive",
+   "size": 8
+  },
+  "addressSize": 16,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 16
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.0944558521560575,
+   "precision_macro": 0.22427561882724995,
+   "precision_weighted": 0.32628733510652724,
+   "recall_macro": 0.3332614379084967,
+   "recall_weighted": 0.0944558521560575,
+   "f1_macro": 0.09046558798661952,
+   "f1_weighted": 0.05271861884562616,
+   "auc_roc": null,
+   "memory_bytes_serialized": 8614,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.01006975001655519,
+   "inference_latency_us": 13.666925951838493
+  },
+  "confusion_matrix": [
+   [
+    0,
+    28,
+    12,
+    37,
+    761,
+    432,
+    230,
+    0
+   ],
+   [
+    0,
+    16,
+    0,
+    0,
+    0,
+    370,
+    818,
+    296
+   ],
+   [
+    0,
+    0,
+    13,
+    5,
+    711,
+    702,
+    64,
+    5
+   ],
+   [
+    0,
+    0,
+    0,
+    38,
+    763,
+    46,
+    0,
+    3653
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    361,
+    604,
+    19,
+    516
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    338,
+    0,
+    512
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    165,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    173
+   ]
+  ],
+  "labels": [
+   "backdoor",
+   "ddos",
+   "injection",
+   "normal",
+   "password",
+   "ransomware",
+   "scanning",
+   "xss"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:43Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Distributive",
+   "size": 8
+  },
+  "addressSize": 24,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 16
+  },
+  "skipped": true,
+  "skipped_reason": "addressSize > bits_total",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:43Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Distributive",
+   "size": 8
+  },
+  "addressSize": 24,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 16
+  },
+  "skipped": true,
+  "skipped_reason": "addressSize > bits_total",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:43Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Distributive",
+   "size": 16
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 32
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.5493668720054757,
+   "precision_macro": 0.338755101866822,
+   "precision_weighted": 0.49887882269123957,
+   "recall_macro": 0.32614705882352946,
+   "recall_weighted": 0.5493668720054757,
+   "f1_macro": 0.32220240819323265,
+   "f1_weighted": 0.5094703189014848,
+   "auc_roc": null,
+   "memory_bytes_serialized": 18290,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.015949416905641556,
+   "inference_latency_us": 105.6039473041892
+  },
+  "confusion_matrix": [
+   [
+    337,
+    267,
+    394,
+    502,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    7,
+    837,
+    288,
+    88,
+    121,
+    159,
+    0,
+    0
+   ],
+   [
+    189,
+    84,
+    640,
+    518,
+    24,
+    45,
+    0,
+    0
+   ],
+   [
+    241,
+    10,
+    2,
+    4113,
+    134,
+    0,
+    0,
+    0
+   ],
+   [
+    27,
+    21,
+    533,
+    582,
+    187,
+    150,
+    0,
+    0
+   ],
+   [
+    0,
+    7,
+    178,
+    171,
+    187,
+    307,
+    0,
+    0
+   ],
+   [
+    3,
+    162,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    53,
+    72,
+    48,
+    0,
+    0
+   ]
+  ],
+  "labels": [
+   "backdoor",
+   "ddos",
+   "injection",
+   "normal",
+   "password",
+   "ransomware",
+   "scanning",
+   "xss"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:46Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Distributive",
+   "size": 16
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 32
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.5530458590006845,
+   "precision_macro": 0.33161255682506263,
+   "precision_weighted": 0.4930734363242367,
+   "recall_macro": 0.33045261437908496,
+   "recall_weighted": 0.5530458590006845,
+   "f1_macro": 0.32046253156347737,
+   "f1_weighted": 0.5084076906527943,
+   "auc_roc": null,
+   "memory_bytes_serialized": 18243,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.01583820814266801,
+   "inference_latency_us": 123.45798313617706
+  },
+  "confusion_matrix": [
+   [
+    367,
+    351,
+    319,
+    463,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    7,
+    991,
+    134,
+    88,
+    121,
+    159,
+    0,
+    0
+   ],
+   [
+    191,
+    229,
+    528,
+    502,
+    5,
+    45,
+    0,
+    0
+   ],
+   [
+    267,
+    8,
+    19,
+    4100,
+    106,
+    0,
+    0,
+    0
+   ],
+   [
+    28,
+    163,
+    409,
+    579,
+    171,
+    150,
+    0,
+    0
+   ],
+   [
+    0,
+    138,
+    47,
+    171,
+    187,
+    307,
+    0,
+    0
+   ],
+   [
+    3,
+    162,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    53,
+    72,
+    48,
+    0,
+    0
+   ]
+  ],
+  "labels": [
+   "backdoor",
+   "ddos",
+   "injection",
+   "normal",
+   "password",
+   "ransomware",
+   "scanning",
+   "xss"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:49Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Distributive",
+   "size": 16
+  },
+  "addressSize": 16,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 32
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.5495379876796714,
+   "precision_macro": 0.34104120138184385,
+   "precision_weighted": 0.5040510413758009,
+   "recall_macro": 0.3288692810457517,
+   "recall_weighted": 0.5495379876796714,
+   "f1_macro": 0.3263337544734812,
+   "f1_weighted": 0.5145685142485957,
+   "auc_roc": null,
+   "memory_bytes_serialized": 15373,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.013831958873197436,
+   "inference_latency_us": 44.479500502347946
+  },
+  "confusion_matrix": [
+   [
+    367,
+    267,
+    394,
+    463,
+    9,
+    0,
+    0,
+    0
+   ],
+   [
+    7,
+    837,
+    288,
+    88,
+    121,
+    159,
+    0,
+    0
+   ],
+   [
+    191,
+    84,
+    640,
+    483,
+    57,
+    45,
+    0,
+    0
+   ],
+   [
+    267,
+    2,
+    2,
+    4067,
+    151,
+    0,
+    0,
+    11
+   ],
+   [
+    28,
+    21,
+    533,
+    557,
+    205,
+    150,
+    0,
+    6
+   ],
+   [
+    0,
+    7,
+    178,
+    154,
+    187,
+    307,
+    0,
+    17
+   ],
+   [
+    3,
+    162,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    53,
+    72,
+    48,
+    0,
+    0
+   ]
+  ],
+  "labels": [
+   "backdoor",
+   "ddos",
+   "injection",
+   "normal",
+   "password",
+   "ransomware",
+   "scanning",
+   "xss"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:50Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Distributive",
+   "size": 16
+  },
+  "addressSize": 16,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 32
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.5530458590006845,
+   "precision_macro": 0.3451319851191266,
+   "precision_weighted": 0.50691623489304,
+   "recall_macro": 0.33073039215686273,
+   "recall_weighted": 0.5530458590006845,
+   "f1_macro": 0.3286787151377948,
+   "f1_weighted": 0.5167131519207404,
+   "auc_roc": null,
+   "memory_bytes_serialized": 15327,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.01368162501603365,
+   "inference_latency_us": 36.33310552686453
+  },
+  "confusion_matrix": [
+   [
+    391,
+    267,
+    368,
+    474,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    7,
+    837,
+    288,
+    88,
+    121,
+    159,
+    0,
+    0
+   ],
+   [
+    191,
+    84,
+    632,
+    509,
+    39,
+    45,
+    0,
+    0
+   ],
+   [
+    269,
+    0,
+    9,
+    4095,
+    114,
+    0,
+    0,
+    13
+   ],
+   [
+    27,
+    21,
+    517,
+    577,
+    202,
+    150,
+    0,
+    6
+   ],
+   [
+    0,
+    7,
+    178,
+    154,
+    187,
+    307,
+    0,
+    17
+   ],
+   [
+    3,
+    162,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    53,
+    72,
+    48,
+    0,
+    0
+   ]
+  ],
+  "labels": [
+   "backdoor",
+   "ddos",
+   "injection",
+   "normal",
+   "password",
+   "ransomware",
+   "scanning",
+   "xss"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:51Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Distributive",
+   "size": 16
+  },
+  "addressSize": 24,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 32
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.5550992470910335,
+   "precision_macro": 0.3454921739212539,
+   "precision_weighted": 0.5096267898117809,
+   "recall_macro": 0.3346748366013072,
+   "recall_weighted": 0.5550992470910335,
+   "f1_macro": 0.330639042458964,
+   "f1_weighted": 0.51947970787909,
+   "auc_roc": null,
+   "memory_bytes_serialized": 18715,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.01662662485614419,
+   "inference_latency_us": 39.81194458901882
+  },
+  "confusion_matrix": [
+   [
+    421,
+    267,
+    377,
+    435,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    7,
+    830,
+    288,
+    88,
+    128,
+    159,
+    0,
+    0
+   ],
+   [
+    193,
+    84,
+    699,
+    474,
+    5,
+    45,
+    0,
+    0
+   ],
+   [
+    295,
+    0,
+    28,
+    4060,
+    104,
+    0,
+    0,
+    13
+   ],
+   [
+    28,
+    21,
+    566,
+    558,
+    171,
+    150,
+    0,
+    6
+   ],
+   [
+    0,
+    7,
+    178,
+    154,
+    187,
+    307,
+    0,
+    17
+   ],
+   [
+    3,
+    162,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    53,
+    72,
+    48,
+    0,
+    0
+   ]
+  ],
+  "labels": [
+   "backdoor",
+   "ddos",
+   "injection",
+   "normal",
+   "password",
+   "ransomware",
+   "scanning",
+   "xss"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:52Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Distributive",
+   "size": 16
+  },
+  "addressSize": 24,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 32
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.5551848049281314,
+   "precision_macro": 0.34560535629044475,
+   "precision_weighted": 0.5096628549027928,
+   "recall_macro": 0.3350915032679739,
+   "recall_weighted": 0.5551848049281314,
+   "f1_macro": 0.3308454913122621,
+   "f1_weighted": 0.5195105336060205,
+   "auc_roc": null,
+   "memory_bytes_serialized": 18672,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.016966999974101782,
+   "inference_latency_us": 48.208399675786495
+  },
+  "confusion_matrix": [
+   [
+    421,
+    267,
+    377,
+    435,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    7,
+    837,
+    288,
+    88,
+    121,
+    159,
+    0,
+    0
+   ],
+   [
+    193,
+    84,
+    699,
+    474,
+    5,
+    45,
+    0,
+    0
+   ],
+   [
+    295,
+    8,
+    28,
+    4054,
+    104,
+    0,
+    0,
+    11
+   ],
+   [
+    28,
+    21,
+    566,
+    558,
+    171,
+    150,
+    0,
+    6
+   ],
+   [
+    0,
+    7,
+    178,
+    154,
+    187,
+    307,
+    0,
+    17
+   ],
+   [
+    3,
+    162,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    53,
+    72,
+    48,
+    0,
+    0
+   ]
+  ],
+  "labels": [
+   "backdoor",
+   "ddos",
+   "injection",
+   "normal",
+   "password",
+   "ransomware",
+   "scanning",
+   "xss"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:53Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 16
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.5289185489390829,
+   "precision_macro": 0.30354888110239886,
+   "precision_weighted": 0.44460553209373266,
+   "recall_macro": 0.2894934640522876,
+   "recall_weighted": 0.5289185489390829,
+   "f1_macro": 0.2761710044861609,
+   "f1_weighted": 0.45266139947719275,
+   "auc_roc": null,
+   "memory_bytes_serialized": 7799,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.008807542035356164,
+   "inference_latency_us": 42.39566624164581
+  },
+  "confusion_matrix": [
+   [
+    348,
+    35,
+    260,
+    753,
+    0,
+    104,
+    0,
+    0
+   ],
+   [
+    283,
+    551,
+    110,
+    288,
+    0,
+    268,
+    0,
+    0
+   ],
+   [
+    111,
+    0,
+    478,
+    684,
+    0,
+    227,
+    0,
+    0
+   ],
+   [
+    14,
+    0,
+    27,
+    4459,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    19,
+    363,
+    856,
+    0,
+    262,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    27,
+    477,
+    0,
+    346,
+    0,
+    0
+   ],
+   [
+    23,
+    142,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    171,
+    0,
+    2,
+    0,
+    0
+   ]
+  ],
+  "labels": [
+   "backdoor",
+   "ddos",
+   "injection",
+   "normal",
+   "password",
+   "ransomware",
+   "scanning",
+   "xss"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:54Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 16
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.5289185489390829,
+   "precision_macro": 0.30354888110239886,
+   "precision_weighted": 0.44460553209373266,
+   "recall_macro": 0.2894934640522876,
+   "recall_weighted": 0.5289185489390829,
+   "f1_macro": 0.2761710044861609,
+   "f1_weighted": 0.45266139947719275,
+   "auc_roc": null,
+   "memory_bytes_serialized": 7799,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.008894874947145581,
+   "inference_latency_us": 44.5834593847394
+  },
+  "confusion_matrix": [
+   [
+    348,
+    35,
+    260,
+    753,
+    0,
+    104,
+    0,
+    0
+   ],
+   [
+    283,
+    551,
+    110,
+    288,
+    0,
+    268,
+    0,
+    0
+   ],
+   [
+    111,
+    0,
+    478,
+    684,
+    0,
+    227,
+    0,
+    0
+   ],
+   [
+    14,
+    0,
+    27,
+    4459,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    19,
+    363,
+    856,
+    0,
+    262,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    27,
+    477,
+    0,
+    346,
+    0,
+    0
+   ],
+   [
+    23,
+    142,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    171,
+    0,
+    2,
+    0,
+    0
+   ]
+  ],
+  "labels": [
+   "backdoor",
+   "ddos",
+   "injection",
+   "normal",
+   "password",
+   "ransomware",
+   "scanning",
+   "xss"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:55Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 16,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 16
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.0987337440109514,
+   "precision_macro": 0.3521020317430278,
+   "precision_weighted": 0.4616070278655756,
+   "recall_macro": 0.33769607843137256,
+   "recall_weighted": 0.0987337440109514,
+   "f1_macro": 0.0953374282038011,
+   "f1_weighted": 0.057120233587299916,
+   "auc_roc": null,
+   "memory_bytes_serialized": 6738,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.007885416969656944,
+   "inference_latency_us": 10.207993909716606
+  },
+  "confusion_matrix": [
+   [
+    18,
+    12,
+    29,
+    23,
+    762,
+    347,
+    309,
+    0
+   ],
+   [
+    0,
+    29,
+    0,
+    0,
+    4,
+    368,
+    805,
+    294
+   ],
+   [
+    0,
+    0,
+    6,
+    2,
+    795,
+    587,
+    105,
+    5
+   ],
+   [
+    0,
+    0,
+    0,
+    24,
+    820,
+    0,
+    0,
+    3656
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    409,
+    560,
+    19,
+    512
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    330,
+    0,
+    520
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    165,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    173
+   ]
+  ],
+  "labels": [
+   "backdoor",
+   "ddos",
+   "injection",
+   "normal",
+   "password",
+   "ransomware",
+   "scanning",
+   "xss"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:55Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 16,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 16
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.0987337440109514,
+   "precision_macro": 0.3521020317430278,
+   "precision_weighted": 0.4616070278655756,
+   "recall_macro": 0.33769607843137256,
+   "recall_weighted": 0.0987337440109514,
+   "f1_macro": 0.0953374282038011,
+   "f1_weighted": 0.057120233587299916,
+   "auc_roc": null,
+   "memory_bytes_serialized": 6738,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.007707457989454269,
+   "inference_latency_us": 9.999959729611874
+  },
+  "confusion_matrix": [
+   [
+    18,
+    12,
+    29,
+    23,
+    762,
+    347,
+    309,
+    0
+   ],
+   [
+    0,
+    29,
+    0,
+    0,
+    4,
+    368,
+    805,
+    294
+   ],
+   [
+    0,
+    0,
+    6,
+    2,
+    795,
+    587,
+    105,
+    5
+   ],
+   [
+    0,
+    0,
+    0,
+    24,
+    820,
+    0,
+    0,
+    3656
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    409,
+    560,
+    19,
+    512
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    330,
+    0,
+    520
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    165,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    173
+   ]
+  ],
+  "labels": [
+   "backdoor",
+   "ddos",
+   "injection",
+   "normal",
+   "password",
+   "ransomware",
+   "scanning",
+   "xss"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:56Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 24,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 16
+  },
+  "skipped": true,
+  "skipped_reason": "addressSize > bits_total",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:56Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 8
+  },
+  "addressSize": 24,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 16
+  },
+  "skipped": true,
+  "skipped_reason": "addressSize > bits_total",
+  "metrics": {
+   "accuracy": 0.0,
+   "precision_macro": 0.0,
+   "precision_weighted": 0.0,
+   "recall_macro": 0.0,
+   "recall_weighted": 0.0,
+   "f1_macro": 0.0,
+   "f1_weighted": 0.0,
+   "auc_roc": null,
+   "memory_bytes_serialized": 0,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.0,
+   "inference_latency_us": 0.0
+  },
+  "confusion_matrix": [],
+  "labels": [],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:56Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 16
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 32
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.5578370978781656,
+   "precision_macro": 0.42984680742324627,
+   "precision_weighted": 0.46763374271814484,
+   "recall_macro": 0.32338814616755795,
+   "recall_weighted": 0.5578370978781656,
+   "f1_macro": 0.30147757986543605,
+   "f1_weighted": 0.48032186826111156,
+   "auc_roc": null,
+   "memory_bytes_serialized": 16806,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.015311416005715728,
+   "inference_latency_us": 123.79151303321123
+  },
+  "confusion_matrix": [
+   [
+    282,
+    296,
+    293,
+    629,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    82,
+    1025,
+    51,
+    169,
+    0,
+    173,
+    0,
+    0
+   ],
+   [
+    128,
+    276,
+    538,
+    543,
+    0,
+    15,
+    0,
+    0
+   ],
+   [
+    33,
+    0,
+    105,
+    4362,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    18,
+    272,
+    384,
+    681,
+    0,
+    145,
+    0,
+    0
+   ],
+   [
+    1,
+    211,
+    24,
+    305,
+    0,
+    309,
+    0,
+    0
+   ],
+   [
+    0,
+    155,
+    6,
+    0,
+    0,
+    0,
+    4,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    106,
+    0,
+    67,
+    0,
+    0
+   ]
+  ],
+  "labels": [
+   "backdoor",
+   "ddos",
+   "injection",
+   "normal",
+   "password",
+   "ransomware",
+   "scanning",
+   "xss"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:00:58Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 16
+  },
+  "addressSize": 8,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 32
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.5572381930184805,
+   "precision_macro": 0.43485772126824257,
+   "precision_weighted": 0.4727784181236851,
+   "recall_macro": 0.3228048128342246,
+   "recall_weighted": 0.5572381930184805,
+   "f1_macro": 0.30050487073158705,
+   "f1_weighted": 0.4793231935857019,
+   "auc_roc": null,
+   "memory_bytes_serialized": 16792,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.014717583078891039,
+   "inference_latency_us": 125.72947889566422
+  },
+  "confusion_matrix": [
+   [
+    273,
+    305,
+    293,
+    629,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    75,
+    1032,
+    51,
+    169,
+    0,
+    173,
+    0,
+    0
+   ],
+   [
+    93,
+    311,
+    533,
+    543,
+    5,
+    15,
+    0,
+    0
+   ],
+   [
+    33,
+    0,
+    105,
+    4362,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    6,
+    284,
+    384,
+    681,
+    0,
+    145,
+    0,
+    0
+   ],
+   [
+    0,
+    212,
+    24,
+    305,
+    0,
+    309,
+    0,
+    0
+   ],
+   [
+    0,
+    155,
+    0,
+    0,
+    6,
+    0,
+    4,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    106,
+    0,
+    67,
+    0,
+    0
+   ]
+  ],
+  "labels": [
+   "backdoor",
+   "ddos",
+   "injection",
+   "normal",
+   "password",
+   "ransomware",
+   "scanning",
+   "xss"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:01:01Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 16
+  },
+  "addressSize": 16,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 32
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.5560403832991102,
+   "precision_macro": 0.32104892111027183,
+   "precision_weighted": 0.46343250661954805,
+   "recall_macro": 0.3216381461675579,
+   "recall_weighted": 0.5560403832991102,
+   "f1_macro": 0.3027502563782702,
+   "f1_weighted": 0.48311366108751086,
+   "auc_roc": null,
+   "memory_bytes_serialized": 14058,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.013298708945512772,
+   "inference_latency_us": 41.12545866519213
+  },
+  "confusion_matrix": [
+   [
+    267,
+    172,
+    411,
+    629,
+    0,
+    0,
+    21,
+    0
+   ],
+   [
+    76,
+    847,
+    192,
+    169,
+    0,
+    173,
+    43,
+    0
+   ],
+   [
+    98,
+    134,
+    710,
+    543,
+    0,
+    15,
+    0,
+    0
+   ],
+   [
+    33,
+    0,
+    105,
+    4362,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    6,
+    133,
+    535,
+    681,
+    0,
+    145,
+    0,
+    0
+   ],
+   [
+    0,
+    139,
+    97,
+    305,
+    0,
+    309,
+    0,
+    0
+   ],
+   [
+    6,
+    155,
+    0,
+    0,
+    0,
+    0,
+    4,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    106,
+    0,
+    67,
+    0,
+    0
+   ]
+  ],
+  "labels": [
+   "backdoor",
+   "ddos",
+   "injection",
+   "normal",
+   "password",
+   "ransomware",
+   "scanning",
+   "xss"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:01:02Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 16
+  },
+  "addressSize": 16,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 32
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.5537303216974675,
+   "precision_macro": 0.4308009260064851,
+   "precision_weighted": 0.465921892343147,
+   "recall_macro": 0.3199437017231135,
+   "recall_weighted": 0.5537303216974675,
+   "f1_macro": 0.30035414450509773,
+   "f1_weighted": 0.4770297851872776,
+   "auc_roc": null,
+   "memory_bytes_serialized": 14045,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.013666291953995824,
+   "inference_latency_us": 47.729467041790485
+  },
+  "confusion_matrix": [
+   [
+    302,
+    281,
+    292,
+    625,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    83,
+    981,
+    51,
+    212,
+    0,
+    173,
+    0,
+    0
+   ],
+   [
+    105,
+    276,
+    524,
+    580,
+    0,
+    15,
+    0,
+    0
+   ],
+   [
+    57,
+    0,
+    91,
+    4352,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    6,
+    272,
+    365,
+    712,
+    0,
+    145,
+    0,
+    0
+   ],
+   [
+    1,
+    211,
+    24,
+    305,
+    0,
+    309,
+    0,
+    0
+   ],
+   [
+    6,
+    155,
+    0,
+    0,
+    0,
+    0,
+    4,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    106,
+    0,
+    67,
+    0,
+    0
+   ]
+  ],
+  "labels": [
+   "backdoor",
+   "ddos",
+   "injection",
+   "normal",
+   "password",
+   "ransomware",
+   "scanning",
+   "xss"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:01:03Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 16
+  },
+  "addressSize": 24,
+  "model_hyperparams": {
+   "min_score": 0.1,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 32
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.5588637919233401,
+   "precision_macro": 0.4377708952298677,
+   "precision_weighted": 0.47738464901325567,
+   "recall_macro": 0.3215204991087344,
+   "recall_weighted": 0.5588637919233401,
+   "f1_macro": 0.2974602805145329,
+   "f1_weighted": 0.4786539133227012,
+   "auc_roc": null,
+   "memory_bytes_serialized": 17196,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.016171500086784363,
+   "inference_latency_us": 42.72896330803633
+  },
+  "confusion_matrix": [
+   [
+    252,
+    317,
+    302,
+    629,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    32,
+    1077,
+    58,
+    169,
+    0,
+    164,
+    0,
+    0
+   ],
+   [
+    93,
+    277,
+    573,
+    543,
+    0,
+    14,
+    0,
+    0
+   ],
+   [
+    33,
+    0,
+    105,
+    4362,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    6,
+    277,
+    396,
+    681,
+    0,
+    140,
+    0,
+    0
+   ],
+   [
+    0,
+    256,
+    25,
+    305,
+    0,
+    264,
+    0,
+    0
+   ],
+   [
+    0,
+    155,
+    6,
+    0,
+    0,
+    0,
+    4,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    106,
+    0,
+    67,
+    0,
+    0
+   ]
+  ],
+  "labels": [
+   "backdoor",
+   "ddos",
+   "injection",
+   "normal",
+   "password",
+   "ransomware",
+   "scanning",
+   "xss"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:01:04Z"
+ },
+ {
+  "model": "ClusWiSARD",
+  "base": "GPS_Tracker",
+  "task": "multiclass",
+  "encoder": {
+   "type": "Gaussian",
+   "size": 16
+  },
+  "addressSize": 24,
+  "model_hyperparams": {
+   "min_score": 0.3,
+   "discriminators_limit": 10
+  },
+  "split": {
+   "random_state": 0,
+   "test_size": 0.3,
+   "stratified": true
+  },
+  "input": {
+   "n_features_num": 2,
+   "n_features_cat": 0,
+   "cat_bits": 0,
+   "bits_total": 32
+  },
+  "skipped": false,
+  "skipped_reason": null,
+  "metrics": {
+   "accuracy": 0.5538158795345653,
+   "precision_macro": 0.43164406138755074,
+   "precision_weighted": 0.4679415388665318,
+   "recall_macro": 0.3194714795008913,
+   "recall_weighted": 0.5538158795345653,
+   "f1_macro": 0.29811635454506585,
+   "f1_weighted": 0.47575392550663603,
+   "auc_roc": null,
+   "memory_bytes_serialized": 17188,
+   "memory_bytes_theoretical": 0,
+   "train_time_s": 0.01649741712026298,
+   "inference_latency_us": 43.97903103381395
+  },
+  "confusion_matrix": [
+   [
+    267,
+    286,
+    297,
+    650,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    76,
+    987,
+    52,
+    212,
+    0,
+    173,
+    0,
+    0
+   ],
+   [
+    98,
+    300,
+    544,
+    543,
+    0,
+    15,
+    0,
+    0
+   ],
+   [
+    33,
+    0,
+    105,
+    4362,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    6,
+    284,
+    384,
+    681,
+    0,
+    145,
+    0,
+    0
+   ],
+   [
+    0,
+    228,
+    8,
+    305,
+    0,
+    309,
+    0,
+    0
+   ],
+   [
+    6,
+    155,
+    0,
+    0,
+    0,
+    0,
+    4,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    106,
+    0,
+    67,
+    0,
+    0
+   ]
+  ],
+  "labels": [
+   "backdoor",
+   "ddos",
+   "injection",
+   "normal",
+   "password",
+   "ransomware",
+   "scanning",
+   "xss"
+  ],
+  "machine": "macOS-26.3-arm64-arm-64bit-Mach-O | arm",
+  "wisardpkg_version": "2.0.0a7",
+  "timestamp": "2026-05-22T00:01:05Z"
+ }
+]

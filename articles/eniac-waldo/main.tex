@@ -1,0 +1,52 @@
+%% SBC Conference template (sbc-template.sty), single-column 12pt A4.
+%% ENIAC 2026 — English, double-anonymous, <=12 pp including references.
+\documentclass[12pt]{article}
+
+\usepackage{sbc-template}
+\usepackage{graphicx,url}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue}
+
+%% Compatibility shim: the 2001 SBC template predates the modern LaTeX/babel hook
+%% system. On TeX Live 2024/2025, babel and the output routine reference
+%% \normalsfcodes before it is defined, raising "Undefined control sequence" on
+%% every page. Provide it (a no-op if already defined; babel installs its own
+%% language-aware version immediately afterwards).
+\providecommand{\normalsfcodes}{}
+
+\sloppy
+
+\title{Exact Machine Unlearning on Weightless Neural Networks}
+
+%% Double-anonymous: real author/affiliation restored at camera-ready.
+\author{Anonymous Author(s)\inst{1}}
+
+\address{Affiliation withheld for double-anonymous review
+  \email{anonymous@example.org}
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Privacy regulations grant individuals a right to erasure, so a model trained on personal data must be able to forget it, deleting a record cheaply, completely, and verifiably. These goals are hard to meet together: retraining from scratch is exact but expensive, cheaper methods leave residue that membership-inference attacks can recover, and accuracy benchmarks never score a model's fitness for deletion. We show that weightless neural networks of the WiSARD family delete by construction, because training increments independent counters and deleting an example subtracts exactly its contribution, leaving the model identical to one that never saw it. We measure this on a synthetic, calibrated Where's-Waldo benchmark with an open evaluation harness that scores retained accuracy, deletion cost, memory, and residual leakage against four unlearning baselines. Across class erasure, poison removal, deletion streams, and backdoor scrubbing, the weightless network deletes a class in 40~ms at 9.3~MB with membership inference at chance and 0.89 accuracy, while retraining spends 1.3~s and a data-removal-enabled forest matches 0.95 accuracy only at 13.9~s and 1.6~GB. Scoring deletion as a first-class property reveals weightless networks as the latency-first exact option for machine unlearning.
+\end{abstract}
+
+\input{sections/intro}        %% 1 Introduction
+\input{sections/related}      %% 2 Related Work
+\input{sections/benchmark}    %% 3 A Synthetic Where's-Waldo Benchmark
+\input{sections/encoding}     %% 4 Encoding and Localization
+\input{sections/unlearning}   %% 5 Weightless Networks as an Exact Unlearning Substrate (core)
+\input{sections/discussion}   %% 6 Discussion
+\input{sections/conclusion}   %% 7 Conclusion
+
+\bibliographystyle{sbc}
+\bibliography{references}
+
+\end{document}

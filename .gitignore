@@ -1,0 +1,16 @@
+venv/
+data/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+notebooks/waldo/cache/
+notebooks/waldo/_rascunhos/
+notebooks/waldo/assets/characters/*.png
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.synctex.gz
+*.zip

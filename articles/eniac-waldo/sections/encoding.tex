@@ -1,0 +1,20 @@
+\section{Encoding and Localization}
+\label{sec:encoding}
+
+Section~\ref{sec:enc-recog} fixes the binary encoding a weightless network reads and compares the tuned network against strong classical baselines on recognition; Section~\ref{sec:enc-loc} builds a weightless localizer and benchmarks it against a tuned random forest. Together they establish the weightless network as a competitive model on the task before the unlearning study.
+
+\subsection{Encoding and recognition}
+\label{sec:enc-recog}
+
+A weightless network has no weights to compensate for a poor representation: each RAM memorizes the bit-tuples it saw for a class, and recognition is a vote over RAM lookups, so encoding the input is the modelling. We binarize each colour channel with a thermometer code, group the resulting position-tagged bits into RAM address tuples, and because the thermometer type and resolution and the tuple size all have interior optima, choose them by a grid search over three seeds rather than by default; the search settles on a Gaussian-spaced thermometer of 13 bits per channel with address size 12, which we fix for the comparison.
+
+With the encoding fixed, we place the tuned weightless network beside logistic regression and a random forest, each tuned over its own hyperparameters on the raw pixels so that no baseline is a strawman. On clean patches the random forest leads at 0.95 macro-F1, the weightless network follows at 0.90, and logistic regression trails at 0.84; under full difficulty the three fall together to 0.77, 0.72, and 0.67. The weightless network is competitive on accuracy without dominating any axis: it is heavier (about 10~MB against the forest's 4.4~MB and logistic regression's 81~KB) and slower (about 1~ms per patch against the forest's 0.07~ms), so the benchmark does not secretly favour it.
+
+\subsection{Localization}
+\label{sec:enc-loc}
+
+Localization needs a different formulation than regressing coordinates. A global Regression-WiSARD that reads the whole scene and predicts the target's centre fails, collapsing to the mean training position at 31~px error, no better than predicting that mean, because the random bit-sampling destroys spatial locality and a small target barely moves the scene's global statistics; position is a \emph{where}, not a \emph{what}. We instead slide a window across the scene, score each window for how well it is centred on the target with a Regression-WiSARD, and take the peak of the resulting score map as the predicted location.
+
+To compare models rather than features, the weightless localizer and a random-forest window classifier read the same compact, hand-designed encoder; a random forest on raw pixels reaches 5.3~px, so the encoder helps it too and is reported as shared preprocessing. On a level field the weightless localizer ties the tuned forest: 3.8~px median error with 97\% of targets within 12~px, against the forest's 3.7~px and 99\%, at 540~KB against the forest's 1.6~MB, while a HOG+SVM detector trails at 19~px. Neither learner dominates the accuracy-versus-memory trade-off.
+
+The tie is stable under difficulty. Retraining both models at each difficulty level, the weightless localizer is slightly ahead on clean scenes (3.1~px against 4.1~px) and the forest slightly ahead at the hardest setting (22.1~px against 23.6~px), with neither collapsing in between. Across recognition and localization the weightless network is therefore a competitive model on this task, which is the premise the next section depends on: the deletion advantage we measure is the advantage of a credible model, not of a weak one.

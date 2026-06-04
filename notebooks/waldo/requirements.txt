@@ -1,0 +1,20 @@
+# Reproducibility pins for the Where's-Waldo weightless-unlearning artifact.
+# Tested with Python 3.13. Run the notebooks from this directory (paths are relative).
+numpy==2.4.3
+pandas==3.0.1
+scikit-learn==1.8.0
+scipy==1.17.1
+matplotlib==3.10.8
+Pillow==12.1.1
+jupyter
+nbconvert
+
+# Weightless networks. Provides Wisard, RegressionWisard, DataSet, BinInput, untrain,
+# getMentalImages, Local2DMapping, GeometricMean. The unlearning core (notebooks 00-03)
+# uses only the standard Wisard API; the localizer (04) also uses RegressionWisard.
+wisardpkg==2.0.0a7
+
+# OPTIONAL: the real DaRE-forest baseline in 03 uses the authors' package via dare_real.py,
+# which builds under Python 3.12 (see dare_real.py header). Without it, the other
+# baselines (retrain / SISA / gradient ascent) still run.
+# dare-rf  @ git+https://github.com/jjbrophy47/dare_rf.git

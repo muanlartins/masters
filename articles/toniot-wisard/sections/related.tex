@@ -1,0 +1,141 @@
+\section{Trabalho relacionado}
+\label{sec:related}
+
+\subsection{O dataset TON\_IoT e o paper de Alsaedi 2020}
+
+O \textbf{TON\_IoT}~\cite{alsaedi2020toniot,moustafa2021toniot} foi
+construído pela equipe da UNSW Canberra Cyber e cobre três camadas
+distintas do tráfego de uma rede IoT: tráfego de rede, eventos de
+sistema operacional e \textbf{telemetria de sensores}. Este relatório
+foca exclusivamente na camada de telemetria, que contém sete bases:
+\textbf{Fridge}, \textbf{Garage\_Door}, \textbf{GPS\_Tracker},
+\textbf{Modbus}, \textbf{Motion\_Light}, \textbf{Thermostat} e
+\textbf{Weather}, totalizando cerca de 260 mil linhas, mais uma base
+\textbf{combined} (concatenação das sete, usada nas Tabelas 12--13 do
+paper). Cada amostra é rotulada como \texttt{normal} ou como um dos
+sete tipos de ataque (\texttt{backdoor}, \texttt{ddos},
+\texttt{injection}, \texttt{password}, \texttt{ransomware},
+\texttt{scanning}, \texttt{xss}; nem toda base contém todos os tipos).
+
+O paper de Alsaedi et al.\ avalia oito \emph{baselines} clássicos
+nessa telemetria sob três tarefas: (i) classificação binária
+\emph{per-device} (Tabelas 10--11 do paper), (ii) classificação binária
+sobre o \emph{combined} (Tabela 12), e (iii) classificação
+multi-classe sobre o \emph{combined} (Tabela 13). O protocolo,
+descrito na Seção VI--A, é \emph{split} 80\%/20\% com validação
+cruzada $k=4$ no \emph{train}, e a métrica reportada é F-score, embora
+a chamada exata da função (\texttt{binary}, \texttt{macro}, ou
+\texttt{weighted}) não seja explicitada. Tratamos essa ambiguidade na
+Seção~\ref{sec:discussao}.
+
+\subsection{Vazamento de dados e qualidade do TON\_IoT}
+\label{sec:related_leak}
+
+A comunidade já documentou vazamento de dados (\emph{data leakage} ---
+quando uma \emph{feature} carrega informação do rótulo que não estaria
+disponível em produção, inflando artificialmente a acurácia) no
+TON\_IoT, porém sempre no \textbf{dataset de rede} e por
+\emph{features} identificadoras. Shaikhanova et al.~\cite{shaikhanova2025audit}
+mostram que o resultado de $99{,}97\%$ do estudo original incluía
+endereços IP e números de porta como \emph{features}, atributos que
+``introduzem vazamento e superestimam o desempenho real'', e propõem
+descartar oito colunas textuais de alta cardinalidade. Dharini et
+al.~\cite{dharini2026efficient} fazem a mesma crítica: os ataques foram
+lançados de faixas de IP e portas pré-definidas, fazendo esses campos
+agirem como identificadores de ataque em vez de indicadores de
+comportamento. Raskovalov et al.~\cite{raskovalov2022rectification} vão
+além e publicam uma versão corrigida (ToN-IoT-R), filtrando fluxos
+rotulados como ataque que continham tráfego normal com o roteador e o
+\emph{resolver} DNS. Todas essas correções operam sobre colunas
+(\texttt{ssl\_subject}, \texttt{http\_uri}, IP, porta) que
+\emph{inexistem} na telemetria de sensores --- portanto não alcançam o
+vazamento que identificamos.
+
+Na camada de \textbf{telemetria}, ao contrário, a acurácia
+quase-perfeita é tratada como virtude, e não como sintoma. Sharrab et
+al.~\cite{sharrab2025analysis} dedicam um artigo ao Garage\_Door e
+reportam $100\%$ de acurácia para múltiplos classificadores, atribuindo
+o resultado ao ``poder preditivo das \emph{features} mais
+correlacionadas'' sem levantar qualquer alarme; Alotaibi e
+Ilyas~\cite{alotaibi2023stacking} combinam seis dispositivos de
+telemetria e reportam $98{,}64\%$ sem uma seção de limitações sobre a
+acurácia. Benaddi et al.~\cite{benaddi2025near} reportam macro-F1 acima
+de $0{,}986$ no TON\_IoT com um IDS comprimido (poda de \emph{features}
+guiada por SHAP e distilação de conhecimento), tratando a acurácia
+quase-perfeita como resultado a otimizar e não como sintoma a
+investigar, sem qualquer análise de vazamento. A crítica de
+heterogeneidade de Booij et al.~\cite{booij2022heterogeneity}, a mais
+citada sobre o dataset, trata de generalização entre versões, não de
+vazamento.
+
+Nenhum desses trabalhos inspeciona os CSVs de telemetria no nível da
+\emph{feature} categórica, e nenhum conecta a determinismo da
+associação à sub-amostragem da classe \texttt{normal} nos arquivos
+públicos. É exatamente esse o foco da nossa auditoria
+(Seção~\ref{sec:dataset}): diagnosticamos um vazamento categórico
+determinístico (Cramér's V $=1{,}000$) em \texttt{Fridge} e
+\texttt{Garage\_Door} e o rastreamos até a sub-amostragem
+$35\,\text{k} \rightarrow 15\,\text{k}$ da classe \texttt{normal},
+um mecanismo distinto do vazamento de identificadores da camada de
+rede e, até onde alcançamos na literatura, ainda não reportado na
+telemetria.
+
+\subsection{Família WiSARD de redes neurais sem peso}
+
+Redes neurais \textbf{sem peso} (WNNs) substituem produtos
+peso-entrada típicos das redes convencionais por consultas
+$\mathcal{O}(1)$ em \emph{RAMs} indexadas por padrões binários de
+entrada. A versão seminal --- \textbf{WiSARD}~\cite{aleksander1984wisard}
+--- é o \emph{discriminador} mais simples possível: um conjunto de
+RAMs $r_1, \dots, r_N$, cada uma endereçada por uma tupla de
+$n$ \emph{bits} (\emph{tuple address}) sorteada (mapeamento
+pseudo-aleatório) sobre a representação binária da entrada. Para cada
+classe, treinar significa marcar com 1 as posições endereçadas pelas
+amostras dessa classe; classificar significa contar quantas RAMs
+respondem 1 para a entrada candidata e escolher a classe com maior
+contagem.
+
+A simplicidade tem custo: a representação binária da entrada precisa
+preservar a estrutura métrica das \emph{features}. A solução clássica
+é o \textbf{termômetro}, que codifica um valor real $x \in [a, b]$ em
+$T$ \emph{bits}, com os primeiros $\lceil T \cdot (x-a)/(b-a) \rceil$
+ligados. Variantes ajustadas aos dados (distributivo, gaussiano,
+exponencial, logarítmico) adaptam a discretização à distribuição
+empírica da \emph{feature}; avaliamos seis dessas variantes na
+Seção~\ref{sec:metodologia}.
+
+Os cinco modelos avaliados estendem o esqueleto WiSARD em direções
+ortogonais:
+
+\begin{description}[leftmargin=*,itemsep=0pt]
+  \item[\textbf{WiSARD}~\cite{aleksander1984wisard}.] O modelo base.
+        Hiperparâmetros principais: tamanho do endereço ($n$),
+        termômetro e número de \emph{bits} por \emph{feature},
+        \texttt{ignore\_zero} (descartar endereços nulos).
+  \item[\textbf{ClusWiSARD}~\cite{cardoso2016cluswisard}.] Particiona
+        cada classe em \emph{sub-discriminadores} via critério de
+        similaridade (\texttt{min\_score}, \texttt{threshold},
+        \texttt{limit}). Útil quando a classe tem sub-modos
+        estatisticamente distintos.
+  \item[\textbf{BloomWiSARD}~\cite{santiago2020bloomwisard}.]
+        Substitui a RAM tradicional por um \emph{Bloom filter}, o que
+        reduz drasticamente o consumo de memória ao custo de falsos
+        positivos controlados.
+  \item[\textbf{BTHOWeN}~\cite{susskind2022bthowen}.] Adota
+        \emph{hashed lookup tables} de tamanho fixo
+        (\texttt{filter\_entries}) com $k$ funções de hash
+        (\texttt{num\_hashes}). Projetado para implementação em FPGA
+        com latência sub-microsegundo.
+  \item[\textbf{ULEEN}~\cite{susskind2023uleen}.] Adiciona uma fase
+        adicional de \emph{learning rate} sobre as RAMs e um esquema
+        de \emph{bleaching} treinável, alcançando F1 superior ao
+        BTHOWeN em datasets de visão ao custo de mais iterações.
+\end{description}
+
+Os experimentos usam a biblioteca \texttt{wisardpkg}~\cite{wisardpkg}
+estendida com o conjunto de termômetros ajustados descrito na
+Seção~\ref{sec:metodologia}. Os modelos \emph{baseline} usam
+\texttt{scikit-learn}~\cite{scikit-learn} para LR/LDA/kNN/RF/CART/NB/SVM
+e \texttt{PyTorch} para o LSTM, sempre com semente fixa
+(\texttt{random\_state=42}) em todos os nossos experimentos; o paper
+não publica a semente que usou (ver \S{}\ref{sec:discussao}).

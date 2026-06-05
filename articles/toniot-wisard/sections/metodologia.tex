@@ -1,0 +1,161 @@
+\section{Metodologia}
+\label{sec:metodologia}
+
+Esta seção formaliza o protocolo experimental. A
+\S{}\ref{sec:protocolo} fixa o protocolo \emph{paper-faithful}
+(\emph{split}, validação cruzada, métrica e encoding) compartilhado por
+todos os modelos; em seguida descrevemos o pipeline de
+pré-processamento, as extensões de termômetros na \texttt{wisardpkg} e o
+ambiente de \emph{hardware} e reprodutibilidade.
+
+\subsection{Protocolo \emph{paper-faithful}}
+\label{sec:protocolo}
+
+Para que a comparação entre os \emph{baselines} clássicos do paper e
+a família WiSARD seja uma comparação direta sob protocolo idêntico, todos os experimentos seguem o
+mesmo protocolo, derivado da Seção VI--A do paper Alsaedi 2020
+(Tabela~\ref{tab:protocolo}).
+
+\begin{table}[ht]
+  \centering
+  \caption{Protocolo \emph{paper-faithful} aplicado a todos os 13
+           modelos avaliados (8 \emph{baselines} + 5 WiSARDs).}
+  \label{tab:protocolo}
+  \small
+  \renewcommand{\arraystretch}{1.15}
+  \begin{tabular}{p{0.27\linewidth} p{0.32\linewidth} p{0.32\linewidth}}
+    \toprule
+    \textbf{Item} & \textbf{Paper \S{}VI--A} & \textbf{Nosso} \\
+    \midrule
+    Split & 80\% \emph{train} / 20\% \emph{test} \emph{held-out} & \texttt{StratifiedShuffleSplit (test\_size=0.20, random\_state=42)} \\
+    Validação cruzada & $k=4$ sobre o \emph{train} & \texttt{StratifiedKFold (n\_splits=4, random\_state=42)} \\
+    F1 final & Média sobre os 4 \emph{folds} & idem \\
+    Métrica F1 & F-score (\S{}VI-B1, não especifica \emph{average}) & \texttt{f1\_weighted} (inferência empírica --- ver \S{}\ref{sec:protocolo_metrica}) \\
+    Encoding categórico & \texttt{LabelEncoder} & \texttt{LabelEncoder} cru, \emph{sem} \texttt{clean\_df} (ver \S{}\ref{sec:discussao_clean}) \\
+    Temporal & Drop \texttt{date}/\texttt{time}/\texttt{timestamp} & \texttt{drop\_temporal\_leak} \\
+    Normalização & \texttt{MinMaxScaler [0, 1]} & idem \\
+    Imputação (combined) & Mediana por coluna & idem (apenas numéricas) \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsubsection{Por que \emph{F1 weighted}}
+\label{sec:protocolo_metrica}
+
+A Seção VI--B1 do paper define F-score com a fórmula binária padrão
+sobre TP/FP/FN (precisão e revocação da classe de ataque). A escolha do
+\emph{average} do \texttt{sklearn} (\texttt{'binary'}, \texttt{'macro'}
+ou \texttt{'weighted'}) muda os valores reportados em até 0{,}2 pontos em
+algumas bases, sendo decisiva para qualquer reprodução. O texto do paper
+\emph{resolve} essa ambiguidade na discussão da Tabela 13, onde declara
+calcular ``\emph{a weighted average\ldots\ multiplying each class with a
+weight factor (i.e., the \# instances with that target class)}'' --- que
+é exatamente o \texttt{average='weighted'} do \texttt{sklearn}. Nossa
+varredura empírica das três variantes contra as Tabelas 10--11
+(\emph{per-device}) confirma essa leitura
+(Tabela~\ref{tab:f1_metric}):
+
+\begin{table}[ht]
+  \centering
+  \caption{Ajuste empírico das três variantes de F1 às Tabelas 10--11
+           (\emph{per-device}) do paper. $\Delta$ = nossa reprodução $-$ paper.}
+  \label{tab:f1_metric}
+  \small
+  \begin{tabular}{lrrrr}
+    \toprule
+    \textbf{Variante} & \textbf{mean $\Delta$} & \textbf{$|\Delta|<0{,}05$} & \textbf{$|\Delta|<0{,}10$} & \textbf{$|\Delta|<0{,}15$} \\
+    \midrule
+    \texttt{binary}   & $+0{,}102$ & 38\% & 52\% & 68\% \\
+    \texttt{macro}    & $-0{,}032$ & 48\% & 71\% & 84\% \\
+    \texttt{weighted} & $\mathbf{-0{,}009}$ & \textbf{48\%} & \textbf{75\%} & \textbf{91\%} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\texttt{weighted} apresenta o melhor ajuste empírico (média de $\Delta$ mais
+próxima de zero e maior fração dentro de tolerância), em concordância
+com a definição explícita do paper. Adotamos \texttt{weighted} para
+todas as comparações; o \emph{runner} \texttt{run\_baselines\_paper.py}
+também grava \texttt{f1} (\emph{average} \texttt{binary}) e \texttt{f1\_macro} para auditoria.
+
+\subsubsection{Por que \emph{sem} \texttt{clean\_df}}
+
+A função \texttt{clean\_df} (apresentada na \S{}\ref{sec:dataset})
+neutraliza os \emph{leaks} categóricos identificados. Em uma análise
+puramente metodológica, ela seria mandatória. Mas \emph{para
+reproduzir o paper}, ela é o passo errado:
+
+\begin{itemize}[leftmargin=*,itemsep=0pt]
+  \item Com \texttt{clean\_df}: \texttt{'high'} e \texttt{'high\ '}
+        viram a mesma categoria; \texttt{Fridge} e \texttt{Garage\_Door}
+        perdem o sinal do encoding e colapsam para predição
+        majoritária. Nossos números ficam \emph{muito abaixo} do
+        paper.
+  \item Sem \texttt{clean\_df}: o \texttt{LabelEncoder} cru preserva
+        o encoding (incluindo as variantes \emph{whitespace}); o
+        modelo aprende o que aprenderia no dataset original do paper
+        (assumindo que o paper de fato encodou da forma descrita em
+        sua \S{}VI-A1, ``\emph{high$\rightarrow$1, low$\rightarrow$0}'').
+\end{itemize}
+
+A consequência honesta é que nossos modelos podem ter \emph{mais}
+sinal do que os do paper em algumas bases (porque os CSVs públicos
+têm variantes \emph{whitespace} que o paper provavelmente não viu);
+essa diferença aparece nos $\Delta$ positivos reportados em
+\S{}\ref{sec:reproducao}.
+
+\subsection{Pipeline de pré-processamento}
+
+Todas as funções de pré-processamento vivem em
+\texttt{consolidado\_utils.py}:
+\texttt{clean\_df} (opcional, não usado na reprodução),
+\texttt{drop\_temporal\_leak},
+\texttt{build\_combined\_dataset} (concatena as sete bases para a tarefa
+\emph{combined}),
+\texttt{presence\_bit\_encode},
+\texttt{select\_thermometer\_type} e
+\texttt{build\_per\_feature\_thermometer} (\emph{dispatch} automático
+de termômetros para os modelos WiSARD-family).
+
+\subsection{Extensões na \texttt{wisardpkg}}
+
+A biblioteca \texttt{wisardpkg}~\cite{wisardpkg} foi estendida com
+termômetros ajustados (\emph{fitted}) para suportar a variedade de
+distribuições do TON\_IoT. O \emph{sweep} usa um conjunto curado de
+seis variantes \emph{não supervisionadas}, aplicadas uniformemente a
+todas as \emph{features}:
+
+\begin{itemize}[leftmargin=*,itemsep=0pt]
+  \item \texttt{linear} --- cortes equiespaçados (termômetro clássico).
+  \item \texttt{distributive} --- discretização por quantis empíricos
+        da \emph{feature}.
+  \item \texttt{gaussian} --- centros e largura derivados de
+        $(\mu, \sigma)$ estimados no \emph{train}.
+  \item \texttt{exponential} e \texttt{logarithmic} --- ajustados para
+        distribuições de cauda longa (codes Modbus).
+  \item \texttt{non-uniform} --- \texttt{DynamicThermometer} cujo
+        orçamento de \emph{bits} é alocado por \emph{feature} de forma
+        proporcional à dispersão (desvio-padrão).
+\end{itemize}
+
+Variantes \emph{label-aware} (\texttt{supervised}) e o
+\texttt{stochastic} ficaram fora da comparação \emph{unsupervised}: a
+primeira usa os rótulos no ajuste, e o segundo --- cujo
+\texttt{optimize()} não era acionado no \emph{pipeline} --- reduzia-se
+ao \texttt{distributive}.
+
+\subsection{Hardware e reprodutibilidade}
+
+Todos os experimentos rodam em um único \emph{venv} Python 3.13
+descrito em \texttt{notebooks/toniot/requirements.txt}. As 288
+execuções de \emph{baseline} consomem cerca de 1h em
+CPU \emph{single-core}; o \emph{sweep} WiSARD-family (\emph{grid}
+estendido com tetos de capacidade unificados, \S{}\ref{sec:wisard_fair}),
+com 30\,020 configurações e cerca de 150\,mil \emph{fits}, roda em
+aproximadamente 6--7h de \emph{wall-clock}, com as sete bases
+\emph{per-device} executadas em paralelo. Resultados em
+\texttt{results/\_consolidado/} (\emph{baselines} em
+\texttt{baselines\_paper.jsonl}; \emph{sweep} em
+\texttt{grid/wisard\_grid\_*.jsonl}); o \emph{notebook}
+\texttt{06\_consolidado\_grupos.ipynb} é o relatório de referência
+re-executável.

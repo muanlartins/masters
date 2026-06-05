@@ -1,0 +1,286 @@
+\section{Comparação consolidada}
+\label{sec:comparacao}
+
+Esta seção apresenta as três fontes de números lado a lado, sempre
+sob o mesmo protocolo \emph{paper-faithful} de \S{}\ref{sec:protocolo}:
+
+\begin{enumerate}[leftmargin=*,itemsep=0pt]
+  \item \textbf{Paper} --- Tabelas 10/11/12/13 do paper Alsaedi 2020.
+  \item \textbf{Nossa reprodução \emph{paper-faithful}} --- oito
+        \emph{baselines} via \texttt{run\_baselines\_paper.py}.
+  \item \textbf{WiSARD-family} --- cinco modelos sem peso, best F1
+        sobre os \emph{grids} de \emph{sweep}.
+\end{enumerate}
+
+\noindent Lembrete: as comparações desta seção são informativas (não
+tentativa de reprodução byte-a-byte), pelo motivo da divergência de
+tamanho documentada em \S{}\ref{sec:dataset_mismatch}.
+
+\subsection{Master heatmap: per-device binário}
+
+A Figura~\ref{fig:master_perdevice} é o \emph{heatmap} principal do
+relatório: sete bases $\times$ três grupos $\times$ até oito modelos, F1
+\emph{weighted}. A coluna do meio é a reprodução
+\emph{paper-faithful}; a coluna da direita são os cinco WiSARDs.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\linewidth]{v06_heatmap_perdevice.png}
+  \caption{Master heatmap: F1 \emph{weighted} médio para per-device
+           binário. Três grupos: paper, nossa reprodução, WiSARD-family.}
+  \label{fig:master_perdevice}
+\end{figure}
+
+\subsection{Combined: binário e multi-classe}
+
+A Figura~\ref{fig:master_combined} reúne as duas tarefas
+\emph{combined} (binário à esquerda, multi-classe à direita).
+
+\begin{figure}[ht]
+  \centering
+  \begin{subfigure}[t]{0.48\linewidth}
+    \includegraphics[width=\linewidth]{v06_heatmap_combined_binary.png}
+    \caption{Combined binário (Tab.\ 12 do paper).}
+  \end{subfigure}\hfill
+  \begin{subfigure}[t]{0.48\linewidth}
+    \includegraphics[width=\linewidth]{v06_heatmap_combined.png}
+    \caption{Combined multi-classe (Tab.\ 13).}
+  \end{subfigure}
+  \caption{Master heatmaps das duas tarefas \emph{combined} ---
+           paper $\times$ ours $\times$ WiSARD-family.}
+  \label{fig:master_combined}
+\end{figure}
+
+\subsection{Bar chart: campeão de cada grupo por base}
+
+A Figura~\ref{fig:bar_best_perbase} compacta o resultado anterior em
+um \emph{bar chart}: para cada base, a altura representa o melhor F1
+de cada grupo.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.85\linewidth]{v06_bar_best_perbase.png}
+  \caption{Best F1 por base, mostrando o campeão de cada um dos três
+           grupos (paper, nossa reprodução, WiSARD-family).}
+  \label{fig:bar_best_perbase}
+\end{figure}
+
+\subsection{Wins matrix: quem lidera em cada base}
+
+A Figura~\ref{fig:wins_matrix} reporta a \emph{wins matrix}: para
+cada base, quantos modelos do grupo $X$ ficam dentro de $0{,}02$ do
+\emph{best F1 global} entre os três grupos. É uma forma menos
+volátil que ``apenas o vencedor'' --- evita declarar um grupo
+campeão por causa de um \emph{outlier} numericamente irrepetível.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.85\linewidth]{v06_wins_matrix.png}
+  \caption{Wins matrix: número de modelos por grupo a até
+           $0{,}02$ F1 do best F1 global da base.}
+  \label{fig:wins_matrix}
+\end{figure}
+
+\subsection{Distribuição agregada de F1 por modelo}
+
+A Figura~\ref{fig:boxplot_models} é um \emph{boxplot} agregando F1
+sobre todas as bases $\times$ \emph{folds}, por modelo. Modelos com mediana
+alta e dispersão baixa são robustos; modelos com cauda longa são
+voláteis. RF/CART dominam o topo da distribuição; entre os WiSARDs,
+ClusWiSARD tem a mediana mais alta sobre todas as configurações
+($0{,}775$), seguida de BTHOWeN ($0{,}739$) e BloomWiSARD ($0{,}733$),
+enquanto ULEEN tem a menor mediana ($0{,}603$) e grande dispersão. A
+WiSARD pura, apesar do \emph{pico} empatado com ClusWiSARD
+(Tabela~\ref{tab:wisard_best_f1}), tem mediana $0{,}701$ --- é a mais
+sensível à escolha de hiperparâmetros.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.85\linewidth]{v06_boxplot_models.png}
+  \caption{Distribuição de F1 \emph{weighted} por modelo
+           (todas as bases $\times$ 4 \emph{folds}).}
+  \label{fig:boxplot_models}
+\end{figure}
+
+\subsection{Custo: tempo de \emph{fit} e memória}
+
+As Figuras~\ref{fig:time_per_model} e~\ref{fig:mem} reportam os dois
+eixos de custo, medidos sob um \emph{harness} único (\emph{fit} único
+por base, incluindo a codificação; \texttt{bench\_cost.py}), o que
+torna a comparação \emph{entre} famílias legítima --- ao contrário do
+tempo agregado do \emph{grid}, que somava quatro \emph{folds} mais o
+\emph{held-out}. No eixo de \textbf{tempo} (Figura~\ref{fig:time_per_model}),
+o LSTM domina o teto (mediana $\approx 61{,}9$\,s), seguido --- agora ---
+do ULEEN ($\approx 7{,}0$\,s, mais lento que o SVM em
+$\approx 5{,}6$\,s): a configuração \emph{justa} do ULEEN usa cinco
+submodelos e vinte \emph{epochs}, e sua implementação de referência é
+em \emph{Python} (ver a ressalva de \emph{implementação} adiante). O
+trio em C++ treina em $\approx 0{,}45$--$0{,}55$\,s e o BTHOWeN é o mais
+rápido da família (mediana $\approx 0{,}09$\,s, cerca de $705\times$
+mais rápido que o LSTM), embora RF ($0{,}04$\,s) e kNN ($0{,}004$\,s)
+treinem em tempo comparável ou menor.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.85\linewidth]{v06_time_per_model.png}
+  \caption{Tempo mediano de \emph{fit} por modelo (\emph{fit} único,
+           mediana sobre 7 bases, escala log). LSTM e ULEEN dominam o
+           teto; a família WiSARD fica entre $0{,}09$\,s (BTHOWeN) e
+           $7{,}0$\,s (ULEEN).}
+  \label{fig:time_per_model}
+\end{figure}
+
+No eixo de \textbf{memória} (Figura~\ref{fig:mem}) reportamos uma
+\emph{única} métrica de estado implantado (\texttt{deployedSizeBytes}),
+comparável entre todos os modelos sem peso: para BloomWiSARD/BTHOWeN/ULEEN
+é a tabela de \emph{bits} de tamanho fixo; para WiSARD/ClusWiSARD é o
+conjunto mínimo de endereços vistos, \emph{bit-packed} e sem falsos
+positivos. Na mediana das sete bases, \emph{toda} a família ocupa
+$\approx 0{,}75$--$2{,}5$\,KB (BloomWiSARD $0{,}75$, ULEEN $0{,}94$,
+BTHOWeN e WiSARD $\approx 2{,}0$, ClusWiSARD $2{,}5$\,KB), contra
+kNN $1{,}1$\,MB, CART $0{,}23$\,MB e RF $3{,}1$\,MB --- cerca de três
+ordens de magnitude abaixo das árvores. A distinção honesta é
+\emph{qualitativa}: as variantes de filtro (Bloom/BTHOWeN/ULEEN) têm
+\emph{footprint} \textbf{constante} por construção, enquanto o de
+WiSARD/ClusWiSARD é \textbf{dependente dos dados} --- $\approx 2$\,KB na
+mediana, mas chegando a $\approx 116$\,KB nas bases estruturadas
+(\texttt{Weather}, \texttt{Modbus}), onde o endereçamento amplo precisa
+memorizar muitos endereços distintos para alcançar F1 $\approx 0{,}93$.
+É essa memorização que paga o ganho de F1.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.85\linewidth]{v06_mem_per_model.png}
+  \caption{Memória de estado implantado por modelo
+           (\texttt{deployedSizeBytes}, mediana sobre 7 bases, escala
+           log). Na mediana a família sem peso ocupa $0{,}75$--$2{,}5$\,KB,
+           contra $0{,}2$--$3$\,MB dos \emph{baselines} de árvore; o
+           \emph{footprint} de Bloom/BTHOWeN/ULEEN é fixo, o de
+           WiSARD/ClusWiSARD é dependente dos dados (até $\approx 116$\,KB
+           nas bases estruturadas).}
+  \label{fig:mem}
+\end{figure}
+
+\subsection{Fronteira de Pareto F1 $\times$ custo}
+
+A Figura~\ref{fig:pareto} resume o \emph{trade-off} F1 $\times$ custo em
+dois eixos, com cada ponto sendo um modelo na sua melhor configuração
+média \emph{per-device}. No eixo de tempo de treino (painel esquerdo),
+os modelos de árvore dominam: RF e CART atingem F1 $\approx 0{,}83$ em
+$\approx 0{,}04$\,s e o kNN $0{,}789$ em $\approx 0{,}004$\,s; o trio
+WiSARD/ClusWiSARD treina em $\approx 0{,}5$\,s com F1 $\approx 0{,}82$ e
+o BTHOWeN em $0{,}09$\,s com $0{,}76$; LSTM e ULEEN são dominados
+(tempo alto). É no eixo de memória (painel direito) que a família se
+distingue --- mas como \emph{trade-off}, não como domínio absoluto. As
+variantes de filtro (Bloom/BTHOWeN/ULEEN) formam a fronteira de baixo
+custo com \emph{footprint} \emph{fixo} de $\approx 0{,}75$--$2$\,KB a
+F1 $\approx 0{,}76$, três ordens de magnitude abaixo das árvores;
+WiSARD e ClusWiSARD recuperam o melhor F1 da família ($0{,}82$) com
+$\approx 2$\,KB \emph{medianos}, ainda muito abaixo das árvores, mas com
+\emph{footprint} dependente dos dados que cresce nas bases onde fazem a
+memorização. Para \emph{deployment} em \emph{edge} sob restrição
+\emph{dura} de memória, as variantes de filtro são a escolha; para
+máximo F1 dentro da família a um custo de memória ainda sub-árvore,
+WiSARD/ClusWiSARD.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\linewidth]{v06_pareto_wisard.png}
+  \caption{Pareto a nível de modelo (melhor configuração média) em dois
+           eixos de custo: F1 $\times$ tempo de \emph{fit} (esquerda) e
+           F1 $\times$ memória (direita), per-device binário. Os modelos de
+           árvore dominam em tempo; a família WiSARD ocupa KBs contra MBs
+           dos \emph{baselines} em memória, com \emph{footprint} fixo
+           para Bloom/BTHOWeN/ULEEN e dependente dos dados para
+           WiSARD/ClusWiSARD. O LSTM é omitido no painel de memória por
+           não ter métrica comparável.}
+  \label{fig:pareto}
+\end{figure}
+
+\subsection{Síntese dos resultados}
+
+A Tabela~\ref{tab:final_consolidada} consolida o resultado em uma
+única visão: F1 médio sobre todas as bases per-device, F1
+\emph{combined} binário, F1 \emph{combined} multi-classe e tempo
+mediano de \emph{fit}.
+
+\begin{table}[ht]
+  \centering
+  \caption{Síntese final: F1 \emph{weighted} médio (sobre 7 bases $\times$
+           4 \emph{folds}) per-device, F1 \emph{combined} binário,
+           F1 \emph{combined} multi-classe e tempo mediano de \emph{fit}
+           único (\texttt{bench\_cost}, inclui codificação). Negrito =
+           melhor por coluna.}
+  \label{tab:final_consolidada}
+  \small
+  \begin{tabular}{lrrrr}
+    \toprule
+    \textbf{Modelo} & \textbf{F1 per-dev.} & \textbf{F1 comb.\ bin.} & \textbf{F1 comb.\ multi.} & \textbf{Tempo (s, med.)} \\
+    \midrule
+    \multicolumn{5}{l}{\textit{Baselines}} \\
+    LR    & 0{,}620 & 0{,}621 & 0{,}296 & 0{,}01 \\
+    LDA   & 0{,}618 & 0{,}629 & 0{,}309 & \textbf{0{,}00} \\
+    kNN   & 0{,}789 & 0{,}820 & 0{,}541 & \textbf{0{,}00} \\
+    RF    & \textbf{0{,}831} & \textbf{0{,}858} & \textbf{0{,}602} & 0{,}04 \\
+    CART  & 0{,}828 & 0{,}854 & 0{,}598 & 0{,}04 \\
+    NB    & 0{,}615 & 0{,}601 & 0{,}028 & \textbf{0{,}00} \\
+    SVM   & 0{,}659 & 0{,}623 & 0{,}294 & 5{,}64 \\
+    LSTM  & 0{,}712 & 0{,}758 & 0{,}449 & 61{,}94 \\
+    \midrule
+    \multicolumn{5}{l}{\textit{WiSARD-family}} \\
+    WiSARD       & 0{,}824 & 0{,}724 & 0{,}413 & 0{,}45 \\
+    ClusWiSARD   & 0{,}822 & 0{,}725 & 0{,}413 & 0{,}55 \\
+    BloomWiSARD  & 0{,}764 & 0{,}718 & 0{,}405 & 0{,}46 \\
+    BTHOWeN      & 0{,}760 & 0{,}514 & 0{,}241 & 0{,}09 \\
+    ULEEN        & 0{,}758 & 0{,}745 & 0{,}425 & 7{,}04 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Leitura dos resultados}
+
+\paragraph{Per-device binário.} RF/CART dominam ($\approx 0{,}83$),
+seguidos por kNN ($0{,}789$); a família WiSARD fica logo atrás, com
+WiSARD ($0{,}824$) e ClusWiSARD ($0{,}822$) liderando o grupo
+\emph{empatadas}, a cerca de $1$ pp de RF/CART e \emph{à frente} de
+kNN, LSTM ($0{,}712$) e SVM ($0{,}659$). Em \texttt{Modbus},
+WiSARD/ClusWiSARD ($0{,}95$) chegam a \emph{igualar} RF/CART. Em bases
+com \emph{leak} categórico forte (\texttt{Fridge}, \texttt{Garage\_Door}),
+todos saturam; em bases sem sinal (\texttt{Motion\_Light}), todos
+colapsam para predição majoritária.
+
+\paragraph{Combined binário.} RF/CART (com 10 árvores e Gini)
+lideram ($\approx 0{,}85$). A família WiSARD cobre $0{,}51$--$0{,}745$;
+o melhor (ULEEN em $0{,}745$) fica $11$ pp atrás de RF e é comparável
+ao LSTM ($0{,}758$), com WiSARD, ClusWiSARD e BloomWiSARD agora em
+$\approx 0{,}72$ (acima dos $0{,}66$--$0{,}69$ da varredura original);
+o BTHOWeN destoa em $0{,}514$.
+
+\paragraph{Combined multi-classe.} O \emph{gap} entre os grupos cresce:
+RF/CART em $\approx 0{,}60$; kNN em $0{,}54$; LSTM em $0{,}45$. A
+família WiSARD fica entre $0{,}24$ (BTHOWeN) e $0{,}43$ (ULEEN), com
+ULEEN ($0{,}425$), WiSARD e ClusWiSARD ($0{,}413$) à frente de
+LR/LDA/SVM ($\approx 0{,}30$), bem acima de NB ($0{,}03$), mas ainda
+abaixo dos modelos baseados em árvore.
+
+\paragraph{Custo computacional.} A vantagem da família WiSARD não está
+no tempo de CPU, e sim na memória. Em tempo de treino, o BTHOWeN é o
+mais rápido da família ($0{,}09$\,s mediano por \emph{fit}, cerca de
+\textbf{705$\times$ mais rápido que o LSTM}), mas RF ($0{,}04$\,s) e kNN
+($0{,}004$\,s) treinam em tempo comparável ou menor com F1 superior, de
+modo que a família não domina o eixo de tempo. O ULEEN, com a
+configuração \emph{justa} (20 \emph{epochs}, cinco sub-modelos), passa a
+gastar $\approx 7$\,s --- mais que o SVM ---, mas isso é em parte
+artefato de sua implementação de referência em \emph{Python}, e não do
+algoritmo (\textbf{ressalva de implementação}: o trio WiSARD/ClusWiSARD/
+BloomWiSARD roda em C++; BTHOWeN e ULEEN em Python, de modo que seu
+tempo de CPU superestima o custo de uma implementação otimizada ou em
+\emph{hardware} dedicado). É na memória que a separação aparece, sob a
+métrica única de estado implantado: as variantes de filtro
+(Bloom/BTHOWeN/ULEEN) ocupam $\approx 0{,}75$--$2$\,KB \emph{fixos},
+três ordens abaixo das árvores ($0{,}2$--$3$\,MB); WiSARD/ClusWiSARD
+recuperam o melhor F1 da família com $\approx 2$\,KB \emph{medianos}
+(porém dependentes dos dados). A escolha \emph{dentro} da família é
+então um \emph{trade-off}: filtro de \emph{footprint} fixo e mínimo
+(Bloom/BTHOWeN/ULEEN, F1 $\approx 0{,}76$) versus o F1 mais alto de
+WiSARD/ClusWiSARD ($0{,}82$) a um custo de memória ainda sub-árvore.

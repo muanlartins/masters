@@ -1,0 +1,111 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage[a4paper,margin=2.4cm]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{placeins}
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue}
+
+\sloppy
+\emergencystretch=3em
+
+\graphicspath{{../../notebooks/toniot/figs/}{figures/}}
+
+\title{
+  \vspace{-1.5cm}
+  Reprodução do paper Alsaedi 2020 e avaliação\\
+  da família WiSARD para detecção de\\
+  anomalia em IoT (TON\_IoT) \\[0.5em]
+  \large Relatório técnico do Trabalho 1
+}
+
+\author{Turma 2026.1 -- Redes Neurais Sem Peso \\
+        Programa de Engenharia de Sistemas e Computação (PESC) \\
+        COPPE -- Universidade Federal do Rio de Janeiro}
+
+\date{Maio de 2026}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\begin{abstract}
+\noindent
+Este relatório consolida o Trabalho 1 da disciplina de Redes Neurais Sem
+Peso (WNN), em que avaliamos cinco modelos da família WiSARD (WiSARD
+clássica, ClusWiSARD, BloomWiSARD, BTHOWeN e ULEEN) na tarefa de
+detecção de anomalia em telemetria IoT, usando o dataset TON\_IoT
+(UNSW Canberra Cyber). Como referência metodológica e numérica usamos o
+paper \emph{Alsaedi et al.\ 2020} (IEEE Access), reproduzindo
+fielmente os oito \emph{baselines} reportados (LR, LDA, kNN, RF, CART,
+NB, SVM e LSTM) sob o protocolo descrito na Seção VI--A do paper
+(\textit{split} 80/20, validação cruzada $k=4$ no \emph{train},
+\emph{F1 weighted}). Durante a reprodução, identificamos três
+problemas estruturais nos CSVs públicos do TON\_IoT que não são
+discutidos no paper original: (i) \emph{leak} categórico determinístico
+em \texttt{Fridge.temp\_condition} e \texttt{Garage\_Door.sphone\_signal}
+(Cramér's V $=1{,}000$); (ii) \emph{leak} temporal universal --- o campo
+\texttt{date} prevê classe perfeitamente em todas as sete bases;
+(iii) divergência de tamanho entre os CSVs públicos
+(\texttt{Train\_Test\_IoT\_*.csv}) e o dataset original que produziu as
+Tabelas 10--13 do paper (classe \texttt{normal} sub-amostrada para
+$43\%$ do volume original). Sob o
+protocolo \emph{paper-faithful} adotado, e sob tetos de capacidade
+\emph{unificados} entre os modelos, a família WiSARD fica a poucos
+pontos percentuais dos melhores \emph{baselines} em bases sem
+\emph{leak} forte: WiSARD e ClusWiSARD lideram o grupo praticamente
+empatadas (F1 $\approx 0{,}82$), a cerca de um ponto percentual de
+Random Forest e à frente de kNN, SVM e LSTM. No \emph{trade-off}
+F1 $\times$ custo há um \emph{trade-off} de memória dentro da própria
+família: as variantes de filtro (BloomWiSARD, BTHOWeN, ULEEN) têm
+\emph{footprint} fixo de $0{,}75$--$2$ \emph{KB}, cerca de três ordens
+de magnitude abaixo dos modelos de árvore, enquanto WiSARD e ClusWiSARD
+recuperam o F1 mais alto a $\approx 2$ \emph{KB} medianos (dependentes
+dos dados); o BTHOWeN treina cerca de $705\times$ mais rápido que o LSTM.
+\end{abstract}
+
+\vspace{0.5em}
+\noindent\textbf{Palavras-chave:} WiSARD, WNN, TON\_IoT, detecção de
+anomalia, IoT, BTHOWeN, ULEEN.
+
+\vspace{1em}
+
+\input{sections/intro}
+\FloatBarrier
+\input{sections/related}
+\FloatBarrier
+\input{sections/dataset}
+\FloatBarrier
+\input{sections/metodologia}
+\FloatBarrier
+\input{sections/reproducao_paper}
+\FloatBarrier
+\input{sections/wisard_sweep}
+\FloatBarrier
+\input{sections/comparacao}
+\FloatBarrier
+\input{sections/discussao}
+\FloatBarrier
+\input{sections/conclusao}
+
+\FloatBarrier
+\clearpage
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}

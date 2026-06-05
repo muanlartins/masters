@@ -11,9 +11,11 @@
 # The --no-build-isolation flag is required because wisardpkg's C++ build
 # expects pybind11/setuptools to be visible from the active environment.
 
-# Custom wisardpkg fork (BloomWisard, fitted thermometers, large-address RAMs,
-# ColorMaskBinarization, Local2DMapping, Python ports of BTHOWeN/DWN/ULEEN).
-wisardpkg @ git+https://github.com/muanlartins/wisardpkg.git@99d13a6716cadfc694248eb385d096d0e37d0c51
+# Custom wisardpkg fork (BloomWisard, fitted thermometers incl. logarithmic,
+# large-address RAMs, deployedSizeBytes deployed-memory metric, Python ports of
+# BTHOWeN/DWN/ULEEN). Pin includes deployedSizeBytes + the logarithmic thermometer
+# the TON_IoT sweep uses (the previous pin lacked both).
+wisardpkg @ git+https://github.com/muanlartins/wisardpkg.git@ccc07eb7d62dfca372a1b530dcd39d32157bfb80
 
 annotated-doc==0.0.4
 annotated-types==0.7.0

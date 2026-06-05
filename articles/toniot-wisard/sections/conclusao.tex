@@ -1,0 +1,110 @@
+\section{Conclusão}
+\label{sec:conclusao}
+
+Este relatório consolidou o Trabalho 1 da disciplina de Redes
+Neurais Sem Peso (mestrado, 2026/1), em que reproduzimos
+fielmente os oito \emph{baselines} de Alsaedi et al.\
+(2020)~\cite{alsaedi2020toniot} no dataset TON\_IoT e avaliamos cinco
+modelos da família WiSARD sob \emph{exatamente o mesmo protocolo}.
+
+\paragraph{Quanto à reprodução do paper.} Sob o protocolo
+\emph{paper-faithful} (\emph{split} 80/20, $k=4$ \emph{StratifiedKFold},
+métrica \texttt{F1 weighted}), nossa reprodução dos oito
+\emph{baselines} bate com as Tabelas 10--11 do paper dentro de
+$|\Delta|<0{,}15$ em 91\% dos pares (modelo, base), com média de
+$\Delta = -0{,}009$. Os deltas residuais concentram-se nas bases mais
+afetadas pela divergência de tamanho entre os CSVs públicos e o
+dataset original do paper (sub-amostragem da classe normal para 43\%
+do volume original), o que documentamos como o fator limitante
+dominante da reprodução.
+
+\paragraph{Quanto à família WiSARD.} Sob o mesmo protocolo, a família
+WiSARD apresenta desempenho competitivo na maioria das bases
+\emph{per-device}: WiSARD ($0{,}824$) e ClusWiSARD ($0{,}822$) lideram o
+grupo \emph{praticamente empatadas}, a cerca de um ponto percentual de
+Random Forest e CART ($\approx 0{,}83$) e à frente de kNN ($0{,}789$),
+LSTM ($0{,}712$) e SVM ($0{,}659$); BloomWiSARD ($0{,}764$), BTHOWeN
+($0{,}760$) e ULEEN ($0{,}758$) vêm logo atrás. Essa paridade
+WiSARD/ClusWiSARD só emergiu após unificarmos os tetos de capacidade do
+\emph{sweep} (\S{}\ref{sec:wisard_fair}): com tetos desiguais, ClusWiSARD
+aparecia $0{,}04$ atrás por artefato de cobertura, não de modelo. Em
+bases com \emph{leak} categórico forte (\texttt{Fridge},
+\texttt{Garage\_Door}), toda a família satura em F1 $\approx 1{,}000$;
+em bases sem sinal discriminativo (\texttt{Motion\_Light}), todos
+colapsam para predição majoritária. Em \texttt{Modbus}, com estrutura
+não-linear nos códigos FC, WiSARD e ClusWiSARD com endereçamento amplo
+chegam a $0{,}95$, \emph{igualando} os modelos de árvore (RF/CART
+$\approx 0{,}94$). No \emph{combined} multi-classe, o \emph{gap} cresce:
+a família fica em $0{,}24$--$0{,}43$, com ULEEN ($0{,}425$), WiSARD e
+ClusWiSARD ($0{,}413$) à frente de LR/LDA/SVM ($\approx 0{,}30$) e bem
+acima de NB ($0{,}03$), mas distante de RF/CART ($0{,}60$).
+
+\paragraph{Quanto à viabilidade em \emph{edge}.} A discussão mais
+relevante deste trabalho não está nos números brutos de F1, mas no
+\emph{trade-off} F1 $\times$ custo, e nesse \emph{trade-off} o eixo
+decisivo é a memória. O BTHOWeN treina em $0{,}09$\,s medianos (cerca de
+\textbf{705$\times$ mais rápido que o LSTM}) e entrega F1 $\approx 0{,}76$.
+Em F1 $\times$ tempo de CPU, porém, os modelos de árvore ainda dominam:
+RF e kNN treinam tão rápido quanto o BTHOWeN e com F1 superior. A
+vantagem genuína da família aparece na memória, sob uma métrica única de
+estado implantado: as variantes de filtro (BloomWiSARD, BTHOWeN, ULEEN)
+são implantáveis em $0{,}75$--$2$\,\emph{KB} \emph{fixos}, cerca de três
+ordens de magnitude abaixo dos modelos de árvore (RF $\approx 3$\,MB,
+kNN $\approx 1$\,MB), a um custo de poucos pontos de F1; WiSARD e
+ClusWiSARD recuperam o melhor F1 da família ($0{,}82$) com
+$\approx 2$\,KB \emph{medianos} --- ainda muito abaixo das árvores, mas
+com \emph{footprint} dependente dos dados que cresce nas bases
+estruturadas. É esse \emph{footprint} reduzido --- e a inferência em
+\emph{hardware} dedicado documentada nos artigos originais de BTHOWeN e
+ULEEN, que um \emph{benchmark} em CPU não captura --- que torna a
+família preferível para \emph{deployment} em hardware embarcado com
+restrição de memória.
+
+\paragraph{Trabalhos futuros.} As direções naturais para este trabalho
+são (i) acesso ao dataset original do paper, eliminando a divergência
+de tamanho que limita a reprodução; (ii) \emph{dispatch} por \emph{feature}, escolhendo o melhor
+termômetro para cada variável em vez de aplicar um único termômetro
+uniformemente, uma vez que a alocação \texttt{non-uniform} já entrou no
+\emph{sweep} atual;
+(iii) avaliação do BTHOWeN em \emph{ULEEN-style training}
+(\emph{epochs}+\emph{learning rate}) para verificar se o tempo extra
+de treinamento compensa pelo F1 ganho; (iv) extensão dos
+\emph{sweeps} para hardware-target (latência de inferência e
+\emph{memory footprint} sob restrição de FPGA), seguindo o protocolo
+do BTHOWeN original.
+
+\paragraph{Conclusão final.} A família WiSARD é uma família viável de
+modelos sem peso para detecção de anomalia em IoT, com perfil
+F1 $\times$ custo claramente distinto e em geral favorável frente aos
+\emph{baselines} clássicos para o cenário \emph{edge}. Os resultados
+não substituem os modelos baseados em árvore quando F1 puro é o
+critério único, mas oferecem redução de cerca de três ordens de
+magnitude em \emph{footprint} de memória (variantes de filtro, com
+\emph{footprint} fixo) a uma perda relativamente pequena em F1, nas
+bases sem leak forte. Duas contribuições metodológicas acompanham esse
+resultado: a unificação dos tetos de capacidade do \emph{sweep}, que
+tornou a comparação intra-família justa (revelando que a aparente
+liderança da WiSARD sobre a ClusWiSARD era artefato de cobertura de
+\emph{grid}), e a métrica única de estado implantado que coloca todos
+os modelos sem peso no mesmo eixo de memória. A maior contribuição,
+porém, é a explicitação dos três problemas estruturais dos CSVs
+públicos do TON\_IoT (\emph{leak} categórico, \emph{leak} temporal
+universal, divergência de tamanho contra o paper original) --- o que
+esperamos sirva de referência para trabalhos futuros sobre esse
+dataset.
+
+\paragraph{Disponibilidade de código e dados.} Todo o pipeline ---
+\emph{notebook} de referência (\texttt{06\_consolidado\_grupos.ipynb}),
+\emph{scripts} de \emph{sweep} e \emph{benchmark}, e os JSONL/JSON de
+resultados que sustentam cada número reportado --- está disponível em
+\url{https://github.com/muanlartins/masters/tree/toniot-wisard-repro}.
+A biblioteca \texttt{wisardpkg} (com o termômetro logarítmico e a
+métrica \texttt{deployedSizeBytes}) é fixada por \emph{commit} em
+\texttt{requirements.txt}. O dataset TON\_IoT
+\texttt{Train\_Test\_IoT\_*.csv} é público (UNSW Canberra Cyber).
+
+\paragraph{Uso de assistentes de IA.} O texto deste relatório foi
+redigido com assistência de IA generativa (Claude Code), a partir
+dos números, figuras e estrutura definidos pelos autores no
+\emph{notebook} de consolidação. Toda a metodologia, todos os
+experimentos e todas as conclusões são de autoria humana.

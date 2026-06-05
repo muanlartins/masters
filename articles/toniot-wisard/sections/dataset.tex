@@ -1,0 +1,233 @@
+\section{Auditoria de qualidade do dataset TON\_IoT}
+\label{sec:dataset}
+
+Antes de treinar qualquer modelo, fizemos uma auditoria da qualidade
+estatística dos sete CSVs de telemetria disponibilizados pela UNSW
+(\texttt{Train\_Test\_IoT\_*.csv}). A motivação é simples: o paper
+Alsaedi 2020 reporta F1 igual a 1{,}00 em
+várias bases (notavelmente \texttt{Garage\_Door} em todos os oito
+modelos), e qualquer reprodução que não interrogue \emph{por que}
+isso acontece corre o risco de incorporar artifacts não-conceituais e
+declarar vitória indevida. Encontramos três problemas estruturais:
+dois tipos de \emph{leak} e uma divergência crítica de tamanho entre
+os CSVs públicos e o que o paper de fato mediu.
+
+\subsection{Inventário de features e Cramér's V}
+
+A Figura~\ref{fig:cramers} mostra, para cada base, o maior Cramér's V
+entre as \emph{features} contra o rótulo binário (\texttt{normal} vs
+qualquer ataque), calculado sobre os dados crus. Valores próximos de 1
+indicam uma \emph{feature} deterministicamente associada ao rótulo ---
+um sinal forte de \emph{leak}.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.95\linewidth]{v06_cramers_v_por_base.png}
+  \caption{Cramér's V máximo por base (a \emph{feature} mais associada
+           ao rótulo), sobre os dados crus. \texttt{temp\_condition}
+           (Fridge) e \texttt{sphone\_signal} (Garage\_Door) atingem
+           V $=1{,}000$, uma dependência determinística (leak).
+           \texttt{GPS\_Tracker} e \texttt{Weather} têm associação forte
+           mas não determinística; as demais bases não têm leak
+           marginal.}
+  \label{fig:cramers}
+\end{figure}
+
+\subsection{Leak categórico em duas bases}
+
+Duas \emph{features} categóricas mostraram Cramér's V exatamente
+$1{,}000$ contra o rótulo (Tabela~\ref{tab:leak_categorico}):
+
+\begin{table}[ht]
+  \centering
+  \caption{Leaks categóricos identificados nos CSVs públicos.}
+  \label{tab:leak_categorico}
+  \small
+  \begin{tabular}{lllc}
+    \toprule
+    \textbf{Base} & \textbf{Feature} & \textbf{Causa} & \textbf{V} \\
+    \midrule
+    Fridge       & \texttt{temp\_condition} & 6 variantes \emph{whitespace} de \texttt{'high'}/\texttt{'low'} & 1{,}000 \\
+    Garage\_Door & \texttt{sphone\_signal}  & \texttt{'0'/'1'} (atk), \texttt{'false\ \ '/'true\ \ '} (normal) & 1{,}000 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Em \texttt{Fridge.temp\_condition}, as seis variantes
+(\texttt{'high'}, \texttt{'high\ '}, \texttt{'high\ \ '} e as análogas
+para \texttt{'low'}) diferem apenas por caracteres de \emph{whitespace}
+no final da string. Para um humano elas são a mesma palavra; para um
+\texttt{LabelEncoder} ingênuo, são seis classes distintas, e o modelo
+aprende a separar \texttt{normal}/\texttt{attack} via essa diferença
+ortográfica em vez de via o conceito que a \emph{feature} representa:
+a variante \emph{sem} espaço aparece $100\%$ em \texttt{attack}, as
+variantes \emph{com} espaço $100\%$ em \texttt{normal}. Análogo em
+\texttt{Garage\_Door}, em que o encoding mistura strings booleanas
+(\texttt{'false\ \ '}/\texttt{'true\ \ '}, sempre \texttt{normal}) com
+strings numéricas (\texttt{'0'}/\texttt{'1'}, sempre \texttt{attack}) de
+forma sistemática por classe. A Figura~\ref{fig:leak_summary} torna o
+\emph{whitespace} visível (glifo \texttt{\textvisiblespace}) para evidenciar essa
+separação.
+
+\subsection{Leak temporal universal}
+
+O paper, em sua Seção VI--A1, descarta \texttt{date}, \texttt{time} e
+\texttt{timestamp} sob o argumento de que ``\emph{may cause some ML
+methods to overfit}''. Nossa análise mostra uma justificativa mais
+forte: o campo \texttt{date} é \textbf{leak determinístico em todas as
+sete bases} --- 100\% das datas únicas aparecem em uma única classe.
+A Figura~\ref{fig:date_leak} reporta a fração de datas exclusivas por
+classe em cada base; em todas, a barra está fixada em 100\%.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.92\linewidth]{v06_date_leak_per_base.png}
+  \caption{Fração de datas únicas que aparecem em apenas uma classe
+           (\texttt{normal} ou \texttt{attack}), por base. As sete
+           barras saturam em 100\%: o \emph{testbed} foi
+           operado em janelas temporais separadas por classe.}
+  \label{fig:date_leak}
+\end{figure}
+
+A causa é a operação do \emph{testbed}: os autores rodaram cada
+campanha de ataque em uma janela de tempo separada da operação normal.
+Para qualquer estudo de generalização, isso significa que \texttt{date}
+e variantes derivadas (\texttt{hour}, \texttt{dayofweek}) precisam ser
+descartadas \emph{antes} do treinamento, comportamento que
+encapsulamos na função \texttt{drop\_temporal\_leak}, aplicada em
+todos os experimentos.
+
+\subsection{Visualização agregada dos leaks}
+
+A Figura~\ref{fig:leak_summary} apresenta um sumário visual dos dois
+tipos de \emph{leak} ao longo das sete bases, alinhando as
+\emph{features} que precisam ser tratadas antes de qualquer
+modelagem.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.92\linewidth]{v06_leak_summary.png}
+  \caption{Sumário dos \emph{leaks} identificados no TON\_IoT
+           público: categórico (\texttt{temp\_condition},
+           \texttt{sphone\_signal}) e temporal (\texttt{date}).
+           O \emph{whitespace} é renderizado com o glifo \texttt{\textvisiblespace}:
+           a variante sem espaço é $100\%$ \texttt{attack}, as variantes
+           com espaço são $100\%$ \texttt{normal}.}
+  \label{fig:leak_summary}
+\end{figure}
+
+\subsection{Os leaks determinísticos são artefato do subset re-amostrado}
+\label{sec:leak_artifact}
+
+Os quatro \emph{datasets} disponibilizados pela UNSW formam uma
+hierarquia: \texttt{telemtry\_data} (logs brutos),
+\texttt{Processed\_IoT\_dataset} (versão integral processada,
+$\sim$3{,}6 M linhas) e \texttt{Train\_Test\_IoT\_*.csv} (subset
+pré-dividido para ML, $\sim$261 k linhas). Confrontando a versão pública
+\texttt{Train\_Test} com a versão integral \texttt{Processed}, descobre-se
+que os leaks \emph{determinísticos} (V $=1{,}000$, exclusividade
+temporal $100\%$) são um artefato \textbf{específico do subset
+re-amostrado}: na versão integral, as mesmas variantes de
+\emph{whitespace} e as mesmas datas existem, mas a associação com o
+rótulo é apenas parcial (Tabela~\ref{tab:leak_subset}).
+
+\begin{table}[ht]
+  \centering
+  \caption{O leak determinístico é uma propriedade do subset público,
+           não do dataset integral. A sub-amostragem da classe
+           \texttt{normal} (\S{}\ref{sec:dataset_mismatch}) removeu
+           justamente as linhas \texttt{normal} de \texttt{'high'}/\texttt{'low'}
+           sem espaço, deixando essas variantes $100\%$ em \texttt{attack}.}
+  \label{tab:leak_subset}
+  \small
+  \begin{tabular}{lcc}
+    \toprule
+    \textbf{Sinal} & \textbf{\texttt{Train\_Test} (público)} & \textbf{\texttt{Processed} (integral)} \\
+    \midrule
+    \texttt{temp\_condition} (Cramér's V)  & \textbf{1{,}000} & 0{,}569 \\
+    \texttt{sphone\_signal} (Cramér's V)   & \textbf{1{,}000} & 0{,}554 \\
+    \texttt{date} (exclusividade de classe) & \textbf{100\%} (7/7 bases) & 50--61\% \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+A implicação é que a divergência de tamanho
+(\S{}\ref{sec:dataset_mismatch}) e o leak categórico
+(\S{}\ref{sec:dataset}) não são achados independentes: são o
+\emph{mesmo} fenômeno. Sub-amostrar \texttt{normal} de
+$\sim$35\,000 para 15\,000 por dispositivo eliminou exatamente as
+poucas linhas \texttt{normal} que usavam a variante sem espaço, o que
+transformou um sinal parcial (V $\approx 0{,}57$) em um separador
+perfeito (V $=1{,}000$). Qualquer reprodução sobre os CSVs públicos
+herda esse artefato.
+
+\subsection{Divergência de tamanho entre CSVs públicos e o paper}
+\label{sec:dataset_mismatch}
+
+O achado mais crítico para a reprodução: \textbf{os CSVs públicos
+\texttt{Train\_Test\_IoT\_*.csv} são um subset re-balanceado do
+dataset que produziu as Tabelas 10--13 do paper}. Confrontando as
+contagens reais dos CSVs com as Figuras 2--3--5 do paper original
+(Tabela~\ref{tab:mismatch}):
+
+\begin{table}[ht]
+  \centering
+  \caption{Divergência de tamanho entre o dataset usado nas
+           Tabelas 10--13 do paper Alsaedi 2020 (lido diretamente das
+           Figuras 2/3/5, que reportam \texttt{normal} $=35\,000$ por
+           dispositivo e $245\,000$ no \emph{combined}) e os CSVs
+           públicos \texttt{Train\_Test\_IoT\_*.csv} (UNSW). Os ataques
+           foram preservados; a classe \texttt{normal} foi sub-amostrada
+           para $43\%$ do volume original.}
+  \label{tab:mismatch}
+  \small
+  \begin{tabular}{lrrrr}
+    \toprule
+    & \multicolumn{2}{c}{\textbf{per-device}} & \multicolumn{2}{c}{\textbf{combined}} \\
+    \cmidrule(lr){2-3}\cmidrule(lr){4-5}
+    & \textbf{normal} & \textbf{total} & \textbf{normal} & \textbf{total} \\
+    \midrule
+    Paper Alsaedi 2020 (Figs.\ 2/3/5) & 35\,000 & 51--60 k & 245\,000 & 401\,119 \\
+    CSVs públicos (UNSW) & 15\,000 & 31--40 k & 105\,000 & 261\,119 \\
+    \midrule
+    Razão (CSVs / paper)             & \textbf{0{,}43} & --- & \textbf{0{,}43} & --- \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Que os ataques foram preservados \emph{na íntegra} é verificável por
+aritmética: as fatias da Figura 5 do paper somam $401\,119$ amostras no
+\emph{combined} (das quais $245\,000$ são \texttt{normal}), e
+$401\,119 - 245\,000 = 156\,119$ coincide exatamente com a contagem de
+ataques que medimos nos CSVs públicos. Apenas a classe \texttt{normal}
+encolheu.
+
+A consequência é que mesmo o pipeline mais fiel ao paper não pode
+reproduzir os números exatos das Tabelas 10--13: a prevalência de
+classe é diferente (paper $\approx$ 40\% ataque / 60\% \texttt{normal};
+CSVs $\approx$ 60\% ataque / 40\% \texttt{normal}), o que altera o ponto
+de operação de modelos que colapsam
+para predição majoritária (LR/LDA/NB em bases pobres como
+\texttt{Motion\_Light}) e empurra todos os F-score \emph{weighted}
+para baixo (a métrica recompensa proporcionalmente quem acerta a
+classe majoritária). Modelos robustos a re-amostragem
+(Random Forest, CART) tendem a divergir menos; modelos sensíveis a
+volume (NB, LSTM) divergem mais. Voltamos a essa limitação na
+Seção~\ref{sec:discussao}.
+
+\subsection{Conclusão da auditoria}
+
+A auditoria define o pipeline mínimo necessário para qualquer
+comparação metodologicamente honesta no TON\_IoT público:
+
+\[
+  \texttt{df} \rightarrow \texttt{drop\_temporal\_leak} \rightarrow
+  \texttt{encode} + \texttt{scale} \rightarrow \texttt{modelo}.
+\]
+
+O passo opcional \texttt{clean\_df} (que normaliza
+\emph{whitespace} e mapeia strings booleanas) é discutido na
+Seção~\ref{sec:discussao}: usá-lo destrói o \emph{leak} categórico,
+mas afasta a reprodução do paper, que aparentemente operou sobre
+\emph{features} já limpas (a diferença está \emph{nos CSVs públicos}, e
+não no dataset original do paper).

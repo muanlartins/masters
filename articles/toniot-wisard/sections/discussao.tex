@@ -1,0 +1,198 @@
+\section{Discussão e limitações}
+\label{sec:discussao}
+
+Esta seção discute as limitações da reprodução em ordem de impacto. A
+divergência de tamanho entre os CSVs públicos e o dataset do paper
+(\S{}\ref{sec:discussao_dataset}) é a dominante; seguem a escolha de
+não usar \texttt{clean\_df} (\S{}\ref{sec:discussao_clean}), a métrica
+F1 inferida empiricamente, a semente e os hiperparâmetros não
+publicados pelo paper, a contagem das ``22 \emph{features}'', a
+substituição do SVM no \emph{combined} e a cobertura reduzida do
+\emph{sweep} combinado, encerrando com o resumo das limitações.
+
+\subsection{Divergência de tamanho é a limitação dominante}
+\label{sec:discussao_dataset}
+
+O \emph{achado} de \S{}\ref{sec:dataset_mismatch} domina todas as
+demais limitações da reprodução: os CSVs públicos
+\texttt{Train\_Test\_IoT\_*.csv} são um \emph{subset re-balanceado}
+do dataset original. A classe \texttt{normal} foi sub-amostrada de
+$\sim$35\,000 para $\sim$15\,000 amostras por dispositivo
+(razão $\approx 0{,}43$), enquanto a classe \texttt{attack} foi
+preservada na íntegra. Isso significa que mesmo o pipeline mais
+fiel ao paper não consegue reproduzir os números exatos das
+Tabelas 10--13, e que qualquer comparação \emph{ours vs.\ paper}
+deve ser lida como ``ordem de grandeza'' e não como ``match exato''.
+
+A consequência concentra-se na tarefa \emph{combined} multi-classe.
+Confrontando a Figura 5 do paper com os CSVs públicos, os \emph{ataques}
+são idênticos linha a linha (\texttt{backdoor} 35\,k, \texttt{ddos}
+25\,k, \texttt{injection} 35\,k, \texttt{password} 35\,k,
+\texttt{ransomware} 16\,030, \texttt{scanning} 3\,973, \texttt{xss}
+6\,116); a \emph{única} diferença é a classe \texttt{normal}
+($245\,000$ no paper, $105\,000$ nos CSVs públicos). Como a acurácia e o
+F1 \emph{weighted} multi-classe seguem a prevalência de \texttt{normal}
+--- a Tabela 13 do paper reporta acurácia de LR $=0{,}61$, igual à sua
+fração de \texttt{normal} ---, nossos números ficam sistematicamente
+abaixo: com $40\%$ de \texttt{normal} contra os $61\%$ do paper, há menos
+da classe majoritária ``fácil'' para sustentar a métrica. A tarefa
+\emph{combined} binária, ao contrário, reproduz bem
+(\S{}\ref{sec:reproducao}): separar ataque de \texttt{normal} depende
+pouco do volume da classe majoritária.
+
+O \emph{Naïve Bayes} é o único modelo cujo \emph{gap} vai além da
+prevalência. Nossa acurácia multi-classe ($0{,}106$) fica \emph{abaixo}
+do \emph{baseline} de maioria ($0{,}40$), enquanto a do paper ($0{,}54$)
+fica próxima da sua prevalência. A causa é uma patologia do
+\texttt{GaussianNB}: as \emph{features} de proveniência (colunas de
+dispositivo preenchidas com zero) e as variáveis quase-constantes por
+classe produzem variâncias degeneradas que levam o modelo a prever
+\texttt{ddos} em vez de \texttt{normal} (aumentar \texttt{var\_smoothing}
+recupera apenas parcialmente, e foge do \texttt{GaussianNB} padrão do
+paper). Acreditamos que os deltas residuais de \S{}\ref{sec:reproducao}
+($|\Delta|<0{,}15$ em 91\% dos pares) são amplamente explicados pela
+divergência de \texttt{normal}, e que sob o dataset original do paper a
+aderência seria substancialmente maior.
+
+\subsection{A escolha entre \emph{clean\_df} e não-\emph{clean\_df}}
+\label{sec:discussao_clean}
+
+O paper afirma, em sua \S{}VI-A1, que features categóricas são
+encodadas como ``high$\rightarrow$1, low$\rightarrow$0''. Isso
+sugere que o paper operou sobre \emph{features já limpas} (sem
+variantes de \emph{whitespace}). Nos CSVs públicos, no entanto, as
+quatro variantes (\texttt{'high'}, \texttt{'high\ '},
+\texttt{'low'}, \texttt{'low\ '}) coexistem; o
+\texttt{LabelEncoder} cru as trata como classes distintas.
+
+Há \emph{duas} opções, e \textbf{nenhuma reproduz o paper
+perfeitamente}:
+
+\begin{itemize}[leftmargin=*,itemsep=0pt]
+  \item \textbf{Com \texttt{clean\_df}}: as variantes são
+        normalizadas; o sinal residual de encoding desaparece;
+        F1 em \texttt{Fridge} e \texttt{Garage\_Door} cai para
+        predição majoritária --- nossos números ficam muito
+        \emph{abaixo} do paper.
+  \item \textbf{Sem \texttt{clean\_df}} (escolhido): o encoding cru
+        preserva qualquer sinal residual; o modelo aprende o que
+        provavelmente aprendeu nos dados originais do paper;
+        para algumas bases isso dá \emph{mais} sinal do que o paper
+        teve (variantes \emph{whitespace} são informação extra),
+        e nossos $\Delta$ ficam positivos.
+\end{itemize}
+
+Adotamos a segunda opção --- a escolha que mais se aproxima de uma
+reprodução honesta dada a versão de dataset que temos --- e
+documentamos explicitamente que isso pode inflar nossos números em
+$\texttt{Fridge}$ para LR/SVM. O \texttt{clean\_df} permanece útil
+em \S{}\ref{sec:dataset} para mostrar a magnitude do \emph{leak}
+introduzido pelo encoding, mas não é parte do pipeline
+\emph{paper-faithful}.
+
+\subsection{Métrica F1 inferida empiricamente}
+
+Como o paper não especifica a chamada exata de \texttt{sklearn}, a
+métrica adotada (\texttt{weighted}) é inferência empírica
+(\S{}\ref{sec:protocolo_metrica}). Se evidência adicional surgir
+(por exemplo, código do paper sendo publicado) reservamos o
+direito de re-rodar com a métrica correta. Nesse cenário, todos os
+resultados desta versão podem ser recomputados em poucas horas
+sobre os \emph{JSONL}s, sem re-treinar modelos: \texttt{f1} (binário),
+\texttt{f1\_macro} e \texttt{f1\_weighted} são gravadas
+simultaneamente em cada execução.
+
+\subsection{Semente e hiperparâmetros não publicados pelo paper}
+
+O paper não publica a semente de aleatoriedade do \emph{split} 80/20,
+dos \emph{folds} nem da inicialização de RF/SVM/LSTM; fixamos
+\texttt{random\_state=42} em todos os nossos experimentos, sem garantia
+de paridade com a partição original. Além disso, o paper especifica
+apenas os hiperparâmetros de cabeçalho de cada modelo (RF com 10
+árvores e critério Gini, kNN com $k=5$, SVM RBF com
+\texttt{gamma='auto'}) e deixa os demais (\texttt{C}, \texttt{solver},
+\texttt{max\_iter}, \texttt{class\_weight}) nos \emph{defaults} do
+\texttt{scikit-learn} 0.22.1 da época. Como esses \emph{defaults}
+mudaram entre versões, o uso do \texttt{scikit-learn} atual é uma
+fonte adicional e inevitável de divergência.
+
+\subsection{Combined: as ``22 features'' do paper são contagem de colunas}
+
+O paper \S{}VI-C reporta que o \emph{combined} foi montado ``\emph{with
+a total of 22 features}''. Nosso \emph{combined} (via
+\texttt{build\_combined\_dataset}) tem 17 \emph{features} de sensor ---
+o \texttt{UNION} das colunas das sete bases. A diferença é
+\emph{contábil}, não conceitual: as 22 são a contagem de colunas do CSV
+combinado, isto é, as 17 \emph{features} de sensor mais
+\texttt{date}, \texttt{time}, \texttt{timestamp}, \texttt{label} e
+\texttt{type}. O próprio paper, em sua \S{}VI-A1, declara descartar
+\texttt{date}, \texttt{time} e \texttt{timestamp} do vetor de
+\emph{features} (``\emph{were omitted\ldots\ as they may cause some ML
+methods to overfit}''), exatamente como fazemos via
+\texttt{drop\_temporal\_leak}. Logo, \textbf{ambos os pipelines treinam
+sobre o mesmo conjunto de $\sim$17 \emph{features} de sensor} --- não há
+discrepância de \emph{features} de modelagem, e em particular o paper
+\emph{não} obteve sinal extra por reter colunas temporais.
+
+Em nossa construção do \emph{combined}, as numéricas faltantes do
+\emph{union} das sete bases são preenchidas com zero (verificamos que
+trocar a imputação por mediana não altera os F1 dos \emph{baselines}).
+As \emph{features} categóricas, ao terem \texttt{NaN} convertido em um
+\emph{label} próprio pelo \texttt{LabelEncoder}, viram um proxy de
+``dispositivo de origem'': apenas \texttt{Fridge} preenche
+\texttt{temp\_condition}, apenas \texttt{Garage\_Door} preenche
+\texttt{sphone\_signal}, e assim por diante. \emph{Esse} \emph{leak} de
+proveniência não estava no protocolo do paper e é uma fonte adicional
+de divergência, especialmente para os modelos mais ávidos por
+encoding categórico (LR, kNN, NB).
+
+\subsection{Substituição do SVM RBF no \emph{combined}}
+
+O SVM com kernel RBF é $\mathcal{O}(n^2)$ em tempo de treinamento,
+inviável em $\sim$210\,000 linhas do \emph{combined}. Como o SVM é um
+dos oito \emph{baselines} do paper e queremos preservá-lo na
+comparação, substituímos apenas o \emph{kernel} RBF por
+\texttt{LinearSVC} para $n>50$\,k, registrando o substituto na coluna
+\texttt{effective\_model} do JSONL.
+
+\subsection{Cobertura limitada do \emph{sweep} combined}
+
+Os experimentos \emph{per-device} cobrem todo o produto cartesiano de
+hiperparâmetros de cada modelo. Os experimentos \emph{combined}
+usam apenas uma configuração canônica por modelo (geralmente a
+melhor configuração descoberta no \emph{per-device}), por motivo de
+custo computacional. Isso significa que os F1 \emph{combined}
+reportados são limites inferiores: um \emph{sweep} completo poderia
+encontrar configurações ligeiramente melhores.
+
+\subsection{Generalização}
+
+Todos os resultados acima são específicos aos CSVs públicos atuais
+do TON\_IoT. Reprodutibilidade exata requer a versão original do
+dataset (não publicamente disponível) ou que os autores publiquem o
+\emph{seed} de re-amostragem que produziu os CSVs públicos.
+Generalização para outros datasets IoT requer revalidar pelo menos
+o pipeline de auditoria (Cramér's V, leak temporal) antes de
+declarar qualquer ranking entre modelos.
+
+\subsection{Resumo das limitações}
+
+\begin{itemize}[leftmargin=*,itemsep=0pt]
+  \item Versão de dataset diferente do paper (classe \texttt{normal}
+        sub-amostrada para 43\% do volume original).
+  \item Métrica F1 inferida empiricamente (não declarada no paper).
+  \item Semente de aleatoriedade não publicada pelo paper; fixamos
+        \texttt{random\_state=42}, sem paridade garantida com a
+        partição original.
+  \item Hiperparâmetros não-cabeçalho dos \emph{baselines} deixados
+        nos \emph{defaults} do \texttt{scikit-learn}, que diferem
+        entre versões.
+  \item Pipeline \emph{paper-faithful} sem \texttt{clean\_df} ---
+        preserva \emph{leaks} do encoding (decisão honesta, mas
+        documentada).
+  \item Leak de proveniência no \emph{combined} (\texttt{NaN}
+        categórico vira proxy de dispositivo de origem).
+  \item SVM RBF substituído por \texttt{LinearSVC} no
+        \emph{combined}.
+  \item Cobertura reduzida do \emph{sweep} combined.
+\end{itemize}

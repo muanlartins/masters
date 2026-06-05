@@ -39,12 +39,21 @@ __pycache__/
 notebooks/f4rm/cache/*
 !notebooks/f4rm/cache/backfill_progress.json
 !notebooks/f4rm/cache/section4_pareto_points_backfill.pkl
+notebooks/waldo/cache/
 
 # Large flat dump (regenerable from notebook)
 notebooks/f4rm/paper_tables/section4_all_points.csv
 
 # Orphan figure
 articles/f4rms/fig1.eps
+
+# Third-party papers (cited via DOI; not redistributable) + coursework slides.
+# main.pdf (our paper) and the figures/ PNGs are kept.
+articles/toniot-wisard/2212.13994v2.pdf
+articles/toniot-wisard/Analysis_and_Evaluation_of_ToN_IoT_Windows_and_Garage_Door_Datasets.pdf
+articles/toniot-wisard/s41598-026-37834-y.pdf
+notebooks/toniot/*.pdf
+notebooks/toniot/*.pptx
 
 # TON_IoT sweep results.
 # Entregas oficiais dos integrantes ficam comitadas em

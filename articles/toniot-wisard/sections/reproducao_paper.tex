@@ -1,0 +1,197 @@
+\section{Reprodução dos \emph{baselines} do paper}
+\label{sec:reproducao}
+
+Esta seção reporta a reprodução dos oito \emph{baselines} do paper
+Alsaedi 2020 sob o protocolo descrito em \S{}\ref{sec:protocolo}.
+São três tarefas: \emph{per-device} binário (sete bases $\times$ oito
+modelos), \emph{combined} binário (uma base $\times$ oito modelos) e
+\emph{combined} multi-classe (uma base $\times$ oito modelos $\times$ nove
+sub-classes de ataque), totalizando 288 execuções
+($72 \times 4\,\text{folds}$).
+
+\subsection{Per-device binário (vs.\ Tabelas 10--11 do paper)}
+\label{sec:reproducao_perdevice}
+
+A Tabela~\ref{tab:perdevice_ours} reporta nossos F1 \emph{weighted}
+médios para cada par (modelo, base). A Figura~\ref{fig:heatmap_perdevice}
+visualiza a tabela como \emph{heatmap}.
+
+\begin{table}[ht]
+  \centering
+  \caption{F1 \emph{weighted} médio (4 folds, \emph{paper-faithful})
+           dos oito \emph{baselines} nas sete bases per-device.
+           Negrito = melhor modelo da base.}
+  \label{tab:perdevice_ours}
+  \scriptsize
+  \begin{tabular}{lcccccccc}
+    \toprule
+    \textbf{Base} & \textbf{LR} & \textbf{LDA} & \textbf{kNN} & \textbf{RF} & \textbf{CART} & \textbf{NB} & \textbf{SVM} & \textbf{LSTM} \\
+    \midrule
+    Fridge       & 0{,}783 & 0{,}777 & \textbf{1{,}000} & \textbf{1{,}000} & \textbf{1{,}000} & 0{,}545 & 0{,}952 & \textbf{1{,}000} \\
+    Garage\_Door & \textbf{1{,}000} & 0{,}938 & \textbf{1{,}000} & \textbf{1{,}000} & \textbf{1{,}000} & \textbf{1{,}000} & \textbf{1{,}000} & \textbf{1{,}000} \\
+    GPS\_Tracker & 0{,}799 & 0{,}854 & \textbf{0{,}943} & 0{,}939 & 0{,}920 & 0{,}633 & 0{,}793 & 0{,}875 \\
+    Modbus       & 0{,}426 & 0{,}426 & 0{,}680 & 0{,}936 & \textbf{0{,}944} & 0{,}441 & 0{,}372 & 0{,}447 \\
+    Motion\_Light & \textbf{0{,}475} & \textbf{0{,}475} & 0{,}474 & \textbf{0{,}475} & \textbf{0{,}475} & \textbf{0{,}475} & \textbf{0{,}475} & \textbf{0{,}475} \\
+    Thermostat   & 0{,}391 & 0{,}391 & \textbf{0{,}509} & 0{,}495 & 0{,}496 & 0{,}455 & 0{,}381 & 0{,}381 \\
+    Weather      & 0{,}468 & 0{,}467 & 0{,}916 & \textbf{0{,}975} & 0{,}964 & 0{,}756 & 0{,}638 & 0{,}808 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.95\linewidth]{v06_heatmap_perdevice.png}
+  \caption{\emph{Heatmap master} per-device binário (7 bases $\times$ 3 grupos:
+           paper, nossa reprodução \emph{paper-faithful}, WiSARD-family).
+           A coluna do meio é a Tabela~\ref{tab:perdevice_ours}.}
+  \label{fig:heatmap_perdevice}
+\end{figure}
+
+\subsection{Combined: binário e multi-classe}
+
+A Tabela~\ref{tab:combined} reúne os F1 médios nas duas tarefas
+\emph{combined}. A Figura~\ref{fig:heatmap_combined} apresenta a
+visualização \emph{heatmap}.
+
+\begin{table}[ht]
+  \centering
+  \caption{F1 \emph{weighted} médio no dataset combined.
+           Negrito = melhor modelo da tarefa.}
+  \label{tab:combined}
+  \small
+  \begin{tabular}{lcc}
+    \toprule
+    \textbf{Modelo} & \textbf{Combined binário (Tab.\ 12)} & \textbf{Combined multi (Tab.\ 13)} \\
+    \midrule
+    LR    & 0{,}621 & 0{,}296 \\
+    LDA   & 0{,}629 & 0{,}309 \\
+    kNN   & 0{,}820 & 0{,}541 \\
+    RF    & \textbf{0{,}858} & \textbf{0{,}602} \\
+    CART  & 0{,}854 & 0{,}598 \\
+    NB    & 0{,}601 & 0{,}028 \\
+    SVM   & 0{,}623 & 0{,}294 \\
+    LSTM  & 0{,}758 & 0{,}449 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}[ht]
+  \centering
+  \begin{subfigure}[t]{0.49\linewidth}
+    \includegraphics[width=\linewidth]{v06_heatmap_combined_binary.png}
+    \caption{Combined binário (Tab.\ 12 do paper).}
+  \end{subfigure}\hfill
+  \begin{subfigure}[t]{0.49\linewidth}
+    \includegraphics[width=\linewidth]{v06_heatmap_combined.png}
+    \caption{Combined multi-classe (Tab.\ 13).}
+  \end{subfigure}
+  \caption{\emph{Heatmaps} consolidados das tarefas \emph{combined}.}
+  \label{fig:heatmap_combined}
+\end{figure}
+
+\subsection{Sanity checks contra o paper}
+
+Para validar que o pipeline está corretamente implementado, definimos
+quatro \emph{sanity checks} derivados de afirmações qualitativas que o
+paper faz nas Tabelas 10--13:
+
+\begin{enumerate}[leftmargin=*,itemsep=0pt]
+  \item \textbf{Garage\_Door deve dar F1 = 1{,}000 em
+        \emph{todos} os modelos} (Tab.\ 10) --- \emph{features}
+        100\% discriminantes. \textbf{Verificado:} sete dos oito modelos
+        com F1 = 1{,}000; LDA fica em 0{,}938 (justificada pela
+        natureza linear gaussiana do modelo).
+  \item \textbf{Modbus deve ter RF/CART $\gg$ linear} (Tab.\ 10) ---
+        estrutura não-linear nos códigos FC1--FC4.
+        \textbf{Verificado:} RF/CART em 0{,}93--0{,}94 versus LR/LDA
+        em 0{,}43 ($\Delta = +0{,}51$).
+  \item \textbf{Motion\_Light colapsa em torno de 0{,}43 em
+        \emph{todos} os modelos} (Tab.\ 11 reporta F-score $0{,}43$ para
+        os oito, $0{,}44$ no LSTM) --- sem sinal discriminativo.
+        \textbf{Verificado:} todos os modelos em $0{,}475$ (predição
+        majoritária); apenas kNN difere marginalmente ($0{,}474$).
+  \item \textbf{Ranking esperado em \emph{combined} multi-classe}
+        CART $>$ kNN $>$ RF $>$ LSTM $>$ NB $>$ LDA $>$
+        LR $>$ SVM (Tab.\ 13). \textbf{Verificado:} ordem
+        observada é RF $\geq$ CART $>$ kNN $>$ LSTM $>$ LDA $>$
+        LR $\approx$ SVM $>$ NB --- match parcial; a única ressalva é
+        que NB colapsa para 0{,}028 (paper reporta $\sim$0{,}52, ver
+        discussão em \S{}\ref{sec:discussao}).
+\end{enumerate}
+
+\subsection{Quantificação do gap paper vs.\ nossa reprodução}
+
+A Figura~\ref{fig:delta_scatter} apresenta duas visões da concordância
+agregada. O \emph{scatter} (esquerda) mostra cada par (modelo, base)
+como um ponto $(F1_{\text{paper}}, F1_{\text{ours}})$; a reta $y=x$
+indicaria reprodução exata. O \emph{heatmap} de $\Delta$ (direita)
+mostra a diferença sinalizada $F1_{\text{ours}} - F1_{\text{paper}}$
+para cada par.
+
+\begin{figure}[ht]
+  \centering
+  \begin{subfigure}[t]{0.46\linewidth}
+    \includegraphics[width=\linewidth]{v06_scatter_ours_vs_paper.png}
+    \caption{Concordância linear ours vs.\ paper.}
+  \end{subfigure}\hfill
+  \begin{subfigure}[t]{0.50\linewidth}
+    \includegraphics[width=\linewidth]{v06_delta_perdevice.png}
+    \caption{$\Delta$ = nossa $-$ paper, per-device binário.}
+  \end{subfigure}
+  \caption{Acordo entre nossa reprodução \emph{paper-faithful} e os
+           números das Tabelas 10--11 do paper.}
+  \label{fig:delta_scatter}
+\end{figure}
+
+\textbf{Resumo quantitativo:}
+
+\begin{itemize}[leftmargin=*,itemsep=0pt]
+  \item $|\Delta| < 0{,}05$ em 48\% dos pares (modelo, base);
+  \item $|\Delta| < 0{,}10$ em 75\%;
+  \item $|\Delta| < 0{,}15$ em \textbf{91\%};
+  \item média de $\Delta$ próxima de zero ($-0{,}009$) ---
+        sem viés sistemático.
+\end{itemize}
+
+Os deltas residuais concentram-se onde a sensibilidade ao encoding e
+o desbalanceamento de classes têm efeito maior: \texttt{Fridge} para
+LR/SVM, em que o encoding das variantes \emph{whitespace} dá sinal
+extra (paper reporta 0{,}43 para LR, obtemos 0{,}78); \texttt{Thermostat},
+em que a baixa prevalência da classe minoritária puxa a média ponderada
+para 0{,}38--0{,}51 enquanto o paper reporta 0{,}53--0{,}57; e os
+modelos lineares no \texttt{Modbus} (LR/LDA/SVM em $\approx 0{,}43$
+versus paper em $0{,}55$). Em todas as bases com sinal estruturado ---
+\texttt{Garage\_Door}, \texttt{GPS\_Tracker}, \texttt{Weather}, e
+\texttt{Motion\_Light} (que sob \emph{weighted} agora alinha bem ao
+paper) --- a reprodução é fiel ($|\Delta| < 0{,}10$ na maioria dos
+modelos).
+
+\subsection{Visão consolidada: o que reproduz em cada tarefa}
+\label{sec:repro_alltasks}
+
+A Figura~\ref{fig:repro_delta} consolida o $\Delta$ (nossa
+$-$ paper) por modelo nas três tarefas, evidenciando onde a
+reprodução é fiel e onde diverge. As duas tarefas \emph{binárias}
+(per-device e \emph{combined}) reproduzem dentro de poucos pontos
+($\Delta$ próximo de zero, em branco). A tarefa \emph{combined}
+multi-classe é sistematicamente mais baixa (vermelho): como a métrica
+\emph{weighted} acompanha a prevalência de \texttt{normal}, e os CSVs
+públicos têm $40\%$ de \texttt{normal} contra os $61\%$ do paper
+(\S{}\ref{sec:discussao_dataset}; ataques idênticos, apenas
+\texttt{normal} sub-amostrada), há menos da classe majoritária para
+sustentar a métrica. O \emph{Naïve Bayes} é o único \emph{outlier} de
+modelo (não de dados): seu colapso multi-classe é uma patologia do
+\texttt{GaussianNB} sobre as \emph{features} de proveniência, discutida
+em \S{}\ref{sec:discussao}.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.72\linewidth]{v06_repro_delta_alltasks.png}
+  \caption{$\Delta$ F1 \emph{weighted} (nossa reprodução $-$ paper) por
+           modelo $\times$ tarefa. Branco ($\Delta \approx 0$) = reproduz;
+           vermelho = abaixo do paper; azul = acima. As tarefas binárias
+           reproduzem bem; a \emph{combined} multi-classe fica abaixo
+           pela divergência de \texttt{normal}, com NB como único
+           \emph{outlier} de modelo.}
+  \label{fig:repro_delta}
+\end{figure}

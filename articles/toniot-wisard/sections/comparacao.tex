@@ -111,7 +111,8 @@ majoritário dos \emph{baselines}.
 \subsection{Distribuição agregada de F1 por modelo}
 
 A Figura~\ref{fig:boxplot_models} é um \emph{boxplot} agregando F1
-sobre todas as bases $\times$ \emph{folds}, por modelo. Modelos com mediana
+(média de 4 \emph{folds} por configuração) sobre todas as
+configurações e bases do \emph{grid}, por modelo. Modelos com mediana
 alta e dispersão baixa são robustos; modelos com cauda longa são
 voláteis. RF/CART dominam o topo da distribuição; entre os WiSARDs,
 ClusWiSARD tem a mediana mais alta sobre todas as configurações
@@ -124,8 +125,9 @@ sensível à escolha de hiperparâmetros.
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.85\linewidth]{v06_boxplot_models.png}
-  \caption{Distribuição de F1 \emph{weighted} por modelo
-           (todas as bases $\times$ 4 \emph{folds}).}
+  \caption{Distribuição de F1 \emph{weighted} por modelo (todas as
+           configurações e bases do \emph{grid}; cada observação é a
+           média de 4 \emph{folds} de uma configuração).}
   \label{fig:boxplot_models}
 \end{figure}
 

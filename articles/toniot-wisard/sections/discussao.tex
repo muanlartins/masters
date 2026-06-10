@@ -4,13 +4,12 @@
 Esta seção discute as limitações da reprodução em ordem de impacto. A
 divergência de tamanho entre os CSVs públicos e o dataset do paper
 (\S{}\ref{sec:discussao_dataset}) é a dominante; seguem a escolha de
-não usar \texttt{clean\_df} (\S{}\ref{sec:discussao_clean}), a métrica
-F1 ancorada no paper mas não publicada como chamada exata, a semente e
-os hiperparâmetros não
-publicados pelo paper, a contagem das ``22 \emph{features}'', a
-substituição do SVM no \emph{combined}, a cobertura reduzida do
-\emph{sweep} combinado e o alcance da generalização, encerrando com o
-resumo das limitações.
+não usar \texttt{clean\_df} (\S{}\ref{sec:discussao_clean}) e a
+contagem das ``22 \emph{features}'' do \emph{combined}. As demais
+limitações (métrica F1 ancorada mas não publicada como chamada exata,
+semente e hiperparâmetros não publicados, substituição do SVM no
+\emph{combined}, cobertura reduzida do \emph{sweep} combinado e alcance
+da generalização) ficam agrupadas ao final.
 
 \subsection{Divergência de tamanho é a limitação dominante}
 \label{sec:discussao_dataset}
@@ -93,34 +92,6 @@ em \S{}\ref{sec:dataset} para mostrar a magnitude do \emph{leak}
 introduzido pelo encoding, mas não é parte do pipeline
 \emph{paper-faithful}.
 
-\subsection{Métrica F1: ancorada no paper, confirmada empiricamente}
-
-A métrica adotada (\texttt{weighted}) está ancorada na definição de
-média ponderada que o paper dá na discussão da Tabela 13
-(\S{}\ref{sec:protocolo_metrica}); o que o paper não publica é a
-\emph{chamada exata} de \texttt{sklearn} para as tarefas binárias
-(Tabelas 10--11), que confirmamos empiricamente pela varredura das três
-variantes. Se evidência adicional surgir (por exemplo, o código do paper
-sendo publicado), poderemos re-rodar com a métrica exata. Nesse cenário, todos os
-resultados desta versão podem ser recomputados em poucas horas
-sobre os \emph{JSONL}s, sem re-treinar modelos: \texttt{f1} (binário),
-\texttt{f1\_macro} e \texttt{f1\_weighted} são gravadas
-simultaneamente em cada execução.
-
-\subsection{Semente e hiperparâmetros não publicados pelo paper}
-
-O paper não publica a semente de aleatoriedade do \emph{split} 80/20,
-dos \emph{folds} nem da inicialização de RF/SVM/LSTM; fixamos
-\texttt{random\_state=42} em todos os nossos experimentos, sem garantia
-de paridade com a partição original. Além disso, o paper especifica
-apenas os hiperparâmetros de cabeçalho de cada modelo (RF com 10
-árvores e critério Gini, kNN com $k=5$, SVM RBF com
-\texttt{gamma='auto'}) e deixa os demais (\texttt{C}, \texttt{solver},
-\texttt{max\_iter}, \texttt{class\_weight}) nos \emph{defaults} do
-\texttt{scikit-learn} 0.22.1 da época. Como esses \emph{defaults}
-mudaram entre versões, o uso do \texttt{scikit-learn} atual é uma
-fonte adicional e inevitável de divergência.
-
 \subsection{Combined: as ``22 features'' do paper são contagem de colunas}
 
 O paper \S{}VI-C reporta que o \emph{combined} foi montado ``\emph{with
@@ -151,8 +122,35 @@ proveniência não estava no protocolo do paper e é uma fonte adicional
 de divergência, especialmente para os modelos mais ávidos por
 encoding categórico (LR, kNN, NB).
 
-\subsection{Substituição do SVM RBF no \emph{combined}}
+\subsection{Outras limitações}
 
+\paragraph{Métrica F1: ancorada no paper, confirmada empiricamente.}
+A métrica adotada (\texttt{weighted}) está ancorada na definição de
+média ponderada que o paper dá na discussão da Tabela 13
+(\S{}\ref{sec:protocolo_metrica}); o que o paper não publica é a
+\emph{chamada exata} de \texttt{sklearn} para as tarefas binárias
+(Tabelas 10--11), que confirmamos empiricamente pela varredura das três
+variantes. Se evidência adicional surgir (por exemplo, o código do paper
+sendo publicado), poderemos re-rodar com a métrica exata. Nesse cenário, todos os
+resultados desta versão podem ser recomputados em poucas horas
+sobre os \emph{JSONL}s, sem re-treinar modelos: \texttt{f1} (binário),
+\texttt{f1\_macro} e \texttt{f1\_weighted} são gravadas
+simultaneamente em cada execução.
+
+\paragraph{Semente e hiperparâmetros não publicados pelo paper.}
+O paper não publica a semente de aleatoriedade do \emph{split} 80/20,
+dos \emph{folds} nem da inicialização de RF/SVM/LSTM; fixamos
+\texttt{random\_state=42} em todos os nossos experimentos, sem garantia
+de paridade com a partição original. Além disso, o paper especifica
+apenas os hiperparâmetros de cabeçalho de cada modelo (RF com 10
+árvores e critério Gini, kNN com $k=5$, SVM RBF com
+\texttt{gamma='auto'}) e deixa os demais (\texttt{C}, \texttt{solver},
+\texttt{max\_iter}, \texttt{class\_weight}) nos \emph{defaults} do
+\texttt{scikit-learn} 0.22.1 da época. Como esses \emph{defaults}
+mudaram entre versões, o uso do \texttt{scikit-learn} atual é uma
+fonte adicional e inevitável de divergência.
+
+\paragraph{Substituição do SVM RBF no \emph{combined}.}
 O SVM com kernel RBF é $\mathcal{O}(n^2)$ em tempo de treinamento,
 inviável em $\sim$210\,000 linhas do \emph{combined}. Como o SVM é um
 dos oito \emph{baselines} do paper e queremos preservá-lo na
@@ -160,8 +158,7 @@ comparação, substituímos apenas o \emph{kernel} RBF por
 \texttt{LinearSVC} para $n>50$\,k, registrando o substituto na coluna
 \texttt{effective\_model} do JSONL.
 
-\subsection{Cobertura limitada do \emph{sweep} combined}
-
+\paragraph{Cobertura limitada do \emph{sweep} combined.}
 Os experimentos \emph{per-device} cobrem todo o produto cartesiano de
 hiperparâmetros de cada modelo. Os experimentos \emph{combined}
 usam apenas uma configuração canônica por modelo (geralmente a
@@ -170,8 +167,7 @@ custo computacional. Isso significa que os F1 \emph{combined}
 reportados são limites inferiores: um \emph{sweep} completo poderia
 encontrar configurações ligeiramente melhores.
 
-\subsection{Generalização}
-
+\paragraph{Generalização.}
 Todos os resultados acima são específicos aos CSVs públicos atuais
 do TON\_IoT. Reprodutibilidade exata requer a versão original do
 dataset (não publicamente disponível) ou que os autores publiquem o
@@ -179,27 +175,3 @@ dataset (não publicamente disponível) ou que os autores publiquem o
 Generalização para outros datasets IoT requer revalidar pelo menos
 o pipeline de auditoria (Cramér's V, leak temporal) antes de
 declarar qualquer ranking entre modelos.
-
-\subsection{Resumo das limitações}
-
-\begin{itemize}[leftmargin=*,itemsep=0pt]
-  \item Versão de dataset diferente do paper (classe \texttt{normal}
-        sub-amostrada para 43\% do volume original).
-  \item Métrica F1 ancorada na média ponderada definida pelo paper
-        (Tabela 13) e confirmada empiricamente; o paper não publica a
-        chamada exata de \texttt{sklearn}.
-  \item Semente de aleatoriedade não publicada pelo paper; fixamos
-        \texttt{random\_state=42}, sem paridade garantida com a
-        partição original.
-  \item Hiperparâmetros não-cabeçalho dos \emph{baselines} deixados
-        nos \emph{defaults} do \texttt{scikit-learn}, que diferem
-        entre versões.
-  \item Pipeline \emph{paper-faithful} sem \texttt{clean\_df}, que
-        preserva \emph{leaks} do encoding (decisão honesta, mas
-        documentada).
-  \item Leak de proveniência no \emph{combined} (\texttt{NaN}
-        categórico vira proxy de dispositivo de origem).
-  \item SVM RBF substituído por \texttt{LinearSVC} no
-        \emph{combined}.
-  \item Cobertura reduzida do \emph{sweep} combined.
-\end{itemize}

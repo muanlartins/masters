@@ -201,8 +201,8 @@ rótulo é apenas parcial (Tabela~\ref{tab:leak_subset}).
     \textbf{Sinal} & \textbf{\texttt{Train\_Test} (público)} & \textbf{\texttt{Processed} (integral)} \\
     \midrule
     \texttt{temp\_condition} (Cramér's V)  & \textbf{1{,}000} & 0{,}569 \\
-    \texttt{sphone\_signal} (Cramér's V)   & \textbf{1{,}000} & 0{,}563 \\
-    \texttt{date} (exclusividade de classe) & \textbf{100\%} (7/7 bases) & 54--62\% \\
+    \texttt{sphone\_signal} (Cramér's V)   & \textbf{1{,}000} & 0{,}554 \\
+    \texttt{date} (exclusividade de classe) & \textbf{100\%} (7/7 bases) & 50--62\% \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -213,7 +213,7 @@ A implicação é que a divergência de tamanho
 \emph{mesmo} fenômeno. Sub-amostrar \texttt{normal} de
 $\sim$35\,000 para 15\,000 por dispositivo eliminou exatamente as
 poucas linhas \texttt{normal} que usavam a variante sem espaço, o que
-transformou um sinal parcial (V $\approx 0{,}57$) em um separador
+transformou um sinal parcial (V $\approx 0{,}56$) em um separador
 perfeito (V $=1{,}000$). Qualquer reprodução sobre os CSVs públicos
 herda esse artefato.
 

@@ -5,10 +5,12 @@ Esta seção discute as limitações da reprodução em ordem de impacto. A
 divergência de tamanho entre os CSVs públicos e o dataset do paper
 (\S{}\ref{sec:discussao_dataset}) é a dominante; seguem a escolha de
 não usar \texttt{clean\_df} (\S{}\ref{sec:discussao_clean}), a métrica
-F1 inferida empiricamente, a semente e os hiperparâmetros não
+F1 ancorada no paper mas não publicada como chamada exata, a semente e
+os hiperparâmetros não
 publicados pelo paper, a contagem das ``22 \emph{features}'', a
-substituição do SVM no \emph{combined} e a cobertura reduzida do
-\emph{sweep} combinado, encerrando com o resumo das limitações.
+substituição do SVM no \emph{combined}, a cobertura reduzida do
+\emph{sweep} combinado e o alcance da generalização, encerrando com o
+resumo das limitações.
 
 \subsection{Divergência de tamanho é a limitação dominante}
 \label{sec:discussao_dataset}
@@ -21,8 +23,9 @@ $\sim$35\,000 para $\sim$15\,000 amostras por dispositivo
 (razão $\approx 0{,}43$), enquanto a classe \texttt{attack} foi
 preservada na íntegra. Isso significa que mesmo o pipeline mais
 fiel ao paper não consegue reproduzir os números exatos das
-Tabelas 10--13, e que qualquer comparação \emph{ours vs.\ paper}
-deve ser lida como ``ordem de grandeza'' e não como ``match exato''.
+Tabelas 10--13, e que qualquer comparação entre nossa reprodução e o
+paper deve ser lida como ``ordem de grandeza'', não como correspondência
+exata.
 
 A consequência concentra-se na tarefa \emph{combined} multi-classe.
 Confrontando a Figura 5 do paper com os CSVs públicos, os \emph{ataques}
@@ -32,8 +35,8 @@ são idênticos linha a linha (\texttt{backdoor} 35\,k, \texttt{ddos}
 6\,116); a \emph{única} diferença é a classe \texttt{normal}
 ($245\,000$ no paper, $105\,000$ nos CSVs públicos). Como a acurácia e o
 F1 \emph{weighted} multi-classe seguem a prevalência de \texttt{normal}
---- a Tabela 13 do paper reporta acurácia de LR $=0{,}61$, igual à sua
-fração de \texttt{normal} ---, nossos números ficam sistematicamente
+(a Tabela 13 do paper reporta acurácia de LR $=0{,}61$, igual à sua
+fração de \texttt{normal}), nossos números ficam sistematicamente
 abaixo: com $40\%$ de \texttt{normal} contra os $61\%$ do paper, há menos
 da classe majoritária ``fácil'' para sustentar a métrica. A tarefa
 \emph{combined} binária, ao contrário, reproduz bem
@@ -72,7 +75,7 @@ perfeitamente}:
   \item \textbf{Com \texttt{clean\_df}}: as variantes são
         normalizadas; o sinal residual de encoding desaparece;
         F1 em \texttt{Fridge} e \texttt{Garage\_Door} cai para
-        predição majoritária --- nossos números ficam muito
+        predição majoritária, e nossos números ficam muito
         \emph{abaixo} do paper.
   \item \textbf{Sem \texttt{clean\_df}} (escolhido): o encoding cru
         preserva qualquer sinal residual; o modelo aprende o que
@@ -82,21 +85,23 @@ perfeitamente}:
         e nossos $\Delta$ ficam positivos.
 \end{itemize}
 
-Adotamos a segunda opção --- a escolha que mais se aproxima de uma
-reprodução honesta dada a versão de dataset que temos --- e
+Adotamos a segunda opção (a escolha que mais se aproxima de uma
+reprodução honesta dada a versão de dataset que temos) e
 documentamos explicitamente que isso pode inflar nossos números em
 $\texttt{Fridge}$ para LR/SVM. O \texttt{clean\_df} permanece útil
 em \S{}\ref{sec:dataset} para mostrar a magnitude do \emph{leak}
 introduzido pelo encoding, mas não é parte do pipeline
 \emph{paper-faithful}.
 
-\subsection{Métrica F1 inferida empiricamente}
+\subsection{Métrica F1: ancorada no paper, confirmada empiricamente}
 
-Como o paper não especifica a chamada exata de \texttt{sklearn}, a
-métrica adotada (\texttt{weighted}) é inferência empírica
-(\S{}\ref{sec:protocolo_metrica}). Se evidência adicional surgir
-(por exemplo, código do paper sendo publicado) reservamos o
-direito de re-rodar com a métrica correta. Nesse cenário, todos os
+A métrica adotada (\texttt{weighted}) está ancorada na definição de
+média ponderada que o paper dá na discussão da Tabela 13
+(\S{}\ref{sec:protocolo_metrica}); o que o paper não publica é a
+\emph{chamada exata} de \texttt{sklearn} para as tarefas binárias
+(Tabelas 10--11), que confirmamos empiricamente pela varredura das três
+variantes. Se evidência adicional surgir (por exemplo, o código do paper
+sendo publicado), poderemos re-rodar com a métrica exata. Nesse cenário, todos os
 resultados desta versão podem ser recomputados em poucas horas
 sobre os \emph{JSONL}s, sem re-treinar modelos: \texttt{f1} (binário),
 \texttt{f1\_macro} e \texttt{f1\_weighted} são gravadas
@@ -120,7 +125,7 @@ fonte adicional e inevitável de divergência.
 
 O paper \S{}VI-C reporta que o \emph{combined} foi montado ``\emph{with
 a total of 22 features}''. Nosso \emph{combined} (via
-\texttt{build\_combined\_dataset}) tem 17 \emph{features} de sensor ---
+\texttt{build\_combined\_dataset}) tem 17 \emph{features} de sensor,
 o \texttt{UNION} das colunas das sete bases. A diferença é
 \emph{contábil}, não conceitual: as 22 são a contagem de colunas do CSV
 combinado, isto é, as 17 \emph{features} de sensor mais
@@ -130,7 +135,7 @@ combinado, isto é, as 17 \emph{features} de sensor mais
 \emph{features} (``\emph{were omitted\ldots\ as they may cause some ML
 methods to overfit}''), exatamente como fazemos via
 \texttt{drop\_temporal\_leak}. Logo, \textbf{ambos os pipelines treinam
-sobre o mesmo conjunto de $\sim$17 \emph{features} de sensor} --- não há
+sobre o mesmo conjunto de $\sim$17 \emph{features} de sensor}: não há
 discrepância de \emph{features} de modelagem, e em particular o paper
 \emph{não} obteve sinal extra por reter colunas temporais.
 
@@ -180,14 +185,16 @@ declarar qualquer ranking entre modelos.
 \begin{itemize}[leftmargin=*,itemsep=0pt]
   \item Versão de dataset diferente do paper (classe \texttt{normal}
         sub-amostrada para 43\% do volume original).
-  \item Métrica F1 inferida empiricamente (não declarada no paper).
+  \item Métrica F1 ancorada na média ponderada definida pelo paper
+        (Tabela 13) e confirmada empiricamente; o paper não publica a
+        chamada exata de \texttt{sklearn}.
   \item Semente de aleatoriedade não publicada pelo paper; fixamos
         \texttt{random\_state=42}, sem paridade garantida com a
         partição original.
   \item Hiperparâmetros não-cabeçalho dos \emph{baselines} deixados
         nos \emph{defaults} do \texttt{scikit-learn}, que diferem
         entre versões.
-  \item Pipeline \emph{paper-faithful} sem \texttt{clean\_df} ---
+  \item Pipeline \emph{paper-faithful} sem \texttt{clean\_df}, que
         preserva \emph{leaks} do encoding (decisão honesta, mas
         documentada).
   \item Leak de proveniência no \emph{combined} (\texttt{NaN}

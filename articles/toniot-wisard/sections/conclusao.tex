@@ -52,11 +52,11 @@ são implantáveis em $0{,}75$--$2$\,\emph{KB} \emph{fixos}, cerca de três
 ordens de magnitude abaixo dos modelos de árvore (RF $\approx 3$\,MB,
 kNN $\approx 1$\,MB), a um custo de poucos pontos de F1; WiSARD e
 ClusWiSARD recuperam o melhor F1 da família ($0{,}82$) com
-$\approx 2$\,KB \emph{medianos} --- ainda muito abaixo das árvores, mas
+$\approx 2$\,KB \emph{medianos}, ainda muito abaixo das árvores, mas
 com \emph{footprint} dependente dos dados que cresce nas bases
-estruturadas. É esse \emph{footprint} reduzido --- e a inferência em
+estruturadas. É esse \emph{footprint} reduzido (somado à inferência em
 \emph{hardware} dedicado documentada nos artigos originais de BTHOWeN e
-ULEEN, que um \emph{benchmark} em CPU não captura --- que torna a
+ULEEN, que um \emph{benchmark} em CPU não captura) que torna a
 família preferível para \emph{deployment} em hardware embarcado com
 restrição de memória.
 
@@ -87,19 +87,22 @@ tornou a comparação intra-família justa (revelando que a aparente
 liderança da WiSARD sobre a ClusWiSARD era artefato de cobertura de
 \emph{grid}), e a métrica única de estado implantado que coloca todos
 os modelos sem peso no mesmo eixo de memória. A maior contribuição,
-porém, é a explicitação dos três problemas estruturais dos CSVs
-públicos do TON\_IoT (\emph{leak} categórico, \emph{leak} temporal
-universal, divergência de tamanho contra o paper original) --- o que
-esperamos sirva de referência para trabalhos futuros sobre esse
-dataset.
+porém, é o diagnóstico dos problemas estruturais dos CSVs públicos do
+TON\_IoT: o \emph{leak} categórico e a divergência de tamanho contra o
+paper original, não discutidos no paper, e a caracterização do
+\emph{leak} temporal (que o paper já descarta por risco de
+\emph{overfit}) como determinístico. Esperamos que sirva de referência
+para trabalhos futuros sobre esse dataset.
 
-\paragraph{Disponibilidade de código e dados.} Todo o pipeline ---
-\emph{notebook} de referência (\texttt{06\_consolidado\_grupos.ipynb}),
-\emph{scripts} de \emph{sweep} e \emph{benchmark}, e os JSONL/JSON de
-resultados que sustentam cada número reportado --- está disponível em
+\paragraph{Disponibilidade de código e dados.} Todo o pipeline (o
+\emph{notebook} de referência \texttt{06\_consolidado\_grupos.ipynb},
+os \emph{scripts} de \emph{sweep} e \emph{benchmark} e os JSONL/JSON de
+resultados que sustentam cada número reportado) está disponível em
 \url{https://github.com/muanlartins/masters/tree/toniot-wisard-repro}.
-A biblioteca \texttt{wisardpkg} (com o termômetro logarítmico e a
-métrica \texttt{deployedSizeBytes}) é fixada por \emph{commit} em
+A biblioteca \texttt{wisardpkg} (com os cinco termômetros ajustados
+\emph{Distributive}, \emph{Gaussian}, \emph{Exponential},
+\emph{Logarithmic} e \emph{Non-uniform}, e a métrica
+\texttt{deployedSizeBytes}) é fixada por \emph{commit} em
 \texttt{requirements.txt}. O dataset TON\_IoT
 \texttt{Train\_Test\_IoT\_*.csv} é público (UNSW Canberra Cyber).
 

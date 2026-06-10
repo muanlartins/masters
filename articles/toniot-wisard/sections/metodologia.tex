@@ -4,16 +4,16 @@
 Esta seção formaliza o protocolo experimental. A
 \S{}\ref{sec:protocolo} fixa o protocolo \emph{paper-faithful}
 (\emph{split}, validação cruzada, métrica e encoding) compartilhado por
-todos os modelos; em seguida descrevemos o pipeline de
-pré-processamento, as extensões de termômetros na \texttt{wisardpkg} e o
-ambiente de \emph{hardware} e reprodutibilidade.
+todos os modelos; em seguida descrevemos as extensões de termômetros na
+\texttt{wisardpkg} e, por fim, a implementação e o ambiente de
+reprodutibilidade (pré-processamento, hardware e artefatos).
 
 \subsection{Protocolo \emph{paper-faithful}}
 \label{sec:protocolo}
 
-Para que a comparação entre os \emph{baselines} clássicos do paper e
-a família WiSARD seja uma comparação direta sob protocolo idêntico, todos os experimentos seguem o
-mesmo protocolo, derivado da Seção VI--A do paper Alsaedi 2020
+Para que a comparação entre os \emph{baselines} clássicos e a família
+WiSARD seja direta, todos os experimentos seguem o mesmo protocolo,
+derivado da Seção VI--A do paper Alsaedi 2020
 (Tabela~\ref{tab:protocolo}).
 
 \begin{table}[ht]
@@ -30,7 +30,7 @@ mesmo protocolo, derivado da Seção VI--A do paper Alsaedi 2020
     Split & 80\% \emph{train} / 20\% \emph{test} \emph{held-out} & \texttt{StratifiedShuffleSplit (test\_size=0.20, random\_state=42)} \\
     Validação cruzada & $k=4$ sobre o \emph{train} & \texttt{StratifiedKFold (n\_splits=4, random\_state=42)} \\
     F1 final & Média sobre os 4 \emph{folds} & idem \\
-    Métrica F1 & F-score (\S{}VI-B1, não especifica \emph{average}) & \texttt{f1\_weighted} (inferência empírica --- ver \S{}\ref{sec:protocolo_metrica}) \\
+    Métrica F1 & F-score (\S{}VI-B1, não especifica \emph{average}) & \texttt{f1\_weighted} (ancorada no paper + ajuste empírico, \S{}\ref{sec:protocolo_metrica}) \\
     Encoding categórico & \texttt{LabelEncoder} & \texttt{LabelEncoder} cru, \emph{sem} \texttt{clean\_df} (ver \S{}\ref{sec:discussao_clean}) \\
     Temporal & Drop \texttt{date}/\texttt{time}/\texttt{timestamp} & \texttt{drop\_temporal\_leak} \\
     Normalização & \texttt{MinMaxScaler [0, 1]} & idem \\
@@ -45,15 +45,17 @@ mesmo protocolo, derivado da Seção VI--A do paper Alsaedi 2020
 A Seção VI--B1 do paper define F-score com a fórmula binária padrão
 sobre TP/FP/FN (precisão e revocação da classe de ataque). A escolha do
 \emph{average} do \texttt{sklearn} (\texttt{'binary'}, \texttt{'macro'}
-ou \texttt{'weighted'}) muda os valores reportados em até 0{,}2 pontos em
-algumas bases, sendo decisiva para qualquer reprodução. O texto do paper
-\emph{resolve} essa ambiguidade na discussão da Tabela 13, onde declara
-calcular ``\emph{a weighted average\ldots\ multiplying each class with a
-weight factor (i.e., the \# instances with that target class)}'' --- que
-é exatamente o \texttt{average='weighted'} do \texttt{sklearn}. Nossa
-varredura empírica das três variantes contra as Tabelas 10--11
-(\emph{per-device}) confirma essa leitura
-(Tabela~\ref{tab:f1_metric}):
+ou \texttt{'weighted'}) muda os valores reportados em mais de 0{,}3
+pontos nas bases de maior desbalanceamento, sendo decisiva para qualquer
+reprodução. O texto do paper \emph{sugere} a leitura \texttt{weighted}:
+na discussão multi-classe da Tabela 13 ele declara calcular ``\emph{a
+weighted average\ldots\ multiplying each class with a weight factor
+(i.e., the \# instances with that target class)}'', que é exatamente o
+\texttt{average='weighted'} do \texttt{sklearn}. Como o paper não publica
+a chamada exata para as tarefas binárias (Tabelas 10--11), estendemos
+essa leitura e a confirmamos empiricamente: nossa varredura das três
+variantes contra essas tabelas mostra \texttt{weighted} como o melhor
+ajuste (Tabela~\ref{tab:f1_metric}):
 
 \begin{table}[ht]
   \centering
@@ -104,7 +106,34 @@ têm variantes \emph{whitespace} que o paper provavelmente não viu);
 essa diferença aparece nos $\Delta$ positivos reportados em
 \S{}\ref{sec:reproducao}.
 
-\subsection{Pipeline de pré-processamento}
+\subsection{Extensões na \texttt{wisardpkg}}
+
+A biblioteca \texttt{wisardpkg}~\cite{wisardpkg} foi estendida com
+termômetros ajustados (\emph{fitted}) para suportar a variedade de
+distribuições do TON\_IoT. O \emph{sweep} usa um conjunto curado de
+seis variantes \emph{não supervisionadas}, aplicadas uniformemente a
+todas as \emph{features}:
+
+\begin{itemize}[leftmargin=*,itemsep=0pt]
+  \item \texttt{linear}: cortes equiespaçados (termômetro clássico).
+  \item \texttt{distributive}: discretização por quantis empíricos
+        da \emph{feature}.
+  \item \texttt{gaussian}: centros e largura derivados de
+        $(\mu, \sigma)$ estimados no \emph{train}.
+  \item \texttt{exponential} e \texttt{logarithmic}: ajustados para
+        distribuições de cauda longa (codes Modbus).
+  \item \texttt{non-uniform}: \texttt{DynamicThermometer} cujo
+        orçamento de \emph{bits} é alocado por \emph{feature} de forma
+        proporcional à dispersão (desvio-padrão).
+\end{itemize}
+
+Variantes \emph{label-aware} (\texttt{supervised}) e o
+\texttt{stochastic} ficaram fora da comparação \emph{unsupervised}: a
+primeira usa os rótulos no ajuste, e o segundo (cujo
+\texttt{optimize()} não era acionado no \emph{pipeline}) reduzia-se
+ao \texttt{distributive}.
+
+\subsection{Implementação e reprodutibilidade}
 
 Todas as funções de pré-processamento vivem em
 \texttt{consolidado\_utils.py}:
@@ -116,35 +145,6 @@ Todas as funções de pré-processamento vivem em
 \texttt{select\_thermometer\_type} e
 \texttt{build\_per\_feature\_thermometer} (\emph{dispatch} automático
 de termômetros para os modelos WiSARD-family).
-
-\subsection{Extensões na \texttt{wisardpkg}}
-
-A biblioteca \texttt{wisardpkg}~\cite{wisardpkg} foi estendida com
-termômetros ajustados (\emph{fitted}) para suportar a variedade de
-distribuições do TON\_IoT. O \emph{sweep} usa um conjunto curado de
-seis variantes \emph{não supervisionadas}, aplicadas uniformemente a
-todas as \emph{features}:
-
-\begin{itemize}[leftmargin=*,itemsep=0pt]
-  \item \texttt{linear} --- cortes equiespaçados (termômetro clássico).
-  \item \texttt{distributive} --- discretização por quantis empíricos
-        da \emph{feature}.
-  \item \texttt{gaussian} --- centros e largura derivados de
-        $(\mu, \sigma)$ estimados no \emph{train}.
-  \item \texttt{exponential} e \texttt{logarithmic} --- ajustados para
-        distribuições de cauda longa (codes Modbus).
-  \item \texttt{non-uniform} --- \texttt{DynamicThermometer} cujo
-        orçamento de \emph{bits} é alocado por \emph{feature} de forma
-        proporcional à dispersão (desvio-padrão).
-\end{itemize}
-
-Variantes \emph{label-aware} (\texttt{supervised}) e o
-\texttt{stochastic} ficaram fora da comparação \emph{unsupervised}: a
-primeira usa os rótulos no ajuste, e o segundo --- cujo
-\texttt{optimize()} não era acionado no \emph{pipeline} --- reduzia-se
-ao \texttt{distributive}.
-
-\subsection{Hardware e reprodutibilidade}
 
 Todos os experimentos rodam em um único \emph{venv} Python 3.13
 descrito em \texttt{notebooks/toniot/requirements.txt}. As 288
@@ -158,4 +158,6 @@ aproximadamente 6--7h de \emph{wall-clock}, com as sete bases
 \texttt{baselines\_paper.jsonl}; \emph{sweep} em
 \texttt{grid/wisard\_grid\_*.jsonl}); o \emph{notebook}
 \texttt{06\_consolidado\_grupos.ipynb} é o relatório de referência
-re-executável.
+re-executável. Todo o código, os \emph{notebooks} e a especificação de
+ambiente que produzem estes resultados estão disponíveis em um
+repositório público: \url{https://github.com/muanlartins/masters/tree/toniot-wisard-repro}.

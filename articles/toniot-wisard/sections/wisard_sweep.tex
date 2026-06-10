@@ -2,11 +2,11 @@
 \label{sec:wisard}
 
 Esta seção apresenta o \emph{sweep} de hiperparâmetros dos cinco
-modelos WiSARD-family --- WiSARD, ClusWiSARD, BloomWiSARD, BTHOWeN e
-ULEEN --- sob o mesmo protocolo \emph{paper-faithful} dos
-\emph{baselines}. A varredura --- com tetos de capacidade
+modelos WiSARD-family (WiSARD, ClusWiSARD, BloomWiSARD, BTHOWeN e
+ULEEN) sob o mesmo protocolo \emph{paper-faithful} dos
+\emph{baselines}. A varredura, com tetos de capacidade
 \emph{unificados} entre os modelos para uma comparação justa
-(\S{}\ref{sec:wisard_fair}) --- avaliou 30\,020 configurações
+(\S{}\ref{sec:wisard_fair}), avaliou 30\,020 configurações
 (30\,000 \emph{per-device} mais 20 na tarefa combinada), cada uma sob
 validação cruzada de 4 \emph{folds} e um conjunto \emph{held-out} de
 20\% reservado por \texttt{StratifiedShuffleSplit} (semente 42),
@@ -15,12 +15,19 @@ em \texttt{results/\_consolidado/grid/wisard\_grid\_*.jsonl}
 (30\,020 linhas), com F1 \emph{weighted} de validação cruzada (média e
 desvio sobre os 4 \emph{folds}) e do \emph{held-out} em cada linha.
 
+As subseções percorrem os \emph{grids} varridos por modelo, o melhor F1
+por (modelo, base) e a generalização no \emph{held-out}; em seguida a
+sensibilidade aos termômetros, o \emph{deep dive} de hiperparâmetros e o
+\emph{ranking} por base; e encerram com o custo do \emph{sweep} e com a
+unificação dos tetos de capacidade (\S{}\ref{sec:wisard_fair}) que torna
+a comparação intra-família justa.
+
 \subsection{Hiperparâmetros varridos}
 
 A Tabela~\ref{tab:wisard_grids} resume os \emph{grids} de cada
 modelo. Os três modelos baseados em termômetro (WiSARD, ClusWiSARD,
-BloomWiSARD) compartilham o mesmo \emph{front-end} de binarização ---
-termômetro $\times$ \emph{bits} por \emph{feature} --- enquanto
+BloomWiSARD) compartilham o mesmo \emph{front-end} de binarização
+(termômetro $\times$ \emph{bits} por \emph{feature}), enquanto
 BTHOWeN e ULEEN usam seus codificadores internos. O termômetro varia
 sobre um conjunto curado de seis variantes \emph{não supervisionadas}:
 \texttt{\{linear, distributive, gaussian, exponential, logarithmic,
@@ -65,7 +72,7 @@ vencedora dentro do \emph{grid}.
 \begin{table}[ht]
   \centering
   \caption{Best F1 \emph{weighted} médio (4 \emph{folds}) por (modelo,
-           base) --- binário \emph{per-device}. Negrito = melhor
+           base), binário \emph{per-device}. Negrito = melhor
            WiSARD da base; última coluna = média sobre as 7 bases.}
   \label{tab:wisard_best_f1}
   \scriptsize
@@ -73,7 +80,7 @@ vencedora dentro do \emph{grid}.
     \toprule
     \textbf{Modelo} & \textbf{Fridge} & \textbf{Garage\_D.} & \textbf{GPS\_T.} & \textbf{Modbus} & \textbf{Motion\_L.} & \textbf{Thermo.} & \textbf{Weather} & \textbf{Média} \\
     \midrule
-    WiSARD       & \textbf{1{,}000} & \textbf{1{,}000} & 0{,}876 & 0{,}953 & \textbf{0{,}503} & 0{,}505 & 0{,}932 & \textbf{0{,}824} \\
+    WiSARD       & \textbf{1{,}000} & \textbf{1{,}000} & 0{,}876 & 0{,}953 & 0{,}503 & 0{,}505 & 0{,}932 & \textbf{0{,}824} \\
     ClusWiSARD   & \textbf{1{,}000} & \textbf{1{,}000} & \textbf{0{,}878} & \textbf{0{,}954} & 0{,}475 & 0{,}511 & \textbf{0{,}934} & 0{,}822 \\
     BloomWiSARD  & \textbf{1{,}000} & \textbf{1{,}000} & 0{,}877 & 0{,}637 & 0{,}475 & 0{,}508 & 0{,}852 & 0{,}764 \\
     BTHOWeN      & \textbf{1{,}000} & \textbf{1{,}000} & 0{,}868 & 0{,}590 & \textbf{0{,}531} & 0{,}511 & 0{,}818 & 0{,}760 \\
@@ -85,7 +92,7 @@ vencedora dentro do \emph{grid}.
 Observações:
 \begin{itemize}[leftmargin=*,itemsep=0pt]
   \item \texttt{Fridge} e \texttt{Garage\_Door}: \emph{todos} os
-        cinco modelos atingem 1{,}000 --- mesma saturação observada
+        cinco modelos atingem 1{,}000, mesma saturação observada
         nos \emph{baselines}. As \emph{features} de \emph{leak}
         (\texttt{temp\_condition}, \texttt{sphone\_signal}) são
         capturadas com facilidade pela discretização do termômetro.
@@ -93,19 +100,21 @@ Observações:
         para 0{,}83--0{,}88 (GPS) e 0{,}82--0{,}93 (Weather); com os
         tetos de endereço estendidos, WiSARD e ClusWiSARD em
         \texttt{Weather} (0{,}93) aproximam-se dos \emph{baselines}
-        (\textbf{kNN} = 0{,}943, \textbf{RF} = 0{,}975).
+        (\textbf{kNN} = 0{,}916, \textbf{RF} = 0{,}975).
   \item \texttt{Modbus}: WiSARD e ClusWiSARD agora \emph{empatam} no
-        topo (0{,}953/0{,}954, ambos com \emph{address size} = 64 e
-        termômetro \texttt{distributive} de 64 \emph{bits}), bem acima
+        topo (0{,}953/0{,}954, ambos com \emph{address size} = 64 e 64
+        \emph{bits}; nessa capacidade máxima \texttt{linear} e
+        \texttt{distributive} ficam estatisticamente indistinguíveis,
+        $\Delta < 0{,}001 \ll$ desvio entre \emph{folds}), bem acima
         de BloomWiSARD (0{,}64), ULEEN (0{,}61) e BTHOWeN (0{,}59). O
         endereçamento amplo recupera a estrutura não-linear dos códigos
         FC e \emph{alcança ou supera} os modelos de árvore
-        (RF/CART = 0{,}94) --- ganho que a varredura original perdia por
+        (RF/CART = 0{,}94), ganho que a varredura original perdia por
         limitar \emph{address size} a 32 (WiSARD) e 16 (ClusWiSARD).
   \item \texttt{Thermostat}: dificuldade compartilhada com os
         \emph{baselines} (0{,}50--0{,}51 para todos os modelos).
   \item \texttt{Motion\_Light}: colapso para predição majoritária
-        (0{,}475--0{,}531) em todos os modelos --- BTHOWeN e ULEEN são
+        (0{,}475--0{,}531) em todos os modelos: BTHOWeN e ULEEN são
         os únicos a romper marginalmente o platô (0{,}531).
 \end{itemize}
 
@@ -118,7 +127,7 @@ paridade é resultado da unificação dos tetos de capacidade
 porque WiSARD não colapsa para predição majoritária em
 \texttt{Motion\_Light} (0{,}503 vs.\ 0{,}475). Na varredura original,
 com tetos de endereço desiguais (32 para WiSARD, 16 para ClusWiSARD),
-ClusWiSARD aparecia $0{,}04$ atrás --- um artefato de cobertura, não de
+ClusWiSARD aparecia $0{,}04$ atrás, um artefato de cobertura, não de
 modelo.
 
 \subsection{Generalização no \emph{held-out}}
@@ -155,14 +164,18 @@ onde o ajuste do \emph{bleaching} por busca ternária interna (no
 A Figura~\ref{fig:thermo_boxplot} reporta a distribuição de F1 ao
 variar o termômetro, agregada sobre as 7 bases e todas as
 configurações dos três modelos baseados em termômetro. O
-\texttt{distributive} domina em todos eles (médias do melhor F1 por
-base de 0{,}824 / 0{,}822 / 0{,}764 para WiSARD / ClusWiSARD /
-BloomWiSARD), com o \texttt{gaussian} em segundo. O \texttt{linear}
-(termômetro clássico de cortes equiespaçados) só é competitivo para
-\emph{features} já naturalmente uniformes (\texttt{Garage\_Door},
-\texttt{Fridge}); para distribuições de cauda longa (\texttt{Modbus},
-\texttt{Weather}) ele subdivide muito pouco a região de massa, levando
-à perda de sinal. O \texttt{non-uniform} e o \texttt{exponential}
+\texttt{distributive} domina a distribuição agregada de F1 nos três
+modelos, com o \texttt{gaussian} em segundo. Sua vantagem sobre o
+\texttt{linear} (cortes equiespaçados) é maior em distribuições de cauda
+longa e sob orçamento de \emph{bits} escasso: em \texttt{Weather} o
+\texttt{distributive} lidera por $\approx 0{,}06$ em \emph{todos} os
+orçamentos, inclusive a 64 \emph{bits} (0{,}932 contra 0{,}872), porque
+a binarização equiespaçada subdivide pouco a região de massa.
+\texttt{Modbus} é a exceção reveladora: lá o \texttt{distributive}
+supera o \texttt{linear} em $\approx 0{,}09$ a 8 \emph{bits}, mas a
+diferença encolhe com o orçamento e some a 64 \emph{bits} (ambos
+$\approx 0{,}95$), quando já há resolução para separar os códigos FC
+mesmo com cortes uniformes. O \texttt{non-uniform} e o \texttt{exponential}
 ficam no fim do \emph{ranking}: alocar \emph{bits} por dispersão não
 compensa quando poucas \emph{features} concentram a variância útil.
 
@@ -178,10 +191,18 @@ compensa quando poucas \emph{features} concentram a variância útil.
 
 \subsection{Deep dive por modelo}
 
-As Figuras~\ref{fig:dd_wisard} a~\ref{fig:dd_uleen} mostram, para
-cada modelo, o \emph{landscape} do \emph{sweep} (F1 médio sobre bases
-ao variar os dois hiperparâmetros principais) e a melhor configuração
-por base.
+As Figuras~\ref{fig:dd_wisard} a~\ref{fig:dd_uleen} mostram, para cada
+modelo, o \emph{landscape} do \emph{sweep} (F1 médio sobre bases ao
+variar os dois hiperparâmetros principais) e a melhor configuração por
+base. O padrão é o mesmo nos cinco modelos: o eixo de capacidade domina
+o \emph{landscape} e o F1 cresce de forma quase monotônica ao longo
+dele (\emph{address size} no trio de termômetro, \texttt{bits\_per\_input}
+em BTHOWeN e ULEEN), com a melhor configuração por base encostando no
+teto (64 para o trio; 48 e 32 \emph{bits} para BTHOWeN e ULEEN). Os
+demais eixos (termômetro, \texttt{num\_hashes}, \texttt{filter\_inputs},
+\emph{lr}) são de segunda ordem. É esse comportamento de memorizador,
+visível em todos os painéis, que motiva a unificação de tetos da
+\S{}\ref{sec:wisard_fair}.
 
 \begin{figure}[!htb]
   \centering
@@ -216,15 +237,23 @@ por base.
     \caption{ULEEN.}
     \label{fig:dd_uleen}
   \end{subfigure}
-  \caption{Deep dive de hiperparâmetros dos modelos WiSARD-family
-           (parte 2/2).}
+  \caption{Deep dive de hiperparâmetros de BTHOWeN e ULEEN (parte 2/2).
+           O F1 cresce com a capacidade (\texttt{bits\_per\_input}) e a
+           melhor configuração por base senta no teto, mesmo padrão do
+           trio de termômetro.}
 \end{figure}
 
 \subsection{Ranking dos modelos por base}
 
-A Figura~\ref{fig:ranking_per_base} mostra os cinco modelos
-WiSARD-family lado a lado para cada base (altura = best F1, anotação
-adicional = tempo médio de \emph{fit}).
+A Figura~\ref{fig:ranking_per_base} põe os cinco modelos lado a lado
+por base (altura = best F1, anotação = tempo de \emph{fit} único). As
+alturas repetem a Tabela~\ref{tab:wisard_best_f1}; o que a figura
+acrescenta é o eixo de custo, que separa os modelos em duas ordens de
+grandeza: BTHOWeN treina mais rápido ($\approx 0{,}09$--$0{,}10$\,s), o
+trio em C++ (WiSARD, ClusWiSARD, BloomWiSARD) fica em
+$0{,}4$--$0{,}8$\,s, e o ULEEN é o \emph{outlier} a $6{,}4$--$9{,}0$\,s.
+A \S{}\ref{sec:wisard_custo} mostra que essa lentidão é de
+\emph{implementação} (referência em Python vs.\ C++), não de algoritmo.
 
 \begin{figure}[ht]
   \centering
@@ -235,13 +264,14 @@ adicional = tempo médio de \emph{fit}).
 \end{figure}
 
 \subsection{Custo e protocolo do \emph{sweep}}
+\label{sec:wisard_custo}
 
 A varredura completa (30\,020 configurações) roda em cerca de 6--7\,h
 de \emph{wall-clock} nesse \emph{hardware}, com as sete bases
 \emph{per-device} executadas em paralelo. O custo é dominado pelo
-ULEEN, cuja implementação de referência em \emph{Python} é uma a duas
-ordens de magnitude mais lenta no treino que o trio
-WiSARD/ClusWiSARD/BloomWiSARD em C++ --- uma ressalva de
+ULEEN, cuja implementação de referência em \emph{Python} é cerca de
+uma ordem de magnitude (13--16$\times$) mais lenta no treino que o trio
+WiSARD/ClusWiSARD/BloomWiSARD em C++, uma ressalva de
 \emph{implementação}, não de algoritmo, retomada na discussão de custo
 (\S{}\ref{sec:comparacao}).
 Três decisões de engenharia tornaram esse orçamento viável e
@@ -263,8 +293,8 @@ como verificação independente de generalização.
 Uma primeira versão do \emph{sweep} usava tetos de \emph{address size}
 \emph{desiguais} entre os modelos (32 para WiSARD, 24 para BloomWiSARD,
 apenas 16 para ClusWiSARD) e \emph{bits/feature} no máximo 32. Como as
-redes sem peso são memorizadoras --- mais capacidade de endereçamento
-quase sempre adiciona sinal nas bases estruturadas ---, a melhor
+redes sem peso são memorizadoras (mais capacidade de endereçamento
+quase sempre adiciona sinal nas bases estruturadas), a melhor
 configuração de cada modelo \emph{encostava no teto}, e os tetos
 desiguais penalizavam injustamente o ClusWiSARD: em \texttt{Modbus} ele
 ficava em 0{,}603 contra 0{,}817 da WiSARD, uma diferença que parecia
@@ -275,8 +305,8 @@ Re-executamos a varredura com tetos \textbf{unificados} em 64
 ampliamos analogamente os eixos de BTHOWeN e ULEEN
 (Tabela~\ref{tab:wisard_grids}). O efeito é direto: o ClusWiSARD em
 \texttt{Modbus} sobe para 0{,}954 (empatando com a WiSARD em 0{,}953),
-e a média \emph{per-device} dos dois fica em $0{,}822$ vs.\ $0{,}824$
---- um empate técnico onde antes havia $0{,}04$ de diferença.
+e a média \emph{per-device} dos dois fica em $0{,}822$ vs.\ $0{,}824$,
+um empate técnico onde antes havia $0{,}04$ de diferença.
 
 A ressalva honesta é que, nas bases estruturadas, a melhor
 configuração ainda fica na fronteira (64/64): para memorizadores o
@@ -285,7 +315,7 @@ configuração ainda fica na fronteira (64/64): para memorizadores o
 o retorno decrescente: o salto 32$\rightarrow$64 rendeu $+0{,}135$ de
 F1 em \texttt{Modbus}, enquanto 64$\rightarrow$128 rende apenas
 $+0{,}011$ (\texttt{Modbus}, já convergido) a $+0{,}027$
-(\texttt{Weather}), com ganho idêntico para WiSARD e ClusWiSARD ---
+(\texttt{Weather}), com ganho idêntico para WiSARD e ClusWiSARD,
 isto é, abaixo de $0{,}03$ e sem alterar o \emph{ranking}. Reportamos
 portanto os resultados no orçamento generoso e \emph{consistente} de
 64: como o teto é o mesmo para todos os modelos do trio, a comparação

@@ -1,6 +1,13 @@
 \section{Trabalho relacionado}
 \label{sec:related}
 
+Esta seção cobre três frentes. A primeira apresenta o dataset TON\_IoT e
+o paper de Alsaedi 2020 que reproduzimos, com seu protocolo e suas três
+tarefas. A segunda revisa a literatura de \emph{leak} e qualidade do
+TON\_IoT, mostrando que as críticas existentes cobrem a camada de rede,
+mas não a telemetria que auditamos. A terceira descreve a família WiSARD
+de redes neurais sem peso e os cinco modelos avaliados.
+
 \subsection{O dataset TON\_IoT e o paper de Alsaedi 2020}
 
 O \textbf{TON\_IoT}~\cite{alsaedi2020toniot,moustafa2021toniot} foi
@@ -28,11 +35,11 @@ a chamada exata da função (\texttt{binary}, \texttt{macro}, ou
 \texttt{weighted}) não seja explicitada. Tratamos essa ambiguidade na
 Seção~\ref{sec:discussao}.
 
-\subsection{Vazamento de dados e qualidade do TON\_IoT}
+\subsection{Leak de dados e qualidade do TON\_IoT}
 \label{sec:related_leak}
 
-A comunidade já documentou vazamento de dados (\emph{data leakage} ---
-quando uma \emph{feature} carrega informação do rótulo que não estaria
+A comunidade já documentou \emph{leak} (\emph{data leakage}: quando
+uma \emph{feature} carrega informação do rótulo que não estaria
 disponível em produção, inflando artificialmente a acurácia) no
 TON\_IoT, porém sempre no \textbf{dataset de rede} e por
 \emph{features} identificadoras. Shaikhanova et al.~\cite{shaikhanova2025audit}
@@ -48,8 +55,8 @@ além e publicam uma versão corrigida (ToN-IoT-R), filtrando fluxos
 rotulados como ataque que continham tráfego normal com o roteador e o
 \emph{resolver} DNS. Todas essas correções operam sobre colunas
 (\texttt{ssl\_subject}, \texttt{http\_uri}, IP, porta) que
-\emph{inexistem} na telemetria de sensores --- portanto não alcançam o
-vazamento que identificamos.
+\emph{inexistem} na telemetria de sensores; portanto, não alcançam o
+\emph{leak} que identificamos.
 
 Na camada de \textbf{telemetria}, ao contrário, a acurácia
 quase-perfeita é tratada como virtude, e não como sintoma. Sharrab et
@@ -63,30 +70,31 @@ acurácia. Benaddi et al.~\cite{benaddi2025near} reportam macro-F1 acima
 de $0{,}986$ no TON\_IoT com um IDS comprimido (poda de \emph{features}
 guiada por SHAP e distilação de conhecimento), tratando a acurácia
 quase-perfeita como resultado a otimizar e não como sintoma a
-investigar, sem qualquer análise de vazamento. A crítica de
+investigar, sem qualquer análise de \emph{leak}. A crítica de
 heterogeneidade de Booij et al.~\cite{booij2022heterogeneity}, a mais
 citada sobre o dataset, trata de generalização entre versões, não de
-vazamento.
+\emph{leak}.
 
 Nenhum desses trabalhos inspeciona os CSVs de telemetria no nível da
-\emph{feature} categórica, e nenhum conecta a determinismo da
+\emph{feature} categórica, e nenhum conecta o determinismo da
 associação à sub-amostragem da classe \texttt{normal} nos arquivos
-públicos. É exatamente esse o foco da nossa auditoria
-(Seção~\ref{sec:dataset}): diagnosticamos um vazamento categórico
-determinístico (Cramér's V $=1{,}000$) em \texttt{Fridge} e
+públicos. É exatamente este o foco da nossa auditoria
+(Seção~\ref{sec:dataset}): diagnosticamos um \emph{leak} categórico
+determinístico (Cramér's V $=1{,}000$, associação categórica máxima
+em que a \emph{feature} determina o rótulo) em \texttt{Fridge} e
 \texttt{Garage\_Door} e o rastreamos até a sub-amostragem
-$35\,\text{k} \rightarrow 15\,\text{k}$ da classe \texttt{normal},
-um mecanismo distinto do vazamento de identificadores da camada de
-rede e, até onde alcançamos na literatura, ainda não reportado na
-telemetria.
+$35\,\text{k} \rightarrow 15\,\text{k}$ da classe \texttt{normal}.
+Esse mecanismo é distinto do \emph{leak} de identificadores da camada
+de rede e, até onde alcançamos na literatura, ainda não foi reportado
+na telemetria.
 
 \subsection{Família WiSARD de redes neurais sem peso}
 
 Redes neurais \textbf{sem peso} (WNNs) substituem produtos
 peso-entrada típicos das redes convencionais por consultas
 $\mathcal{O}(1)$ em \emph{RAMs} indexadas por padrões binários de
-entrada. A versão seminal --- \textbf{WiSARD}~\cite{aleksander1984wisard}
---- é o \emph{discriminador} mais simples possível: um conjunto de
+entrada. A versão seminal, a \textbf{WiSARD}~\cite{aleksander1984wisard},
+é o \emph{discriminador} mais simples possível: um conjunto de
 RAMs $r_1, \dots, r_N$, cada uma endereçada por uma tupla de
 $n$ \emph{bits} (\emph{tuple address}) sorteada (mapeamento
 pseudo-aleatório) sobre a representação binária da entrada. Para cada
@@ -128,8 +136,10 @@ ortogonais:
         com latência sub-microsegundo.
   \item[\textbf{ULEEN}~\cite{susskind2023uleen}.] Adiciona uma fase
         adicional de \emph{learning rate} sobre as RAMs e um esquema
-        de \emph{bleaching} treinável, alcançando F1 superior ao
-        BTHOWeN em datasets de visão ao custo de mais iterações.
+        de \emph{bleaching} treinável (limiar sobre as contagens de
+        acesso das RAMs que descarta respostas de baixa frequência),
+        alcançando F1 superior ao BTHOWeN em datasets de visão ao
+        custo de mais iterações.
 \end{description}
 
 Os experimentos usam a biblioteca \texttt{wisardpkg}~\cite{wisardpkg}
@@ -139,3 +149,12 @@ Seção~\ref{sec:metodologia}. Os modelos \emph{baseline} usam
 e \texttt{PyTorch} para o LSTM, sempre com semente fixa
 (\texttt{random\_state=42}) em todos os nossos experimentos; o paper
 não publica a semente que usou (ver \S{}\ref{sec:discussao}).
+
+\medskip
+\noindent A literatura de qualidade do TON\_IoT trata apenas da camada
+de rede, e a literatura de telemetria aceita a acurácia quase-perfeita
+sem auditá-la; já os trabalhos sobre a família WiSARD não a avaliam sob
+um protocolo de reprodução fiel a um \emph{baseline} estabelecido. Este
+relatório ocupa essa lacuna dupla: audita o TON\_IoT no nível da
+\emph{feature} categórica e avalia cinco modelos WiSARD sob o protocolo
+\emph{paper-faithful} de Alsaedi 2020.

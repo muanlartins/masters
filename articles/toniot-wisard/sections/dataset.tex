@@ -7,18 +7,29 @@ estatística dos sete CSVs de telemetria disponibilizados pela UNSW
 Alsaedi 2020 reporta F1 igual a 1{,}00 em
 várias bases (notavelmente \texttt{Garage\_Door} em todos os oito
 modelos), e qualquer reprodução que não interrogue \emph{por que}
-isso acontece corre o risco de incorporar artifacts não-conceituais e
+isso acontece corre o risco de incorporar artefatos não-conceituais e
 declarar vitória indevida. Encontramos três problemas estruturais:
 dois tipos de \emph{leak} e uma divergência crítica de tamanho entre
 os CSVs públicos e o que o paper de fato mediu.
 
-\subsection{Inventário de features e Cramér's V}
+A seção está organizada em cinco partes. A primeira inventaria as
+\emph{features} por associação com o rótulo e diagnostica o \emph{leak}
+categórico determinístico em duas bases. A segunda caracteriza o
+\emph{leak} temporal que satura nas sete bases. A terceira documenta a
+divergência de tamanho entre os CSVs públicos e o dataset que produziu
+as Tabelas 10--13 do paper. A quarta mostra que os dois \emph{leaks}
+determinísticos são, na verdade, um artefato dessa divergência. A
+quinta consolida o pipeline mínimo de tratamento que a auditoria torna
+obrigatório.
+
+\subsection{Inventário de features e leak categórico}
+\label{sec:leak_categorico}
 
 A Figura~\ref{fig:cramers} mostra, para cada base, o maior Cramér's V
 entre as \emph{features} contra o rótulo binário (\texttt{normal} vs
 qualquer ataque), calculado sobre os dados crus. Valores próximos de 1
-indicam uma \emph{feature} deterministicamente associada ao rótulo ---
-um sinal forte de \emph{leak}.
+indicam uma \emph{feature} deterministicamente associada ao rótulo,
+sinal forte de \emph{leak}.
 
 \begin{figure}[ht]
   \centering
@@ -32,8 +43,6 @@ um sinal forte de \emph{leak}.
            marginal.}
   \label{fig:cramers}
 \end{figure}
-
-\subsection{Leak categórico em duas bases}
 
 Duas \emph{features} categóricas mostraram Cramér's V exatamente
 $1{,}000$ contra o rótulo (Tabela~\ref{tab:leak_categorico}):
@@ -69,13 +78,25 @@ forma sistemática por classe. A Figura~\ref{fig:leak_summary} torna o
 \emph{whitespace} visível (glifo \texttt{\textvisiblespace}) para evidenciar essa
 separação.
 
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.92\linewidth]{v06_leak_summary.png}
+  \caption{Sumário dos \emph{leaks} identificados no TON\_IoT
+           público: categórico (\texttt{temp\_condition},
+           \texttt{sphone\_signal}) e temporal (\texttt{date}).
+           O \emph{whitespace} é renderizado com o glifo \texttt{\textvisiblespace}:
+           a variante sem espaço é $100\%$ \texttt{attack}, as variantes
+           com espaço são $100\%$ \texttt{normal}.}
+  \label{fig:leak_summary}
+\end{figure}
+
 \subsection{Leak temporal universal}
 
 O paper, em sua Seção VI--A1, descarta \texttt{date}, \texttt{time} e
 \texttt{timestamp} sob o argumento de que ``\emph{may cause some ML
 methods to overfit}''. Nossa análise mostra uma justificativa mais
 forte: o campo \texttt{date} é \textbf{leak determinístico em todas as
-sete bases} --- 100\% das datas únicas aparecem em uma única classe.
+sete bases}, com 100\% das datas únicas aparecendo em uma única classe.
 A Figura~\ref{fig:date_leak} reporta a fração de datas exclusivas por
 classe em cada base; em todas, a barra está fixada em 100\%.
 
@@ -97,24 +118,59 @@ descartadas \emph{antes} do treinamento, comportamento que
 encapsulamos na função \texttt{drop\_temporal\_leak}, aplicada em
 todos os experimentos.
 
-\subsection{Visualização agregada dos leaks}
+\subsection{Divergência de tamanho entre CSVs públicos e o paper}
+\label{sec:dataset_mismatch}
 
-A Figura~\ref{fig:leak_summary} apresenta um sumário visual dos dois
-tipos de \emph{leak} ao longo das sete bases, alinhando as
-\emph{features} que precisam ser tratadas antes de qualquer
-modelagem.
+O achado mais crítico para a reprodução é que \textbf{os CSVs públicos
+\texttt{Train\_Test\_IoT\_*.csv} são um subset re-balanceado do
+dataset que produziu as Tabelas 10--13 do paper}. Confrontando as
+contagens reais dos CSVs com as Figuras 2/3/5 do paper original
+(Tabela~\ref{tab:mismatch}):
 
-\begin{figure}[ht]
+\begin{table}[ht]
   \centering
-  \includegraphics[width=0.92\linewidth]{v06_leak_summary.png}
-  \caption{Sumário dos \emph{leaks} identificados no TON\_IoT
-           público: categórico (\texttt{temp\_condition},
-           \texttt{sphone\_signal}) e temporal (\texttt{date}).
-           O \emph{whitespace} é renderizado com o glifo \texttt{\textvisiblespace}:
-           a variante sem espaço é $100\%$ \texttt{attack}, as variantes
-           com espaço são $100\%$ \texttt{normal}.}
-  \label{fig:leak_summary}
-\end{figure}
+  \caption{Divergência de tamanho entre o dataset usado nas
+           Tabelas 10--13 do paper Alsaedi 2020 (lido diretamente das
+           Figuras 2/3/5, que reportam \texttt{normal} $=35\,000$ por
+           dispositivo e $245\,000$ no \emph{combined}) e os CSVs
+           públicos \texttt{Train\_Test\_IoT\_*.csv} (UNSW). Os ataques
+           foram preservados; a classe \texttt{normal} foi sub-amostrada
+           para $43\%$ do volume original.}
+  \label{tab:mismatch}
+  \small
+  \begin{tabular}{lrrrr}
+    \toprule
+    & \multicolumn{2}{c}{\textbf{per-device}} & \multicolumn{2}{c}{\textbf{combined}} \\
+    \cmidrule(lr){2-3}\cmidrule(lr){4-5}
+    & \textbf{normal} & \textbf{total} & \textbf{normal} & \textbf{total} \\
+    \midrule
+    Paper Alsaedi 2020 (Figs.\ 2/3/5) & 35\,000 & 51--60 k & 245\,000 & 401\,119 \\
+    CSVs públicos (UNSW) & 15\,000 & 31--40 k & 105\,000 & 261\,119 \\
+    \midrule
+    Razão (CSVs / paper)             & \textbf{0{,}43} & -- & \textbf{0{,}43} & -- \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Que os ataques foram preservados \emph{na íntegra} é verificável por
+aritmética: as fatias da Figura 5 do paper somam $401\,119$ amostras no
+\emph{combined} (das quais $245\,000$ são \texttt{normal}), e
+$401\,119 - 245\,000 = 156\,119$ coincide exatamente com a contagem de
+ataques que medimos nos CSVs públicos. Apenas a classe \texttt{normal}
+encolheu.
+
+A consequência é que mesmo o pipeline mais fiel ao paper não pode
+reproduzir os números exatos das Tabelas 10--13: a prevalência de
+classe é diferente (paper $\approx$ 39\% ataque / 61\% \texttt{normal};
+CSVs $\approx$ 60\% ataque / 40\% \texttt{normal}), o que altera o ponto
+de operação de modelos que colapsam
+para predição majoritária (LR/LDA/NB em bases pobres como
+\texttt{Motion\_Light}) e empurra todos os F-score \emph{weighted}
+para baixo (a métrica recompensa proporcionalmente quem acerta a
+classe majoritária). Modelos robustos a re-amostragem
+(Random Forest, CART) tendem a divergir menos; modelos sensíveis a
+volume (NB, LSTM) divergem mais. Voltamos a essa limitação na
+Seção~\ref{sec:discussao}.
 
 \subsection{Os leaks determinísticos são artefato do subset re-amostrado}
 \label{sec:leak_artifact}
@@ -145,75 +201,21 @@ rótulo é apenas parcial (Tabela~\ref{tab:leak_subset}).
     \textbf{Sinal} & \textbf{\texttt{Train\_Test} (público)} & \textbf{\texttt{Processed} (integral)} \\
     \midrule
     \texttt{temp\_condition} (Cramér's V)  & \textbf{1{,}000} & 0{,}569 \\
-    \texttt{sphone\_signal} (Cramér's V)   & \textbf{1{,}000} & 0{,}554 \\
-    \texttt{date} (exclusividade de classe) & \textbf{100\%} (7/7 bases) & 50--61\% \\
+    \texttt{sphone\_signal} (Cramér's V)   & \textbf{1{,}000} & 0{,}563 \\
+    \texttt{date} (exclusividade de classe) & \textbf{100\%} (7/7 bases) & 54--62\% \\
     \bottomrule
   \end{tabular}
 \end{table}
 
 A implicação é que a divergência de tamanho
 (\S{}\ref{sec:dataset_mismatch}) e o leak categórico
-(\S{}\ref{sec:dataset}) não são achados independentes: são o
+(\S{}\ref{sec:leak_categorico}) não são achados independentes: são o
 \emph{mesmo} fenômeno. Sub-amostrar \texttt{normal} de
 $\sim$35\,000 para 15\,000 por dispositivo eliminou exatamente as
 poucas linhas \texttt{normal} que usavam a variante sem espaço, o que
 transformou um sinal parcial (V $\approx 0{,}57$) em um separador
 perfeito (V $=1{,}000$). Qualquer reprodução sobre os CSVs públicos
 herda esse artefato.
-
-\subsection{Divergência de tamanho entre CSVs públicos e o paper}
-\label{sec:dataset_mismatch}
-
-O achado mais crítico para a reprodução: \textbf{os CSVs públicos
-\texttt{Train\_Test\_IoT\_*.csv} são um subset re-balanceado do
-dataset que produziu as Tabelas 10--13 do paper}. Confrontando as
-contagens reais dos CSVs com as Figuras 2--3--5 do paper original
-(Tabela~\ref{tab:mismatch}):
-
-\begin{table}[ht]
-  \centering
-  \caption{Divergência de tamanho entre o dataset usado nas
-           Tabelas 10--13 do paper Alsaedi 2020 (lido diretamente das
-           Figuras 2/3/5, que reportam \texttt{normal} $=35\,000$ por
-           dispositivo e $245\,000$ no \emph{combined}) e os CSVs
-           públicos \texttt{Train\_Test\_IoT\_*.csv} (UNSW). Os ataques
-           foram preservados; a classe \texttt{normal} foi sub-amostrada
-           para $43\%$ do volume original.}
-  \label{tab:mismatch}
-  \small
-  \begin{tabular}{lrrrr}
-    \toprule
-    & \multicolumn{2}{c}{\textbf{per-device}} & \multicolumn{2}{c}{\textbf{combined}} \\
-    \cmidrule(lr){2-3}\cmidrule(lr){4-5}
-    & \textbf{normal} & \textbf{total} & \textbf{normal} & \textbf{total} \\
-    \midrule
-    Paper Alsaedi 2020 (Figs.\ 2/3/5) & 35\,000 & 51--60 k & 245\,000 & 401\,119 \\
-    CSVs públicos (UNSW) & 15\,000 & 31--40 k & 105\,000 & 261\,119 \\
-    \midrule
-    Razão (CSVs / paper)             & \textbf{0{,}43} & --- & \textbf{0{,}43} & --- \\
-    \bottomrule
-  \end{tabular}
-\end{table}
-
-Que os ataques foram preservados \emph{na íntegra} é verificável por
-aritmética: as fatias da Figura 5 do paper somam $401\,119$ amostras no
-\emph{combined} (das quais $245\,000$ são \texttt{normal}), e
-$401\,119 - 245\,000 = 156\,119$ coincide exatamente com a contagem de
-ataques que medimos nos CSVs públicos. Apenas a classe \texttt{normal}
-encolheu.
-
-A consequência é que mesmo o pipeline mais fiel ao paper não pode
-reproduzir os números exatos das Tabelas 10--13: a prevalência de
-classe é diferente (paper $\approx$ 40\% ataque / 60\% \texttt{normal};
-CSVs $\approx$ 60\% ataque / 40\% \texttt{normal}), o que altera o ponto
-de operação de modelos que colapsam
-para predição majoritária (LR/LDA/NB em bases pobres como
-\texttt{Motion\_Light}) e empurra todos os F-score \emph{weighted}
-para baixo (a métrica recompensa proporcionalmente quem acerta a
-classe majoritária). Modelos robustos a re-amostragem
-(Random Forest, CART) tendem a divergir menos; modelos sensíveis a
-volume (NB, LSTM) divergem mais. Voltamos a essa limitação na
-Seção~\ref{sec:discussao}.
 
 \subsection{Conclusão da auditoria}
 

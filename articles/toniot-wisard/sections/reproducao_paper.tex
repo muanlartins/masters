@@ -7,14 +7,23 @@ São três tarefas: \emph{per-device} binário (sete bases $\times$ oito
 modelos), \emph{combined} binário (uma base $\times$ oito modelos) e
 \emph{combined} multi-classe (uma base $\times$ oito modelos $\times$ nove
 sub-classes de ataque), totalizando 288 execuções
-($72 \times 4\,\text{folds}$).
+($72 \times 4\,\text{folds}$). As subseções reportam, em ordem, os
+resultados \emph{per-device} (\S{}\ref{sec:reproducao_perdevice}) e
+\emph{combined}, os quatro \emph{sanity checks} qualitativos derivados do
+paper, a quantificação da diferença entre nossa reprodução e o paper, e
+a visão consolidada por tarefa (\S{}\ref{sec:repro_alltasks}).
 
 \subsection{Per-device binário (vs.\ Tabelas 10--11 do paper)}
 \label{sec:reproducao_perdevice}
 
-A Tabela~\ref{tab:perdevice_ours} reporta nossos F1 \emph{weighted}
-médios para cada par (modelo, base). A Figura~\ref{fig:heatmap_perdevice}
-visualiza a tabela como \emph{heatmap}.
+Os F1 \emph{weighted} reproduzidos (média de 4 \emph{folds}) separam as
+sete bases em três regimes (Tabela~\ref{tab:perdevice_ours}). No primeiro,
+o \emph{leak} categórico domina e os modelos que exploram o encoding
+chegam a F1 $=1{,}000$ (Garage\_Door nos oito modelos, Fridge nos
+não-lineares). No segundo, as bases são genuinamente separáveis e os
+modelos não-lineares lideram (kNN, RF e CART em Weather, GPS\_Tracker e
+Modbus). No terceiro, o sinal é pobre e todos colapsam para perto da
+predição majoritária (Motion\_Light e Thermostat, F1 $\approx 0{,}38$--$0{,}51$).
 
 \begin{table}[ht]
   \centering
@@ -38,20 +47,15 @@ visualiza a tabela como \emph{heatmap}.
   \end{tabular}
 \end{table}
 
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.95\linewidth]{v06_heatmap_perdevice.png}
-  \caption{\emph{Heatmap master} per-device binário (7 bases $\times$ 3 grupos:
-           paper, nossa reprodução \emph{paper-faithful}, WiSARD-family).
-           A coluna do meio é a Tabela~\ref{tab:perdevice_ours}.}
-  \label{fig:heatmap_perdevice}
-\end{figure}
-
 \subsection{Combined: binário e multi-classe}
 
-A Tabela~\ref{tab:combined} reúne os F1 médios nas duas tarefas
-\emph{combined}. A Figura~\ref{fig:heatmap_combined} apresenta a
-visualização \emph{heatmap}.
+No \emph{combined}, Random Forest lidera as duas tarefas (F1 $0{,}858$
+binário, $0{,}602$ multi-classe), seguido de perto por CART
+(Tabela~\ref{tab:combined}). A queda do binário para o
+multi-classe é acentuada (a maioria dos modelos perde entre $0{,}26$ e
+$0{,}33$ de F1), refletindo a dificuldade das nove sub-classes de
+ataque; o NB é o caso extremo, colapsando para $0{,}028$, patologia do
+\texttt{GaussianNB} discutida na \S{}\ref{sec:discussao}.
 
 \begin{table}[ht]
   \centering
@@ -75,20 +79,6 @@ visualização \emph{heatmap}.
   \end{tabular}
 \end{table}
 
-\begin{figure}[ht]
-  \centering
-  \begin{subfigure}[t]{0.49\linewidth}
-    \includegraphics[width=\linewidth]{v06_heatmap_combined_binary.png}
-    \caption{Combined binário (Tab.\ 12 do paper).}
-  \end{subfigure}\hfill
-  \begin{subfigure}[t]{0.49\linewidth}
-    \includegraphics[width=\linewidth]{v06_heatmap_combined.png}
-    \caption{Combined multi-classe (Tab.\ 13).}
-  \end{subfigure}
-  \caption{\emph{Heatmaps} consolidados das tarefas \emph{combined}.}
-  \label{fig:heatmap_combined}
-\end{figure}
-
 \subsection{Sanity checks contra o paper}
 
 Para validar que o pipeline está corretamente implementado, definimos
@@ -97,24 +87,24 @@ paper faz nas Tabelas 10--13:
 
 \begin{enumerate}[leftmargin=*,itemsep=0pt]
   \item \textbf{Garage\_Door deve dar F1 = 1{,}000 em
-        \emph{todos} os modelos} (Tab.\ 10) --- \emph{features}
+        \emph{todos} os modelos} (Tab.\ 10): \emph{features}
         100\% discriminantes. \textbf{Verificado:} sete dos oito modelos
         com F1 = 1{,}000; LDA fica em 0{,}938 (justificada pela
         natureza linear gaussiana do modelo).
-  \item \textbf{Modbus deve ter RF/CART $\gg$ linear} (Tab.\ 10) ---
+  \item \textbf{Modbus deve ter RF/CART $\gg$ linear} (Tab.\ 10):
         estrutura não-linear nos códigos FC1--FC4.
         \textbf{Verificado:} RF/CART em 0{,}93--0{,}94 versus LR/LDA
         em 0{,}43 ($\Delta = +0{,}51$).
   \item \textbf{Motion\_Light colapsa em torno de 0{,}43 em
         \emph{todos} os modelos} (Tab.\ 11 reporta F-score $0{,}43$ para
-        os oito, $0{,}44$ no LSTM) --- sem sinal discriminativo.
+        os oito, $0{,}44$ no LSTM): sem sinal discriminativo.
         \textbf{Verificado:} todos os modelos em $0{,}475$ (predição
         majoritária); apenas kNN difere marginalmente ($0{,}474$).
   \item \textbf{Ranking esperado em \emph{combined} multi-classe}
         CART $>$ kNN $>$ RF $>$ LSTM $>$ NB $>$ LDA $>$
         LR $>$ SVM (Tab.\ 13). \textbf{Verificado:} ordem
         observada é RF $\geq$ CART $>$ kNN $>$ LSTM $>$ LDA $>$
-        LR $\approx$ SVM $>$ NB --- match parcial; a única ressalva é
+        LR $\approx$ SVM $>$ NB, com concordância parcial; a única ressalva é
         que NB colapsa para 0{,}028 (paper reporta $\sim$0{,}52, ver
         discussão em \S{}\ref{sec:discussao}).
 \end{enumerate}
@@ -149,8 +139,8 @@ para cada par.
   \item $|\Delta| < 0{,}05$ em 48\% dos pares (modelo, base);
   \item $|\Delta| < 0{,}10$ em 75\%;
   \item $|\Delta| < 0{,}15$ em \textbf{91\%};
-  \item média de $\Delta$ próxima de zero ($-0{,}009$) ---
-        sem viés sistemático.
+  \item média de $\Delta$ próxima de zero ($-0{,}009$), sem viés
+        sistemático.
 \end{itemize}
 
 Os deltas residuais concentram-se onde a sensibilidade ao encoding e
@@ -160,10 +150,10 @@ extra (paper reporta 0{,}43 para LR, obtemos 0{,}78); \texttt{Thermostat},
 em que a baixa prevalência da classe minoritária puxa a média ponderada
 para 0{,}38--0{,}51 enquanto o paper reporta 0{,}53--0{,}57; e os
 modelos lineares no \texttt{Modbus} (LR/LDA/SVM em $\approx 0{,}43$
-versus paper em $0{,}55$). Em todas as bases com sinal estruturado ---
-\texttt{Garage\_Door}, \texttt{GPS\_Tracker}, \texttt{Weather}, e
-\texttt{Motion\_Light} (que sob \emph{weighted} agora alinha bem ao
-paper) --- a reprodução é fiel ($|\Delta| < 0{,}10$ na maioria dos
+versus paper em $0{,}55$). Em todas as bases com sinal estruturado
+(\texttt{Garage\_Door}, \texttt{GPS\_Tracker}, \texttt{Weather} e
+\texttt{Motion\_Light}, que sob \emph{weighted} agora alinha bem ao
+paper), a reprodução é fiel ($|\Delta| < 0{,}10$ na maioria dos
 modelos).
 
 \subsection{Visão consolidada: o que reproduz em cada tarefa}

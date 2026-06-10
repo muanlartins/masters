@@ -45,37 +45,30 @@
 
 \begin{abstract}
 \noindent
-Este relatório consolida o Trabalho 1 da disciplina de Redes Neurais Sem
-Peso (WNN), em que avaliamos cinco modelos da família WiSARD (WiSARD
-clássica, ClusWiSARD, BloomWiSARD, BTHOWeN e ULEEN) na tarefa de
-detecção de anomalia em telemetria IoT, usando o dataset TON\_IoT
-(UNSW Canberra Cyber). Como referência metodológica e numérica usamos o
-paper \emph{Alsaedi et al.\ 2020} (IEEE Access), reproduzindo
-fielmente os oito \emph{baselines} reportados (LR, LDA, kNN, RF, CART,
-NB, SVM e LSTM) sob o protocolo descrito na Seção VI--A do paper
-(\textit{split} 80/20, validação cruzada $k=4$ no \emph{train},
-\emph{F1 weighted}). Durante a reprodução, identificamos três
-problemas estruturais nos CSVs públicos do TON\_IoT que não são
-discutidos no paper original: (i) \emph{leak} categórico determinístico
-em \texttt{Fridge.temp\_condition} e \texttt{Garage\_Door.sphone\_signal}
-(Cramér's V $=1{,}000$); (ii) \emph{leak} temporal universal --- o campo
-\texttt{date} prevê classe perfeitamente em todas as sete bases;
-(iii) divergência de tamanho entre os CSVs públicos
-(\texttt{Train\_Test\_IoT\_*.csv}) e o dataset original que produziu as
-Tabelas 10--13 do paper (classe \texttt{normal} sub-amostrada para
-$43\%$ do volume original). Sob o
-protocolo \emph{paper-faithful} adotado, e sob tetos de capacidade
-\emph{unificados} entre os modelos, a família WiSARD fica a poucos
-pontos percentuais dos melhores \emph{baselines} em bases sem
-\emph{leak} forte: WiSARD e ClusWiSARD lideram o grupo praticamente
-empatadas (F1 $\approx 0{,}82$), a cerca de um ponto percentual de
-Random Forest e à frente de kNN, SVM e LSTM. No \emph{trade-off}
-F1 $\times$ custo há um \emph{trade-off} de memória dentro da própria
-família: as variantes de filtro (BloomWiSARD, BTHOWeN, ULEEN) têm
-\emph{footprint} fixo de $0{,}75$--$2$ \emph{KB}, cerca de três ordens
-de magnitude abaixo dos modelos de árvore, enquanto WiSARD e ClusWiSARD
-recuperam o F1 mais alto a $\approx 2$ \emph{KB} medianos (dependentes
-dos dados); o BTHOWeN treina cerca de $705\times$ mais rápido que o LSTM.
+A detecção de intrusão em dispositivos IoT/IIoT precisa conciliar dois
+requisitos que competem no \emph{edge}: eficácia preditiva alta e custo
+computacional baixo o bastante para caber em \emph{hardware} embarcado.
+Avaliamos a família WiSARD de redes neurais sem peso (WNN), cuja
+inferência por consulta a tabelas $\mathcal{O}(1)$ sugere um caminho de
+baixo custo para essa tensão, contra oito \emph{baselines} clássicos no
+\emph{benchmark} TON\_IoT, reproduzindo fielmente o protocolo do paper
+de referência de Alsaedi et al.\ (2020). Sob o mesmo protocolo
+\emph{paper-faithful} e com tetos de capacidade unificados, WiSARD e
+ClusWiSARD lideram a família empatadas (F1 \emph{weighted}
+\emph{per-device} $\approx 0{,}82$), a cerca de um ponto percentual de
+Random Forest e à frente de kNN, SVM e LSTM; o mesmo intervalo se mantém
+nas bases sem \emph{leak} forte. O eixo decisivo do \emph{trade-off}
+F1 $\times$ custo é a memória: as variantes de filtro (BloomWiSARD,
+BTHOWeN, ULEEN) implantam-se em $0{,}75$--$2$\,KB \emph{fixos}, duas a
+três ordens de magnitude abaixo dos modelos de árvore, e o BTHOWeN
+treina cerca de $705\times$ mais rápido que o LSTM. A reprodução também
+expõe dois problemas estruturais dos CSVs públicos não discutidos no
+paper, um \emph{leak} categórico determinístico (Cramér's V $=1{,}000$)
+e uma divergência de tamanho contra o dataset original, e caracteriza
+como determinístico o \emph{leak} temporal que o paper já descarta. A
+família sem peso é, assim, uma opção viável de baixo custo de memória
+para IDS em \emph{edge}, e a auditoria serve de alerta para a acurácia
+quase-perfeita reportada nesse dataset.
 \end{abstract}
 
 \vspace{0.5em}

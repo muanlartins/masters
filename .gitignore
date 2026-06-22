@@ -61,3 +61,19 @@ notebooks/toniot/*.pptx
 # log, PNGs de cada integrante) em notebooks/toniot/_entregas/<modelo>/.
 # Zips brutos das entregas ficam locais em _entregas/_zips/, não comitados.
 notebooks/toniot/_entregas/_zips/
+
+# ── branch blockchain-aula-1: só material da Aula 1 ──────────────────────────
+# As demais áreas do repositório existem localmente mas não fazem parte desta
+# branch; ignoradas aqui para manter o working tree limpo. (Em outras branches
+# este .gitignore tem a versão original — isto não as afeta.)
+.venv/
+/README.md
+articles/
+notebooks/
+reading/
+slides/cardio/
+slides/eniac-waldo/
+slides/toniot-wisard/
+wisardpkg-perf/
+/CLAUDE.md
+/PRESENTATION_GUIDE.md

@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import itertools
+
 from minichain.crypto import target_from_bits
 from minichain.types import Block
 from minichain import kit
@@ -12,9 +14,7 @@ def meets_target(h: bytes, bits: int) -> bool:
 
 
 def mine(block: Block, bits: int) -> int:
-    nonce = 0
-    while True:
+    for nonce in itertools.count():       # 0, 1, 2, … até um hash cair no alvo
         block.nonce = nonce
         if meets_target(kit.block_hash(block), bits):
             return nonce
-        nonce += 1

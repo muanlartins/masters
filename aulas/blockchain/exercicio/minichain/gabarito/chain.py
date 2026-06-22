@@ -26,8 +26,5 @@ def validate_block(block: Block, prev_block: Block | None) -> bool:
 
 
 def is_valid_chain(chain: list[Block]) -> bool:
-    for i, block in enumerate(chain):
-        prev = chain[i - 1] if i > 0 else None
-        if not validate_block(block, prev):
-            return False
-    return True
+    prevs = [None, *chain[:-1]]   # o antecessor de cada bloco (None no gênese)
+    return all(validate_block(block, prev) for block, prev in zip(chain, prevs))

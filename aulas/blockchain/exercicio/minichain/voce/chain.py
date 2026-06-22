@@ -7,12 +7,15 @@ quebram — porque o hash de um entra no cabeçalho do próximo. Validar a cadei
 Quando terminar, ligue "chain": True em config.py.
 """
 
+from __future__ import annotations
+
+from minichain.types import Block
 from minichain import kit
 
 GENESIS_PREV = b"\x00" * 32
 
 
-def validate_block(block, prev_block):
+def validate_block(block: Block, prev_block: Block | None) -> bool:
     """True se `block` é válido em relação a `prev_block` (None no gênese). Cheque:
 
       1. ligação: se prev_block é None, block.prev_hash == GENESIS_PREV;
@@ -24,7 +27,7 @@ def validate_block(block, prev_block):
     raise NotImplementedError("Parte 5: implemente validate_block")
 
 
-def is_valid_chain(chain):
+def is_valid_chain(chain: list[Block]) -> bool:
     """True se TODOS os blocos de `chain` (lista, do gênese ao topo) passam em
     validate_block, cada um contra o seu antecessor."""
     raise NotImplementedError("Parte 5: implemente is_valid_chain")

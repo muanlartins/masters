@@ -12,8 +12,8 @@ fizer usa a solução de referência, então o sistema sempre roda inteiro.
 ```bash
 ./instalar.sh         # uma vez: cria a venv e instala as dependências
 ./progresso.sh        # painel: o que falta e quantos testes passam
-./testar.sh merkle    # testa uma parte  (sem argumento: testa tudo)
-./brincar.sh          # vê a blockchain rodando: minera, adultera, prova
+./testar.sh merkle    # testa uma parte, teste a teste  (sem argumento: testa tudo)
+./simulacao.sh        # passeio narrado: vê cada peça rodando com os valores reais
 ```
 
 ## Como fazer

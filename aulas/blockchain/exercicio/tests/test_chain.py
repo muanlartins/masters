@@ -20,20 +20,24 @@ def _chain():
 
 
 def test_freshly_built_chain_is_valid():
+    """uma cadeia recém-minerada é válida"""
     assert kit.is_valid_chain(_chain()) is True
 
 
 def test_genesis_alone_is_valid():
+    """o bloco gênese sozinho é válido"""
     assert kit.is_valid_chain(build.genesis(bits=8)) is True
 
 
 def test_tampered_transaction_breaks_the_chain():
+    """adulterar uma transação invalida a cadeia"""
     chain = _chain()
-    chain[1].txs[0].amount = 999   # muda os txids -> raiz não bate (e assinatura cai)
+    chain[1].txs[0].amount = 999
     assert kit.is_valid_chain(chain) is False
 
 
 def test_broken_prev_link_breaks_the_chain():
+    """quebrar o elo (prev_hash) invalida a cadeia"""
     chain = _chain()
     chain[2].prev_hash = b"\x11" * 32
     assert kit.is_valid_chain(chain) is False

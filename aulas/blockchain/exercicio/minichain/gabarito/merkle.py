@@ -1,9 +1,11 @@
 """Parte 1 — Árvore de Merkle (REFERÊNCIA)."""
 
+from __future__ import annotations
+
 from minichain.crypto import sha256d
 
 
-def merkle_root(leaves):
+def merkle_root(leaves: list[bytes]) -> bytes:
     if not leaves:
         raise ValueError("a lista de folhas não pode ser vazia")
     level = list(leaves)
@@ -14,10 +16,10 @@ def merkle_root(leaves):
     return level[0]
 
 
-def merkle_proof(leaves, index):
+def merkle_proof(leaves: list[bytes], index: int) -> list[tuple[str, bytes]]:
     if not 0 <= index < len(leaves):
         raise IndexError("índice fora da lista de folhas")
-    proof = []
+    proof: list[tuple[str, bytes]] = []
     level = list(leaves)
     i = index
     while len(level) > 1:
@@ -32,7 +34,7 @@ def merkle_proof(leaves, index):
     return proof
 
 
-def verify_proof(leaf, proof, root):
+def verify_proof(leaf: bytes, proof: list[tuple[str, bytes]], root: bytes) -> bool:
     h = leaf
     for side, sibling in proof:
         if side == "left":

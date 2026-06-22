@@ -7,11 +7,14 @@ custa energia — e o que torna reescrever a história caro.
 Quando terminar, ligue "pow": True em config.py.
 """
 
+from __future__ import annotations
+
 from minichain.crypto import target_from_bits
+from minichain.types import Block
 from minichain import kit
 
 
-def meets_target(h, bits):
+def meets_target(h: bytes, bits: int) -> bool:
     """True se o hash `h` (bytes), lido como inteiro, for < alvo.
 
     alvo = target_from_bits(bits) = 2**(256-bits).
@@ -20,7 +23,7 @@ def meets_target(h, bits):
     raise NotImplementedError("Parte 4: implemente meets_target")
 
 
-def mine(block, bits):
+def mine(block: Block, bits: int) -> int:
     """Ache, por força bruta, um nonce que satisfaça o alvo; devolva esse nonce.
 
     Varie block.nonce a partir de 0; em cada tentativa cheque

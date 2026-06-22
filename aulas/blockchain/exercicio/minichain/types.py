@@ -4,7 +4,9 @@ São contêineres de dados puros (dataclasses). A lógica que opera sobre eles
 (calcular hash, validar, minerar) é o que você implementa em `minichain/voce/`.
 """
 
-from dataclasses import dataclass, field
+from __future__ import annotations
+
+from dataclasses import dataclass
 
 
 @dataclass
@@ -35,7 +37,7 @@ class Block:
 
     version: int
     prev_hash: bytes
-    txs: list
+    txs: list[Tx]
     timestamp: int
     bits: int
     nonce: int = 0

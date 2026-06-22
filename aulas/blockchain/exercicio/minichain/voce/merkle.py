@@ -7,11 +7,13 @@ Com ela, uma carteira leve prova que uma transação está no bloco baixando só
 Quando terminar, ligue "merkle": True em config.py.
 """
 
+from __future__ import annotations
+
 from minichain.crypto import sha256d
 
 
-def merkle_root(leaves):
-    """Raiz de Merkle (bytes, 32) de uma lista de folhas (cada folha em bytes).
+def merkle_root(leaves: list[bytes]) -> bytes:
+    """Raiz de Merkle (32 bytes) de uma lista de folhas (cada folha são bytes).
 
     Regra (estilo Bitcoin):
       - 1 folha   -> a raiz é a própria folha.
@@ -23,7 +25,7 @@ def merkle_root(leaves):
     raise NotImplementedError("Parte 1: implemente merkle_root")
 
 
-def merkle_proof(leaves, index):
+def merkle_proof(leaves: list[bytes], index: int) -> list[tuple[str, bytes]]:
     """Prova de inclusão da folha em `index`: lista de (lado, hash_do_irmão).
 
     `lado` é "left" se o irmão fica à esquerda da posição atual, "right" se à
@@ -33,7 +35,7 @@ def merkle_proof(leaves, index):
     raise NotImplementedError("Parte 1: implemente merkle_proof")
 
 
-def verify_proof(leaf, proof, root):
+def verify_proof(leaf: bytes, proof: list[tuple[str, bytes]], root: bytes) -> bool:
     """True se, dobrando `leaf` com os irmãos de `proof`, chega-se em `root`.
 
     Para cada (lado, irmão): se lado == "left",  h = sha256d(irmão + h);

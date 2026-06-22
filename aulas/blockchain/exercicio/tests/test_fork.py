@@ -20,6 +20,7 @@ def _chain(n_extra):
 
 
 def test_chain_work_sums_difficulty():
+    """chain_work soma 2**bits de cada bloco"""
     chain = build.genesis(bits=8)
     assert kit.chain_work(chain) == 2 ** 8
     build.append(chain, [_signed()], bits=8)
@@ -27,12 +28,14 @@ def test_chain_work_sums_difficulty():
 
 
 def test_best_chain_picks_more_accumulated_work():
+    """best_chain escolhe a cadeia com mais trabalho acumulado"""
     short, long = _chain(1), _chain(3)
     assert kit.best_chain([short, long]) is long
 
 
 def test_best_chain_ignores_invalid_chains():
+    """best_chain ignora cadeias inválidas"""
     good = _chain(1)
     bad = _chain(1)
-    bad[1].prev_hash = b"\x00" * 32   # quebra o elo -> cadeia inválida
+    bad[1].prev_hash = b"\x00" * 32
     assert kit.best_chain([bad, good]) is good

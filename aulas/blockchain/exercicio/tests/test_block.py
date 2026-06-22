@@ -11,6 +11,7 @@ def _block():
 
 
 def test_compute_merkle_matches_txids():
+    """compute_merkle bate com a raiz de Merkle dos txids"""
     b = _block()
     root = kit.compute_merkle(b)
     assert root == kit.merkle_root([kit.txid(t) for t in b.txs])
@@ -18,18 +19,21 @@ def test_compute_merkle_matches_txids():
 
 
 def test_header_is_80_bytes():
+    """o cabeçalho serializado tem 80 bytes"""
     b = _block()
     kit.compute_merkle(b)
     assert len(kit.header_bytes(b)) == 80
 
 
 def test_block_hash_is_double_sha_of_header():
+    """o hash do bloco é o SHA256² do cabeçalho"""
     b = _block()
     kit.compute_merkle(b)
     assert kit.block_hash(b) == sha256d(kit.header_bytes(b))
 
 
 def test_nonce_changes_the_hash():
+    """mudar o nonce muda o hash do bloco"""
     b = _block()
     kit.compute_merkle(b)
     h0 = kit.block_hash(b)

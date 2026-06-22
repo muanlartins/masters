@@ -80,42 +80,49 @@ def parte_hash():
 def parte_merkle():
     titulo(2, "Árvore de Merkle: provar que uma tx está no bloco")
     sk, vk = gen_keys()
-    txs = [_signed(sk, vk, dest, v) for dest, v in
-           [(b"Bob", 5), (b"Carol", 2), (b"Dave", 9), (b"Erin", 1)]]
+    alvo = 2  # vamos provar que a tx de Dave (índice 2) está no bloco
+    dests = [b"Bob", b"Carol", b"Dave", b"Erin"]
+    txs = [_signed(sk, vk, d, v) for d, v in zip(dests, [5, 2, 9, 1])]
     folhas = [kit.txid(t) for t in txs]
-    p(f"{BOLD}folhas{R} (uma por transação, folha = txid = sha256d da tx):")
-    for i, h in enumerate(folhas):
-        p(f"  h{i} = {hx(h)}")
+    p(f"{BOLD}folhas{R} — uma por transação (folha = txid = sha256d da tx):")
+    for i, (d, h) in enumerate(zip(dests, folhas)):
+        marca = f"   {YEL}← queremos provar esta{R}" if i == alvo else ""
+        p(f"  h{i}  {d.decode():<6} {hx(h)}{marca}")
+
     h01 = sha256d(folhas[0] + folhas[1])
     h23 = sha256d(folhas[2] + folhas[3])
     raiz = sha256d(h01 + h23)
+    nome = {folhas[0]: "h0", folhas[1]: "h1", folhas[2]: "h2", folhas[3]: "h3",
+            h01: "h01", h23: "h23", raiz: "raiz"}
     print()
-    p(f"{BOLD}sobe um nível{R} (pai = sha256d(esq ‖ dir)):")
-    p(f"  h01 = H(h0 ‖ h1) = {hx(h01)}")
-    p(f"  h23 = H(h2 ‖ h3) = {hx(h23)}")
-    p(f"{BOLD}raiz{R} = H(h01 ‖ h23) = {hx(raiz)}")
+    p(f"{BOLD}a árvore sobe emparelhando vizinhos{R} (pai = sha256d(esq ‖ dir)):")
+    p("  h01  = H(h0 ‖ h1)")
+    p("  h23  = H(h2 ‖ h3)")
+    p(f"  raiz = H(h01 ‖ h23) = {hx(raiz)}")
     det(f"bate com kit.merkle_root(folhas)? {sim(raiz == kit.merkle_root(folhas))}")
 
     print()
-    p(f"{BOLD}prova de que a tx2 (→ Dave) está no bloco{R}")
-    prova = kit.merkle_proof(folhas, 2)
+    prova = kit.merkle_proof(folhas, alvo)
+    p(f"{BOLD}a prova de que h2 (Dave) está no bloco{R} são só os irmãos no caminho:")
     for lado, irmao in prova:
-        p(f"  irmão à {lado:<5} = {hx(irmao)}")
-    det(f"{len(prova)} hashes — não as {len(txs)} transações inteiras "
-        "(num bloco real: ~12 em vez de milhares)")
+        onde = "direita" if lado == "right" else "esquerda"
+        p(f"  {nome[irmao]:<4} (o irmão à {onde})")
+    det(f"{len(prova)} hashes, não as {len(txs)} txs inteiras "
+        "(num bloco real: ~12, não milhares)")
+
     print()
-    p("verificação, tendo só a tx2 + a prova:")
-    h = folhas[2]
-    p(f"  começo com h2 = {hx(h)}")
+    p(f"{BOLD}quem tem só a tx de Dave + a prova refaz o caminho até a raiz:{R}")
+    h = folhas[alvo]
     for lado, irmao in prova:
         if lado == "left":
             novo = sha256d(irmao + h)
-            p(f"  H({hx(irmao)} ‖ {hx(h)}) = {hx(novo)}")
+            eq = f"H({nome[irmao]} ‖ {nome[h]})"
         else:
             novo = sha256d(h + irmao)
-            p(f"  H({hx(h)} ‖ {hx(irmao)}) = {hx(novo)}")
+            eq = f"H({nome[h]} ‖ {nome[irmao]})"
+        p(f"  {eq:<14} = {nome[novo]}")
         h = novo
-    p(f"  cheguei em {hx(h)} — é a raiz? {sim(h == raiz)}")
+    p(f"  → {nome[h]} = {hx(h)} — é a raiz publicada? {sim(h == raiz)}")
 
 
 # ── 3. assinatura ───────────────────────────────────────────────────────────

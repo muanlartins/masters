@@ -1,0 +1,10 @@
+{
+  "name": "exercicio-sol",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Exercicios de Solidity da Aula 2 — contratos inteligentes, peca por peca.",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.0"
+  }
+}

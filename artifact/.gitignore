@@ -1,0 +1,8 @@
+node_modules/
+build/
+*.ptau
+*.zkey
+*.wtns
+*.r1cs
+*.wasm
+__pycache__/

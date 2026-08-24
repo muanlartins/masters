@@ -1,0 +1,170 @@
+\section{Proposal: Atomic Goals and Cumulative Levels}
+\label{sec:proposal}
+
+\subsection{System and Adversary Model}
+\label{sec:model}
+
+A fusion system consists of $m$ sensors, an aggregator, and an off-system
+auditor. Before acquisition, an authenticated and versioned public policy $P$
+fixes the device roster, an epoch, the canonical sequence of eligible record
+identifiers, and the operator $F$ with its public parameters. It also names the
+external anchoring procedure and verification material provisioned before the
+run. Policy authentication is a prerequisite: the goals below are relative to
+the particular $P$ that the auditor accepts.
+
+Sensors produce the policy-ordered sequence
+$O=((d_j,q_j,v_j))_{j=1}^{n}$, where $q_j$ is a device-local sequence number;
+the policy need not trust a device wall clock. A manifest $M$ contains the
+ordered identifiers and binding commitments to their values. The aggregator
+publishes an output $y$, a manifest commitment $c_M$, and evidence $\pi$.
+Each run has a unique 16-byte identifier $u$. The auditor's view is
+$\mathsf{view}(r)=(P,u,y,c_M,\pi)$ plus the provisioned
+verification material. Its judge may also hold private protocol state $\eta$,
+including a fresh 32-byte anchor state $a$ and a sampling challenge issued
+after observing an anchored $c_M$; $\eta$ is not accepted merely because the
+producer copied it into $\pi$.
+
+The anchor signs $H(P)\|u\|a\|c_M$. Its trusted service guarantees fresh $a$
+and unique $u$, and the auditor records the anchor receipt before recording
+acceptance of $y$; the signature alone is not a timestamp. For sampling, the
+auditor then issues a separate unpredictable challenge. A computationally
+bounded adversary may control the network
+and aggregator, modify stored records, forge an origin label, select which
+records reach $M$, or choose $y$. A capture profile separately states whether
+sensor application software or isolated secrets may also be compromised.
+
+The fixed schedule covers closed windows. Event-triggered acquisition, churn,
+and open-world reports additionally require an authenticated closure rule, such
+as signed boundary markers; without one we do not claim policy-complete
+coverage. Order-sensitive filters consume values in $P$'s canonical order.
+
+\subsection{Atomic Conditions and Reporting Levels}
+\label{sec:levels}
+
+The four atomic conditions for a run are:
+\begin{description}
+\setlength{\itemsep}{0pt}
+\item[G1 (anchored integrity)] an external party bound $u$, fresh auditor state,
+and a binding $c_M$ before accepting $y$, so replay or a later entry change is detected;
+\item[G2 (credential attribution)] each value commitment in $M$ is
+authenticated under the credential assigned by $P$ to the device it names;
+\item[G3 (policy-relative coverage)] the ordered identifier sequence in $M$
+equals the sequence required by $P$; and
+\item[G4 (computation conformance)] $y=F(O_M)$ for policy-ordered openings
+$O_M$ of all commitments in $M$.
+\end{description}
+These conditions are distinct dimensions. The V-levels are their cumulative
+prefixes: $\gamma_0$ contains all runs and
+$\gamma_i=\bigcap_{j=1}^{i}\mathrm{G}_j$ for $1\leq i\leq4$. This prefix is a
+reporting convention chosen because a claim about the policy-required
+computation should not silently omit the integrity, attribution, or coverage
+obligations on which it relies. It does not imply that a mechanism contributing
+G2 or G4 must implement every earlier condition.
+
+We instantiate the goal--judge--tolerance scaffold of Cortier et al.
+\cite{cortier2016}. Let $\mathcal{A}_{\rho}$ be the adversaries admitted by a
+fixed capture profile $\rho$.
+
+\begin{definition}[Level-$i$ verifiability]
+A system $\Sigma$ achieves \textbf{\Vlevel{$i$}} under profile $\rho$ with
+tolerance $\delta$ if there is a probabilistic polynomial-time judge $J$ such
+that, for every $\mathcal{A}\in\mathcal{A}_{\rho}$,
+\[
+\Pr[\, r \leftarrow \Sigma^{\mathcal{A}} :
+r \notin \gamma_i \wedge J(\mathsf{view}(r),\eta)=\mathsf{accept}\,]\leq\delta,
+\]
+and $J$ accepts a benign run in $\gamma_i$ with overwhelming probability.
+\end{definition}
+
+Table~\ref{tab:levels} names the cumulative prefixes. The qualified names are
+intentional: a signature attributes a credential rather than proving an honest
+transducer reading, and coverage is complete only relative to $P$. By
+construction, $\Vlevel{$i{+}1$}\Rightarrow\Vlevel{$i$}$ under the same profile.
+The adjacent counterexamples in Section~\ref{sec:separation} establish that the
+added conditions are non-redundant; they do not derive a unique total order from
+independence alone.
+
+\begin{table}[t]
+\caption{Cumulative run-level reporting convention. Availability, physical
+truth, and suitability of $F$ remain outside the hierarchy.}
+\label{tab:levels}
+\centering
+\small
+\begin{tabular}{@{}lL{2.8cm}L{2.0cm}L{5.3cm}@{}}
+\toprule
+& Name & Prefix & What the name does not claim \\
+\midrule
+\Vzero  & None & no run-level condition & any evidentiary guarantee \\
+\Vone   & Anchored & G1 & availability or recoverability of openings \\
+\Vtwo   & Credential-attributed & G1--G2 & honest transduction or protected keys \\
+\Vthree & Policy-complete & G1--G3 & events outside $P$ or open-window closure \\
+\Vfour  & Computation-conformant & G1--G4 & physical truth or that $F$ is appropriate \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+A concrete trace explains the cumulative choice. If $P$ requires sequence
+numbers 1 through 60, a manifest containing authentic records 1 through 59
+satisfies G2 and fails G3. A proof that $y=F(O_M)$ over that incomplete manifest
+could satisfy G4 in isolation but is not cumulative V4. Conversely, a
+homomorphic authenticator may contribute G2+G4 without constituting a complete
+V4 stack.
+
+\subsection{Boundaries and Exclusions}
+\label{sec:rationale}
+
+Mechanisms do not name levels. Defining V1 as ``a Merkle tree,'' for example,
+would make cost analysis circular and exclude equivalent constructions. The
+ALCOA+ vocabulary offers a regulatory reading, not a derivation: its
+Attributable, Complete, Enduring, and Accurate terms resemble parts of G1--G4,
+but legibility and availability are operational, consistency reaches across
+runs, and contemporaneity needs trusted time \cite{mhra2018}. We stop at G4
+because $P$ already fixes $F$ and its parameters. Software-build provenance is
+an adjacent object, as SLSA illustrates \cite{slsa}.
+
+Capture also bounds what evidence can establish. A sensor controlling its own
+measurement path can commit and authenticate a plausible but false value, which
+later processing evidence cannot distinguish from an honest one
+\cite{przydatek2003sia}. Availability is separate too: a
+commitment proves binding only when an opening is supplied; it does not recover
+a discarded record.
+
+\subsection{Capture-Resilience Profiles}
+\label{sec:rot}
+
+Physical capture changes which parties and secrets the judge may trust, not the
+run-level condition. Extracting a sensor's signing key undermines G2 for that
+sensor, while compromising only the aggregator need not do so when sensors sign
+their own commitments. Every result must therefore pair its V-level with a
+capture profile.
+
+Table~\ref{tab:profiles} gives templates a deployment must refine.
+A $\rho_{\mathrm{eval}}$ claim must name the evaluated duration and attacks;
+hardware supports it only within that scope. RATS appraises evidence against
+references, endorsements, and policy \cite{rfc9334}; APEX addresses software
+compromise, not general physical resistance \cite{apex2020}.
+
+\begin{table}[t]
+\caption{Capture-resilience templates reported independently of a V-level.}
+\label{tab:profiles}
+\centering
+\small
+\begin{tabular}{@{}lL{4.3cm}L{4.2cm}@{}}
+\toprule
+Profile & Adversary admitted & Evidence base required \\
+\midrule
+$\rho_{\mathrm{soft}}$ & network and aggregator control; no enrolled sensor
+application compromise & sensor credential in ordinary application memory \\
+$\rho_{\mathrm{iso}}$ & full application-software compromise & isolated key,
+freshness, and measured acquisition/execution path \\
+$\rho_{\mathrm{eval}}$ & named physical attacks within an evaluation scope &
+laboratory-evaluated root of trust and key protection \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+No profile makes a physical observation true. A protected path may stop
+compromised software from changing a reading after acquisition, but cannot stop
+environmental spoofing or a compromised transducer from supplying a legal-
+looking value. Cross-sensor trust estimation addresses this residual risk
+\cite{mate2025}; it composes with the evidence goals but is not implied by them.

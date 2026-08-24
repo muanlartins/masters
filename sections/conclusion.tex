@@ -1,0 +1,21 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+Run-level assurance is clearer when the claim is separated from the mechanism
+and from capture resilience. G1--G4 identify anchored manifest integrity,
+credential attribution, policy-relative coverage, and computation conformance;
+V1--V4 are their cumulative prefixes. The cross-field map shows why a
+signature, succinct proof, or attestation report contributes to particular
+conditions without automatically constituting a complete level.
+
+The executable study yields three lessons. Short authenticated records can be
+cheaper than commitment entries. Sampling saves disclosure only under a stated
+false-acceptance probability. In the demonstrated proof, credential attribution
+dominates the scalar fusion arithmetic. These findings compare protocol
+evidence, not deployability on a physically exposed device.
+
+For deployment: authenticate and version $P$; choose the V-claim and tolerance;
+state the capture profile; cover every required G-condition; and account for
+online evidence, setup, retention, and judge work separately. Future work
+should test an order-sensitive multi-sensor operator, a real attested path under
+physical evaluation, and adaptive or dynamic-window adversaries.

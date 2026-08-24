@@ -1,0 +1,172 @@
+\section{Executable Evaluation and Cost Analysis}
+\label{sec:evidence}
+
+The evaluation asks whether the judges realize the atomic distinctions, which
+representation choices determine communication, and which statement layers
+dominate a succinct proof. The goal is design insight from an executable model,
+not a claim of device feasibility.
+
+\subsection{Artifact and Method}
+\label{sec:artifact}
+
+The artifact implements nine complete stacks, one deliberately partial
+baseline, five circuits, and four adjacent-condition attacks. A complete stack
+carries evidence for every G-condition through its claimed level. The seeded
+generator, raw JSON, table generator, numeric claim checker, and adversarial
+proof-object tests are included in the anonymous supplement at
+\url{https://anonymous.4open.science/r/edge-fusion/}.
+
+We report
+$\mathrm{cost}(S,n,m,F)=\langle\mathbf{N}_{P},\mathbf{N}_{J},
+B_{\mathrm{ev}},M_P,M_J\rangle$. The first two coordinates count named
+evidence-generation and judge primitives. $B_{\mathrm{ev}}$ is the online
+transcript beyond the pre-provisioned policy $P$ and claimed output $y$,
+including verifier challenges. $M_P$ and $M_J$ are protocol state retained
+between records under the declared streaming schedule, not process RSS. If
+$B_P$ bytes of policy and setup material are distributed over $R$ runs, the
+amortized communication is $B_{\mathrm{ev}}+B_P/R$. The same rule applies to
+device keys, policy rosters, anchor keys, and proof verification keys.
+The generator populates a canonically serialized, versioned Ed25519/BLS roster;
+$H(P)$ binds its exact enrolled keys.
+
+The workload contains $n=60$ scheduled readings from $m=4$ loggers and tests
+arithmetic mean, excursion count, and bounded fixed-point mean kinetic
+temperature (MKT). It is synthetic scalar sensor-data aggregation, not an
+evaluation of tracking, association, heterogeneous-source fusion, or
+pharmaceutical prevalence. The stack sweep covers
+$n\in\{12,20,60,120,240,480,960\}$. Groth16 experiments use circom 2.2.3,
+circomlib 2.0.5, and snarkjs 0.7.5 on an Apple M4 Pro with 24 GB of memory.
+
+\subsection{Separation and the Price of Sampling}
+\label{sec:separation}
+
+The adjacent traces alter a record after anchoring (A1), use a credential that
+does not match the named device (A2), omit a required identifier (A3-short), or
+change the output of a complete authentic run (A4). Replaying each trace against
+each stack's own evidence gives 36 complete-stack decisions; 34 are
+deterministic and all follow the cumulative definition. These executions are
+counterexamples separating adjacent goals, not security proofs for all
+adversaries. Separate mutations replace an enrolled key or the accepted roster;
+both are rejected.
+
+The sampled V3 stack adds a harder coverage trace, A3-padded: it keeps length
+$n$ by replacing the omitted identifier with an authentic duplicate. The
+auditor anchors the root, stores its own unpredictable 32-byte challenge, and
+checks exactly the $k$ derived policy positions, paths, signatures, and
+identifiers. The challenge is not read from the producer's proof object.
+A3-short is rejected before sampling because its length violates $P$;
+A3-padded is detected only if a defective position is opened.
+
+If $t$ of $n$ positions are defective before the challenge and $k$ distinct
+positions are sampled uniformly without replacement, then
+\[
+ \Pr[\mathrm{miss}]=\delta=\frac{\binom{n-t}{k}}{\binom{n}{k}},\qquad
+ \Pr[\mathrm{detect}]=1-\delta,
+\]
+with $\binom{n-t}{k}=0$ when $k>n-t$. For one defect, detection is $k/n$.
+Thus $n=60,k=20$ checks one third of the manifest but still accepts a fixed
+single-position defect with probability $2/3$. As an implementation sanity
+check, 2,000 fixed challenges detected A1 at 0.338 and A3-padded at 0.317,
+consistent with $1/3$. The formula does not cover a producer that learns or
+grinds the challenge before committing.
+
+\textbf{Design rule 1:} sampling is attractive only when the policy explicitly
+accepts sparse-defect false acceptance; it is not a strong defense against one
+strategic omission.
+
+\subsection{Representation, Not the V-Number, Drives Bandwidth}
+
+For the declared serialization, the dominant byte formulas are
+\begin{align*}
+B_{\mathrm{raw}}(n) &= 144+n(6+64),\\
+B_{\mathrm{Ed}}(n) &= 144+n(36+64),\\
+B_{\mathrm{BLS}}(n) &= 240+36n,\\
+B_{\mathrm{sample}}(n,k) &= 176+k'(100+32\lceil\log_2 n\rceil),
+\quad k'=\min(k,n).
+\end{align*}
+The constants expose the boundary: each anchored stack carries a 32-byte root,
+64-byte signature, 16-byte run ID, and 32-byte auditor state; 36 bytes is an
+identifier and commitment. Sampled openings also carry a Merkle path. Exact V3 sends the
+same full manifest as Ed25519 V2, so it adds judge work but no bytes.
+
+At $n=60$, raw authenticated records and recomputation provide cumulative V4 in
+4,344 bytes, while commitment-based Ed25519 V2 uses 6,144 bytes. Here a 6-byte
+observation is smaller than its 36-byte manifest entry. With fixed $k=20$, the
+sampled stack uses 6,016 bytes at $n=60$; accounting for Merkle-depth steps, it
+first becomes smaller than raw transmission at $n=94$ (the first measured point
+past that crossover is $n=120$). It buys that reduction with interaction and
+$\delta$, not with a stronger primitive.
+
+\input{tables/costvec}
+
+The setup comparison also separates encodings. At $n=12$, snarkjs emits 983
+bytes of proof and public-signal JSON; the G1 signature, run ID, and auditor
+state bring this implementation bundle to 1,095 bytes. Packed raw V4 uses 984
+bytes, so this cross-encoding implementation comparison is 111 bytes larger.
+Under normalized compressed-binary encoding, the 128-byte proof, 96-byte public fields,
+and 112-byte G1 context total 336 bytes---648 bytes smaller than packed raw.
+The verification key is 3,290 bytes as JSON or 352 bytes normalized; a first run is
+therefore 4,385 bytes in JSON or 688 bytes normalized. The $n=60$ attributed
+circuit was compiled but not proven, so we make no comparison there.
+
+Aggregate signatures expose a different trade. BLS reduces V2 evidence from
+6,144 to 2,400 bytes but replaces 61 Ed25519 verifications with 61 pairings and
+one aggregate-signature verification. The 16-byte homomorphic MAC is smaller
+still, but authenticates only a linear aggregate for a designated auditor. It
+omits G1 and per-record G2 evidence and is therefore a partial baseline, not V4.
+
+The modeled attestation stack is visually separated in Table~\ref{tab:costvec}.
+Its 208-byte transcript contains a 32-byte manifest root, 48-byte run context,
+a 64-byte external anchor that supplies G1 before output acceptance, and a
+64-byte isolated-path report binding $P$, the root, and $y$. It assumes enrollment, appraisal, and
+policy enforcement under $\rho_{\mathrm{iso}}$; no secure element or device was
+measured.
+
+\textbf{Design rule 2:} compare complete evidence objects and their trust and
+setup boundaries. A higher V-number need not cost more than a lower one, and a
+small primitive is not automatically a complete stack.
+
+\subsection{Attribution Dominates the Demonstrated Circuit}
+
+Table~\ref{tab:circuits} decomposes the proof statement. Binding 60
+policy-ordered values takes 32,040 constraints. Arithmetic mean adds one;
+excursion counting adds 1,261 (3.9\%); and bounded MKT adds 6,591 (20.6\%). The
+MKT circuit constrains the declared 0--35\,$^{\circ}$C band at scale $2^{16}$.
+Integer divisions and the logarithm round toward $-\infty$ with constrained
+remainders; the degree-12 approximation differs from floating point by 1.8~mK
+on this trace. These are alternative
+G4 operators over the same binding layer.
+
+\input{tables/circuits}
+
+Adding policy-positioned EdDSA attribution to the arithmetic mean raises the
+circuit from 32,041 to 549,392 constraints, a factor of 17.1. It constrains
+G2--G4 and exposes $c_M$, but an external event must still supply G1. The
+$n=60$ attributed circuit was compilation-only. At $n=12$, where the available
+setup sufficed, proving consumed a median 2,467 MB of resident memory over three
+trials (range 1,812--2,494 MB). This host measurement is evidence against
+assuming logger feasibility, not a device benchmark.
+
+\textbf{Design rule 3:} optimizing the fusion formula alone will not make this
+proof deployable while conventional in-circuit attribution dominates. Keeping
+authentication outside the circuit or using proof-friendly credentials may be
+more consequential, when the resulting trust model is acceptable.
+
+\subsection{Threats to Validity}
+
+The artifact is an executable protocol model, not deployable security software.
+Fixture keys are publicly derivable, the Groth16 setup is for benchmarking, and
+the isolated attestation path is assumed. Primitive and serialized-byte counts
+are exact for the code, but retained state is analytical and prover RSS is
+host-specific. We report no device latency, energy, radio duty cycle, or
+physical-attack result. Commitment openings also require retained source data;
+availability and audit-storage cost are outside the cost vector.
+
+One synthetic seed and scalar reductions cannot establish general fusion
+workload realism. Order-sensitive tracking or filtering can use the
+canonical policy order, but its circuit and protocol costs remain unmeasured.
+The sampling expression assumes a defect set fixed before a sound challenge;
+32-bit draws use rejection sampling for exact uniformity.
+adaptive corruption and open-window acquisition need additional protocols.
+Finally, MKT correctness is relative to one bounded numerical specification,
+not all temperature bands or implementations.

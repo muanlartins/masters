@@ -1,0 +1,388 @@
+% edge-fusion / LAFusion 2026 — bibliography
+% Primary fields verified on 2026-08-23 unless a nearby comment says otherwise.
+% NEVER add an entry that has not been checked against the source.
+
+% ===== the definitional spine ==============================================
+
+@inproceedings{gennaro2010,
+  author    = {Gennaro, Rosario and Gentry, Craig and Parno, Bryan},
+  title     = {Non-Interactive Verifiable Computing: Outsourcing Computation to
+               Untrusted Workers},
+  booktitle = {Advances in Cryptology -- CRYPTO 2010},
+  series    = {LNCS},
+  volume    = {6223},
+  pages     = {465--482},
+  year      = {2010},
+  publisher = {Springer},
+  doi       = {10.1007/978-3-642-14623-7_25},
+  note      = {{C}ryptology ePrint Archive, Report 2009/547}
+}
+
+@inproceedings{cortier2016,
+  author    = {Cortier, V{\'e}ronique and Galindo, David and K{\"u}sters, Ralf
+               and M{\"u}ller, Johannes and Truderung, Tomasz},
+  title     = {{SoK}: Verifiability Notions for E-Voting Protocols},
+  booktitle = {IEEE Symposium on Security and Privacy (S\&P)},
+  pages     = {779--798},
+  year      = {2016},
+  doi       = {10.1109/SP.2016.52}
+}
+
+@inproceedings{chiesa2010pcd,
+  author    = {Chiesa, Alessandro and Tromer, Eran},
+  title     = {Proof-Carrying Data and Hearsay Arguments from Signature Cards},
+  booktitle = {Innovations in Computer Science (ICS)},
+  pages     = {310--331},
+  publisher = {Tsinghua University Press},
+  year      = {2010}
+}
+
+% ===== fusion-native verifiable aggregation ================================
+
+@inproceedings{przydatek2003sia,
+  author    = {Przydatek, Bartosz and Song, Dawn and Perrig, Adrian},
+  title     = {{SIA}: Secure Information Aggregation in Sensor Networks},
+  booktitle = {ACM Conference on Embedded Networked Sensor Systems (SenSys)},
+  pages     = {255--265},
+  year      = {2003},
+  doi       = {10.1145/958491.958521}
+}
+
+@inproceedings{chan2006hierarchical,
+  author    = {Chan, Haowen and Perrig, Adrian and Song, Dawn},
+  title     = {Secure Hierarchical In-Network Aggregation in Sensor Networks},
+  booktitle = {ACM Conference on Computer and Communications Security (CCS)},
+  pages     = {278--287},
+  year      = {2006},
+  doi       = {10.1145/1180405.1180440}
+}
+
+@inproceedings{palazzo2024mpvas,
+  author    = {Palazzo, Marco and Dekker, Florine W. and Brighente, Alessandro
+               and Conti, Mauro and Erkin, Zekeriya},
+  title     = {Privacy-Preserving Data Aggregation with Public Verifiability
+               Against Internal Adversaries},
+  booktitle = {33rd USENIX Security Symposium},
+  pages     = {6957--6974},
+  year      = {2024},
+  publisher = {USENIX Association},
+  url       = {https://www.usenix.org/conference/usenixsecurity24/presentation/palazzo}
+}
+
+@article{zhou2024ppvda,
+  author  = {Zhou, Fucai and Wu, Qiyu and Wu, Pengfei and Xu, Jian and Feng, Da},
+  title   = {Privacy-Preserving and Verifiable Data Aggregation for Internet of
+             Vehicles},
+  journal = {Computer Communications},
+  volume  = {218},
+  pages   = {198--208},
+  year    = {2024},
+  doi     = {10.1016/j.comcom.2024.02.022}
+}
+
+% ===== the fusion community's statistical answer ===========================
+
+@inproceedings{mate2025,
+  author    = {Hallyburton, R. Spencer and Pajic, Miroslav},
+  title     = {Security-Aware Sensor Fusion with {MATE}: the Multi-Agent Trust
+               Estimator},
+  booktitle = {ACM Conference on Computer and Communications Security (CCS)},
+  year      = {2025},
+  doi       = {10.1145/3719027.3765193},
+  note      = {arXiv:2503.04954}
+}
+
+@inproceedings{trustfusion2025iccps,
+  author    = {Hallyburton, R. Spencer and Pajic, Miroslav},
+  title     = {Trust-Based Assured Sensor Fusion in Distributed Aerial Autonomy},
+  booktitle = {ACM/IEEE International Conference on Cyber-Physical Systems
+               (ICCPS)},
+  year      = {2025},
+  doi       = {10.1145/3716550.3722038}
+}
+
+% ===== roots of trust / physical tamper ====================================
+
+@inproceedings{apex2020,
+  author    = {De Oliveira Nunes, Ivan and Eldefrawy, Karim and
+               Rattanavipanon, Norrathep and Tsudik, Gene},
+  title     = {{APEX}: A Verified Architecture for Proofs of Execution on Remote
+               Devices under Full Software Compromise},
+  booktitle = {USENIX Security Symposium},
+  pages     = {771--788},
+  year      = {2020},
+  publisher = {USENIX Association},
+  url       = {https://www.usenix.org/conference/usenixsecurity20/presentation/nunes}
+}
+
+@techreport{rfc9334,
+  author      = {Birkholz, Henk and Thaler, Dave and Richardson, Michael and
+                 Smith, Ned and Pan, Wei},
+  title       = {Remote {ATtestation} procedureS ({RATS}) Architecture},
+  institution = {Internet Engineering Task Force},
+  number      = {RFC 9334},
+  year        = {2023},
+  doi         = {10.17487/RFC9334}
+}
+
+@inproceedings{versa2022,
+  author    = {De Oliveira Nunes, Ivan and Hwang, Seoyeon and
+               Jakkamsetti, Sashidhar and Tsudik, Gene},
+  title     = {Privacy-from-Birth: Protecting Sensed Data from Malicious Sensors
+               with {VERSA}},
+  booktitle = {IEEE Symposium on Security and Privacy (S\&P)},
+  year      = {2022}
+}
+
+@inproceedings{garota2022,
+  author    = {Aliaj, Esmerald and De Oliveira Nunes, Ivan and Tsudik, Gene},
+  title     = {{GAROTA}: Generalized Active Root-Of-Trust Architecture for
+               Tiny Embedded Devices},
+  booktitle = {USENIX Security Symposium},
+  year      = {2022},
+  note      = {arXiv:2102.07014}
+}
+
+@inproceedings{cflat2016,
+  author    = {Abera, Tigist and Asokan, N. and Davi, Lucas and
+               Ekberg, Jan-Erik and Nyman, Thomas and Paverd, Andrew and
+               Sadeghi, Ahmad-Reza and Tsudik, Gene},
+  title     = {{C-FLAT}: Control-Flow Attestation for Embedded Systems Software},
+  booktitle = {ACM Conference on Computer and Communications Security (CCS)},
+  year      = {2016},
+  note      = {arXiv:1605.07763}
+}
+
+@article{sokruntime2024,
+  author    = {Ammar, Mahmoud and Caulfield, Adam and
+               De Oliveira Nunes, Ivan},
+  title     = {{SoK}: Runtime Integrity},
+  journal   = {arXiv preprint arXiv:2408.10200},
+  year      = {2024}
+}
+
+@inproceedings{darpa2016,
+  author    = {Ibrahim, Ahmad and Sadeghi, Ahmad-Reza and Tsudik, Gene and
+               Zeitouni, Shaza},
+  title     = {{DARPA}: Device Attestation Resilient to Physical Attacks},
+  booktitle = {ACM Conference on Security and Privacy in Wireless and Mobile
+               Networks (WiSec)},
+  pages     = {171--182},
+  year      = {2016}
+}
+
+@misc{vecodi2026,
+  author    = {Kiri, Mohamed Khalil and De Oliveira Nunes, Ivan and
+               Francillon, Aur{\'e}lien and Rattanavipanon, Norrathep},
+  title     = {Verifiable and Confidential {DNN} Inference on Low-End Edge
+               Devices},
+  howpublished = {arXiv preprint arXiv:2606.07470},
+  year      = {2026},
+  doi       = {10.48550/arXiv.2606.07470}
+}
+
+% ===== cost metrics ========================================================
+
+@inproceedings{felics2015,
+  author    = {Dinu, Daniel and Le Corre, Yann and Khovratovich, Dmitry and
+               Perrin, L{\'e}o and Gro{\ss}sch{\"a}dl, Johann and
+               Biryukov, Alex},
+  title     = {{FELICS} -- Fair Evaluation of Lightweight Cryptographic Systems},
+  booktitle = {NIST Workshop on Lightweight Cryptography},
+  year      = {2015}
+}
+
+@inproceedings{demeulenaer2008,
+  author    = {de Meulenaer, Giacomo and Gosset, Fran{\c c}ois and
+               Standaert, Fran{\c c}ois-Xavier and Pereira, Olivier},
+  title     = {On the Energy Cost of Communication and Cryptography in Wireless
+               Sensor Networks},
+  booktitle = {IEEE International Conference on Wireless and Mobile Computing,
+               Networking and Communications (WiMob)},
+  pages     = {580--585},
+  year      = {2008},
+  doi       = {10.1109/WiMob.2008.16}
+}
+
+@article{kuznetsov2026,
+  author    = {Kuznetsov, Oleksandr and Kuznetsova, Yelyzaveta and
+               Ziyatbekova, Gulzat and Kovalenko, Yuliia and
+               Palahusynets, Ruslan},
+  title     = {Performance Evaluation of {zk-SNARK} Protocols for
+               Privacy-Preserving Sensor Data Verification: A Systematic
+               Benchmarking Study},
+  journal   = {Sensors},
+  volume    = {26},
+  number    = {8},
+  pages     = {2486},
+  year      = {2026},
+  doi       = {10.3390/s26082486}
+}
+
+% ===== graded-ladder precedents (related work, not competitors) ============
+
+@misc{psacertified,
+  title        = {{PSA} Certified: Security Certification for {IoT}},
+  howpublished = {\url{https://www.psacertified.org/}},
+  year         = {2026},
+  note         = {Accessed 2026-08-23},
+  url          = {https://www.psacertified.org/getting-certified/}
+}
+
+@techreport{nist80063,
+  author      = {Temoshok, David and Choong, Yee-Yin and Fenton, James L. and
+                 Regenscheid, Andrew and Lefkovitz, Naomi and Richer, Justin and
+                 Proud-Madruga, Donna and Gupta, Sudhi and Galluzzo, Ryan},
+  title       = {Digital Identity Guidelines},
+  institution = {National Institute of Standards and Technology},
+  number      = {NIST SP 800-63-4},
+  year        = {2025},
+  doi         = {10.6028/NIST.SP.800-63-4}
+}
+
+@misc{slsa,
+  title        = {{SLSA} Build Track Basics, Version 1.2},
+  howpublished = {\url{https://slsa.dev/spec/v1.2/build-track-basics}},
+  year         = {2026},
+  note         = {Accessed 2026-08-23}
+}
+
+% ===== the fusion venue's own vocabulary ===================================
+
+@inproceedings{steinberg1999jdl,
+  author    = {Steinberg, Alan N. and Bowman, Christopher L. and
+               White, Franklin E.},
+  title     = {Revisions to the {JDL} Data Fusion Model},
+  booktitle = {Sensor Fusion: Architectures, Algorithms, and Applications III},
+  series    = {Proc. SPIE},
+  year      = {1999}
+}
+
+% ===== regulatory grounding ================================================
+
+@misc{mhra2018,
+  title        = {{GxP} Data Integrity Guidance and Definitions},
+  author       = {{Medicines and Healthcare products Regulatory Agency}},
+  year         = {2018},
+  url          = {https://www.gov.uk/government/publications/guidance-on-gxp-data-integrity}
+}
+
+@misc{who2011coldchain,
+  author       = {{World Health Organization}},
+  title        = {Model Guidance for the Storage and Transport of Time- and
+                  Temperature-Sensitive Pharmaceutical Products},
+  howpublished = {WHO Technical Report Series 961, Annex 9},
+  year         = {2011},
+  url          = {https://www.who.int/publications/m/item/trs961-annex9-modelguidanceforstoragetransport}
+}
+
+@misc{usp2023mkt,
+  author       = {{United States Pharmacopeia}},
+  title        = {General Chapter 1079.2: Mean Kinetic Temperature in the
+                  Evaluation of Temperature Excursions During Storage and
+                  Transportation of Drug Products},
+  howpublished = {USP--NF},
+  year         = {2023},
+  doi          = {10.31003/USPNF_M13855_02_01}
+}
+
+@misc{cfr21part11,
+  title        = {Electronic Records; Electronic Signatures},
+  author       = {{U.S. Food and Drug Administration}},
+  howpublished = {21 CFR Part 11},
+  year         = {1997}
+}
+
+% ===== surveys checked for the gap (all C1 FAIL) ===========================
+
+@article{bontekoe2025,
+  author  = {Bontekoe, Tariq and Karastoyanova, Dimka and Turkmen, Fatih},
+  title   = {Verifiability for Privacy-Preserving Computing on Distributed
+             Data -- A Survey},
+  journal = {International Journal of Information Security},
+  volume  = {24},
+  number  = {3},
+  pages   = {141},
+  year    = {2025},
+  doi     = {10.1007/s10207-025-01047-7},
+  note    = {arXiv:2309.08248}
+}
+
+@article{provenanceslr2024,
+  author  = {Faraj, Omair and Meg{\'\i}as, David and Garcia-Alfaro, Joaquin},
+  title   = {Security Approaches for Data Provenance in the Internet of Things:
+             A Systematic Literature Review},
+  journal = {arXiv preprint arXiv:2407.03466},
+  year    = {2024}
+}
+
+@article{walfish2015,
+  author  = {Walfish, Michael and Blumberg, Andrew J.},
+  title   = {Verifying Computations Without Reexecuting Them},
+  journal = {Communications of the ACM},
+  volume  = {58},
+  number  = {2},
+  pages   = {74--84},
+  year    = {2015},
+  doi     = {10.1145/2641562}
+}
+
+% ===== mechanism catalogue (carried from study/verifiable-computation) =====
+
+@inproceedings{merkle1987,
+  author    = {Merkle, Ralph C.},
+  title     = {A Digital Signature Based on a Conventional Encryption Function},
+  booktitle = {Advances in Cryptology -- CRYPTO '87},
+  series    = {LNCS},
+  volume    = {293},
+  pages     = {369--378},
+  year      = {1988},
+  publisher = {Springer}
+}
+
+@inproceedings{crosby2009,
+  author    = {Crosby, Scott A. and Wallach, Dan S.},
+  title     = {Efficient Data Structures for Tamper-Evident Logging},
+  booktitle = {USENIX Security Symposium},
+  pages     = {317--334},
+  year      = {2009}
+}
+
+@inproceedings{clarke2003multiset,
+  author    = {Clarke, Dwaine and Devadas, Srinivas and van Dijk, Marten and
+               Gassend, Blaise and Suh, G. Edward},
+  title     = {Incremental Multiset Hash Functions and Their Application to
+               Memory Integrity Checking},
+  booktitle = {Advances in Cryptology -- ASIACRYPT 2003},
+  year      = {2003},
+  doi       = {10.1007/978-3-540-40061-5_13}
+}
+
+@inproceedings{boneh2003aggregate,
+  author    = {Boneh, Dan and Gentry, Craig and Lynn, Ben and Shacham, Hovav},
+  title     = {Aggregate and Verifiably Encrypted Signatures from Bilinear Maps},
+  booktitle = {Advances in Cryptology -- EUROCRYPT 2003},
+  series    = {LNCS},
+  volume    = {2656},
+  pages     = {416--432},
+  year      = {2003},
+  doi       = {10.1007/3-540-39200-9_26}
+}
+
+@inproceedings{catalano2013hmac,
+  author    = {Catalano, Dario and Fiore, Dario},
+  title     = {Practical Homomorphic {MACs} for Arithmetic Circuits},
+  booktitle = {Advances in Cryptology -- EUROCRYPT 2013},
+  pages     = {336--352},
+  year      = {2013},
+  doi       = {10.1007/978-3-642-38348-9_21}
+}
+
+@inproceedings{groth2016,
+  author    = {Groth, Jens},
+  title     = {On the Size of Pairing-Based Non-interactive Arguments},
+  booktitle = {Advances in Cryptology -- EUROCRYPT 2016},
+  pages     = {305--326},
+  year      = {2016},
+  doi       = {10.1007/978-3-662-49896-5_11}
+}

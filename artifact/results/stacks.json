@@ -1,0 +1,3898 @@
+{
+ "sweep": [
+  12,
+  20,
+  60,
+  120,
+  240,
+  480,
+  960
+ ],
+ "headline_n": 60,
+ "operators": {
+  "mkt": {
+   "12": [
+    {
+     "stack": "v0-none",
+     "level": 0,
+     "profile": "rho_soft",
+     "mechanism": "no evidence",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 281.74173088415046,
+     "B_ev": 0,
+     "B_breakdown": {},
+     "N_P": {},
+     "M_P": 0,
+     "N_J": {},
+     "M_J": 0
+    },
+    {
+     "stack": "v1-merkle",
+     "level": 1,
+     "profile": "rho_soft",
+     "mechanism": "anchored RFC 6962 Merkle root",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 281.74173088415046,
+     "B_ev": 576,
+     "B_breakdown": {
+      "manifest": 432,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 35,
+      "sign": 1
+     },
+     "M_P": 96,
+     "N_J": {
+      "hash": 23,
+      "verify": 1
+     },
+     "M_J": 96
+    },
+    {
+     "stack": "v1-chain",
+     "level": 1,
+     "profile": "rho_soft",
+     "mechanism": "anchored hash chain",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 281.74173088415046,
+     "B_ev": 576,
+     "B_breakdown": {
+      "manifest": 432,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 36,
+      "sign": 1
+     },
+     "M_P": 32,
+     "N_J": {
+      "hash": 24,
+      "verify": 1
+     },
+     "M_J": 32
+    },
+    {
+     "stack": "v2-ed25519",
+     "level": 2,
+     "profile": "rho_soft",
+     "mechanism": "per-record Ed25519 signature",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 281.74173088415046,
+     "B_ev": 1344,
+     "B_breakdown": {
+      "manifest": 432,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "record sigs": 768
+     },
+     "N_P": {
+      "hash": 35,
+      "sign": 13
+     },
+     "M_P": 96,
+     "N_J": {
+      "hash": 23,
+      "verify": 13
+     },
+     "M_J": 96
+    },
+    {
+     "stack": "v2-bls",
+     "level": 2,
+     "profile": "rho_soft",
+     "mechanism": "BLS12-381 aggregate signature",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 281.74173088415046,
+     "B_ev": 672,
+     "B_breakdown": {
+      "manifest": 432,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "aggregate sig": 96
+     },
+     "N_P": {
+      "hash": 35,
+      "sign": 13,
+      "agg": 11
+     },
+     "M_P": 96,
+     "N_J": {
+      "hash": 23,
+      "verify": 1,
+      "pairing": 13
+     },
+     "M_J": 96
+    },
+    {
+     "stack": "v3-manifest",
+     "level": 3,
+     "profile": "rho_soft",
+     "mechanism": "policy-order check on the transmitted manifest",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 281.74173088415046,
+     "B_ev": 1344,
+     "B_breakdown": {
+      "manifest": 432,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "record sigs": 768
+     },
+     "N_P": {
+      "hash": 35,
+      "sign": 13
+     },
+     "M_P": 96,
+     "N_J": {
+      "hash": 35,
+      "verify": 13
+     },
+     "M_J": 96
+    },
+    {
+     "stack": "v3-policy-sample",
+     "level": 3,
+     "profile": "rho_soft",
+     "mechanism": "policy-position sampling with k openings",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 281.74173088415046,
+     "B_ev": 2912,
+     "B_breakdown": {
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "verifier challenge": 32,
+      "openings": 2736
+     },
+     "N_P": {
+      "hash": 123,
+      "sign": 13
+     },
+     "M_P": 96,
+     "N_J": {
+      "hash": 56,
+      "verify": 13
+     },
+     "M_J": 0
+    },
+    {
+     "stack": "v4-raw",
+     "level": 4,
+     "profile": "rho_soft",
+     "mechanism": "ship raw observations, judge recomputes F",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 281.74173088415046,
+     "B_ev": 984,
+     "B_breakdown": {
+      "observations": 72,
+      "record sigs": 768,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 23,
+      "sign": 13
+     },
+     "M_P": 96,
+     "N_J": {
+      "hash": 23,
+      "verify": 13,
+      "fuse": 1
+     },
+     "M_J": 96
+    },
+    {
+     "stack": "v4-attested",
+     "level": 4,
+     "profile": "rho_iso",
+     "mechanism": "modeled attested execution report",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": true,
+     "accept": true,
+     "y": 281.74173088415046,
+     "B_ev": 208,
+     "B_breakdown": {
+      "manifest root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "external anchor": 64,
+      "report": 64
+     },
+     "N_P": {
+      "hash": 24,
+      "sign": 2
+     },
+     "M_P": 32,
+     "N_J": {
+      "verify": 2
+     },
+     "M_J": 0
+    }
+   ],
+   "20": [
+    {
+     "stack": "v0-none",
+     "level": 0,
+     "profile": "rho_soft",
+     "mechanism": "no evidence",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 281.4362512791119,
+     "B_ev": 0,
+     "B_breakdown": {},
+     "N_P": {},
+     "M_P": 0,
+     "N_J": {},
+     "M_J": 0
+    },
+    {
+     "stack": "v1-merkle",
+     "level": 1,
+     "profile": "rho_soft",
+     "mechanism": "anchored RFC 6962 Merkle root",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 281.4362512791119,
+     "B_ev": 864,
+     "B_breakdown": {
+      "manifest": 720,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 59,
+      "sign": 1
+     },
+     "M_P": 128,
+     "N_J": {
+      "hash": 39,
+      "verify": 1
+     },
+     "M_J": 128
+    },
+    {
+     "stack": "v1-chain",
+     "level": 1,
+     "profile": "rho_soft",
+     "mechanism": "anchored hash chain",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 281.4362512791119,
+     "B_ev": 864,
+     "B_breakdown": {
+      "manifest": 720,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 60,
+      "sign": 1
+     },
+     "M_P": 32,
+     "N_J": {
+      "hash": 40,
+      "verify": 1
+     },
+     "M_J": 32
+    },
+    {
+     "stack": "v2-ed25519",
+     "level": 2,
+     "profile": "rho_soft",
+     "mechanism": "per-record Ed25519 signature",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 281.4362512791119,
+     "B_ev": 2144,
+     "B_breakdown": {
+      "manifest": 720,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "record sigs": 1280
+     },
+     "N_P": {
+      "hash": 59,
+      "sign": 21
+     },
+     "M_P": 128,
+     "N_J": {
+      "hash": 39,
+      "verify": 21
+     },
+     "M_J": 128
+    },
+    {
+     "stack": "v2-bls",
+     "level": 2,
+     "profile": "rho_soft",
+     "mechanism": "BLS12-381 aggregate signature",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 281.4362512791119,
+     "B_ev": 960,
+     "B_breakdown": {
+      "manifest": 720,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "aggregate sig": 96
+     },
+     "N_P": {
+      "hash": 59,
+      "sign": 21,
+      "agg": 19
+     },
+     "M_P": 128,
+     "N_J": {
+      "hash": 39,
+      "verify": 1,
+      "pairing": 21
+     },
+     "M_J": 128
+    },
+    {
+     "stack": "v3-manifest",
+     "level": 3,
+     "profile": "rho_soft",
+     "mechanism": "policy-order check on the transmitted manifest",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 281.4362512791119,
+     "B_ev": 2144,
+     "B_breakdown": {
+      "manifest": 720,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "record sigs": 1280
+     },
+     "N_P": {
+      "hash": 59,
+      "sign": 21
+     },
+     "M_P": 128,
+     "N_J": {
+      "hash": 59,
+      "verify": 21
+     },
+     "M_J": 128
+    },
+    {
+     "stack": "v3-policy-sample",
+     "level": 3,
+     "profile": "rho_soft",
+     "mechanism": "policy-position sampling with k openings",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 281.4362512791119,
+     "B_ev": 5376,
+     "B_breakdown": {
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "verifier challenge": 32,
+      "openings": 5200
+     },
+     "N_P": {
+      "hash": 347,
+      "sign": 21
+     },
+     "M_P": 128,
+     "N_J": {
+      "hash": 112,
+      "verify": 21
+     },
+     "M_J": 0
+    },
+    {
+     "stack": "v4-raw",
+     "level": 4,
+     "profile": "rho_soft",
+     "mechanism": "ship raw observations, judge recomputes F",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 281.4362512791119,
+     "B_ev": 1544,
+     "B_breakdown": {
+      "observations": 120,
+      "record sigs": 1280,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 39,
+      "sign": 21
+     },
+     "M_P": 128,
+     "N_J": {
+      "hash": 39,
+      "verify": 21,
+      "fuse": 1
+     },
+     "M_J": 128
+    },
+    {
+     "stack": "v4-attested",
+     "level": 4,
+     "profile": "rho_iso",
+     "mechanism": "modeled attested execution report",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": true,
+     "accept": true,
+     "y": 281.4362512791119,
+     "B_ev": 208,
+     "B_breakdown": {
+      "manifest root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "external anchor": 64,
+      "report": 64
+     },
+     "N_P": {
+      "hash": 40,
+      "sign": 2
+     },
+     "M_P": 32,
+     "N_J": {
+      "verify": 2
+     },
+     "M_J": 0
+    }
+   ],
+   "60": [
+    {
+     "stack": "v0-none",
+     "level": 0,
+     "profile": "rho_soft",
+     "mechanism": "no evidence",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.9718287241516,
+     "B_ev": 0,
+     "B_breakdown": {},
+     "N_P": {},
+     "M_P": 0,
+     "N_J": {},
+     "M_J": 0
+    },
+    {
+     "stack": "v1-merkle",
+     "level": 1,
+     "profile": "rho_soft",
+     "mechanism": "anchored RFC 6962 Merkle root",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.9718287241516,
+     "B_ev": 2304,
+     "B_breakdown": {
+      "manifest": 2160,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 179,
+      "sign": 1
+     },
+     "M_P": 160,
+     "N_J": {
+      "hash": 119,
+      "verify": 1
+     },
+     "M_J": 160
+    },
+    {
+     "stack": "v1-chain",
+     "level": 1,
+     "profile": "rho_soft",
+     "mechanism": "anchored hash chain",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.9718287241516,
+     "B_ev": 2304,
+     "B_breakdown": {
+      "manifest": 2160,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 180,
+      "sign": 1
+     },
+     "M_P": 32,
+     "N_J": {
+      "hash": 120,
+      "verify": 1
+     },
+     "M_J": 32
+    },
+    {
+     "stack": "v2-ed25519",
+     "level": 2,
+     "profile": "rho_soft",
+     "mechanism": "per-record Ed25519 signature",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.9718287241516,
+     "B_ev": 6144,
+     "B_breakdown": {
+      "manifest": 2160,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "record sigs": 3840
+     },
+     "N_P": {
+      "hash": 179,
+      "sign": 61
+     },
+     "M_P": 160,
+     "N_J": {
+      "hash": 119,
+      "verify": 61
+     },
+     "M_J": 160
+    },
+    {
+     "stack": "v2-bls",
+     "level": 2,
+     "profile": "rho_soft",
+     "mechanism": "BLS12-381 aggregate signature",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.9718287241516,
+     "B_ev": 2400,
+     "B_breakdown": {
+      "manifest": 2160,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "aggregate sig": 96
+     },
+     "N_P": {
+      "hash": 179,
+      "sign": 61,
+      "agg": 59
+     },
+     "M_P": 160,
+     "N_J": {
+      "hash": 119,
+      "verify": 1,
+      "pairing": 61
+     },
+     "M_J": 160
+    },
+    {
+     "stack": "v3-manifest",
+     "level": 3,
+     "profile": "rho_soft",
+     "mechanism": "policy-order check on the transmitted manifest",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.9718287241516,
+     "B_ev": 6144,
+     "B_breakdown": {
+      "manifest": 2160,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "record sigs": 3840
+     },
+     "N_P": {
+      "hash": 179,
+      "sign": 61
+     },
+     "M_P": 160,
+     "N_J": {
+      "hash": 179,
+      "verify": 61
+     },
+     "M_J": 160
+    },
+    {
+     "stack": "v3-policy-sample",
+     "level": 3,
+     "profile": "rho_soft",
+     "mechanism": "policy-position sampling with k openings",
+     "public": true,
+     "delta": 0.6666666666666667,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.9718287241516,
+     "B_ev": 6016,
+     "B_breakdown": {
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "verifier challenge": 32,
+      "openings": 5840
+     },
+     "N_P": {
+      "hash": 1241,
+      "sign": 61
+     },
+     "M_P": 160,
+     "N_J": {
+      "hash": 138,
+      "verify": 21
+     },
+     "M_J": 0
+    },
+    {
+     "stack": "v4-raw",
+     "level": 4,
+     "profile": "rho_soft",
+     "mechanism": "ship raw observations, judge recomputes F",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.9718287241516,
+     "B_ev": 4344,
+     "B_breakdown": {
+      "observations": 360,
+      "record sigs": 3840,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 119,
+      "sign": 61
+     },
+     "M_P": 160,
+     "N_J": {
+      "hash": 119,
+      "verify": 61,
+      "fuse": 1
+     },
+     "M_J": 160
+    },
+    {
+     "stack": "v4-attested",
+     "level": 4,
+     "profile": "rho_iso",
+     "mechanism": "modeled attested execution report",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": true,
+     "accept": true,
+     "y": 280.9718287241516,
+     "B_ev": 208,
+     "B_breakdown": {
+      "manifest root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "external anchor": 64,
+      "report": 64
+     },
+     "N_P": {
+      "hash": 120,
+      "sign": 2
+     },
+     "M_P": 32,
+     "N_J": {
+      "verify": 2
+     },
+     "M_J": 0
+    }
+   ],
+   "120": [
+    {
+     "stack": "v0-none",
+     "level": 0,
+     "profile": "rho_soft",
+     "mechanism": "no evidence",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.904707504005,
+     "B_ev": 0,
+     "B_breakdown": {},
+     "N_P": {},
+     "M_P": 0,
+     "N_J": {},
+     "M_J": 0
+    },
+    {
+     "stack": "v1-merkle",
+     "level": 1,
+     "profile": "rho_soft",
+     "mechanism": "anchored RFC 6962 Merkle root",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.904707504005,
+     "B_ev": 4464,
+     "B_breakdown": {
+      "manifest": 4320,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 359,
+      "sign": 1
+     },
+     "M_P": 192,
+     "N_J": {
+      "hash": 239,
+      "verify": 1
+     },
+     "M_J": 192
+    },
+    {
+     "stack": "v1-chain",
+     "level": 1,
+     "profile": "rho_soft",
+     "mechanism": "anchored hash chain",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.904707504005,
+     "B_ev": 4464,
+     "B_breakdown": {
+      "manifest": 4320,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 360,
+      "sign": 1
+     },
+     "M_P": 32,
+     "N_J": {
+      "hash": 240,
+      "verify": 1
+     },
+     "M_J": 32
+    },
+    {
+     "stack": "v2-ed25519",
+     "level": 2,
+     "profile": "rho_soft",
+     "mechanism": "per-record Ed25519 signature",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.904707504005,
+     "B_ev": 12144,
+     "B_breakdown": {
+      "manifest": 4320,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "record sigs": 7680
+     },
+     "N_P": {
+      "hash": 359,
+      "sign": 121
+     },
+     "M_P": 192,
+     "N_J": {
+      "hash": 239,
+      "verify": 121
+     },
+     "M_J": 192
+    },
+    {
+     "stack": "v3-manifest",
+     "level": 3,
+     "profile": "rho_soft",
+     "mechanism": "policy-order check on the transmitted manifest",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.904707504005,
+     "B_ev": 12144,
+     "B_breakdown": {
+      "manifest": 4320,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "record sigs": 7680
+     },
+     "N_P": {
+      "hash": 359,
+      "sign": 121
+     },
+     "M_P": 192,
+     "N_J": {
+      "hash": 359,
+      "verify": 121
+     },
+     "M_J": 192
+    },
+    {
+     "stack": "v3-policy-sample",
+     "level": 3,
+     "profile": "rho_soft",
+     "mechanism": "policy-position sampling with k openings",
+     "public": true,
+     "delta": 0.8333333333333334,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.904707504005,
+     "B_ev": 6656,
+     "B_breakdown": {
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "verifier challenge": 32,
+      "openings": 6480
+     },
+     "N_P": {
+      "hash": 2602,
+      "sign": 121
+     },
+     "M_P": 192,
+     "N_J": {
+      "hash": 157,
+      "verify": 21
+     },
+     "M_J": 0
+    },
+    {
+     "stack": "v4-raw",
+     "level": 4,
+     "profile": "rho_soft",
+     "mechanism": "ship raw observations, judge recomputes F",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.904707504005,
+     "B_ev": 8544,
+     "B_breakdown": {
+      "observations": 720,
+      "record sigs": 7680,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 239,
+      "sign": 121
+     },
+     "M_P": 192,
+     "N_J": {
+      "hash": 239,
+      "verify": 121,
+      "fuse": 1
+     },
+     "M_J": 192
+    },
+    {
+     "stack": "v4-attested",
+     "level": 4,
+     "profile": "rho_iso",
+     "mechanism": "modeled attested execution report",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": true,
+     "accept": true,
+     "y": 280.904707504005,
+     "B_ev": 208,
+     "B_breakdown": {
+      "manifest root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "external anchor": 64,
+      "report": 64
+     },
+     "N_P": {
+      "hash": 240,
+      "sign": 2
+     },
+     "M_P": 32,
+     "N_J": {
+      "verify": 2
+     },
+     "M_J": 0
+    }
+   ],
+   "240": [
+    {
+     "stack": "v0-none",
+     "level": 0,
+     "profile": "rho_soft",
+     "mechanism": "no evidence",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.8860389215834,
+     "B_ev": 0,
+     "B_breakdown": {},
+     "N_P": {},
+     "M_P": 0,
+     "N_J": {},
+     "M_J": 0
+    },
+    {
+     "stack": "v1-merkle",
+     "level": 1,
+     "profile": "rho_soft",
+     "mechanism": "anchored RFC 6962 Merkle root",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.8860389215834,
+     "B_ev": 8784,
+     "B_breakdown": {
+      "manifest": 8640,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 719,
+      "sign": 1
+     },
+     "M_P": 224,
+     "N_J": {
+      "hash": 479,
+      "verify": 1
+     },
+     "M_J": 224
+    },
+    {
+     "stack": "v1-chain",
+     "level": 1,
+     "profile": "rho_soft",
+     "mechanism": "anchored hash chain",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.8860389215834,
+     "B_ev": 8784,
+     "B_breakdown": {
+      "manifest": 8640,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 720,
+      "sign": 1
+     },
+     "M_P": 32,
+     "N_J": {
+      "hash": 480,
+      "verify": 1
+     },
+     "M_J": 32
+    },
+    {
+     "stack": "v2-ed25519",
+     "level": 2,
+     "profile": "rho_soft",
+     "mechanism": "per-record Ed25519 signature",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.8860389215834,
+     "B_ev": 24144,
+     "B_breakdown": {
+      "manifest": 8640,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "record sigs": 15360
+     },
+     "N_P": {
+      "hash": 719,
+      "sign": 241
+     },
+     "M_P": 224,
+     "N_J": {
+      "hash": 479,
+      "verify": 241
+     },
+     "M_J": 224
+    },
+    {
+     "stack": "v3-manifest",
+     "level": 3,
+     "profile": "rho_soft",
+     "mechanism": "policy-order check on the transmitted manifest",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.8860389215834,
+     "B_ev": 24144,
+     "B_breakdown": {
+      "manifest": 8640,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "record sigs": 15360
+     },
+     "N_P": {
+      "hash": 719,
+      "sign": 241
+     },
+     "M_P": 224,
+     "N_J": {
+      "hash": 719,
+      "verify": 241
+     },
+     "M_J": 224
+    },
+    {
+     "stack": "v3-policy-sample",
+     "level": 3,
+     "profile": "rho_soft",
+     "mechanism": "policy-position sampling with k openings",
+     "public": true,
+     "delta": 0.9166666666666666,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.8860389215834,
+     "B_ev": 7296,
+     "B_breakdown": {
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "verifier challenge": 32,
+      "openings": 7120
+     },
+     "N_P": {
+      "hash": 5340,
+      "sign": 241
+     },
+     "M_P": 224,
+     "N_J": {
+      "hash": 179,
+      "verify": 21
+     },
+     "M_J": 0
+    },
+    {
+     "stack": "v4-raw",
+     "level": 4,
+     "profile": "rho_soft",
+     "mechanism": "ship raw observations, judge recomputes F",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.8860389215834,
+     "B_ev": 16944,
+     "B_breakdown": {
+      "observations": 1440,
+      "record sigs": 15360,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 479,
+      "sign": 241
+     },
+     "M_P": 224,
+     "N_J": {
+      "hash": 479,
+      "verify": 241,
+      "fuse": 1
+     },
+     "M_J": 224
+    },
+    {
+     "stack": "v4-attested",
+     "level": 4,
+     "profile": "rho_iso",
+     "mechanism": "modeled attested execution report",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": true,
+     "accept": true,
+     "y": 280.8860389215834,
+     "B_ev": 208,
+     "B_breakdown": {
+      "manifest root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "external anchor": 64,
+      "report": 64
+     },
+     "N_P": {
+      "hash": 480,
+      "sign": 2
+     },
+     "M_P": 32,
+     "N_J": {
+      "verify": 2
+     },
+     "M_J": 0
+    }
+   ],
+   "480": [
+    {
+     "stack": "v0-none",
+     "level": 0,
+     "profile": "rho_soft",
+     "mechanism": "no evidence",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.86049414560307,
+     "B_ev": 0,
+     "B_breakdown": {},
+     "N_P": {},
+     "M_P": 0,
+     "N_J": {},
+     "M_J": 0
+    },
+    {
+     "stack": "v1-merkle",
+     "level": 1,
+     "profile": "rho_soft",
+     "mechanism": "anchored RFC 6962 Merkle root",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.86049414560307,
+     "B_ev": 17424,
+     "B_breakdown": {
+      "manifest": 17280,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 1439,
+      "sign": 1
+     },
+     "M_P": 256,
+     "N_J": {
+      "hash": 959,
+      "verify": 1
+     },
+     "M_J": 256
+    },
+    {
+     "stack": "v1-chain",
+     "level": 1,
+     "profile": "rho_soft",
+     "mechanism": "anchored hash chain",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.86049414560307,
+     "B_ev": 17424,
+     "B_breakdown": {
+      "manifest": 17280,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 1440,
+      "sign": 1
+     },
+     "M_P": 32,
+     "N_J": {
+      "hash": 960,
+      "verify": 1
+     },
+     "M_J": 32
+    },
+    {
+     "stack": "v2-ed25519",
+     "level": 2,
+     "profile": "rho_soft",
+     "mechanism": "per-record Ed25519 signature",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.86049414560307,
+     "B_ev": 48144,
+     "B_breakdown": {
+      "manifest": 17280,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "record sigs": 30720
+     },
+     "N_P": {
+      "hash": 1439,
+      "sign": 481
+     },
+     "M_P": 256,
+     "N_J": {
+      "hash": 959,
+      "verify": 481
+     },
+     "M_J": 256
+    },
+    {
+     "stack": "v3-manifest",
+     "level": 3,
+     "profile": "rho_soft",
+     "mechanism": "policy-order check on the transmitted manifest",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.86049414560307,
+     "B_ev": 48144,
+     "B_breakdown": {
+      "manifest": 17280,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "record sigs": 30720
+     },
+     "N_P": {
+      "hash": 1439,
+      "sign": 481
+     },
+     "M_P": 256,
+     "N_J": {
+      "hash": 1439,
+      "verify": 481
+     },
+     "M_J": 256
+    },
+    {
+     "stack": "v3-policy-sample",
+     "level": 3,
+     "profile": "rho_soft",
+     "mechanism": "policy-position sampling with k openings",
+     "public": true,
+     "delta": 0.9583333333333334,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.86049414560307,
+     "B_ev": 7936,
+     "B_breakdown": {
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "verifier challenge": 32,
+      "openings": 7760
+     },
+     "N_P": {
+      "hash": 10840,
+      "sign": 481
+     },
+     "M_P": 256,
+     "N_J": {
+      "hash": 199,
+      "verify": 21
+     },
+     "M_J": 0
+    },
+    {
+     "stack": "v4-raw",
+     "level": 4,
+     "profile": "rho_soft",
+     "mechanism": "ship raw observations, judge recomputes F",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.86049414560307,
+     "B_ev": 33744,
+     "B_breakdown": {
+      "observations": 2880,
+      "record sigs": 30720,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 959,
+      "sign": 481
+     },
+     "M_P": 256,
+     "N_J": {
+      "hash": 959,
+      "verify": 481,
+      "fuse": 1
+     },
+     "M_J": 256
+    },
+    {
+     "stack": "v4-attested",
+     "level": 4,
+     "profile": "rho_iso",
+     "mechanism": "modeled attested execution report",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": true,
+     "accept": true,
+     "y": 280.86049414560307,
+     "B_ev": 208,
+     "B_breakdown": {
+      "manifest root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "external anchor": 64,
+      "report": 64
+     },
+     "N_P": {
+      "hash": 960,
+      "sign": 2
+     },
+     "M_P": 32,
+     "N_J": {
+      "verify": 2
+     },
+     "M_J": 0
+    }
+   ],
+   "960": [
+    {
+     "stack": "v0-none",
+     "level": 0,
+     "profile": "rho_soft",
+     "mechanism": "no evidence",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.8734647443215,
+     "B_ev": 0,
+     "B_breakdown": {},
+     "N_P": {},
+     "M_P": 0,
+     "N_J": {},
+     "M_J": 0
+    },
+    {
+     "stack": "v1-merkle",
+     "level": 1,
+     "profile": "rho_soft",
+     "mechanism": "anchored RFC 6962 Merkle root",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.8734647443215,
+     "B_ev": 34704,
+     "B_breakdown": {
+      "manifest": 34560,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 2879,
+      "sign": 1
+     },
+     "M_P": 288,
+     "N_J": {
+      "hash": 1919,
+      "verify": 1
+     },
+     "M_J": 288
+    },
+    {
+     "stack": "v1-chain",
+     "level": 1,
+     "profile": "rho_soft",
+     "mechanism": "anchored hash chain",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.8734647443215,
+     "B_ev": 34704,
+     "B_breakdown": {
+      "manifest": 34560,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 2880,
+      "sign": 1
+     },
+     "M_P": 32,
+     "N_J": {
+      "hash": 1920,
+      "verify": 1
+     },
+     "M_J": 32
+    },
+    {
+     "stack": "v2-ed25519",
+     "level": 2,
+     "profile": "rho_soft",
+     "mechanism": "per-record Ed25519 signature",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.8734647443215,
+     "B_ev": 96144,
+     "B_breakdown": {
+      "manifest": 34560,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "record sigs": 61440
+     },
+     "N_P": {
+      "hash": 2879,
+      "sign": 961
+     },
+     "M_P": 288,
+     "N_J": {
+      "hash": 1919,
+      "verify": 961
+     },
+     "M_J": 288
+    },
+    {
+     "stack": "v3-manifest",
+     "level": 3,
+     "profile": "rho_soft",
+     "mechanism": "policy-order check on the transmitted manifest",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.8734647443215,
+     "B_ev": 96144,
+     "B_breakdown": {
+      "manifest": 34560,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "record sigs": 61440
+     },
+     "N_P": {
+      "hash": 2879,
+      "sign": 961
+     },
+     "M_P": 288,
+     "N_J": {
+      "hash": 2879,
+      "verify": 961
+     },
+     "M_J": 288
+    },
+    {
+     "stack": "v3-policy-sample",
+     "level": 3,
+     "profile": "rho_soft",
+     "mechanism": "policy-position sampling with k openings",
+     "public": true,
+     "delta": 0.9791666666666666,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.8734647443215,
+     "B_ev": 8576,
+     "B_breakdown": {
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "verifier challenge": 32,
+      "openings": 8400
+     },
+     "N_P": {
+      "hash": 21860,
+      "sign": 961
+     },
+     "M_P": 288,
+     "N_J": {
+      "hash": 219,
+      "verify": 21
+     },
+     "M_J": 0
+    },
+    {
+     "stack": "v4-raw",
+     "level": 4,
+     "profile": "rho_soft",
+     "mechanism": "ship raw observations, judge recomputes F",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.8734647443215,
+     "B_ev": 67344,
+     "B_breakdown": {
+      "observations": 5760,
+      "record sigs": 61440,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 1919,
+      "sign": 961
+     },
+     "M_P": 288,
+     "N_J": {
+      "hash": 1919,
+      "verify": 961,
+      "fuse": 1
+     },
+     "M_J": 288
+    },
+    {
+     "stack": "v4-attested",
+     "level": 4,
+     "profile": "rho_iso",
+     "mechanism": "modeled attested execution report",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": true,
+     "accept": true,
+     "y": 280.8734647443215,
+     "B_ev": 208,
+     "B_breakdown": {
+      "manifest root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "external anchor": 64,
+      "report": 64
+     },
+     "N_P": {
+      "hash": 1920,
+      "sign": 2
+     },
+     "M_P": 32,
+     "N_J": {
+      "verify": 2
+     },
+     "M_J": 0
+    }
+   ]
+  },
+  "mean": {
+   "12": [
+    {
+     "stack": "v0-none",
+     "level": 0,
+     "profile": "rho_soft",
+     "mechanism": "no evidence",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.315,
+     "B_ev": 0,
+     "B_breakdown": {},
+     "N_P": {},
+     "M_P": 0,
+     "N_J": {},
+     "M_J": 0
+    },
+    {
+     "stack": "v1-merkle",
+     "level": 1,
+     "profile": "rho_soft",
+     "mechanism": "anchored RFC 6962 Merkle root",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.315,
+     "B_ev": 576,
+     "B_breakdown": {
+      "manifest": 432,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 35,
+      "sign": 1
+     },
+     "M_P": 96,
+     "N_J": {
+      "hash": 23,
+      "verify": 1
+     },
+     "M_J": 96
+    },
+    {
+     "stack": "v1-chain",
+     "level": 1,
+     "profile": "rho_soft",
+     "mechanism": "anchored hash chain",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.315,
+     "B_ev": 576,
+     "B_breakdown": {
+      "manifest": 432,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 36,
+      "sign": 1
+     },
+     "M_P": 32,
+     "N_J": {
+      "hash": 24,
+      "verify": 1
+     },
+     "M_J": 32
+    },
+    {
+     "stack": "v2-ed25519",
+     "level": 2,
+     "profile": "rho_soft",
+     "mechanism": "per-record Ed25519 signature",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.315,
+     "B_ev": 1344,
+     "B_breakdown": {
+      "manifest": 432,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "record sigs": 768
+     },
+     "N_P": {
+      "hash": 35,
+      "sign": 13
+     },
+     "M_P": 96,
+     "N_J": {
+      "hash": 23,
+      "verify": 13
+     },
+     "M_J": 96
+    },
+    {
+     "stack": "v2-bls",
+     "level": 2,
+     "profile": "rho_soft",
+     "mechanism": "BLS12-381 aggregate signature",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.315,
+     "B_ev": 672,
+     "B_breakdown": {
+      "manifest": 432,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "aggregate sig": 96
+     },
+     "N_P": {
+      "hash": 35,
+      "sign": 13,
+      "agg": 11
+     },
+     "M_P": 96,
+     "N_J": {
+      "hash": 23,
+      "verify": 1,
+      "pairing": 13
+     },
+     "M_J": 96
+    },
+    {
+     "stack": "v3-manifest",
+     "level": 3,
+     "profile": "rho_soft",
+     "mechanism": "policy-order check on the transmitted manifest",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.315,
+     "B_ev": 1344,
+     "B_breakdown": {
+      "manifest": 432,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "record sigs": 768
+     },
+     "N_P": {
+      "hash": 35,
+      "sign": 13
+     },
+     "M_P": 96,
+     "N_J": {
+      "hash": 35,
+      "verify": 13
+     },
+     "M_J": 96
+    },
+    {
+     "stack": "v3-policy-sample",
+     "level": 3,
+     "profile": "rho_soft",
+     "mechanism": "policy-position sampling with k openings",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.315,
+     "B_ev": 2912,
+     "B_breakdown": {
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "verifier challenge": 32,
+      "openings": 2736
+     },
+     "N_P": {
+      "hash": 123,
+      "sign": 13
+     },
+     "M_P": 96,
+     "N_J": {
+      "hash": 56,
+      "verify": 13
+     },
+     "M_J": 0
+    },
+    {
+     "stack": "v4-raw",
+     "level": 4,
+     "profile": "rho_soft",
+     "mechanism": "ship raw observations, judge recomputes F",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.315,
+     "B_ev": 984,
+     "B_breakdown": {
+      "observations": 72,
+      "record sigs": 768,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 23,
+      "sign": 13
+     },
+     "M_P": 96,
+     "N_J": {
+      "hash": 23,
+      "verify": 13,
+      "fuse": 1
+     },
+     "M_J": 96
+    },
+    {
+     "stack": "v4-attested",
+     "level": 4,
+     "profile": "rho_iso",
+     "mechanism": "modeled attested execution report",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": true,
+     "accept": true,
+     "y": 280.315,
+     "B_ev": 208,
+     "B_breakdown": {
+      "manifest root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "external anchor": 64,
+      "report": 64
+     },
+     "N_P": {
+      "hash": 24,
+      "sign": 2
+     },
+     "M_P": 32,
+     "N_J": {
+      "verify": 2
+     },
+     "M_J": 0
+    },
+    {
+     "stack": "partial-homomac",
+     "level": 0,
+     "profile": "rho_soft",
+     "mechanism": "aggregate-only linearly homomorphic MAC",
+     "public": false,
+     "delta": 0.0,
+     "complete": false,
+     "modeled": false,
+     "accept": true,
+     "y": 280.315,
+     "B_ev": 16,
+     "B_breakdown": {
+      "combined tag": 16
+     },
+     "N_P": {
+      "hash": 12,
+      "mul": 24
+     },
+     "M_P": 16,
+     "N_J": {
+      "hash": 12,
+      "mul": 13
+     },
+     "M_J": 0
+    }
+   ],
+   "20": [
+    {
+     "stack": "v0-none",
+     "level": 0,
+     "profile": "rho_soft",
+     "mechanism": "no evidence",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.1715,
+     "B_ev": 0,
+     "B_breakdown": {},
+     "N_P": {},
+     "M_P": 0,
+     "N_J": {},
+     "M_J": 0
+    },
+    {
+     "stack": "v1-merkle",
+     "level": 1,
+     "profile": "rho_soft",
+     "mechanism": "anchored RFC 6962 Merkle root",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.1715,
+     "B_ev": 864,
+     "B_breakdown": {
+      "manifest": 720,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 59,
+      "sign": 1
+     },
+     "M_P": 128,
+     "N_J": {
+      "hash": 39,
+      "verify": 1
+     },
+     "M_J": 128
+    },
+    {
+     "stack": "v1-chain",
+     "level": 1,
+     "profile": "rho_soft",
+     "mechanism": "anchored hash chain",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.1715,
+     "B_ev": 864,
+     "B_breakdown": {
+      "manifest": 720,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 60,
+      "sign": 1
+     },
+     "M_P": 32,
+     "N_J": {
+      "hash": 40,
+      "verify": 1
+     },
+     "M_J": 32
+    },
+    {
+     "stack": "v2-ed25519",
+     "level": 2,
+     "profile": "rho_soft",
+     "mechanism": "per-record Ed25519 signature",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.1715,
+     "B_ev": 2144,
+     "B_breakdown": {
+      "manifest": 720,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "record sigs": 1280
+     },
+     "N_P": {
+      "hash": 59,
+      "sign": 21
+     },
+     "M_P": 128,
+     "N_J": {
+      "hash": 39,
+      "verify": 21
+     },
+     "M_J": 128
+    },
+    {
+     "stack": "v2-bls",
+     "level": 2,
+     "profile": "rho_soft",
+     "mechanism": "BLS12-381 aggregate signature",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.1715,
+     "B_ev": 960,
+     "B_breakdown": {
+      "manifest": 720,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "aggregate sig": 96
+     },
+     "N_P": {
+      "hash": 59,
+      "sign": 21,
+      "agg": 19
+     },
+     "M_P": 128,
+     "N_J": {
+      "hash": 39,
+      "verify": 1,
+      "pairing": 21
+     },
+     "M_J": 128
+    },
+    {
+     "stack": "v3-manifest",
+     "level": 3,
+     "profile": "rho_soft",
+     "mechanism": "policy-order check on the transmitted manifest",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.1715,
+     "B_ev": 2144,
+     "B_breakdown": {
+      "manifest": 720,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "record sigs": 1280
+     },
+     "N_P": {
+      "hash": 59,
+      "sign": 21
+     },
+     "M_P": 128,
+     "N_J": {
+      "hash": 59,
+      "verify": 21
+     },
+     "M_J": 128
+    },
+    {
+     "stack": "v3-policy-sample",
+     "level": 3,
+     "profile": "rho_soft",
+     "mechanism": "policy-position sampling with k openings",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.1715,
+     "B_ev": 5376,
+     "B_breakdown": {
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "verifier challenge": 32,
+      "openings": 5200
+     },
+     "N_P": {
+      "hash": 347,
+      "sign": 21
+     },
+     "M_P": 128,
+     "N_J": {
+      "hash": 112,
+      "verify": 21
+     },
+     "M_J": 0
+    },
+    {
+     "stack": "v4-raw",
+     "level": 4,
+     "profile": "rho_soft",
+     "mechanism": "ship raw observations, judge recomputes F",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.1715,
+     "B_ev": 1544,
+     "B_breakdown": {
+      "observations": 120,
+      "record sigs": 1280,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 39,
+      "sign": 21
+     },
+     "M_P": 128,
+     "N_J": {
+      "hash": 39,
+      "verify": 21,
+      "fuse": 1
+     },
+     "M_J": 128
+    },
+    {
+     "stack": "v4-attested",
+     "level": 4,
+     "profile": "rho_iso",
+     "mechanism": "modeled attested execution report",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": true,
+     "accept": true,
+     "y": 280.1715,
+     "B_ev": 208,
+     "B_breakdown": {
+      "manifest root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "external anchor": 64,
+      "report": 64
+     },
+     "N_P": {
+      "hash": 40,
+      "sign": 2
+     },
+     "M_P": 32,
+     "N_J": {
+      "verify": 2
+     },
+     "M_J": 0
+    },
+    {
+     "stack": "partial-homomac",
+     "level": 0,
+     "profile": "rho_soft",
+     "mechanism": "aggregate-only linearly homomorphic MAC",
+     "public": false,
+     "delta": 0.0,
+     "complete": false,
+     "modeled": false,
+     "accept": true,
+     "y": 280.1715,
+     "B_ev": 16,
+     "B_breakdown": {
+      "combined tag": 16
+     },
+     "N_P": {
+      "hash": 20,
+      "mul": 40
+     },
+     "M_P": 16,
+     "N_J": {
+      "hash": 20,
+      "mul": 21
+     },
+     "M_J": 0
+    }
+   ],
+   "60": [
+    {
+     "stack": "v0-none",
+     "level": 0,
+     "profile": "rho_soft",
+     "mechanism": "no evidence",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.01466666666664,
+     "B_ev": 0,
+     "B_breakdown": {},
+     "N_P": {},
+     "M_P": 0,
+     "N_J": {},
+     "M_J": 0
+    },
+    {
+     "stack": "v1-merkle",
+     "level": 1,
+     "profile": "rho_soft",
+     "mechanism": "anchored RFC 6962 Merkle root",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.01466666666664,
+     "B_ev": 2304,
+     "B_breakdown": {
+      "manifest": 2160,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 179,
+      "sign": 1
+     },
+     "M_P": 160,
+     "N_J": {
+      "hash": 119,
+      "verify": 1
+     },
+     "M_J": 160
+    },
+    {
+     "stack": "v1-chain",
+     "level": 1,
+     "profile": "rho_soft",
+     "mechanism": "anchored hash chain",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.01466666666664,
+     "B_ev": 2304,
+     "B_breakdown": {
+      "manifest": 2160,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 180,
+      "sign": 1
+     },
+     "M_P": 32,
+     "N_J": {
+      "hash": 120,
+      "verify": 1
+     },
+     "M_J": 32
+    },
+    {
+     "stack": "v2-ed25519",
+     "level": 2,
+     "profile": "rho_soft",
+     "mechanism": "per-record Ed25519 signature",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.01466666666664,
+     "B_ev": 6144,
+     "B_breakdown": {
+      "manifest": 2160,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "record sigs": 3840
+     },
+     "N_P": {
+      "hash": 179,
+      "sign": 61
+     },
+     "M_P": 160,
+     "N_J": {
+      "hash": 119,
+      "verify": 61
+     },
+     "M_J": 160
+    },
+    {
+     "stack": "v2-bls",
+     "level": 2,
+     "profile": "rho_soft",
+     "mechanism": "BLS12-381 aggregate signature",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.01466666666664,
+     "B_ev": 2400,
+     "B_breakdown": {
+      "manifest": 2160,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "aggregate sig": 96
+     },
+     "N_P": {
+      "hash": 179,
+      "sign": 61,
+      "agg": 59
+     },
+     "M_P": 160,
+     "N_J": {
+      "hash": 119,
+      "verify": 1,
+      "pairing": 61
+     },
+     "M_J": 160
+    },
+    {
+     "stack": "v3-manifest",
+     "level": 3,
+     "profile": "rho_soft",
+     "mechanism": "policy-order check on the transmitted manifest",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.01466666666664,
+     "B_ev": 6144,
+     "B_breakdown": {
+      "manifest": 2160,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "record sigs": 3840
+     },
+     "N_P": {
+      "hash": 179,
+      "sign": 61
+     },
+     "M_P": 160,
+     "N_J": {
+      "hash": 179,
+      "verify": 61
+     },
+     "M_J": 160
+    },
+    {
+     "stack": "v3-policy-sample",
+     "level": 3,
+     "profile": "rho_soft",
+     "mechanism": "policy-position sampling with k openings",
+     "public": true,
+     "delta": 0.6666666666666667,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.01466666666664,
+     "B_ev": 6016,
+     "B_breakdown": {
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "verifier challenge": 32,
+      "openings": 5840
+     },
+     "N_P": {
+      "hash": 1241,
+      "sign": 61
+     },
+     "M_P": 160,
+     "N_J": {
+      "hash": 138,
+      "verify": 21
+     },
+     "M_J": 0
+    },
+    {
+     "stack": "v4-raw",
+     "level": 4,
+     "profile": "rho_soft",
+     "mechanism": "ship raw observations, judge recomputes F",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 280.01466666666664,
+     "B_ev": 4344,
+     "B_breakdown": {
+      "observations": 360,
+      "record sigs": 3840,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 119,
+      "sign": 61
+     },
+     "M_P": 160,
+     "N_J": {
+      "hash": 119,
+      "verify": 61,
+      "fuse": 1
+     },
+     "M_J": 160
+    },
+    {
+     "stack": "v4-attested",
+     "level": 4,
+     "profile": "rho_iso",
+     "mechanism": "modeled attested execution report",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": true,
+     "accept": true,
+     "y": 280.01466666666664,
+     "B_ev": 208,
+     "B_breakdown": {
+      "manifest root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "external anchor": 64,
+      "report": 64
+     },
+     "N_P": {
+      "hash": 120,
+      "sign": 2
+     },
+     "M_P": 32,
+     "N_J": {
+      "verify": 2
+     },
+     "M_J": 0
+    },
+    {
+     "stack": "partial-homomac",
+     "level": 0,
+     "profile": "rho_soft",
+     "mechanism": "aggregate-only linearly homomorphic MAC",
+     "public": false,
+     "delta": 0.0,
+     "complete": false,
+     "modeled": false,
+     "accept": true,
+     "y": 280.01466666666664,
+     "B_ev": 16,
+     "B_breakdown": {
+      "combined tag": 16
+     },
+     "N_P": {
+      "hash": 60,
+      "mul": 120
+     },
+     "M_P": 16,
+     "N_J": {
+      "hash": 60,
+      "mul": 61
+     },
+     "M_J": 0
+    }
+   ],
+   "120": [
+    {
+     "stack": "v0-none",
+     "level": 0,
+     "profile": "rho_soft",
+     "mechanism": "no evidence",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 279.8741666666666,
+     "B_ev": 0,
+     "B_breakdown": {},
+     "N_P": {},
+     "M_P": 0,
+     "N_J": {},
+     "M_J": 0
+    },
+    {
+     "stack": "v1-merkle",
+     "level": 1,
+     "profile": "rho_soft",
+     "mechanism": "anchored RFC 6962 Merkle root",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 279.8741666666666,
+     "B_ev": 4464,
+     "B_breakdown": {
+      "manifest": 4320,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 359,
+      "sign": 1
+     },
+     "M_P": 192,
+     "N_J": {
+      "hash": 239,
+      "verify": 1
+     },
+     "M_J": 192
+    },
+    {
+     "stack": "v1-chain",
+     "level": 1,
+     "profile": "rho_soft",
+     "mechanism": "anchored hash chain",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 279.8741666666666,
+     "B_ev": 4464,
+     "B_breakdown": {
+      "manifest": 4320,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 360,
+      "sign": 1
+     },
+     "M_P": 32,
+     "N_J": {
+      "hash": 240,
+      "verify": 1
+     },
+     "M_J": 32
+    },
+    {
+     "stack": "v2-ed25519",
+     "level": 2,
+     "profile": "rho_soft",
+     "mechanism": "per-record Ed25519 signature",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 279.8741666666666,
+     "B_ev": 12144,
+     "B_breakdown": {
+      "manifest": 4320,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "record sigs": 7680
+     },
+     "N_P": {
+      "hash": 359,
+      "sign": 121
+     },
+     "M_P": 192,
+     "N_J": {
+      "hash": 239,
+      "verify": 121
+     },
+     "M_J": 192
+    },
+    {
+     "stack": "v3-manifest",
+     "level": 3,
+     "profile": "rho_soft",
+     "mechanism": "policy-order check on the transmitted manifest",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 279.8741666666666,
+     "B_ev": 12144,
+     "B_breakdown": {
+      "manifest": 4320,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "record sigs": 7680
+     },
+     "N_P": {
+      "hash": 359,
+      "sign": 121
+     },
+     "M_P": 192,
+     "N_J": {
+      "hash": 359,
+      "verify": 121
+     },
+     "M_J": 192
+    },
+    {
+     "stack": "v3-policy-sample",
+     "level": 3,
+     "profile": "rho_soft",
+     "mechanism": "policy-position sampling with k openings",
+     "public": true,
+     "delta": 0.8333333333333334,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 279.8741666666666,
+     "B_ev": 6656,
+     "B_breakdown": {
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "verifier challenge": 32,
+      "openings": 6480
+     },
+     "N_P": {
+      "hash": 2602,
+      "sign": 121
+     },
+     "M_P": 192,
+     "N_J": {
+      "hash": 157,
+      "verify": 21
+     },
+     "M_J": 0
+    },
+    {
+     "stack": "v4-raw",
+     "level": 4,
+     "profile": "rho_soft",
+     "mechanism": "ship raw observations, judge recomputes F",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 279.8741666666666,
+     "B_ev": 8544,
+     "B_breakdown": {
+      "observations": 720,
+      "record sigs": 7680,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 239,
+      "sign": 121
+     },
+     "M_P": 192,
+     "N_J": {
+      "hash": 239,
+      "verify": 121,
+      "fuse": 1
+     },
+     "M_J": 192
+    },
+    {
+     "stack": "v4-attested",
+     "level": 4,
+     "profile": "rho_iso",
+     "mechanism": "modeled attested execution report",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": true,
+     "accept": true,
+     "y": 279.8741666666666,
+     "B_ev": 208,
+     "B_breakdown": {
+      "manifest root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "external anchor": 64,
+      "report": 64
+     },
+     "N_P": {
+      "hash": 240,
+      "sign": 2
+     },
+     "M_P": 32,
+     "N_J": {
+      "verify": 2
+     },
+     "M_J": 0
+    },
+    {
+     "stack": "partial-homomac",
+     "level": 0,
+     "profile": "rho_soft",
+     "mechanism": "aggregate-only linearly homomorphic MAC",
+     "public": false,
+     "delta": 0.0,
+     "complete": false,
+     "modeled": false,
+     "accept": true,
+     "y": 279.87416666666667,
+     "B_ev": 16,
+     "B_breakdown": {
+      "combined tag": 16
+     },
+     "N_P": {
+      "hash": 120,
+      "mul": 240
+     },
+     "M_P": 16,
+     "N_J": {
+      "hash": 120,
+      "mul": 121
+     },
+     "M_J": 0
+    }
+   ],
+   "240": [
+    {
+     "stack": "v0-none",
+     "level": 0,
+     "profile": "rho_soft",
+     "mechanism": "no evidence",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 279.88879166666663,
+     "B_ev": 0,
+     "B_breakdown": {},
+     "N_P": {},
+     "M_P": 0,
+     "N_J": {},
+     "M_J": 0
+    },
+    {
+     "stack": "v1-merkle",
+     "level": 1,
+     "profile": "rho_soft",
+     "mechanism": "anchored RFC 6962 Merkle root",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 279.88879166666663,
+     "B_ev": 8784,
+     "B_breakdown": {
+      "manifest": 8640,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 719,
+      "sign": 1
+     },
+     "M_P": 224,
+     "N_J": {
+      "hash": 479,
+      "verify": 1
+     },
+     "M_J": 224
+    },
+    {
+     "stack": "v1-chain",
+     "level": 1,
+     "profile": "rho_soft",
+     "mechanism": "anchored hash chain",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 279.88879166666663,
+     "B_ev": 8784,
+     "B_breakdown": {
+      "manifest": 8640,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 720,
+      "sign": 1
+     },
+     "M_P": 32,
+     "N_J": {
+      "hash": 480,
+      "verify": 1
+     },
+     "M_J": 32
+    },
+    {
+     "stack": "v2-ed25519",
+     "level": 2,
+     "profile": "rho_soft",
+     "mechanism": "per-record Ed25519 signature",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 279.88879166666663,
+     "B_ev": 24144,
+     "B_breakdown": {
+      "manifest": 8640,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "record sigs": 15360
+     },
+     "N_P": {
+      "hash": 719,
+      "sign": 241
+     },
+     "M_P": 224,
+     "N_J": {
+      "hash": 479,
+      "verify": 241
+     },
+     "M_J": 224
+    },
+    {
+     "stack": "v3-manifest",
+     "level": 3,
+     "profile": "rho_soft",
+     "mechanism": "policy-order check on the transmitted manifest",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 279.88879166666663,
+     "B_ev": 24144,
+     "B_breakdown": {
+      "manifest": 8640,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "record sigs": 15360
+     },
+     "N_P": {
+      "hash": 719,
+      "sign": 241
+     },
+     "M_P": 224,
+     "N_J": {
+      "hash": 719,
+      "verify": 241
+     },
+     "M_J": 224
+    },
+    {
+     "stack": "v3-policy-sample",
+     "level": 3,
+     "profile": "rho_soft",
+     "mechanism": "policy-position sampling with k openings",
+     "public": true,
+     "delta": 0.9166666666666666,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 279.88879166666663,
+     "B_ev": 7296,
+     "B_breakdown": {
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "verifier challenge": 32,
+      "openings": 7120
+     },
+     "N_P": {
+      "hash": 5340,
+      "sign": 241
+     },
+     "M_P": 224,
+     "N_J": {
+      "hash": 179,
+      "verify": 21
+     },
+     "M_J": 0
+    },
+    {
+     "stack": "v4-raw",
+     "level": 4,
+     "profile": "rho_soft",
+     "mechanism": "ship raw observations, judge recomputes F",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 279.88879166666663,
+     "B_ev": 16944,
+     "B_breakdown": {
+      "observations": 1440,
+      "record sigs": 15360,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 479,
+      "sign": 241
+     },
+     "M_P": 224,
+     "N_J": {
+      "hash": 479,
+      "verify": 241,
+      "fuse": 1
+     },
+     "M_J": 224
+    },
+    {
+     "stack": "v4-attested",
+     "level": 4,
+     "profile": "rho_iso",
+     "mechanism": "modeled attested execution report",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": true,
+     "accept": true,
+     "y": 279.88879166666663,
+     "B_ev": 208,
+     "B_breakdown": {
+      "manifest root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "external anchor": 64,
+      "report": 64
+     },
+     "N_P": {
+      "hash": 480,
+      "sign": 2
+     },
+     "M_P": 32,
+     "N_J": {
+      "verify": 2
+     },
+     "M_J": 0
+    },
+    {
+     "stack": "partial-homomac",
+     "level": 0,
+     "profile": "rho_soft",
+     "mechanism": "aggregate-only linearly homomorphic MAC",
+     "public": false,
+     "delta": 0.0,
+     "complete": false,
+     "modeled": false,
+     "accept": true,
+     "y": 279.88879166666663,
+     "B_ev": 16,
+     "B_breakdown": {
+      "combined tag": 16
+     },
+     "N_P": {
+      "hash": 240,
+      "mul": 480
+     },
+     "M_P": 16,
+     "N_J": {
+      "hash": 240,
+      "mul": 241
+     },
+     "M_J": 0
+    }
+   ],
+   "480": [
+    {
+     "stack": "v0-none",
+     "level": 0,
+     "profile": "rho_soft",
+     "mechanism": "no evidence",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 279.8750625,
+     "B_ev": 0,
+     "B_breakdown": {},
+     "N_P": {},
+     "M_P": 0,
+     "N_J": {},
+     "M_J": 0
+    },
+    {
+     "stack": "v1-merkle",
+     "level": 1,
+     "profile": "rho_soft",
+     "mechanism": "anchored RFC 6962 Merkle root",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 279.8750625,
+     "B_ev": 17424,
+     "B_breakdown": {
+      "manifest": 17280,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 1439,
+      "sign": 1
+     },
+     "M_P": 256,
+     "N_J": {
+      "hash": 959,
+      "verify": 1
+     },
+     "M_J": 256
+    },
+    {
+     "stack": "v1-chain",
+     "level": 1,
+     "profile": "rho_soft",
+     "mechanism": "anchored hash chain",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 279.8750625,
+     "B_ev": 17424,
+     "B_breakdown": {
+      "manifest": 17280,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 1440,
+      "sign": 1
+     },
+     "M_P": 32,
+     "N_J": {
+      "hash": 960,
+      "verify": 1
+     },
+     "M_J": 32
+    },
+    {
+     "stack": "v2-ed25519",
+     "level": 2,
+     "profile": "rho_soft",
+     "mechanism": "per-record Ed25519 signature",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 279.8750625,
+     "B_ev": 48144,
+     "B_breakdown": {
+      "manifest": 17280,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "record sigs": 30720
+     },
+     "N_P": {
+      "hash": 1439,
+      "sign": 481
+     },
+     "M_P": 256,
+     "N_J": {
+      "hash": 959,
+      "verify": 481
+     },
+     "M_J": 256
+    },
+    {
+     "stack": "v3-manifest",
+     "level": 3,
+     "profile": "rho_soft",
+     "mechanism": "policy-order check on the transmitted manifest",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 279.8750625,
+     "B_ev": 48144,
+     "B_breakdown": {
+      "manifest": 17280,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "record sigs": 30720
+     },
+     "N_P": {
+      "hash": 1439,
+      "sign": 481
+     },
+     "M_P": 256,
+     "N_J": {
+      "hash": 1439,
+      "verify": 481
+     },
+     "M_J": 256
+    },
+    {
+     "stack": "v3-policy-sample",
+     "level": 3,
+     "profile": "rho_soft",
+     "mechanism": "policy-position sampling with k openings",
+     "public": true,
+     "delta": 0.9583333333333334,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 279.8750625,
+     "B_ev": 7936,
+     "B_breakdown": {
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "verifier challenge": 32,
+      "openings": 7760
+     },
+     "N_P": {
+      "hash": 10840,
+      "sign": 481
+     },
+     "M_P": 256,
+     "N_J": {
+      "hash": 199,
+      "verify": 21
+     },
+     "M_J": 0
+    },
+    {
+     "stack": "v4-raw",
+     "level": 4,
+     "profile": "rho_soft",
+     "mechanism": "ship raw observations, judge recomputes F",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 279.8750625,
+     "B_ev": 33744,
+     "B_breakdown": {
+      "observations": 2880,
+      "record sigs": 30720,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 959,
+      "sign": 481
+     },
+     "M_P": 256,
+     "N_J": {
+      "hash": 959,
+      "verify": 481,
+      "fuse": 1
+     },
+     "M_J": 256
+    },
+    {
+     "stack": "v4-attested",
+     "level": 4,
+     "profile": "rho_iso",
+     "mechanism": "modeled attested execution report",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": true,
+     "accept": true,
+     "y": 279.8750625,
+     "B_ev": 208,
+     "B_breakdown": {
+      "manifest root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "external anchor": 64,
+      "report": 64
+     },
+     "N_P": {
+      "hash": 960,
+      "sign": 2
+     },
+     "M_P": 32,
+     "N_J": {
+      "verify": 2
+     },
+     "M_J": 0
+    },
+    {
+     "stack": "partial-homomac",
+     "level": 0,
+     "profile": "rho_soft",
+     "mechanism": "aggregate-only linearly homomorphic MAC",
+     "public": false,
+     "delta": 0.0,
+     "complete": false,
+     "modeled": false,
+     "accept": true,
+     "y": 279.87506249999996,
+     "B_ev": 16,
+     "B_breakdown": {
+      "combined tag": 16
+     },
+     "N_P": {
+      "hash": 480,
+      "mul": 960
+     },
+     "M_P": 16,
+     "N_J": {
+      "hash": 480,
+      "mul": 481
+     },
+     "M_J": 0
+    }
+   ],
+   "960": [
+    {
+     "stack": "v0-none",
+     "level": 0,
+     "profile": "rho_soft",
+     "mechanism": "no evidence",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 279.86493749999994,
+     "B_ev": 0,
+     "B_breakdown": {},
+     "N_P": {},
+     "M_P": 0,
+     "N_J": {},
+     "M_J": 0
+    },
+    {
+     "stack": "v1-merkle",
+     "level": 1,
+     "profile": "rho_soft",
+     "mechanism": "anchored RFC 6962 Merkle root",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 279.86493749999994,
+     "B_ev": 34704,
+     "B_breakdown": {
+      "manifest": 34560,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 2879,
+      "sign": 1
+     },
+     "M_P": 288,
+     "N_J": {
+      "hash": 1919,
+      "verify": 1
+     },
+     "M_J": 288
+    },
+    {
+     "stack": "v1-chain",
+     "level": 1,
+     "profile": "rho_soft",
+     "mechanism": "anchored hash chain",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 279.86493749999994,
+     "B_ev": 34704,
+     "B_breakdown": {
+      "manifest": 34560,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 2880,
+      "sign": 1
+     },
+     "M_P": 32,
+     "N_J": {
+      "hash": 1920,
+      "verify": 1
+     },
+     "M_J": 32
+    },
+    {
+     "stack": "v2-ed25519",
+     "level": 2,
+     "profile": "rho_soft",
+     "mechanism": "per-record Ed25519 signature",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 279.86493749999994,
+     "B_ev": 96144,
+     "B_breakdown": {
+      "manifest": 34560,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "record sigs": 61440
+     },
+     "N_P": {
+      "hash": 2879,
+      "sign": 961
+     },
+     "M_P": 288,
+     "N_J": {
+      "hash": 1919,
+      "verify": 961
+     },
+     "M_J": 288
+    },
+    {
+     "stack": "v3-manifest",
+     "level": 3,
+     "profile": "rho_soft",
+     "mechanism": "policy-order check on the transmitted manifest",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 279.86493749999994,
+     "B_ev": 96144,
+     "B_breakdown": {
+      "manifest": 34560,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "record sigs": 61440
+     },
+     "N_P": {
+      "hash": 2879,
+      "sign": 961
+     },
+     "M_P": 288,
+     "N_J": {
+      "hash": 2879,
+      "verify": 961
+     },
+     "M_J": 288
+    },
+    {
+     "stack": "v3-policy-sample",
+     "level": 3,
+     "profile": "rho_soft",
+     "mechanism": "policy-position sampling with k openings",
+     "public": true,
+     "delta": 0.9791666666666666,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 279.86493749999994,
+     "B_ev": 8576,
+     "B_breakdown": {
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64,
+      "verifier challenge": 32,
+      "openings": 8400
+     },
+     "N_P": {
+      "hash": 21860,
+      "sign": 961
+     },
+     "M_P": 288,
+     "N_J": {
+      "hash": 219,
+      "verify": 21
+     },
+     "M_J": 0
+    },
+    {
+     "stack": "v4-raw",
+     "level": 4,
+     "profile": "rho_soft",
+     "mechanism": "ship raw observations, judge recomputes F",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": false,
+     "accept": true,
+     "y": 279.86493749999994,
+     "B_ev": 67344,
+     "B_breakdown": {
+      "observations": 5760,
+      "record sigs": 61440,
+      "root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "anchor": 64
+     },
+     "N_P": {
+      "hash": 1919,
+      "sign": 961
+     },
+     "M_P": 288,
+     "N_J": {
+      "hash": 1919,
+      "verify": 961,
+      "fuse": 1
+     },
+     "M_J": 288
+    },
+    {
+     "stack": "v4-attested",
+     "level": 4,
+     "profile": "rho_iso",
+     "mechanism": "modeled attested execution report",
+     "public": true,
+     "delta": 0.0,
+     "complete": true,
+     "modeled": true,
+     "accept": true,
+     "y": 279.86493749999994,
+     "B_ev": 208,
+     "B_breakdown": {
+      "manifest root": 32,
+      "run id": 16,
+      "auditor anchor state": 32,
+      "external anchor": 64,
+      "report": 64
+     },
+     "N_P": {
+      "hash": 1920,
+      "sign": 2
+     },
+     "M_P": 32,
+     "N_J": {
+      "verify": 2
+     },
+     "M_J": 0
+    },
+    {
+     "stack": "partial-homomac",
+     "level": 0,
+     "profile": "rho_soft",
+     "mechanism": "aggregate-only linearly homomorphic MAC",
+     "public": false,
+     "delta": 0.0,
+     "complete": false,
+     "modeled": false,
+     "accept": true,
+     "y": 279.8649375,
+     "B_ev": 16,
+     "B_breakdown": {
+      "combined tag": 16
+     },
+     "N_P": {
+      "hash": 960,
+      "mul": 1920
+     },
+     "M_P": 16,
+     "N_J": {
+      "hash": 960,
+      "mul": 961
+     },
+     "M_J": 0
+    }
+   ]
+  }
+ },
+ "separation": {
+  "mean": [
+   {
+    "stack": "v0-none",
+    "level": 0,
+    "results": {
+     "A1": {
+      "detected": false,
+      "expected": false
+     },
+     "A2": {
+      "detected": false,
+      "expected": false
+     },
+     "A3": {
+      "detected": false,
+      "expected": false
+     },
+     "A4": {
+      "detected": false,
+      "expected": false
+     }
+    }
+   },
+   {
+    "stack": "v1-merkle",
+    "level": 1,
+    "results": {
+     "A1": {
+      "detected": true,
+      "expected": true
+     },
+     "A2": {
+      "detected": false,
+      "expected": false
+     },
+     "A3": {
+      "detected": false,
+      "expected": false
+     },
+     "A4": {
+      "detected": false,
+      "expected": false
+     }
+    }
+   },
+   {
+    "stack": "v1-chain",
+    "level": 1,
+    "results": {
+     "A1": {
+      "detected": true,
+      "expected": true
+     },
+     "A2": {
+      "detected": false,
+      "expected": false
+     },
+     "A3": {
+      "detected": false,
+      "expected": false
+     },
+     "A4": {
+      "detected": false,
+      "expected": false
+     }
+    }
+   },
+   {
+    "stack": "v2-ed25519",
+    "level": 2,
+    "results": {
+     "A1": {
+      "detected": true,
+      "expected": true
+     },
+     "A2": {
+      "detected": true,
+      "expected": true
+     },
+     "A3": {
+      "detected": false,
+      "expected": false
+     },
+     "A4": {
+      "detected": false,
+      "expected": false
+     }
+    }
+   },
+   {
+    "stack": "v2-bls",
+    "level": 2,
+    "results": {
+     "A1": {
+      "detected": true,
+      "expected": true
+     },
+     "A2": {
+      "detected": true,
+      "expected": true
+     },
+     "A3": {
+      "detected": false,
+      "expected": false
+     },
+     "A4": {
+      "detected": false,
+      "expected": false
+     }
+    }
+   },
+   {
+    "stack": "v3-manifest",
+    "level": 3,
+    "results": {
+     "A1": {
+      "detected": true,
+      "expected": true
+     },
+     "A2": {
+      "detected": true,
+      "expected": true
+     },
+     "A3": {
+      "detected": true,
+      "expected": true
+     },
+     "A4": {
+      "detected": false,
+      "expected": false
+     }
+    }
+   },
+   {
+    "stack": "v3-policy-sample",
+    "level": 3,
+    "results": {
+     "A1": {
+      "detected": true,
+      "expected": true
+     },
+     "A2": {
+      "detected": true,
+      "expected": true
+     },
+     "A3": {
+      "detected": true,
+      "expected": true
+     },
+     "A4": {
+      "detected": false,
+      "expected": false
+     }
+    }
+   },
+   {
+    "stack": "v4-raw",
+    "level": 4,
+    "results": {
+     "A1": {
+      "detected": true,
+      "expected": true
+     },
+     "A2": {
+      "detected": true,
+      "expected": true
+     },
+     "A3": {
+      "detected": true,
+      "expected": true
+     },
+     "A4": {
+      "detected": true,
+      "expected": true
+     }
+    }
+   },
+   {
+    "stack": "v4-attested",
+    "level": 4,
+    "results": {
+     "A1": {
+      "detected": true,
+      "expected": true
+     },
+     "A2": {
+      "detected": true,
+      "expected": true
+     },
+     "A3": {
+      "detected": true,
+      "expected": true
+     },
+     "A4": {
+      "detected": true,
+      "expected": true
+     }
+    }
+   },
+   {
+    "stack": "partial-homomac",
+    "level": 0,
+    "results": {
+     "A1": {
+      "detected": true,
+      "expected": null
+     },
+     "A2": {
+      "detected": true,
+      "expected": null
+     },
+     "A3": {
+      "detected": true,
+      "expected": null
+     },
+     "A4": {
+      "detected": true,
+      "expected": null
+     }
+    }
+   }
+  ]
+ }
+}

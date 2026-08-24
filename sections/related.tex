@@ -1,0 +1,35 @@
+\section{Related Work}
+\label{sec:related}
+
+Definitions of verifiability separate goals from judges. Non-interactive
+verifiable computation addresses outsourcing \cite{gennaro2010},
+proof-carrying data distributes a compliance predicate \cite{chiesa2010pcd},
+and Cortier et al. parameterize voting verifiability by a goal, judge, tolerance,
+and benign-run condition \cite{cortier2016}. We instantiate that scaffold for
+one fusion run.
+
+Verifiable aggregation protocols instead bundle assurances. SIA authenticates
+reports, commits to values, and checks
+operator-specific approximations with sampling and interactive proofs
+\cite{przydatek2003sia}. Hierarchical secure aggregation prevents intermediate
+manipulation beyond the values injected directly by compromised nodes
+\cite{chan2006hierarchical}. Recent schemes add public verification for private
+summation \cite{palazzo2024mpvas} or designated verification of private inner
+products \cite{zhou2024ppvda}. Their theorems are packages for particular
+operators and adversaries, not cumulative names for the run-level conditions
+inside those packages.
+
+Mechanism surveys classify protocol families rather than claims.
+Bontekoe et al. \cite{bontekoe2025} organize verifiable privacy-preserving
+computation by computation and verification technique; our map instead puts
+the atomic audit condition first.
+
+Provenance and runtime assurance protect adjacent objects: SLSA orders build
+evidence \cite{slsa}, RATS appraises an attesting environment \cite{rfc9334},
+and APEX proves execution under software compromise \cite{apex2020}. None is
+itself a cumulative V-level.
+
+Robust fusion addresses what cryptography cannot validate. MATE infers which
+sensors to believe from cross-sensor consistency \cite{mate2025}; V-goals
+instead check bound records and computation. Privacy is likewise orthogonal
+unless its mechanism supplies an audit condition.

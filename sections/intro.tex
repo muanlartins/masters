@@ -1,0 +1,47 @@
+\section{Introduction}
+\label{sec:intro}
+
+Distributed fusion systems reduce sensor streams to the quantities on which a
+decision is made. A pharmaceutical logger, for example, can reduce a
+temperature history to a mean kinetic temperature and an excursion decision
+\cite{usp2023mkt}; a maritime system can reduce many reports to
+a track.
+
+That reduction also removes the auditor's simplest check: retain the inputs and
+recompute. An aggregator may alter a record, attach the wrong origin, omit an
+inconvenient observation, or report a value that the declared operator did not
+produce. Physical access can additionally expose application software and
+keys. Classical verifiable computation begins with a powerful worker and a
+weaker client that wants to avoid recomputation \cite{gennaro2010}. Here the
+evidence producer may be the least capable device, although aggregation and
+proof generation can also be delegated.
+
+General frameworks let an application choose a verified property, while
+concrete aggregation protocols prove fixed packages of properties.
+Proof-carrying data uses an application-defined compliance predicate
+\cite{chiesa2010pcd}; the KTV framework represents verifiability through a goal,
+a judge, and an error bound \cite{cortier2016}; and aggregation protocols combine
+authentication, commitments, and operator-specific checks
+\cite{przydatek2003sia,palazzo2024mpvas,zhou2024ppvda}. They do not provide this
+particular cumulative, run-level vocabulary for saying which part of a package
+a deployment can verify.
+
+We separate four atomic conditions---anchored manifest integrity, credential
+attribution, policy-relative coverage, and computation conformance---and use
+their prefixes as a cumulative reporting convention. The hierarchy is chosen
+because a claim about the policy-required computation should not omit the
+integrity, attribution, or coverage obligations on which that claim relies; it
+is not a claim that the atomic conditions have a unique logical order. Physical
+compromise is reported independently through a capture-resilience profile. No
+combination proves that a sensor measured the physical world honestly.
+
+We contribute G1--G4 with cumulative \Vzero--\Vfour{} and capture profiles; a
+cross-field mechanism map; and an executable cold-chain model of nine complete
+stacks, one partial baseline, and five proof circuits. The evaluation yields
+design rules about representation, probabilistic coverage, and attribution
+cost. The V prefix distinguishes this vocabulary from JDL fusion levels, which
+grade what is inferred rather than what can be checked \cite{steinberg1999jdl}.
+
+Generative AI assisted literature discovery, artifact development, checks, and
+revision. Human authors verified all sources, code, analyses, and text and
+retain full responsibility.\par

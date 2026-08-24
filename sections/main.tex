@@ -1,0 +1,81 @@
+\documentclass[runningheads]{llncs}
+
+% llncs.cls is Springer's official class for LNCS *and* its sibling series,
+% CCIS included. Same file as articles/f4rms/.
+\usepackage{silence}
+\WarningFilter{amsmath}{Unable to redefine math accent}
+\WarningFilter{caption}{Unknown document class}
+
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{amsmath,amssymb}
+\usepackage[hidelinks]{hyperref}
+
+\ifx\pdfminorversion\undefined\else\pdfminorversion=7\fi
+\ifx\pdfsuppresswarningpagegroup\undefined\else\pdfsuppresswarningpagegroup=1\fi
+
+\setlength{\textfloatsep}{8pt}
+\setlength{\floatsep}{8pt}
+\setlength{\intextsep}{6pt}
+
+% --- ladder macros: one place to change if the naming moves again -----------
+\newcommand{\Vlevel}[1]{\textsf{V#1}}
+\newcommand{\Vzero}{\Vlevel{0}}
+\newcommand{\Vone}{\Vlevel{1}}
+\newcommand{\Vtwo}{\Vlevel{2}}
+\newcommand{\Vthree}{\Vlevel{3}}
+\newcommand{\Vfour}{\Vlevel{4}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\begin{document}
+
+\title{Run-Level Verifiability for Sensor Fusion:\\
+       Cumulative Guarantees and Capture-Resilience Profiles}
+\titlerunning{Run-Level Verifiability for Sensor Fusion}
+
+% LAFusion 2026 uses double-blind review. Restore the author blocks only for
+% the camera-ready version.
+\author{Anonymous Author(s)}
+\authorrunning{Anonymous Author(s)}
+\institute{Anonymous institution}
+
+\maketitle
+
+\begin{abstract}
+Sensor-fusion deployments often retain only derived outputs, leaving an auditor
+unable to distinguish record alteration, credential misattribution, omission,
+and incorrect computation. Existing protocols prove different bundles of
+these properties under different compromise assumptions, which makes their
+claims and costs difficult to compare. We define four atomic run-level goals:
+externally anchored manifest integrity, credential attribution, policy-relative
+coverage, and conformance to the declared fusion computation. Their prefixes
+form a cumulative reporting hierarchy, while a separate capture-resilience
+profile states which software or hardware compromises the evidence tolerates.
+A cross-field map shows how secure logging, authenticated aggregation,
+succinct proofs, attestation, and robust fusion contribute to the goals without
+automatically constituting a complete level. We exercise the vocabulary with
+an executable model of nine complete stacks, one partial baseline, and five
+proof circuits for a cold-chain aggregation policy. The study yields three
+design rules: short authenticated records can cost less than commitments;
+sampling reduces communication only by accepting explicit false-acceptance
+risk; and credential attribution, rather than fusion arithmetic, dominates the
+demonstrated proof circuit. The artifact is a protocol model, not a device or
+physical-attack evaluation.
+
+\keywords{Data fusion \and Verifiability \and Data provenance \and
+Remote attestation \and Resource-constrained devices.}
+\end{abstract}
+
+\input{sections/intro}
+\input{sections/related}
+\input{sections/proposal}
+\input{sections/mechanisms}
+\input{sections/evidence}
+\input{sections/conclusion}
+
+\bibliographystyle{splncs04}
+\bibliography{references}
+
+\end{document}

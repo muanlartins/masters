@@ -1,0 +1,246 @@
+{
+ "host": "arm64 / Darwin",
+ "environment": {
+  "platform": "macOS-26.3-arm64-arm-64bit-Mach-O",
+  "python": "3.14.3",
+  "node": "v24.7.0",
+  "circom": "circom compiler 2.2.3",
+  "snarkjs": "0.7.5"
+ },
+ "cM_python": "16771564580367780030295041620405569521191772422779691665629193376523875214002",
+ "results": [
+  {
+   "circuit": "binding",
+   "n": 60,
+   "constraints": 32040,
+   "wires": 32041,
+   "outputs": 1,
+   "private_inputs": 60,
+   "nonlinear": 15540,
+   "linear": 16500,
+   "ptau_power": 15,
+   "proving_key_bytes": 13760988,
+   "verification_key_json_bytes": 2926,
+   "witness_s": 0.29,
+   "witness_rss_bytes": 68993024,
+   "reps": 3,
+   "prove_s": 8.52,
+   "prove_s_all": [
+    8.52,
+    9.48,
+    8.45
+   ],
+   "prove_rss_bytes": 1071628288,
+   "prove_rss_all": [
+    1039548416,
+    1071628288,
+    1076101120
+   ],
+   "verified": true,
+   "verify_s": 1.17,
+   "verify_rss_bytes": 204013568,
+   "public_signals": [
+    "16771564580367780030295041620405569521191772422779691665629193376523875214002"
+   ],
+   "proof_json_bytes": 803,
+   "public_json_bytes": 84,
+   "proof_structural_bytes": 128,
+   "public_structural_bytes": 32,
+   "verification_key_structural_bytes": 288,
+   "cross_checks": {
+    "manifest": true
+   },
+   "checked": true
+  },
+  {
+   "circuit": "mean",
+   "n": 60,
+   "constraints": 32041,
+   "wires": 32042,
+   "outputs": 2,
+   "private_inputs": 60,
+   "nonlinear": 15540,
+   "linear": 16501,
+   "ptau_power": 15,
+   "proving_key_bytes": 13761352,
+   "verification_key_json_bytes": 3107,
+   "witness_s": 0.25,
+   "witness_rss_bytes": 68845568,
+   "reps": 3,
+   "prove_s": 8.61,
+   "prove_s_all": [
+    8.44,
+    8.61,
+    8.91
+   ],
+   "prove_rss_bytes": 960593920,
+   "prove_rss_all": [
+    888733696,
+    1047429120,
+    960593920
+   ],
+   "verified": true,
+   "verify_s": 0.95,
+   "verify_rss_bytes": 203866112,
+   "public_signals": [
+    "16771564580367780030295041620405569521191772422779691665629193376523875214002",
+    "2007268"
+   ],
+   "proof_json_bytes": 805,
+   "public_json_bytes": 96,
+   "proof_structural_bytes": 128,
+   "public_structural_bytes": 64,
+   "verification_key_structural_bytes": 320,
+   "cross_checks": {
+    "manifest": true,
+    "operator": true
+   },
+   "checked": true
+  },
+  {
+   "circuit": "excursion",
+   "n": 60,
+   "constraints": 33301,
+   "wires": 33242,
+   "outputs": 2,
+   "private_inputs": 60,
+   "nonlinear": 16620,
+   "linear": 16681,
+   "ptau_power": 16,
+   "proving_key_bytes": 16385064,
+   "verification_key_json_bytes": 3107,
+   "witness_s": 0.3,
+   "witness_rss_bytes": 69189632,
+   "reps": 3,
+   "prove_s": 11.81,
+   "prove_s_all": [
+    11.81,
+    12.61,
+    10.71
+   ],
+   "prove_rss_bytes": 1084227584,
+   "prove_rss_all": [
+    1010974720,
+    1084227584,
+    1160265728
+   ],
+   "verified": true,
+   "verify_s": 0.95,
+   "verify_rss_bytes": 204587008,
+   "public_signals": [
+    "16771564580367780030295041620405569521191772422779691665629193376523875214002",
+    "12"
+   ],
+   "proof_json_bytes": 803,
+   "public_json_bytes": 91,
+   "proof_structural_bytes": 128,
+   "public_structural_bytes": 64,
+   "verification_key_structural_bytes": 320,
+   "cross_checks": {
+    "manifest": true,
+    "operator": true
+   },
+   "checked": true
+  },
+  {
+   "circuit": "mkt",
+   "n": 60,
+   "constraints": 38631,
+   "wires": 38264,
+   "outputs": 2,
+   "private_inputs": 184,
+   "nonlinear": 21211,
+   "linear": 17420,
+   "ptau_power": 16,
+   "proving_key_bytes": 18565908,
+   "verification_key_json_bytes": 3105,
+   "witness_s": 0.06,
+   "witness_rss_bytes": 70615040,
+   "reps": 3,
+   "prove_s": 1.02,
+   "prove_s_all": [
+    1.03,
+    0.99,
+    1.02
+   ],
+   "prove_rss_bytes": 1257472000,
+   "prove_rss_all": [
+    1257472000,
+    1228046336,
+    1259864064
+   ],
+   "verified": true,
+   "verify_s": 0.18,
+   "verify_rss_bytes": 206438400,
+   "public_signals": [
+    "16771564580367780030295041620405569521191772422779691665629193376523875214002",
+    "28097"
+   ],
+   "proof_json_bytes": 805,
+   "public_json_bytes": 94,
+   "proof_structural_bytes": 128,
+   "public_structural_bytes": 64,
+   "verification_key_structural_bytes": 320,
+   "cross_checks": {
+    "manifest": true,
+    "operator": true
+   },
+   "checked": true
+  },
+  {
+   "circuit": "attributed",
+   "n": 12,
+   "constraints": 110816,
+   "wires": 110765,
+   "outputs": 3,
+   "private_inputs": 56,
+   "nonlinear": 94977,
+   "linear": 15839,
+   "ptau_power": 17,
+   "proving_key_bytes": 55949148,
+   "verification_key_json_bytes": 3290,
+   "witness_s": 1.47,
+   "witness_rss_bytes": 103989248,
+   "reps": 3,
+   "prove_s": 2.1,
+   "prove_s_all": [
+    8.49,
+    2.1,
+    2.03
+   ],
+   "prove_rss_bytes": 2467430400,
+   "prove_rss_all": [
+    1812054016,
+    2467430400,
+    2493677568
+   ],
+   "verified": true,
+   "verify_s": 0.19,
+   "verify_rss_bytes": 205799424,
+   "public_signals": [
+    "18301709052160722488104002326886176975121831207110649851256384275527554963707",
+    "401814",
+    "17367511034297322430513335326516643505103095875870914607096226518577398128278"
+   ],
+   "proof_json_bytes": 806,
+   "public_json_bytes": 177,
+   "proof_structural_bytes": 128,
+   "public_structural_bytes": 96,
+   "verification_key_structural_bytes": 352,
+   "cross_checks": {
+    "manifest": true,
+    "operator": true,
+    "roster": true
+   },
+   "checked": true
+  },
+  {
+   "circuit": "attributed",
+   "n": 60,
+   "constraints": 549392,
+   "nonlinear": 473265,
+   "linear": 76127,
+   "compile_only": true
+  }
+ ]
+}

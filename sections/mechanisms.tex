@@ -1,0 +1,96 @@
+\section{Cross-Field Mechanism Map}
+\label{sec:mechanisms}
+
+Mechanisms attach to atomic conditions, not automatically to cumulative levels.
+Table~\ref{tab:mapping} maps representative families by their direct
+contribution and the assumption needed to compose that contribution. A row
+marked G4 means conformance only to the statement or operator that the cited
+construction actually verifies; it does not silently supply G1--G3.
+
+\begin{table}[t]
+\caption{Technique-to-goal map. A cumulative V$i$ claim requires every G1--G$i$
+condition, possibly by composition. ``Direct'' denotes the condition to which
+the technique principally contributes, not a universal theorem for the family.}
+\label{tab:mapping}
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{@{}L{2.0cm}L{2.25cm}L{1.6cm}L{5.4cm}@{}}
+\toprule
+Field / technique & Examples & Direct & Cumulative interpretation and caveat \\
+\midrule
+Tamper-evident logging & Merkle/history trees; hash chains
+\cite{crosby2009} & G1 with an external witness & A producer-controlled root is
+not G1. A tree binds leaves and a chain binds an ordered prefix; neither proves
+coverage or availability of openings. \\
+
+Record authentication & MACs, signatures, BLS aggregation
+\cite{boneh2003aggregate} & G2 & Cumulative V2 also needs G1. It proves use of a
+credential; device identity depends on enrollment and honest acquisition on the
+capture profile. \\
+
+Secure sensor aggregation & SIA
+\cite{przydatek2003sia} & G1/G2 plus probabilistic,
+operator-specific tests & Its sampling theorem and approximate aggregate must
+be mapped to G3/G4 and $\delta$; approximate validity is not exact cumulative
+V4. \\
+
+Verifiable private aggregation & mPVAS; PPVDA
+\cite{palazzo2024mpvas,zhou2024ppvda} & G2 and operator-specific G4 & G1 and G3
+are not automatic. Public versus designated verification, collusion, supported
+operator, and privacy assumptions remain explicit. \\
+
+General verifiable computation & Groth16; proof-carrying data
+\cite{groth2016,chiesa2010pcd} & G4 for the constrained statement & A circuit may
+internalize G2/G3, but freshness and external anchoring still supply G1. Setup,
+statement binding, and numerical semantics matter. \\
+
+Attestation / proof of execution & RATS; APEX; VECODI
+\cite{rfc9334,apex2020,vecodi2026} & execution identity and G4 under an isolated
+path & Cumulative use needs appraisal, enrollment, input binding, coverage, and
+a fresh external G1 event. Supports $\rho_{\mathrm{iso}}$, not physical truth. \\
+
+Roots of trust / evaluation & Secure elements, TPMs, PUFs, evaluated hardware
+& no G-condition alone & Supports a capture profile only for the evaluated key,
+path, attacks, and duration; small report size is not a V-level. \\
+
+Robust or statistical fusion & MATE and trust-aware fusion
+\cite{mate2025} & physical-value plausibility / resilience &
+Orthogonal to G1--G4 and useful precisely because computation-conformant V4
+cannot establish physical truth. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The map exposes several composition rules. Aggregate signatures compress tags,
+not messages, identities, key bindings, or coverage. A homomorphic MAC can
+authenticate a linear aggregate for a designated auditor while omitting the
+manifest integrity and per-record evidence needed by a cumulative stack. A
+succinct proof can instead constrain attribution and coverage inside its
+statement, but its manifest commitment still needs a fresh G1 anchor.
+
+As a worked mapping, SIA's authenticated query nonce and server-held Merkle
+commitment contribute G1; sensor--server MACs on opened leaves contribute
+probabilistic G2; duplicate, count, and input-representation tests contribute
+probabilistic coverage under its ID-knowledge or alarm-channel assumptions;
+and its interactive tests establish operator-specific approximation
+\cite{przydatek2003sia}. It does not reach cumulative V3 here because G3 asks
+for the exact policy-ordered identifier sequence, nor V4 because G4 asks for
+exact $y=F(O_M)$ rather than an $\epsilon$-approximation. Its own
+$(\epsilon,\delta)$ claim remains valuable and should be reported directly.
+
+Sampling adds a protocol condition rather than a new semantic goal. The root
+must be anchored before an unpredictable verifier challenge, and an offline
+judge must compare the response with its own stored challenge or an
+authenticated challenge transcript. Trusting a challenge copied from the
+producer's proof permits root grinding. Public and designated verification,
+and deterministic and probabilistic guarantees, must therefore be stated even
+when they contribute to the same G-condition.
+
+Proofs of execution occupy a different trust profile from cryptographic
+arguments. Groth16 work follows the circuit \cite{groth2016}, whereas APEX binds
+an output to execution under a hardware root \cite{apex2020}. In our modeled
+attestation stack, an external authority first anchors the manifest root; the
+isolated path then reports that root and $y$. The row measures only this
+protocol transcript under $\rho_{\mathrm{iso}}$: it does not measure hardware,
+energy, or physical resistance.
